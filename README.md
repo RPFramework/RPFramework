@@ -38,6 +38,6 @@ So why should you hop on board with the modular approach to this framework? This
 4. Setting up addons
 	1. Module should have provided a **@RPFramework\Addons** folder where you have addons that you need to distribute to your players
 5. Navigate to **RPFramework.yourMap\Functions\modules** and place the module's folder there
-6. Navigate to **RPFramework.yourMap\Functions\modules\CONFIG** and open up fn_initModules.sqf, moduleDialogs.hpp, moduleFunctions.hpp, moduleRscTitles.hpp, moduleSounds.hpp
-7. In fn_initModules.sqf add an element to array called _cModules in format `"ClientModules_fnc_initMODULE"`, remember that the last array element doesn't need a comma after it but every element before it does
-8. In moduleDialogs.hpp, moduleFunctions.hpp, moduleRscTitles.hpp and moduleSounds.hpp add a new line in format `#include "..\MODULE\CURRENTFILESUFFIX.hpp"` where CURRENTFILESUFFIX is the "suffix" of the current file. For moduleFunctions.hpp the CURRENTFILESUFFIX would be Functions.
+6. Navigate to **RPFramework.yourMap\Functions\modules\CONFIG** and open up **fn_initModules.sqf**, **moduleDialogs.hpp**, **moduleFunctions.hpp**, **moduleRscTitles.hpp**, **moduleSounds.hpp**
+7. In **fn_initModules.sqf** add an element to array called **_cModules** in format `"ClientModules_fnc_initMODULE"`, remember that the last array element doesn't need a comma after it but every element before it does
+8. In **moduleDialogs.hpp**, **moduleFunctions.hpp**, **moduleRscTitles.hpp** and **moduleSounds.hpp** add a new line in format `#include "..\MODULE\CURRENTFILESUFFIX.hpp"` where **CURRENTFILESUFFIX** is the "suffix" of the current file. For **moduleFunctions.hpp** the **CURRENTFILESUFFIX** would be **Functions**.
