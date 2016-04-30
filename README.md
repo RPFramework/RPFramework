@@ -21,7 +21,7 @@ So why should you hop on board with the modular approach to this framework? This
 	3. Replace **extdb-conf.ini** in **@ExtDB2** with the same file provided in folder **External Files** and find line **74** where you should change the mysql details to correspond to your database's.
 	4. Drag and drop the **extDB** folder from **External Files** to **@ExtDB2** and choose to replace everything
 4. Setting up the mission and server files for RPFramework
-	1. Navigate to folder **bin*** and move **@RPF_Server** and **@RPFramework** to your server's main Arma 3 Folder
+	1. Navigate to folder **bin** and move **@RPF_Server** and **@RPFramework** to your server's main Arma 3 Folder
 	2. Move **RPFramework.Altis** to your server's MPMissions folder
 5. Distribute @RPFramework or the addons inside it to your players
 6. **ADDITIONAL INFO: Modifying RPFramework and porting it to another map:**
@@ -41,3 +41,106 @@ So why should you hop on board with the modular approach to this framework? This
 6. Navigate to **RPFramework.yourMap\Functions\modules\CONFIG** and open up **fn_initModules.sqf**, **moduleDialogs.hpp**, **moduleFunctions.hpp**, **moduleRscTitles.hpp**, **moduleSounds.hpp**
 7. In **fn_initModules.sqf** add an element to array called **_cModules** in format `"ClientModules_fnc_initMODULE"`, remember that the last array element doesn't need a comma after it but every element before it does
 8. In **moduleDialogs.hpp**, **moduleFunctions.hpp**, **moduleRscTitles.hpp** and **moduleSounds.hpp** add a new line in format `#include "..\MODULE\CURRENTFILESUFFIX.hpp"` where **CURRENTFILESUFFIX** is the "suffix" of the current file. For **moduleFunctions.hpp** the **CURRENTFILESUFFIX** would be **Functions**.
+
+## Module documentation for 1.0.0
+
+### General
+Modules are additional script packages that can depend on the core of RPFramework, but the core never depends on a module. Modules can overwrite settings, add functions, dialogs, sounds and much more. Modules can be distributed under different licenses than the core of RPFramework.
+The core is a bunch of basic functionality that creates a fairly limited game experience and loads in modules.
+
+RPFramework has some modules by default, that have been made solely for the purpose of showing module creators how their modules can change the framework. These default modules also make the mission somewhat playable.
+
+### Creating a module
+Modules add features to RPFramework. If you are a scripter, you already know how to make modules because they are just bunch of functions, dialogs and sounds for the mission and server. They aren't anything special, but they just make things a bit more modular and easier for the user of the framework.
+
+You can add any functions, sounds, dialogs, titles and database functionalty. It is also very important that you follow the correct module structure and init function name.
+
+When finally releasing your module, please include a readme with proper installing instructions that every user can understand. If you want to release your module under the same license as RPFramework your module can be included in the following RPFramework releases and you will be consired a contributor to the team.
+
+Module structure on mission's side
+```
+| modules
+|_ YourModule
+|__ fn_initYourModule.sqf
+|__ fn_function1YourModule.sqf
+|__ fn_function2YourModule.sqf
+|__ Functions.hpp
+|__ Dialogs.hpp
+|__ RscDialogs.hpp
+|__ Sounds.hpp
+```
+You should include all of these .hpp files in your module so that the user doesn't need to check if your module needs to be included into moduleSounds.hpp and so on.
+
+Module structure example on server's side
+```
+| modules
+|_ YourModule
+|__ fn_initYourModule.sqf
+|__ fn_serversideFunction1YourModule.sqf
+|__ Functions.hpp
+```
+
+You can check out the example module or any other module included with RPFramework for more information on structuring
+
+You can also add actions to the interaction menu in any of your scripts, but it should be done in your init file or by calling another function initializing menu actions first in your init.
+Interaction menu used is RPFramework's internal interaction system. Adding interaction menu items happens by adding an array in correct format to the master array of RPFramework's interaction system called RPF_InteractionMenuItems. In this array format first array inside the array has conditions that all have to be true for the menu items to show up. Second array inside the array has the text of the menu button first and then the code action being run when you click the interaction button.
+Example of adding menu actions.
+```javascript
+_menuItems = [
+	[
+		["condition1", "condition2"],
+		["Button text", "code action"]
+	],
+	[
+		[" vehicle player in RPF_PoliceVehicles ", "player getVariable 'cop' > 0"],
+		["Police DB", "[]call ClientModules_fnc_policeComputer"]
+	],
+	[
+		["cursorTarget isKindOf 'Man'", "!alive cursorTarget"],
+		["Try to wake up the dead guy", "hint 'Good try, but you can not wake up the dead'"]
+	]
+];
+{
+	RPF_InteractionMenuItems pushBack _x;
+}forEach _menuItems;
+```
+Check the example module for an example!
+
+Now important step is making sure to include all your functions in the Functions.hpp which will end up in CfgFunctions.
+
+**Proper way of doing the CfgFunctions class:**
+
+Basically, your classes correspond to the filenames in your module's folder without the fn_ part and .sqf ending. For the CfgFunctions part in the mission, you will have a different path than the server to your module folder so make sure you notice this when you write the file line of your class.
+RPFramework's system has a moduleFunctions.hpp inside mission/server > Functions > modules > CONFIG where the user of RPFramework will include your module's own Functions.hpp. So when you are making a module, you have to put all your functions into your module's folder in a file called Functions.hpp. By using this kind of structure and strict naming, we hope to make it easier for the user to add modules to RPFramework.
+
+This would go to mission > Functions > modules > YourModule > Functions.hpp
+```C++
+class YourModule {
+  file = "Functions\modules\YourModule";
+  class initYourModule {};
+  class function1YourModule {};
+  class function2YourModule {};
+};
+```
+
+This one would go to RPF_server > server > modules > YourModule > Functions.hpp
+```C++
+class YourModule {
+  file = "RPF_server\server\modules\YourModule";
+  class initYourModule {};
+  class serversideFunction1YourModule {};
+};
+```
+
+You can add sounds, dialogs and titles in your Sounds.hpp, Dialogs.hpp and RscTitles.hpp. You can head over to BI wiki to find out more about how these configs work. Sounds and RscTitles will be included inside CfgSounds and RscTitles but Dialogs.hpp will be included straight in to description.ext so this allows you to define other things in to description.ext inside Dialogs.hpp.
+
+RPFramework uses ExtDB2 and its SQL_CUSTOM_V2 protocol to interact with a MySQL database. You can read about this extension and protocol over at https://github.com/Torndeco/extDB2 (Apparently the developer quit developing and took the documentation down..) and include the prepared statements that your module needs with your package.
+Here is an example of a prepared statement you could include with your module. You should use `[_query, _mode] call ExternalS_fnc_ExtDBasync;` for database calls, but RPFramework does indeed offer an alternative which does the same thing as ExternalS_fnc_ExtDBasync, it's called with `[_mode, _query] call ExternalS_fnc_ExtDBquery;`.
+```
+[gangInfo]
+SQL1_1 = SELECT id, owner, name, maxmembers, bank, members FROM gangs WHERE active='1' AND members LIKE ?;
+SQL1_INPUTS = 1
+
+Number of Inputs = 1  
+OUTPUT = 1, 2-String, 3-String, 4, 5, 6
+```
