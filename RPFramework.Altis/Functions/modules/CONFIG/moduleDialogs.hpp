@@ -1,0 +1,7 @@
+#include "..\Ticketing\Dialogs.hpp"
+#include "..\Example\Dialogs.hpp"
+#include "..\Taser\Dialogs.hpp"
+#include "..\Fishing\Dialogs.hpp"
+#include "..\Farming\Dialogs.hpp"
+#include "..\ShopSystem\Dialogs.hpp"
+#include "..\BasicMedical\Dialogs.hpp"

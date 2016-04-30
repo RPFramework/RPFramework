@@ -1,0 +1,7 @@
+#include "..\Ticketing\Sounds.hpp"
+#include "..\Example\Sounds.hpp"
+#include "..\Taser\Sounds.hpp"
+#include "..\Fishing\Sounds.hpp"
+#include "..\Farming\Sounds.hpp"
+#include "..\ShopSystem\Sounds.hpp"
+#include "..\BasicMedical\Sounds.hpp"
