@@ -15,7 +15,7 @@ class CfgFunctions
 	{
 		class Save
 		{
-			file = "RPF_Server\server\core\Save";
+			file = "RPF_Server\Functions\core\Save";
 			class handleDisconnect {};
             class initStats {};
             class statSave {};
@@ -38,9 +38,9 @@ class CfgFunctions
 	{
 		class Config
 		{
-			file = "RPF_Server\server\modules\CONFIG";
+			file = "RPF_Server\Functions\modules\CONFIG";
 			class initModules {};
 		};
-		#include "server\modules\CONFIG\moduleFunctions.hpp"
+		#include "Functions\modules\CONFIG\moduleFunctions.hpp"
 	};
 };
