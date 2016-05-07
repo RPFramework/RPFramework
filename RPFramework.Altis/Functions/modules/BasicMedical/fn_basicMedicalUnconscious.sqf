@@ -23,8 +23,8 @@ _positionPlayer = getPos player;
 _medics = []call Client_fnc_getMedics;
 {
 	[[0, _uid, _positionPlayer], "ClientModules_fnc_basicMedicalMarker", _x, false] spawn BIS_fnc_MP;
-	_unconsciousMarker = createMarkerLocal [_uid, _positionPlayer]; 
-	_unconsciousMarker setMarkerShapeLocal "ICON"; 
+	_unconsciousMarker = createMarkerLocal [_uid, _positionPlayer];
+	_unconsciousMarker setMarkerShapeLocal "ICON";
 	_unconsciousMarker setMarkerTypeLocal "KIA";
 	_unconsciousMarker setMarkerTextLocal "[EMS] Unconscious Person";
 	_unconsciousMarker setMarkerColorLocal "ColorRed";
@@ -56,6 +56,10 @@ switch (true) do {
 		player setVariable ["stabilized", false, true];
 		player allowDamage true;
 		cutText ["","PLAIN",1];
+		_money = "Land_Money_F" createVehicle position player;
+		_cash = player getVariable "cash";
+		_money setVariable ["money", _cash, true];
+		player setVariable ["cash", 0, true];
 		player setDamage 1;
 	};
     case (!(player getVariable "unconscious")): {

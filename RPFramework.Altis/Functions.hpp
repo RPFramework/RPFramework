@@ -1,7 +1,7 @@
-class CfgFunctions 
+class CfgFunctions
 {
 	class Client
-	{	
+	{
 		class ATM
 		{
 			file = "Functions\core\ATM";
@@ -61,6 +61,7 @@ class CfgFunctions
 			class giveCashSubmit {};
 			class removeBank {};
 			class removeCash {};
+			class takeMoney {};
 		};
 		class Police
 		{
@@ -83,7 +84,7 @@ class CfgFunctions
 		};
 	};
 	class ClientModules
-	{	
+	{
 		class Config
 		{
 			file = "Functions\modules\CONFIG";

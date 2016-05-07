@@ -5,7 +5,7 @@
 class RscTitles
 {
 	#include "Functions\modules\CONFIG\moduleRscTitles.hpp"
-	class  HUD 
+	class  HUD
 	{
 		idd = 1000;
 		onLoad = "uiNamespace setVariable ['HUD',_this select 0]";
@@ -14,7 +14,7 @@ class RscTitles
 		movingEnable = 0;
 		fadein = 0;
 		fadeout = 0;
-		
+
 		class controls
 		{
 			/*class RscFrame_1800: RscFrame
@@ -102,7 +102,7 @@ class RscTitles
 				w = 0.0286458 * safezoneW;
 				h = 0.0439828 * safezoneH;
 			};
-		};	
+		};
 	};
 };
 
@@ -111,7 +111,7 @@ enableDebugConsole = 1;
 respawn = "BASE";
 disabledAI = 1;
 author = "RPFramework Team";
-onLoadName = "RPFramework 1.0.0";
+onLoadName = "RPFramework 1.0.1";
 onLoadMission = "RPFramework by RPFramework Team";
 respawndelay = 10;
 

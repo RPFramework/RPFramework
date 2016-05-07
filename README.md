@@ -1,5 +1,5 @@
 ![alt text](http://i.imgur.com/8CJibJN.png "Logo")
-## Version 1.0.0 (STABLE)
+## Version 1.0.1 (STABLE)
 # RPFramework
 Modular roleplaying mission framework for Arma 3. For license, check the LICENSE.txt file. Please note that this is by no means a mission that you can start playing on with your friends. This is a framework that you can build your own mission on. You can join the RPFramework Team simply by forking the repository on github and starting to make changes. Every contribution is appreciated.
 
@@ -141,6 +141,6 @@ Here is an example of a prepared statement you could include with your module. Y
 SQL1_1 = SELECT id, owner, name, maxmembers, bank, members FROM gangs WHERE active='1' AND members LIKE ?;
 SQL1_INPUTS = 1
 
-Number of Inputs = 1  
+Number of Inputs = 1
 OUTPUT = 1, 2-String, 3-String, 4, 5, 6
 ```

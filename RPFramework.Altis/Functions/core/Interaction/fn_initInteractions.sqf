@@ -75,5 +75,9 @@ RPF_InteractionMenuItems = [
 	[
 		["alive player"],
 		["Use Item", "[] call Client_fnc_openUseItem"]
+	],
+	[
+		["!(isNil {cursorTarget getVariable 'money'})"],
+		["Take money", "[cursorTarget] call Client_fnc_takeMoney"]
 	]
 ];
