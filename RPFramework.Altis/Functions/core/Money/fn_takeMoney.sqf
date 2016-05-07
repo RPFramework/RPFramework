@@ -1,5 +1,6 @@
 /*
 Author: Kerkkoh
+First Edit: 7.5.2016
 */
 params ["_ct"];
 _amount = _ct getVariable "money";
