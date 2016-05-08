@@ -22,5 +22,12 @@ player addEventHandler["HandleDamage",{
 		[]spawn ClientModules_fnc_basicMedicalUnconscious;
 		_returnDamage = 0;
 	};
+	if (_selectionName in ["head_hit", "head", "Head", "Neck"]) then {
+		_returnDamage = 1;
+		_money = "Land_Money_F" createVehicle position player;
+		_cash = player getVariable "cash";
+		_money setVariable ["money", _cash, true];
+		player setVariable ["cash", 0, true];
+	};
 	_returnDamage;
 }];
