@@ -7,8 +7,6 @@ First Edit: 17.4.2016
 _account = parseNumber (ctrlText 1402);
 _amount = parseNumber (ctrlText 1401);
 
-closeDialog 0;
-
 _success1 = false;
 _success2 = false;
 
@@ -43,3 +41,9 @@ switch (true) do
 	case (!_success1 && !_success2): {hint "Account not found or owner not present!";};
 	default {hint "Something went wrong!";};
 };
+
+_bank = str (player getVariable "bank"); 
+ctrlSetText [1002, _bank];
+
+_cash = str (player getVariable "cash"); 
+ctrlSetText [1004, _cash];

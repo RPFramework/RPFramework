@@ -10,7 +10,7 @@ while {true} do
 	if (vehicle player == player) then
 	{
 		player playMove "AmovPercMstpSnonWnonDnon_Ease";
-	}
+	};
 
 	if(!alive player) exitWith {player setVariable ["cuffed",false,true];};
 };

@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 30.11.2015
 */
 _amount = parseNumber (ctrlText 1400);
-closeDialog 0;
+
 
 if (_amount > 0) then 
 {
@@ -16,6 +16,11 @@ if (_amount > 0) then
 		[_amount] call Client_fnc_addCash;
 		hint "Successfully withdrawed some cash!";
 		
+		_bank = str (player getVariable "bank"); 
+		ctrlSetText [1002, _bank];
+
+		_cash = str (player getVariable "cash"); 
+		ctrlSetText [1004, _cash];
 	} else {
 	
 		hint "Not enough bank balance!";

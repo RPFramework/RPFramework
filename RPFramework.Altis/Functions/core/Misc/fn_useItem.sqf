@@ -3,6 +3,7 @@ Author: Kerkkoh
 First Edit: 24.4.2016
 */
 _index = lbCurSel 1500;
+if (_index == -1) exitWith {};
 _dataS = lbData [1500, _index];
 _data = call compile _dataS;
 _item = _data select 0;
@@ -15,6 +16,8 @@ _amount = _data select 1;
 		call compile _action;
 	};
 }forEach RPF_Usables;
+
+player removeItem _item;
 
 lbClear 1500;
 _items = [items player]call Client_fnc_sortArray;

@@ -18,13 +18,11 @@ switch (_type) do {
 		_check = [1, _amountPrice] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_amountPrice] call Client_fnc_removeCash;
-			closeDialog 0;
 			for "_i" from 1 to _amount step 1 do {
 				player addItem _class;
 			};
 			hint "You have bought the item(s)! Here you go.";
 		} else {
-			closeDialog 0;
 			hint "You don't have enough money!";
 		};
 	};
@@ -32,13 +30,11 @@ switch (_type) do {
 		_check = [1, _amountPrice] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_amountPrice] call Client_fnc_removeCash;
-			closeDialog 0;
 			for "_i" from 1 to _amount step 1 do {
 				player addMagazine _class;
 			};
 			hint "You have bought the magazine(s)! Here you go.";
 		} else {
-			closeDialog 0;
 			hint "You don't have enough money!";
 		};
 	};
@@ -46,11 +42,9 @@ switch (_type) do {
 		_check = [1, _price] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
-			closeDialog 0;
 			player addWeapon _class;
 			hint "You have bought the weapon! Here you go.";
 		} else {
-			closeDialog 0;
 			hint "You don't have enough money!";
 		};
 	};
@@ -58,11 +52,9 @@ switch (_type) do {
 		_check = [1, _price] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
-			closeDialog 0;
 			player addUniform _class;
 			hint "You have bought the clothes! Here you go.";
 		} else {
-			closeDialog 0;
 			hint "You don't have enough money!";
 		};
 	};
@@ -70,11 +62,9 @@ switch (_type) do {
 		_check = [1, _price] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
-			closeDialog 0;
 			player addVest _class;
 			hint "You have bought the clothes! Here you go.";
 		} else {
-			closeDialog 0;
 			hint "You don't have enough money!";
 		};
 	};
@@ -82,11 +72,9 @@ switch (_type) do {
 		_check = [1, _price] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
-			closeDialog 0;
 			player addHeadgear _class;
 			hint "You have bought the clothes! Here you go.";
 		} else {
-			closeDialog 0;
 			hint "You don't have enough money!";
 		};
 	};
@@ -94,11 +82,9 @@ switch (_type) do {
 		_check = [1, _price] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
-			closeDialog 0;
 			player addBackpack _class;
 			hint "You have bought the clothes! Here you go.";
 		} else {
-			closeDialog 0;
 			hint "You don't have enough money!";
 		};
 	};

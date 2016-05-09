@@ -66,7 +66,7 @@ RPF_InteractionMenuItems = [
 	],
 	[
 		["(count (attachedObjects player)) <= 0", "cursorTarget in RPF_ownedFurniture"],
-		["Pick up", "[cursorTarget] call Client_fnc_escort"]
+		["Pick up", "[cursorTarget] call Client_fnc_pickUp"]
 	],
 	[
 		["(count (attachedObjects player)) > 0", "((attachedObjects player) select 0) in RPF_ownedFurniture"],

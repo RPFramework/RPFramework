@@ -17,6 +17,19 @@ RPF_MedicCars = [
 	
 ];
 
+RPF_Edibles = [
+	["RPF_Items_Salema", 50],
+	["RPF_Items_Olives", 40],
+	["RPF_Items_BakedBeans", 60],
+	["RPF_Items_Cereal", 40],
+	["RPF_Items_RiceBox", 50]
+];
+RPF_Drinkables = [
+	["RPF_Items_CleanerSpray", 30],
+	["RPF_Items_Canteen", 100],
+	["RPF_Items_WaterBottle", 90]
+];
+
 RPF_Usables = [
 	["RPF_Items_Meth", "player removeItem 'RPF_Items_Meth';"],
 	["RPF_Items_Poppy", "player removeItem 'RPF_Items_Poppy';"],
@@ -29,10 +42,7 @@ RPF_Usables = [
 	
 	["RPF_Items_CleanerSpray", "['RPF_Items_CleanerSpray']call Client_fnc_drinkItem"],
 	["RPF_Items_Canteen", "['RPF_Items_Canteen']call Client_fnc_drinkItem"],
-	["RPF_Items_WaterBottle", "['RPF_Items_WaterBottle']call Client_fnc_drinkItem"],
-	
-	["RPF_Items_PoppySeed", "['RPF_Items_PoppySeed']call ClientModules_fnc_plantPlantae"],
-	["RPF_Items_OliveSeed", "['RPF_Items_OliveSeed']call ClientModules_fnc_plantPlantae"]
+	["RPF_Items_WaterBottle", "['RPF_Items_WaterBottle']call Client_fnc_drinkItem"]
 ];
 
 RPF_PhysicalItems = [];

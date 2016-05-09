@@ -45,7 +45,7 @@ switch (true) do {
 			[_price] call Client_fnc_removeCash;
 			closeDialog 0;
 			_newfurn = _class createVehicle position player;
-			[_newfurn] call Client_fnc_escort;
+			[_newfurn] call Client_fnc_pickUp;
 			RPF_ownedFurniture pushBack _newfurn;
 			if (_class == RPF_Fishingnet) then {
 				[[_newfurn], "ServerModules_fnc_addFishingnet", false, false, false] call BIS_fnc_MP;

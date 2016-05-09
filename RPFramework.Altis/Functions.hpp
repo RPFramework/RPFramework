@@ -50,6 +50,7 @@ class CfgFunctions
 			class openUseItem {};
 			class getMedics {};
 			class getPolice {};
+			class pickUp {};
 		};
 		class Money
 		{

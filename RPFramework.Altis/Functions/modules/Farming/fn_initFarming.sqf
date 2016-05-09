@@ -26,15 +26,15 @@ RPF_plantTypes = [
 	"RPF_Plant_Poppy"
 ];
 
+_usables = [
+	["RPF_Items_PoppySeed", "['RPF_Items_PoppySeed']call ClientModules_fnc_plantPlantae"],
+	["RPF_Items_OliveSeed", "['RPF_Items_OliveSeed']call ClientModules_fnc_plantPlantae"]
+];
+{
+	RPF_Usables pushBack _x;
+}forEach _usables;
+
 _menuItems = [
-	[
-		["'RPF_Items_PoppySeed' in (items player)", "(surfaceType position player) in RPF_farmGroundTypes", "!(isOnRoad ASLToAGL getPosASL player)"],
-		["Plant Poppy", "['RPF_Items_PoppySeed'] call ClientModules_fnc_plantPlantae"]
-	],
-	[
-		["'RPF_Items_OliveSeed' in (items player)", "(surfaceType position player) in RPF_farmGroundTypes", "!(isOnRoad ASLToAGL getPosASL player)"],
-		["Plant Olive", "['RPF_Items_OliveSeed'] call ClientModules_fnc_plantPlantae"]
-	],
 	[
 		["(typeOf cursorTarget) in RPF_plantTypes"],
 		["Destroy Plant", "[cursorTarget] call ClientModules_fnc_destroyPlantae"]
@@ -47,4 +47,3 @@ _menuItems = [
 {
 	RPF_InteractionMenuItems pushBack _x;
 }forEach _menuItems;
-

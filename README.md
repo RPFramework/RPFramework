@@ -1,5 +1,5 @@
 ![alt text](http://i.imgur.com/8CJibJN.png "Logo")
-## Version 1.0.1 (STABLE)
+## Version 1.1.0 (STABLE)
 # RPFramework
 Modular roleplaying mission framework for Arma 3. For license, check the LICENSE.txt file. Please note that this is by no means a mission that you can start playing on with your friends. This is a framework that you can build your own mission on. You can join the RPFramework Team simply by forking the repository on github and starting to make changes. Every contribution is appreciated.
 
@@ -105,6 +105,37 @@ _menuItems = [
 }forEach _menuItems;
 ```
 Check the example module for an example!
+
+You can add drinkables and edibles to RPFramework's "Use Item" system by adding them to the correct global arrays in the correct format.
+Example:
+```javascript
+_edible = [
+	["RPF_Items_Olives", 20],
+	[classname, amount_of_hunger_removed]
+];
+{
+	RPF_Edibles pushBack _x;
+}forEach _edible;
+_drinkable = [
+	["RPF_Items_Canteen", 90],
+	[classname, amount_of_thirst_removed]
+];
+{
+	RPF_Drinkables pushBack _x;
+}forEach _drinkable;
+```
+Adding usable items happens by adding the item to RPF_Usables array just like you have done with the interaction actions, drinkables and edibles.
+Example:
+```javascript
+_usable = [
+	["RPF_Items_Olives", "['RPF_Items_Olives']call Client_fnc_eatItem"],
+	["RPF_Items_Canteen", "['RPF_Items_Canteen']call Client_fnc_drinkItem"],
+	[classname, action]
+];
+{
+	RPF_Edibles pushBack _x;
+}forEach _usable;
+```
 
 Now important step is making sure to include all your functions in the Functions.hpp which will end up in CfgFunctions.
 

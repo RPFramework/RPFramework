@@ -111,7 +111,7 @@ enableDebugConsole = 1;
 respawn = "BASE";
 disabledAI = 1;
 author = "RPFramework Team";
-onLoadName = "RPFramework 1.0.1";
+onLoadName = "RPFramework 1.1.0";
 onLoadMission = "RPFramework by RPFramework Team";
 respawndelay = 10;
 
