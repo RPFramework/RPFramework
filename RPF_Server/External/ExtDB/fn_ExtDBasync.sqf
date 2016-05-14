@@ -14,7 +14,7 @@ private["_queryStmt","_mode","_queryResult","_key","_return","_loop"];
 _queryStmt = [_this,0,"",[""]] call BIS_fnc_param;
 _mode = [_this,1,1,[0]] call BIS_fnc_param;
 
-_key = "extDB2" callExtension format["%1:%2:%3",_mode,FETCH_CONST(life_sql_id),_queryStmt];
+_key = "extDB2" callExtension format["%1:%2:%3",_mode,(call extDB_SQL_CUSTOM_ID),_queryStmt];
 
 if(_mode isEqualTo 1) exitWith {true};
 
