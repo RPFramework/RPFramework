@@ -7,9 +7,10 @@ Modular roleplaying mission framework for Arma 3. For license, check the LICENSE
 ## Benefits of a modular approach
 So why should you hop on board with the modular approach to this framework? This modular approach isn't a good approach for a normal mission but for a framework it has been proven effective. Think of Arma 3 as a framework and mods as modules; modules can be easily enabled and disabled by the user and, of course, installed easily without messing with the core files of the game. If you got the example you might already think it's a good approach for this framework as proven by Arma. In the RPFramework installing modules isn't as easy as in Arma 3, but it gets pretty close. I have seen the attempts of modifying missions like Altis Life that people have tried to use as a framework and it gets really messy, but this way you keep your modules and original files from the core separated.
 
-## RPFramework Team
+## RPFramework Team // Contributors
 * **Kerkko(h)**
 * **Elephxnt**
+* **NiiRoZz**
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework
