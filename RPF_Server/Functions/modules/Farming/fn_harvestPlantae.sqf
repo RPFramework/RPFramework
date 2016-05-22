@@ -12,7 +12,7 @@ if (_state >= 0) then {
 		case "RPF_Plant_Poppy": {
 			_item = "RPF_Items_Poppy";
 			_pia = RPF_plantArray find _plant;
-			
+
 			RPF_plantArray deleteAt _pia;
 			deleteVehicle _plant;
 			_player addItem _item;
@@ -20,12 +20,12 @@ if (_state >= 0) then {
 		case "RPF_Plant_Olive": {
 			_item = "RPF_Items_Olives";
 			_pia = RPF_plantArray find _plant;
-			
+
 			RPF_plantArray deleteAt _pia;
 			deleteVehicle _plant;
 			_player addItem _item;
 		};
 	};
 } else {
-	[["This plant is not fully grown yet!"], "Client_fnc_hintMP", _player, false] spawn BIS_fnc_MP;
+	["This plant is not fully grown yet!"] remoteExecCall ["Client_fnc_hintMP", _player];
 };

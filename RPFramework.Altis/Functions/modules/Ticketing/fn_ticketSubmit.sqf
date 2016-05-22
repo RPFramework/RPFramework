@@ -8,11 +8,11 @@ closeDialog 0;
 
 params ["_target", "_officer"];
 
-if (_amount > 0) then 
+if (_amount > 0) then
 {
-	[[_officer, _amount, _reason], "ClientModules_fnc_ticketGet", _target, false] spawn BIS_fnc_MP;
+	[_officer, _amount, _reason] remoteExecCall ["ClientModules_fnc_ticketGet", _target];
 }
-else 
+else
 {
 	hint "Ticket amount must be more than $0!";
 };

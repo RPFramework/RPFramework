@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 19.4.2016
 */
 
-while {true} do {
+for "_i" from 0 to 1 step 0 do {
 	sleep 240;
 	RPF_hunger = RPF_hunger + 1;
 	RPF_thirst = RPF_thirst + 2;

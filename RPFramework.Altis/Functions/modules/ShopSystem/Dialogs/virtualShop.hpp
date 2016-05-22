@@ -83,7 +83,7 @@ class virtualShop
 			y = 0.686927 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = [cursorTarget]call ClientModules_fnc_openVirtualShopSell;
+			action = [cursorObject]call ClientModules_fnc_openVirtualShopSell;
 		};
 	};
 };

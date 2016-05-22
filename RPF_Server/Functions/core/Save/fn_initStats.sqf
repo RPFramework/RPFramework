@@ -18,7 +18,7 @@ if (_booli) then {
 	diag_log "playerInfo Returned:";
 	diag_log _returned;
 	_res = _fetch select 0;
-	
+
 	_items = _res select 0;
 	_clothes = _res select 1;
 	_pweapon = _res select 2;
@@ -30,15 +30,15 @@ if (_booli) then {
 	_position = _res select 8;
 	_garage = _res select 9;
 	_bankAccount = _res select 10;
-	
+
 	_player setVariable ["cash", _cash, true];
 	_player setVariable ["bank", _bank, true];
 	_player setVariable ["bankAccount", _bankAccount, true];
 	_player setVariable ["cop", _cop, true];
 	_player setVariable ["ems", _ems, true];
 	_player setVariable ["garage", _garage, true];
-	
-	[[_items, _clothes, _pweapon, _sweapon, _position], "Client_fnc_loadInventory", _player, false] spawn BIS_fnc_MP;
+
+	[_items, _clothes, _pweapon, _sweapon, _position] remoteExecCall ["Client_fnc_loadInventory", _player];
 } else {
 	_name = name _player;
 	_items = [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)];
@@ -51,13 +51,12 @@ if (_booli) then {
 	_ems = -1;
 	_position = position _player;
 	_garage = [];
-	
+
 	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12", _uid, _name, _items, _clothes, _pweapon, _sweapon, _cash, _bank, _cop, _ems, _position, _garage];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	diag_log "Inserting New Player";
-	
+
 	sleep 3;
-	
+
 	[_player] spawn Server_fnc_initStats;
 }
-

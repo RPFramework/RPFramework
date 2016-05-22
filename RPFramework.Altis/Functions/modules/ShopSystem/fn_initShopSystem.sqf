@@ -5,12 +5,12 @@ First Edit: 22.4.2016
 
 _menuItems = [
 	[
-		["!(isNil {cursorTarget getVariable 'buyableThing'})"],
-		["Buy this", "[cursorTarget] call ClientModules_fnc_openPhysicalShop"]
+		["!(isNil {cursorObject getVariable 'buyableThing'})"],
+		["Buy this", "[cursorObject] call ClientModules_fnc_openPhysicalShop"]
 	],
 	[
-		["!(isNil {cursorTarget getVariable 'shopSystemShop'})"],
-		["Open shop", "[cursorTarget] call ClientModules_fnc_openVirtualShop"]
+		["!(isNil {cursorObject getVariable 'shopSystemShop'})"],
+		["Open shop", "[cursorObject] call ClientModules_fnc_openVirtualShop"]
 	]
 ];
 {

@@ -1,6 +1,7 @@
 #include "Functions.hpp"
 #include "Sounds.hpp"
 #include "Dialogs\Dialogs.hpp"
+#include "CfgRemoteExec.hpp"
 
 class RscTitles
 {

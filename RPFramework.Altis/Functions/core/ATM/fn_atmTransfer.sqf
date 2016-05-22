@@ -11,27 +11,26 @@ _success1 = false;
 _success2 = false;
 
 {
-	
 	_playerAccount = _x getVariable "bankAccount";
-	
-	if (_playerAccount == _account) then 
+
+	if (_playerAccount == _account) then
 	{
-	
+
 		_check = [2, _amount] call Client_fnc_checkMoney;
-		if (_check) then 
+		if (_check) then
 		{
-		
+
 			[_amount] call Client_fnc_removeBank;
-			[[_amount], "Client_fnc_addBank", _x, false] spawn BIS_fnc_MP;
+			[_amount] remoteExecCall ["Client_fnc_addBank", _x];
 			_str = format ["You have received %1 from %2", _amount, name player];
-			[[_str], "Client_fnc_hintMP", _x, false] spawn BIS_fnc_MP;
+			[_str] remoteExecCall ["Client_fnc_hintMP", _x];
 			_success2 = true;
-			
+
 		};
 		_success1 = true;
-		
+
 	};
-	
+
 }forEach allPlayers;
 
 switch (true) do
@@ -42,8 +41,8 @@ switch (true) do
 	default {hint "Something went wrong!";};
 };
 
-_bank = str (player getVariable "bank"); 
+_bank = str (player getVariable "bank");
 ctrlSetText [1002, _bank];
 
-_cash = str (player getVariable "cash"); 
+_cash = str (player getVariable "cash");
 ctrlSetText [1004, _cash];
