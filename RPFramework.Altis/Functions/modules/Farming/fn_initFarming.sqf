@@ -36,12 +36,12 @@ _usables = [
 
 _menuItems = [
 	[
-		["(typeOf cursorTarget) in RPF_plantTypes"],
-		["Destroy Plant", "[cursorTarget] call ClientModules_fnc_destroyPlantae"]
+		["(typeOf cursorObject) in RPF_plantTypes"],
+		["Destroy Plant", "[cursorObject] call ClientModules_fnc_destroyPlantae"]
 	],
 	[
-		["(typeOf cursorTarget) in RPF_plantTypes"],
-		["Harvest Plant", "[cursorTarget] call ClientModules_fnc_harvestPlantae"]
+		["(typeOf cursorObject) in RPF_plantTypes"],
+		["Harvest Plant", "[cursorObject] call ClientModules_fnc_harvestPlantae"]
 	]
 ];
 {

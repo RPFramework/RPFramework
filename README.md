@@ -96,7 +96,7 @@ _menuItems = [
 		["Police DB", "[]call ClientModules_fnc_policeComputer"]
 	],
 	[
-		["cursorTarget isKindOf 'Man'", "!alive cursorTarget"],
+		["cursorObject isKindOf 'Man'", "!alive cursorObject"],
 		["Try to wake up the dead guy", "hint 'Good try, but you can not wake up the dead'"]
 	]
 ];

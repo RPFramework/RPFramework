@@ -22,5 +22,5 @@ if (count _no == 0) then {
 		};
 	};
 } else {
-	[["You can't plant a new plant so close to another one!"], "Client_fnc_hintMP", _player, false] spawn BIS_fnc_MP;
+	["You can't plant a new plant so close to another one!"] remoteExecCall ["Client_fnc_hintMP", _player];
 };
