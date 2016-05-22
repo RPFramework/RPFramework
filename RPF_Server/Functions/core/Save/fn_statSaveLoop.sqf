@@ -6,7 +6,6 @@ Last Edit: 26.11.2015
 while {true} do {
 	sleep 300;
 	{
-	diag_log "Stat Save Loop";
 		_uid = getPlayerUID _x;
 		
 		_checkstr = format ["existPlayerInfo:%1", _uid];
@@ -27,8 +26,6 @@ while {true} do {
 			
 			_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9", _items, _clothes, _pweapon, _sweapon, _cash, _bank, _position, _garage, _uid];
 			_update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
-			diag_log "Updating Player - (Loop)";
-			diag_log _updatestr;
 		};
 	}forEach allPlayers;
 };

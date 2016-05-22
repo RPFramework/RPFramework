@@ -1,5 +1,5 @@
 ![alt text](http://i.imgur.com/8CJibJN.png "Logo")
-## Version 1.1.0 (STABLE)
+## Version 2.0.0 (STABLE)
 # RPFramework
 Modular roleplaying mission framework for Arma 3. For license, check the LICENSE.txt file. Please note that this is by no means a mission that you can start playing on with your friends. This is a framework that you can build your own mission on. You can join the RPFramework Team simply by forking the repository on github and starting to make changes. Every contribution is appreciated.
 
@@ -18,9 +18,9 @@ So why should you hop on board with the modular approach to this framework? This
 2. Read documents called **LICENSE.txt** and **COPYING.txt**
 3. Setting up the database
 	1. Navigate to folder **External Files**, take out **rpframework.sql** and import it into a MySQL database
-	2. Download extDB2 http://www.armaholic.com/page.php?id=26096 and set it up on your server
-	3. Replace **extdb-conf.ini** in **@ExtDB2** with the same file provided in folder **External Files** and find line **74** where you should change the mysql details to correspond to your database's.
-	4. Drag and drop the **extDB** folder from **External Files** to **@ExtDB2** and choose to replace everything
+	2. Download ExtDB3 https://bitbucket.org/torndeco/extdb3/downloads and set it up on your server (Instructions here: https://bitbucket.org/torndeco/extdb3/wiki/Installation)
+	3. Replace **extdb-conf.ini** in **@ExtDB3** with the same file provided in folder **External Files** and find line **74** where you should change the mysql details to correspond to your database's.
+	4. Drag and drop the **extDB** folder from **External Files** to **@ExtDB3** and choose to replace everything
 4. Setting up the mission and server files for RPFramework
 	1. Navigate to folder **bin** and move **@RPF_Server** and **@RPFramework** to your server's main Arma 3 Folder
 	2. Move **RPFramework.Altis** to your server's MPMissions folder
@@ -166,13 +166,19 @@ class YourModule {
 
 You can add sounds, dialogs and titles in your Sounds.hpp, Dialogs.hpp and RscTitles.hpp. You can head over to BI wiki to find out more about how these configs work. Sounds and RscTitles will be included inside CfgSounds and RscTitles but Dialogs.hpp will be included straight in to description.ext so this allows you to define other things in to description.ext inside Dialogs.hpp.
 
-RPFramework uses ExtDB2 and its SQL_CUSTOM_V2 protocol to interact with a MySQL database. You can read about this extension and protocol over at https://github.com/Torndeco/extDB2 (Apparently the developer quit developing and took the documentation down..) and include the prepared statements that your module needs with your package.
+RPFramework uses ExtDB3 and its SQL_CUSTOM protocol to interact with a MySQL database. You can read about this extension and protocol over at https://bitbucket.org/torndeco/extdb3/wiki/browse/ and include the prepared statements that your module needs with your package.
 Here is an example of a prepared statement you could include with your module. You should use `[_query, _mode] call ExternalS_fnc_ExtDBasync;` for database calls, but RPFramework does indeed offer an alternative which does the same thing as ExternalS_fnc_ExtDBasync, it's called with `[_mode, _query] call ExternalS_fnc_ExtDBquery;`.
+Source: https://bitbucket.org/torndeco/extdb3/wiki/extDB3%20-%20sql_custom.ini
 ```
-[gangInfo]
-SQL1_1 = SELECT id, owner, name, maxmembers, bank, members FROM gangs WHERE active='1' AND members LIKE ?;
-SQL1_INPUTS = 1
+[getPlayerSave]
+;; Prepared Statement = true
+;;   If set to false, uses SQL instead of Prepared Statement
+;; Return InsertID = false
 
-Number of Inputs = 1
-OUTPUT = 1, 2-String, 3-String, 4, 5, 6
+;; Strip Chars = ""
+;; Strip Chars Mode = 0
+;;    Incase you want to override the Strip Chars from [Default]
+
+SQL1_1 = SELECT * FROM PlayerSave WHERE PlayerUID = ? AND MapID = ?;
+SQL1_INPUTS = 1,2
 ```

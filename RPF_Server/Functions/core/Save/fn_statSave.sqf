@@ -18,5 +18,3 @@ _sweapon = handgunWeapon _player;
 
 _updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9", _items, _clothes, _pweapon, _sweapon, _cash, _bank, _position, _garage, _uid];
 _update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
-diag_log "Saving Player Stats - Disconnect";
-diag_log _updatestr;

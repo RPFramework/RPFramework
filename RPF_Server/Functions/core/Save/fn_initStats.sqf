@@ -2,7 +2,6 @@
 Author: Kerkkoh
 Last Edit: 23.11.2015
 */
-diag_log "fn_initStats";
 _player = _this select 0;
 
 _uid = getPlayerUID _player;
@@ -15,8 +14,6 @@ if (_booli) then {
 	_fetchstr = format ["playerInfo:%1", _uid];
 	_fetch = [_fetchstr, 2] call ExternalS_fnc_ExtDBasync;
 	_returned = str _fetch;
-	diag_log "playerInfo Returned:";
-	diag_log _returned;
 	_res = _fetch select 0;
 	
 	_items = _res select 0;
@@ -54,7 +51,6 @@ if (_booli) then {
 	
 	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12", _uid, _name, _items, _clothes, _pweapon, _sweapon, _cash, _bank, _cop, _ems, _position, _garage];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
-	diag_log "Inserting New Player";
 	
 	sleep 3;
 	

@@ -7,7 +7,7 @@ enableSaving [false, false];
 sleep 1;
 
 if (isServer) then {
-	["rpframework", "SQL_CUSTOM_V2", "rpframework"] spawn ExternalS_fnc_ExtDBinit;
+	["rpframework", "SQL_CUSTOM", "rpframework.ini"] spawn ExternalS_fnc_ExtDBinit;
 	sleep 3;
 	[] call Server_fnc_handleDisconnect;
 	[] spawn Server_fnc_statSaveLoop;
