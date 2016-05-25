@@ -3,9 +3,9 @@ Author: Kerkkoh
 First Edit: 22.4.2016
 
 params
-0 - Object - cursorTarget
+0 - Object - cursorObject
 
-cursorTarget setVariable ["buyableThing", ["C_Offroad_01_F", 10000, 0], true];
+cursorObject setVariable ["buyableThing", ["C_Offroad_01_F", 10000, 0], true];
 buyableThing array format ["C_Offroad_01_F", 10000, 0] >>> ["Classname", price, type(0 - Car, 1 - Item, 2 - Physical item (Furniture / Fishing nets))]
 						  ["RPF_Items_Olives", 10000, 1]
 */

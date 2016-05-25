@@ -29,7 +29,7 @@ class physicalShop
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = [cursorTarget]call ClientModules_fnc_buyPhysicalShop;
+			action = [cursorObject]call ClientModules_fnc_buyPhysicalShop;
 		};
 		class RscText_1001: RscText
 		{

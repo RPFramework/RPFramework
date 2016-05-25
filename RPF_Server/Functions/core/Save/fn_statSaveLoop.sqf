@@ -3,7 +3,7 @@ Author: Kerkkoh
 Last Edit: 26.11.2015
 */
 
-while {true} do {
+for "_i" from 0 to 1 step 0 do {
 	sleep 300;
 	{
 		_uid = getPlayerUID _x;

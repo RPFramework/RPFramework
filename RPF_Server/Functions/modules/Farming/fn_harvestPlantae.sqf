@@ -27,5 +27,5 @@ if (_state >= 0) then {
 		};
 	};
 } else {
-	[["This plant is not fully grown yet!"], "Client_fnc_hintMP", _player, false] spawn BIS_fnc_MP;
+	["This plant is not fully grown yet!"] remoteExecCall ["Client_fnc_hintMP", _player];
 };

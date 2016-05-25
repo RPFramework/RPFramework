@@ -35,7 +35,7 @@ if (_booli) then {
 	_player setVariable ["ems", _ems, true];
 	_player setVariable ["garage", _garage, true];
 	
-	[[_items, _clothes, _pweapon, _sweapon, _position], "Client_fnc_loadInventory", _player, false] spawn BIS_fnc_MP;
+	[_items, _clothes, _pweapon, _sweapon, _position] remoteExecCall ["Client_fnc_loadInventory", _player];
 } else {
 	_name = name _player;
 	_items = [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)];

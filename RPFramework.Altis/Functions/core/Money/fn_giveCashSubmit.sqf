@@ -14,10 +14,10 @@ if (_amount > 0) then
 	if (_enoughCash) then 
 	{
 		[_amount] call Client_fnc_removeCash;
-		[[_amount], "Client_fnc_addCash", _target, false] spawn BIS_fnc_MP;
+		[_amount] remoteExecCall ["Client_fnc_addCash", _target];
 		
 		_text = format ["%1 gave you %2 $", _giver, _amount];
-		[[_text], "Client_fnc_hintMP", _target, false] spawn BIS_fnc_MP;
+		[_text] remoteExecCall ["Client_fnc_hintMP", _target];
 	} else {
 		hint "You don't have that much cash!";
 	};

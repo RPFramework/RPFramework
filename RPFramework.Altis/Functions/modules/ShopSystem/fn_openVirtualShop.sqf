@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 23.4.2016
 
 params
-0 - Object - cursorTarget
+0 - Object - cursorObject
 
 _array =
 [
@@ -28,7 +28,7 @@ _array =
 		["class", SELLprice, type]
 	]
 ];
-cursorTarget setVariable ["shopSystemShop", _array, true];
+cursorObject setVariable ["shopSystemShop", _array, true];
 Types:
 0 - Item
 1 - Magazine

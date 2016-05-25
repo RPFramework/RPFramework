@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 15.3.2016
 */
 disableSerialization;
-while {true} do {
+for "_i" from 0 to 1 step 0 do {
 	_hud = uiNamespace getVariable ["HUD",displayNull];
 
 	if(isNull _hud) then 

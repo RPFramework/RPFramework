@@ -8,4 +8,4 @@ params ["_targetVehicle"];
 _target = (attachedObjects player) select 0;
 
 [] call Client_fnc_escortStop;
-[[_targetVehicle], "Client_fnc_putInCarTarget", _target, false] spawn BIS_fnc_MP;
+[_targetVehicle] remoteExecCall ["Client_fnc_putInCarTarget", _target];

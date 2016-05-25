@@ -22,7 +22,7 @@ _uid = str (getPlayerUID player);
 _positionPlayer = getPos player;
 _medics = []call Client_fnc_getMedics;
 {
-	[[0, _uid, _positionPlayer], "ClientModules_fnc_basicMedicalMarker", _x, false] spawn BIS_fnc_MP;
+	[0, _uid, _positionPlayer] remoteExecCall ["ClientModules_fnc_basicMedicalMarker", _x];
 	_unconsciousMarker = createMarkerLocal [_uid, _positionPlayer];
 	_unconsciousMarker setMarkerShapeLocal "ICON";
 	_unconsciousMarker setMarkerTypeLocal "KIA";
@@ -30,7 +30,8 @@ _medics = []call Client_fnc_getMedics;
 	_unconsciousMarker setMarkerColorLocal "ColorRed";
 }forEach _medics;
 _stabilizedOnce = false;
-while {alive player && time <= _timer && player getVariable "unconscious" && !isNull player} do {
+for "_i" from 0 to 1 step 0 do {
+	if (!alive player || time >= _timer || !(player getVariable "unconscious") || isNull player) exitWith {};
 	if (player getVariable "stabilized" && !_stabilizedOnce) then {
 		_newTime = RPF_UnconsciousTime * 2;
 		_timer = _timer + _newTime;
@@ -47,7 +48,7 @@ switch (true) do {
 		_positionPlayer = getPos player;
 		_medics = []call Client_fnc_getMedics;
 		{
-			[[1, _uid, _positionPlayer], "ClientModules_fnc_basicMedicalMarker", _x, false] spawn BIS_fnc_MP;
+			[1, _uid, _positionPlayer] remoteExecCall ["ClientModules_fnc_basicMedicalMarker", _x];
 		}forEach _medics;
 		player enableSimulation true;
 		player setVariable ["tf_globalVolume", 1.0];
@@ -67,7 +68,7 @@ switch (true) do {
 		_positionPlayer = getPos player;
 		_medics = []call Client_fnc_getMedics;
 		{
-			[[1, _uid, _positionPlayer], "ClientModules_fnc_basicMedicalMarker", _x, false] spawn BIS_fnc_MP;
+			[1, _uid, _positionPlayer] remoteExecCall ["ClientModules_fnc_basicMedicalMarker", _x];
 		}forEach _medics;
 		player enableSimulation true;
 		player switchMove "";

@@ -1,5 +1,5 @@
 ![alt text](http://i.imgur.com/8CJibJN.png "Logo")
-## Version 2.0.0 (STABLE)
+## Version 3.0.0 (STABLE)
 # RPFramework
 Modular roleplaying mission framework for Arma 3. For license, check the LICENSE.txt file. Please note that this is by no means a mission that you can start playing on with your friends. This is a framework that you can build your own mission on. You can join the RPFramework Team simply by forking the repository on github and starting to make changes. Every contribution is appreciated.
 
@@ -97,7 +97,7 @@ _menuItems = [
 		["Police DB", "[]call ClientModules_fnc_policeComputer"]
 	],
 	[
-		["cursorTarget isKindOf 'Man'", "!alive cursorTarget"],
+		["cursorObject isKindOf 'Man'", "!alive cursorObject"],
 		["Try to wake up the dead guy", "hint 'Good try, but you can not wake up the dead'"]
 	]
 ];
@@ -182,3 +182,13 @@ Source: https://bitbucket.org/torndeco/extdb3/wiki/extDB3%20-%20sql_custom.ini
 SQL1_1 = SELECT * FROM PlayerSave WHERE PlayerUID = ? AND MapID = ?;
 SQL1_INPUTS = 1,2
 ```
+
+If your module is using remoteExec, remember to add the functions it needs to the RemoteFunctions.hpp located in every module's main folder.
+Example:
+```
+        /* Client functions */
+        Function(Client_fnc_loadInventory,CLIENT)
+        /* Server functions */
+        Function(Server_fnc_initStats,SERVER)
+```
+For more info: https://community.bistudio.com/wiki/CfgRemoteExec and https://community.bistudio.com/wiki/Arma_3_Remote_Execution

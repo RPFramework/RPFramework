@@ -17,7 +17,7 @@ if (isServer) then {
 	waitUntil {sleep 0.1; !(isNil {player}) && player == player && alive player};
 	cutText ["Loading in...","BLACK",1];
 	sleep 5;
-	[[player], "Server_fnc_initStats", false, false, false] call BIS_fnc_MP;
+	[player] remoteExecCall ["Server_fnc_initStats", 2];
 	sleep 3;
 	
 	cutText ["","plain",1];

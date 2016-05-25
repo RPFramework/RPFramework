@@ -48,7 +48,7 @@ switch (true) do {
 			[_newfurn] call Client_fnc_pickUp;
 			RPF_ownedFurniture pushBack _newfurn;
 			if (_class == RPF_Fishingnet) then {
-				[[_newfurn], "ServerModules_fnc_addFishingnet", false, false, false] call BIS_fnc_MP;
+				[_newfurn] remoteExecCall ["ServerModules_fnc_addFishingnet", 2];
 			};
 			hint "You have bought the item! Here you go.";
 		} else {

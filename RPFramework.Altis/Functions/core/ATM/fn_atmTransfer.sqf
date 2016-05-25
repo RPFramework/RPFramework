@@ -22,9 +22,9 @@ _success2 = false;
 		{
 		
 			[_amount] call Client_fnc_removeBank;
-			[[_amount], "Client_fnc_addBank", _x, false] spawn BIS_fnc_MP;
+			[_amount] remoteExecCall ["Client_fnc_addBank", _x];
 			_str = format ["You have received %1 from %2", _amount, name player];
-			[[_str], "Client_fnc_hintMP", _x, false] spawn BIS_fnc_MP;
+			[_str] remoteExecCall ["Client_fnc_hintMP", _x];
 			_success2 = true;
 			
 		};

@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 23.4.2016
 
 params
-0 - Object - cursorTarget
+0 - Object - cursorObject
 */
 params ["_ct"];
 
