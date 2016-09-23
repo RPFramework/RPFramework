@@ -51,6 +51,11 @@ class CfgFunctions
 			class getMedics {};
 			class getPolice {};
 			class pickUp {};
+/*	Pending Later Reintegration
+			class hygienicItem {};
+			class latrineItem {};
+			class energyItem {};
+*/
 		};
 		class Money
 		{

@@ -38,7 +38,7 @@ class RscTitles
 			class RscPicture_1201: RscPicture
 			{
 				idc = -1;
-				text = "RPF_General\data\hpIcon.paa";
+				text = "RPF_General\data\healthIcon.paa";
 				x = 0.929688 * safezoneW + safezoneX;
 				y = 0.829871 * safezoneH + safezoneY;
 				w = 0.0286458 * safezoneW;
@@ -112,7 +112,7 @@ enableDebugConsole = 1;
 respawn = "BASE";
 disabledAI = 1;
 author = "RPFramework Team";
-onLoadName = "RPFramework 3.0.0";
+onLoadName = "RPFramework 3.0.1";
 onLoadMission = "RPFramework by RPFramework Team";
 respawndelay = 10;
 
