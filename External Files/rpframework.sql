@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 -- Database: `rpframework`
 --
 
+CREATE DATABASE IF NOT EXISTS rpframework;
+USE rpframework;
+
 -- --------------------------------------------------------
 
 --
