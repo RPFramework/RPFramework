@@ -5,3 +5,4 @@
 #include "..\Farming\RemoteFunctions.hpp"
 #include "..\ShopSystem\RemoteFunctions.hpp"
 #include "..\BasicMedical\RemoteFunctions.hpp"
+#include "..\Delivery\RemoteFunctions.hpp"

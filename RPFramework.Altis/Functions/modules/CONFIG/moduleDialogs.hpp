@@ -5,3 +5,4 @@
 #include "..\Farming\Dialogs.hpp"
 #include "..\ShopSystem\Dialogs.hpp"
 #include "..\BasicMedical\Dialogs.hpp"
+#include "..\Delivery\Dialogs.hpp"

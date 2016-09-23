@@ -15,7 +15,8 @@ _cModules = [
 	"ClientModules_fnc_initFishing",
 	"ClientModules_fnc_initFarming",
 	"ClientModules_fnc_initShopSystem",
-	"ClientModules_fnc_initBasicMedical"
+	"ClientModules_fnc_initBasicMedical",
+	"ClientModules_fnc_initDelivery"
 ];
 
 

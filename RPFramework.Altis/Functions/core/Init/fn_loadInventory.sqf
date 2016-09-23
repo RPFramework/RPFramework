@@ -30,6 +30,9 @@ player addUniform (_clothes select 0);
 player addVest (_clothes select 1);
 player addBackpack (_clothes select 2);
 player addHeadgear (_clothes select 3);
+player addItem "ItemMap";
+player addItem "ItemGPS";
+player addItem "ItemWatch";
 
 _uitems = _items select 0;
 _vitems = _items select 1;

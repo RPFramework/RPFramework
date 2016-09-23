@@ -5,3 +5,4 @@
 #include "..\Farming\RscTitles.hpp"
 #include "..\ShopSystem\RscTitles.hpp"
 #include "..\BasicMedical\RscTitles.hpp"
+#include "..\Delivery\RscTitles.hpp"
