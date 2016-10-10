@@ -2,19 +2,12 @@ class CfgFunctions
 {
 	class Client
 	{
-		class ATM
-		{
-			file = "Functions\core\ATM";
-			class atmDeposit {};
-			class atmTransfer {};
-			class atmWithdraw {};
-			class openATM {};
-		};
 		class Garage
 		{
 			file = "Functions\core\Garage";
 			class fetchCar {};
 			class openGarage {};
+			class receiveGarage {};
 			class storeCar {};
 		};
 		class Init
@@ -51,6 +44,7 @@ class CfgFunctions
 			class getMedics {};
 			class getPolice {};
 			class pickUp {};
+			class switchDutyStatus {};
 		};
 		class Money
 		{
@@ -82,6 +76,11 @@ class CfgFunctions
 		{
 			file = "Functions\core\Vehicle";
 			class useKey {};
+			class vehicleHitGet {};
+			class vehicleHitLoad {};
+			class openTrunk {};
+			class storeTrunk {};
+			class takeTrunk {};
 		};
 	};
 	class ClientModules

@@ -24,13 +24,14 @@ _veh5 lock true;
 
 []spawn ServerModules_fnc_vehicleShopLoop;
 
-
-
 _net = "CargoNet_01_box_F" createVehicle [16777.7,12630.4,-0.0249977];
 _net setDir 93.6125;
 _net setVariable ["buyableThing", ["CargoNet_01_box_F", 50, 2], true];
 
-
+_lab = "OfficeTable_01_new_F" createVehicle [16776,12635.4,-0.0249977];
+_lab setDir 2.99588;
+_lab setVariable ["buyableThing", ["OfficeTable_01_new_F", 100, 2], true];
+_lab setVariable ["methLab", true, true];
 
 _generalStoreMarker = createMarker ["generalStore", [16774.1,12633,-0.0249958]]; 
 _generalStoreMarker setMarkerShape "ICON"; 
@@ -76,6 +77,7 @@ _arrayGeneral =
 		["B_Kitbag_mcamo", 50, 6]
 	],
 	[
+		["RPF_Items_Salema", 20, 0],
 		["U_Marshal", 15, 3],
 		["U_C_Journalist", 15, 3],
 		["U_B_Wetsuit", 25, 3],
@@ -175,6 +177,9 @@ _polStoreMarker setMarkerType "hd_dot";
 _polStoreMarker setMarkerText "Police Store";
 
 _polStore = "OfficeTable_01_new_F" createVehicle [16565.4,12729.2,-9.53674e-006];
+
+_polStore setVariable ["policeStation", 1, true];
+
 _polStore setDir 219.919;
 _arraypolStore =
 [
@@ -232,6 +237,9 @@ _emsStoreMarker setMarkerType "hd_dot";
 _emsStoreMarker setMarkerText "EMS Store";
 
 _emsStore = "OfficeTable_01_new_F" createVehicle [16550.2,12764.8,0.00196266];
+
+_emsStore setVariable ["medicStation", 1, true];
+
 _emsStore setDir 305.069;
 _arrayemsStore =
 [

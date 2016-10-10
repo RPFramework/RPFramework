@@ -17,6 +17,7 @@ ctrlShow [1004, false];
 ctrlShow [1400, false];
 
 _array = _ct getVariable "buyableThing";
+_methLab = _ct getVariable ["methLab", false];
 _class = _array select 0;
 _price = _array select 1;
 ctrlSetText [1003, str _price];
@@ -37,12 +38,16 @@ switch (true) do {
 		ctrlShow [1400, true];
 		ctrlShow [1004, true];
 	};
-	case (_type == 2 && _class != RPF_Fishingnet): {
+	case (_type == 2 && _class != RPF_Fishingnet && !_methLab): {
 		_name = [_class]call Client_fnc_getVehicleName;
 		ctrlSetText [1001, _name];
 	};
 	case (_type == 2 && _class == RPF_Fishingnet): {
 		_name = "Fishing net";
+		ctrlSetText [1001, _name];
+	};
+	case (_type == 2 && _methLab): {
+		_name = "Chemistry Table";
 		ctrlSetText [1001, _name];
 	};
 };

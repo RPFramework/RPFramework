@@ -9,7 +9,7 @@ RPF_InteractionMenuItems = [
 		["Use Car Key", "[cursorObject] call Client_fnc_useKey"]
 	],
 	[
-		["(vehicle player) != player", "(vehicle player) in RPF_Cars", "(player distance cursorObject) <= 5"],
+		["(vehicle player) != player", "(vehicle player) in RPF_Cars"],
 		["Use Car Key", "[vehicle player] call Client_fnc_useKey"]
 	],
 	[
@@ -37,7 +37,7 @@ RPF_InteractionMenuItems = [
 		["Escort", "[cursorObject] call Client_fnc_escort"]
 	],
 	[
-		["(count (attachedObjects player)) > 0", "((attachedObjects player) select 0) isKindOf 'Man'", "(player distance cursorObject) <= 5"],
+		["(count (attachedObjects player)) > 0", "((attachedObjects player) select 0) isKindOf 'Man'"],
 		["Let Go", "[] call Client_fnc_escortStop"]
 	],
 	[
@@ -61,16 +61,16 @@ RPF_InteractionMenuItems = [
 		["Open Garage", "[cursorObject] call Client_fnc_openGarage"]
 	],
 	[
-		["!(isNil {cursorObject getVariable 'atm'})", "(player distance cursorObject) <= 5"],
-		["Open ATM", "[cursorObject] call Client_fnc_openATM"]
-	],
-	[
 		["(count (attachedObjects player)) <= 0", "cursorObject in RPF_ownedFurniture", "(player distance cursorObject) <= 5"],
 		["Pick up", "[cursorObject] call Client_fnc_pickUp"]
 	],
 	[
-		["(count (attachedObjects player)) > 0", "((attachedObjects player) select 0) in RPF_ownedFurniture", "(player distance cursorObject) <= 5"],
+		["(count (attachedObjects player)) > 0", "((attachedObjects player) select 0) in RPF_ownedFurniture"],
 		["Let Go", "[] call Client_fnc_escortStop"]
+	],
+	[
+		["(cursorObject isKindOf 'Car') || (cursorObject isKindOf 'Air') || (cursorObject isKindOf 'Ship')", "(player distance cursorObject) <= 5", "(locked cursorObject) == 0"],
+		["Trunk", "[cursorObject] call Client_fnc_openTrunk"]
 	],
 	[
 		["alive player"],
@@ -79,5 +79,21 @@ RPF_InteractionMenuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'money'})", "(player distance cursorObject) <= 5"],
 		["Take money", "[cursorObject] call Client_fnc_takeMoney"]
+	],
+	[
+		["player getVariable ['copoffduty', 0] > 0", "!(isNil {cursorObject getVariable 'policeStation'})", "(player distance cursorObject) <= 5"],
+		["Go on duty", "[1, 0] call Client_fnc_switchDutyStatus"]
+	],
+	[
+		["player getVariable ['emsoffduty', 0] > 0", "!(isNil {cursorObject getVariable 'medicStation'})", "(player distance cursorObject) <= 5"],
+		["Go on duty", "[1, 1] call Client_fnc_switchDutyStatus"]
+	],
+	[
+		["player getVariable ['cop', 0] > 0", "!(isNil {cursorObject getVariable 'policeStation'})", "(player distance cursorObject) <= 5"],
+		["Go off duty", "[0, 0] call Client_fnc_switchDutyStatus"]
+	],
+	[
+		["player getVariable ['ems', 0] > 0", "!(isNil {cursorObject getVariable 'medicStation'})", "(player distance cursorObject) <= 5"],
+		["Go off duty", "[0, 1] call Client_fnc_switchDutyStatus"]
 	]
 ];

@@ -5,3 +5,6 @@
 #include "..\Farming\Sounds.hpp"
 #include "..\ShopSystem\Sounds.hpp"
 #include "..\BasicMedical\Sounds.hpp"
+#include "..\ATM\Sounds.hpp"
+#include "..\Respawn\Sounds.hpp"
+#include "..\methLab\Sounds.hpp"

@@ -83,7 +83,7 @@ class ATM
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = []call Client_fnc_atmWithdraw;
+			action = []call ClientModules_fnc_atmWithdraw;
 		};
 		class RscButton_1601: RscButton
 		{
@@ -93,7 +93,7 @@ class ATM
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = []call Client_fnc_atmDeposit;
+			action = []call ClientModules_fnc_atmDeposit;
 		};
 		class RscText_1006: RscText
 		{
@@ -148,7 +148,7 @@ class ATM
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.148958 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = []call Client_fnc_atmTransfer;
+			action = []call ClientModules_fnc_atmTransfer;
 		};
 	};
 };

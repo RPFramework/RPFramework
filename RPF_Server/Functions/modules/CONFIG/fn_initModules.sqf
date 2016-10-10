@@ -11,7 +11,9 @@ _sModules = [
 	"ServerModules_fnc_initExample",
 	"ServerModules_fnc_initFishing",
 	"ServerModules_fnc_initFarming",
-	"ServerModules_fnc_initShopSystem"
+	"ServerModules_fnc_initShopSystem",
+	"ServerModules_fnc_initATM",
+	"ServerModules_fnc_initMethLab"
 ];
 
 {

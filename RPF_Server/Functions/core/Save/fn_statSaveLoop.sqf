@@ -22,9 +22,8 @@ for "_i" from 0 to 1 step 0 do {
 			_clothes = [(uniform _x), (vest _x), (backpack _x), (headgear _x)];
 			_pweapon = primaryWeapon _x;
 			_sweapon = handgunWeapon _x;
-			_garage = _x getVariable "garage";
 			
-			_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9", _items, _clothes, _pweapon, _sweapon, _cash, _bank, _position, _garage, _uid];
+			_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8", _items, _clothes, _pweapon, _sweapon, _cash, _bank, _position, _uid];
 			_update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
 		};
 	}forEach allPlayers;

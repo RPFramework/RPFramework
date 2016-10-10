@@ -50,6 +50,9 @@ switch (true) do {
 			if (_class == RPF_Fishingnet) then {
 				[_newfurn] remoteExecCall ["ServerModules_fnc_addFishingnet", 2];
 			};
+			if (!(isNil {_ct getVariable 'methLab'})) then {
+				_newfurn setVariable ["methLab", 1, true];
+			};
 			hint "You have bought the item! Here you go.";
 		} else {
 			closeDialog 0;

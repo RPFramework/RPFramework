@@ -1,0 +1,2 @@
+Function(ServerModules_fnc_transferMoney,SERVER)
+Function(ServerModules_fnc_atmRefresh,CLIENT)

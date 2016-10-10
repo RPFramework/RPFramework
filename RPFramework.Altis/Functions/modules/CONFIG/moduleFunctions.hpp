@@ -5,3 +5,6 @@
 #include "..\Farming\Functions.hpp"
 #include "..\ShopSystem\Functions.hpp"
 #include "..\BasicMedical\Functions.hpp"
+#include "..\ATM\Functions.hpp"
+#include "..\Respawn\Functions.hpp"
+#include "..\methLab\Functions.hpp"

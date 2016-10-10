@@ -1,0 +1,3 @@
+Function(ClientModules_fnc_receiveMethLabCheck,CLIENT)
+
+Function(ServerModules_fnc_methLabCheck,SERVER)

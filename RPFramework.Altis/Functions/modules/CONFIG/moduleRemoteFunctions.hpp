@@ -5,3 +5,6 @@
 #include "..\Farming\RemoteFunctions.hpp"
 #include "..\ShopSystem\RemoteFunctions.hpp"
 #include "..\BasicMedical\RemoteFunctions.hpp"
+#include "..\ATM\RemoteFunctions.hpp"
+#include "..\Respawn\RemoteFunctions.hpp"
+#include "..\methLab\RemoteFunctions.hpp"

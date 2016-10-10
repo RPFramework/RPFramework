@@ -21,7 +21,18 @@ class CfgFunctions
             class statSave {};
             class statSaveLoop {};
 		};
-		
+		class Garage
+		{
+			file = "RPF_Server\Functions\core\Garage";
+			class fetchGarage {};
+            class insertGarage {};
+            class removeGarage {};
+		};
+		class Money
+		{
+			file = "RPF_Server\Functions\core\Money";
+			class replicateMoney {};
+		};
 	};
 	class ExternalS
 	{

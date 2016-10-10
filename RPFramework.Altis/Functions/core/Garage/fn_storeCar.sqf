@@ -1,6 +1,6 @@
 /*
 Author: Kerkkoh
-First Edit: 2.12.2015
+First Edit: 6.9.2016
 */
 
 params ["_ct"];
@@ -8,9 +8,8 @@ params ["_ct"];
 _pia = RPF_Cars find _ct;
 RPF_Cars deleteAt _pia;
 
-_garage = player getVariable "garage";
-_classname = typeOf _ct;
-_garage pushBack _classname;
-player setVariable ["garage", _garage, true];
+_hit = [_ct]call Client_fnc_vehicleHitGet;
+
+[typeOf _ct, _hit, player] remoteExecCall ["Server_fnc_insertGarage", 2];
 
 deleteVehicle _ct;

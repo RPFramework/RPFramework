@@ -5,3 +5,6 @@
 #include "..\Farming\Dialogs.hpp"
 #include "..\ShopSystem\Dialogs.hpp"
 #include "..\BasicMedical\Dialogs.hpp"
+#include "..\ATM\Dialogs.hpp"
+#include "..\Respawn\Dialogs.hpp"
+#include "..\methLab\Dialogs.hpp"

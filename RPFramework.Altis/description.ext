@@ -30,7 +30,7 @@ class RscTitles
 			{
 				idc = -1;
 				text = "RPF_General\data\cashIcon.paa";
-				x = 0.929688 * safezoneW + safezoneX;
+				x = 0.91 * safezoneW + safezoneX;
 				y = 0.774893 * safezoneH + safezoneY;
 				w = 0.0286458 * safezoneW;
 				h = 0.0439828 * safezoneH;
@@ -39,7 +39,7 @@ class RscTitles
 			{
 				idc = -1;
 				text = "RPF_General\data\hpIcon.paa";
-				x = 0.929688 * safezoneW + safezoneX;
+				x = 0.91 * safezoneW + safezoneX;
 				y = 0.829871 * safezoneH + safezoneY;
 				w = 0.0286458 * safezoneW;
 				h = 0.0439828 * safezoneH;
@@ -48,7 +48,7 @@ class RscTitles
 			{
 				idc = -1;
 				text = "RPF_General\data\hungerIcon.paa";
-				x = 0.929688 * safezoneW + safezoneX;
+				x = 0.91 * safezoneW + safezoneX;
 				y = 0.88485 * safezoneH + safezoneY;
 				w = 0.0286458 * safezoneW;
 				h = 0.0439828 * safezoneH;
@@ -57,7 +57,7 @@ class RscTitles
 			{
 				idc = -1;
 				text = "RPF_General\data\thirstIcon.paa";
-				x = 0.929688 * safezoneW + safezoneX;
+				x = 0.91 * safezoneW + safezoneX;
 				y = 0.939828 * safezoneH + safezoneY;
 				w = 0.0286458 * safezoneW;
 				h = 0.0439828 * safezoneH;
@@ -74,33 +74,33 @@ class RscTitles
 			class RscText_1000: RscText
 			{
 				idc = 1000;
-				x = 0.964063 * safezoneW + safezoneX;
+				x = 0.944375 * safezoneW + safezoneX;
 				y = 0.774893 * safezoneH + safezoneY;
-				w = 0.0286458 * safezoneW;
+				w = 0.0386458 * safezoneW;
 				h = 0.0439828 * safezoneH;
 			};
 			class RscText_1001: RscText
 			{
 				idc = 1001;
-				x = 0.964063 * safezoneW + safezoneX;
+				x = 0.944375 * safezoneW + safezoneX;
 				y = 0.829871 * safezoneH + safezoneY;
-				w = 0.0286458 * safezoneW;
+				w = 0.0386458 * safezoneW;
 				h = 0.0439828 * safezoneH;
 			};
 			class RscText_1002: RscText
 			{
 				idc = 1002;
-				x = 0.964063 * safezoneW + safezoneX;
+				x = 0.944375 * safezoneW + safezoneX;
 				y = 0.88485 * safezoneH + safezoneY;
-				w = 0.0286458 * safezoneW;
+				w = 0.0386458 * safezoneW;
 				h = 0.0439828 * safezoneH;
 			};
 			class RscText_1003: RscText
 			{
 				idc = 1003;
-				x = 0.964063 * safezoneW + safezoneX;
+				x = 0.944375 * safezoneW + safezoneX;
 				y = 0.939828 * safezoneH + safezoneY;
-				w = 0.0286458 * safezoneW;
+				w = 0.0386458 * safezoneW;
 				h = 0.0439828 * safezoneH;
 			};
 		};
@@ -112,7 +112,7 @@ enableDebugConsole = 1;
 respawn = "BASE";
 disabledAI = 1;
 author = "RPFramework Team";
-onLoadName = "RPFramework 3.0.0";
+onLoadName = "RPFramework 4.0.0";
 onLoadMission = "RPFramework by RPFramework Team";
 respawndelay = 10;
 

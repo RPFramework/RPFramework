@@ -17,6 +17,9 @@ RPF_MedicCars = [
 	
 ];
 
+RPF_PoliceStations = [];
+RPF_MedicStations = [];
+
 RPF_Edibles = [
 	["RPF_Items_Salema", 50],
 	["RPF_Items_Olives", 40],
