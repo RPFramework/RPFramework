@@ -31,10 +31,6 @@ class CfgRemoteExec {
         /* Anyone functions */
         Function(Client_fnc_playSound,ANYONE)
 		
-		/* Debug console fix, remove this before using the framework in a game environment!!!! */
-        Function(BIS_fnc_execvm,ANYONE)
-		/* -------------------------- */
-		
 		#include "Functions\modules\CONFIG\moduleRemoteFunctions.hpp"
     };
 
@@ -43,7 +39,5 @@ class CfgRemoteExec {
         jip = 0;
 
         Function(setFuel,ANYONE)
-		Function(call,ANYONE)
-		Function(spawn,ANYONE)
     };
 };
