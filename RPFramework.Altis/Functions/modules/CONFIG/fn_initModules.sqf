@@ -10,7 +10,6 @@ Check out RPFramework's README.md or module's Readme file for info on module ins
 
 _cModules = [
 	"ClientModules_fnc_initExample",
-	"ClientModules_fnc_initTaser",
 	"ClientModules_fnc_initTicketing",
 	"ClientModules_fnc_initFishing",
 	"ClientModules_fnc_initFarming",

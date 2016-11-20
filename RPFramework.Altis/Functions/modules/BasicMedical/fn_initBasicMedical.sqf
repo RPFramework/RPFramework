@@ -15,22 +15,10 @@ player setVariable ["stabilized", false, true];
 player addEventHandler["HandleDamage",{
 	_damage = _this select 2;
 	_returnDamage = _damage;
-	if (!(isNil {RPF_TaserProjectiles})) then {
-		if (!(player getVariable "unconscious") && _damage >= 0.9 && alive player && !((_this select 4) in RPF_TaserProjectiles)) then {
-			player allowDamage false;
-			[]spawn ClientModules_fnc_basicMedicalUnconscious;
-			_returnDamage = 0;
-		} else {
-			if ((_this select 4) in RPF_TaserProjectiles) then {
-				_returnDamage = 0;
-			};
-		};
-	} else {
-		if (!(player getVariable "unconscious") && _damage >= 0.9 && alive player) then {
-			player allowDamage false;
-			[]spawn ClientModules_fnc_basicMedicalUnconscious;
-			_returnDamage = 0;
-		};
+	if (!(player getVariable "unconscious") && _damage >= 0.9 && alive player) then {
+		player allowDamage false;
+		[]spawn ClientModules_fnc_basicMedicalUnconscious;
+		_returnDamage = 0;
 	};
 	_returnDamage;
 }];

@@ -6,6 +6,6 @@ params ["_ct"];
 
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 [player, "handcuffs"] remoteExecCall ["Client_fnc_playSound", 0];
-waitUntil {sleep 0.01; animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+sleep 0.833;
 
-remoteExecCall ["Client_fnc_cuffTarget", _ct];
+[] remoteExecCall ["Client_fnc_cuffTarget", _ct];
