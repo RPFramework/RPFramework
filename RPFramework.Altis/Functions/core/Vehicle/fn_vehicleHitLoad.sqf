@@ -10,6 +10,6 @@ _hits = _res select 1;
 _index = 0;
 {
 	_hit = _hits select _index;
-	_vehicle setHit [_x, _hit];
+	_vehicle setHitPointDamage [_x, _hit];
 	_index = _index + 1;
 }forEach _parts;

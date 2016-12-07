@@ -7,3 +7,5 @@
 #include "..\ATM\Functions.hpp"
 #include "..\Respawn\Functions.hpp"
 #include "..\methLab\Functions.hpp"
+#include "..\Delivery\Functions.hpp"
+#include "..\Jail\Functions.hpp"

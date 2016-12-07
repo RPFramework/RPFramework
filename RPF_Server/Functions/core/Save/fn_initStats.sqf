@@ -18,14 +18,13 @@ if (_booli) then {
 	
 	_items = _res select 0;
 	_clothes = _res select 1;
-	_pweapon = _res select 2;
-	_sweapon = _res select 3;
-	_cash = _res select 4;
-	_bank = _res select 5;
-	_cop = _res select 6;
-	_ems = _res select 7;
-	_position = _res select 8;
-	_bankAccount = _res select 9;
+	_weapons = _res select 2;
+	_cash = _res select 3;
+	_bank = _res select 4;
+	_cop = _res select 5;
+	_ems = _res select 6;
+	_position = _res select 7;
+	_bankAccount = _res select 8;
 	
 	_player setVariable ["cash", _cash, true];
 	_player setVariable ["bank", _bank, true];
@@ -36,20 +35,19 @@ if (_booli) then {
 	_player setVariable ["ems", 0, true];
 	_player setVariable ["emsoffduty", _ems, true];
 	
-	[_items, _clothes, _pweapon, _sweapon, _position] remoteExecCall ["Client_fnc_loadInventory", _player];
+	[_items, _clothes, _weapons, _position] remoteExecCall ["Client_fnc_loadInventory", _player];
 } else {
 	_name = name _player;
 	_items = [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)];
 	_clothes = [(uniform _player), (vest _player), (backpack _player), (headgear _player)];
-	_pweapon = "none";
-	_sweapon = "none";
+	_weapons = [];
 	_cash = 1;
 	_bank = 2000;
 	_cop = -1;
 	_ems = -1;
 	_position = position _player;
 	
-	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11", _uid, _name, _items, _clothes, _pweapon, _sweapon, _cash, _bank, _cop, _ems, _position];
+	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10", _uid, _name, _items, _clothes, _weapons, _cash, _bank, _cop, _ems, _position];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	
 	sleep 3;

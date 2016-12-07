@@ -7,3 +7,5 @@
 #include "..\ATM\RscTitles.hpp"
 #include "..\Respawn\RscTitles.hpp"
 #include "..\methLab\RscTitles.hpp"
+#include "..\Delivery\RscTitles.hpp"
+#include "..\Jail\RscTitles.hpp"

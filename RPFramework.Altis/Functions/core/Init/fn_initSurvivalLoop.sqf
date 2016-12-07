@@ -18,6 +18,7 @@ for "_i" from 0 to 1 step 0 do {
 			} else {
 				player setDamage _newdmg;
 			};
+			hint _hint;
 		};
 		case (RPF_hunger >= 90): {
 			_hint = parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#B80000'>You are starving!</t>";
@@ -35,6 +36,7 @@ for "_i" from 0 to 1 step 0 do {
 			} else {
 				player setDamage _newdmg;
 			};
+			hint _hint;
 		};
 		case (RPF_thirst >= 90): {
 			_hint = parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#1700E6'>You really need a drink!</t>";

@@ -16,6 +16,7 @@ for "_i" from 0 to 1 step 0 do
 			_veh setDir 322.976;
 			_veh setVariable ["buyableThing", [_class, _price, 0], true];
 			_veh lock true;
+			_veh allowDamage false;
 		};
 	}forEach _vehicles;
 };

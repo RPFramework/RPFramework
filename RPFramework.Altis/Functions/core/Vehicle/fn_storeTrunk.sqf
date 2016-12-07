@@ -60,10 +60,14 @@ if (_found == 0) then {
 _classVeh = typeOf _veh;
 _maxLoad = getNumber(configFile >> "CfgVehicles" >> _classVeh >> "maximumLoad");
 _trunksize = round(_maxLoad/300);
-_text = format ["Trunk - %1/%2", count _trunk, _trunksize];
+_count = 0;
+{
+_count = _count + (_x select 1);
+}forEach _trunk;
+_text = format ["Trunk - %1/%2", _count, _trunksize];
 ctrlSetText [1000, _text];
 
-if (!((count (attachedObjects player)) > 0)) then {
+if (!(count (attachedObjects player) > 0) || _count >= _trunksize) then {
 	ctrlShow [1600, false];
 } else {
 	ctrlShow [1600, true];

@@ -17,7 +17,9 @@ _cModules = [
 	"ClientModules_fnc_initBasicMedical",
 	"ClientModules_fnc_initATM",
 	"ClientModules_fnc_initRespawn",
-	"ClientModules_fnc_initMethLab"
+	"ClientModules_fnc_initMethLab",
+	"ClientModules_fnc_initDeliverySystem",
+	"ClientModules_fnc_initJail"
 ];
 
 

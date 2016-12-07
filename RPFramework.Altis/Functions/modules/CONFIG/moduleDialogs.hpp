@@ -7,3 +7,5 @@
 #include "..\ATM\Dialogs.hpp"
 #include "..\Respawn\Dialogs.hpp"
 #include "..\methLab\Dialogs.hpp"
+#include "..\Delivery\Dialogs.hpp"
+#include "..\Jail\Dialogs.hpp"

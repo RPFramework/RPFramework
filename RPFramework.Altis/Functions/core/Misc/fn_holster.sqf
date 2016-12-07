@@ -10,6 +10,6 @@ if (RPF_Holstered == 1) then {
 	RPF_Holstered = 0;
 } else {
 	RPF_Holster = [handgunWeapon player, handgunMagazine player, handgunItems player, player ammo (handgunWeapon player)];
-	player removeWeapon RPF_HWeapon;
+	player removeWeapon (handgunWeapon player);
 	RPF_Holstered = 1;
 };

@@ -7,3 +7,5 @@
 #include "..\ATM\Sounds.hpp"
 #include "..\Respawn\Sounds.hpp"
 #include "..\methLab\Sounds.hpp"
+#include "..\Delivery\Sounds.hpp"
+#include "..\Jail\Sounds.hpp"

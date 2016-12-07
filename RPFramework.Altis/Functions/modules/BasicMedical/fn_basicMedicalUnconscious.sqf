@@ -7,8 +7,7 @@ Additional Information:
 player action ["eject", vehicle player];
 
 player switchMove "";
-player playMoveNow "AinjPpneMstpSnonWrflDnon";
-sleep 4;
+player switchMove "AinjPpneMstpSnonWrflDnon";
 player enableSimulation false;
 player setVariable ["tf_globalVolume", 0.1];
 player setVariable ["tf_unable_to_use_radio", false];
@@ -43,7 +42,7 @@ for "_i" from 0 to 1 step 0 do {
 };
 
 switch (true) do {
-    case (time >= _timer): {
+    case (time >= _timer || !alive player): {
 		_uid = str (getPlayerUID player);
 		_positionPlayer = getPos player;
 		_medics = []call Client_fnc_getMedics;
@@ -60,7 +59,7 @@ switch (true) do {
 		_money = "Land_Money_F" createVehicle position player;
 		_cash = player getVariable "cash";
 		_money setVariable ["money", _cash, true];
-		player setVariable ["cash", 0, true];
+		[_cash]call Client_fnc_removeCash;
 		player setDamage 1;
 	};
     case (!(player getVariable "unconscious")): {

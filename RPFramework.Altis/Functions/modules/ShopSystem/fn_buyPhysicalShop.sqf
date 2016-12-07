@@ -18,6 +18,8 @@ switch (true) do {
 			closeDialog 0;
 			RPF_Cars pushBack _ct;
 			hint "Congratulations for buying a new car! Here are the keys.";
+			[_ct, (owner player)] remoteExec ["setOwner", 2];
+			_ct allowDamage true;
 		} else {
 			closeDialog 0;
 			hint "You don't have enough money!";

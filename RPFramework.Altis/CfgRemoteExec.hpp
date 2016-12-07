@@ -39,5 +39,6 @@ class CfgRemoteExec {
         jip = 0;
 
         Function(setFuel,ANYONE)
+        Function(setOwner,ANYONE)
     };
 };

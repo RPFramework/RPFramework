@@ -1,0 +1,8 @@
+Function(ClientModules_fnc_receiveJailCell,CLIENT)
+Function(ClientModules_fnc_jailBreakAlert,CLIENT)
+Function(ClientModules_fnc_receivePrisoners,CLIENT)
+
+Function(ServerModules_fnc_fetchJailCell,SERVER)
+Function(ServerModules_fnc_fetchPrisoners,SERVER)
+Function(ServerModules_fnc_releaseFromJail,SERVER)
+Function(ServerModules_fnc_breakoutJail,SERVER)

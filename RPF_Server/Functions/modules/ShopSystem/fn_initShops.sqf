@@ -14,7 +14,7 @@ _physicals = [
 	_veh = (_x select 0) createVehicle (_x select 1);
 	_veh setDir (_x select 2);
 	_veh setVariable ["buyableThing", [_x select 0, _x select 3, _x select 4], true];
-	if (_x select 5) then {_veh lock true;};
+	if (_x select 5) then {_veh lock true;_veh allowDamage false;};
 	if (_x select 6) then {_veh setVariable ["methLab", true, true];};
 }forEach _physicals;
 

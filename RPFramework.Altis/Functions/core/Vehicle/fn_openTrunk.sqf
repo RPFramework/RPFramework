@@ -39,12 +39,17 @@ lbClear 1500;
 	lbSetData [1500, _item, _class];
 }forEach _trunk;
 
-if (!((count (attachedObjects player)) > 0)) then {
+_count = 0;
+{
+_count = _count + (_x select 1);
+}forEach _trunk;
+
+if (!(count (attachedObjects player) > 0) || _count >= _trunksize) then {
 	ctrlShow [1600, false];
 };
 if (!(count _trunk > 0)) then {
 	ctrlShow [1601, false];
 };
 
-_text = format ["Trunk - %1/%2", count _trunk, _trunksize];
+_text = format ["Trunk - %1/%2", _count, _trunksize];
 ctrlSetText [1000, _text];

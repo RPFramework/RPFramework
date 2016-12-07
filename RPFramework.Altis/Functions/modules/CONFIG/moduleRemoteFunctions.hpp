@@ -7,3 +7,5 @@
 #include "..\ATM\RemoteFunctions.hpp"
 #include "..\Respawn\RemoteFunctions.hpp"
 #include "..\methLab\RemoteFunctions.hpp"
+#include "..\Delivery\RemoteFunctions.hpp"
+#include "..\Jail\RemoteFunctions.hpp"

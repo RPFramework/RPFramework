@@ -1,5 +1,5 @@
 ![alt text](http://i.imgur.com/8CJibJN.png "Logo")
-## Version 4.0.2 (STABLE)
+## Version 4.1.0 (STABLE)
 # RPFramework
 Modular roleplaying mission framework for Arma 3. For license, check the LICENSE.txt file. Please note that this is by no means a mission that you can start playing on with your friends. This is a framework that you can build your own mission on. You can join the RPFramework Team simply by forking the repository on github and starting to make changes. Every contribution is appreciated.
 
@@ -108,6 +108,8 @@ _menuItems = [
 ```
 Check the example module for an example!
 
+**Adding food and drink items:**
+
 You can add drinkables and edibles to RPFramework's "Use Item" system by adding them to the correct global arrays in the correct format.
 Example:
 ```javascript
@@ -126,6 +128,9 @@ _drinkable = [
 	RPF_Drinkables pushBack _x;
 }forEach _drinkable;
 ```
+
+**Adding usable items:**
+
 Adding usable items happens by adding the item to RPF_Usables array just like you have done with the interaction actions, drinkables and edibles.
 Example:
 ```javascript
@@ -167,6 +172,8 @@ class YourModule {
 
 You can add sounds, dialogs and titles in your Sounds.hpp, Dialogs.hpp and RscTitles.hpp. You can head over to BI wiki to find out more about how these configs work. Sounds and RscTitles will be included inside CfgSounds and RscTitles but Dialogs.hpp will be included straight in to description.ext so this allows you to define other things in to description.ext inside Dialogs.hpp.
 
+**Database:**
+
 RPFramework uses ExtDB3 and its SQL_CUSTOM protocol to interact with a MySQL database. You can read about this extension and protocol over at https://bitbucket.org/torndeco/extdb3/wiki/browse/ and include the prepared statements that your module needs with your package.
 Here is an example of a prepared statement you could include with your module. You should use `[_query, _mode] call ExternalS_fnc_ExtDBasync;` for database calls, but RPFramework does indeed offer an alternative which does the same thing as ExternalS_fnc_ExtDBasync, it's called with `[_mode, _query] call ExternalS_fnc_ExtDBquery;`.
 Source: https://bitbucket.org/torndeco/extdb3/wiki/extDB3%20-%20sql_custom.ini
@@ -184,6 +191,8 @@ SQL1_1 = SELECT * FROM PlayerSave WHERE PlayerUID = ? AND MapID = ?;
 SQL1_INPUTS = 1,2
 ```
 
+**RemoteExec**
+
 If your module is using remoteExec, remember to add the functions it needs to the RemoteFunctions.hpp located in every module's main folder.
 Example:
 ```
@@ -193,3 +202,18 @@ Example:
         Function(Server_fnc_initStats,SERVER)
 ```
 For more info: https://community.bistudio.com/wiki/CfgRemoteExec and https://community.bistudio.com/wiki/Arma_3_Remote_Execution
+
+**Money**
+
+Money is being handled completely by the server and when modified, it will be updated instantly to the database.
+
+To make everyone's life easier, there are helper functions for adding and removing money from player's bank and cash balance in `RPFramework\RPFramework.Altis\Functions\core\Money`
+
+These helper functions are:
+```
+	Client_fnc_addBank
+	Client_fnc_addCash
+	Client_fnc_removeBank
+	Client_fnc_removeCash
+```
+Each one of them only takes one argument and that is the amount of money being added or removed.
