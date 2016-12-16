@@ -16,6 +16,7 @@ So why should you hop on board with the modular approach to this framework? This
 * **Elephxnt**
 * **NiiRoZz**
 * **InnovativeStudios / J. Schmidt**
+* **TheFlyingJets**
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework
