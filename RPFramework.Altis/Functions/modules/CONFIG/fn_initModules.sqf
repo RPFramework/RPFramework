@@ -19,7 +19,8 @@ _cModules = [
 	"ClientModules_fnc_initRespawn",
 	"ClientModules_fnc_initMethLab",
 	"ClientModules_fnc_initDeliverySystem",
-	"ClientModules_fnc_initJail"
+	"ClientModules_fnc_initJail",
+	"ClientModules_fnc_initTaser"
 ];
 
 

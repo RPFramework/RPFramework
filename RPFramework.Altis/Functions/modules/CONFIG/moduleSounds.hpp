@@ -9,3 +9,4 @@
 #include "..\methLab\Sounds.hpp"
 #include "..\Delivery\Sounds.hpp"
 #include "..\Jail\Sounds.hpp"
+#include "..\Taser\Sounds.hpp"

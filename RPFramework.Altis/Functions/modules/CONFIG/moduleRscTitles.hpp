@@ -9,3 +9,4 @@
 #include "..\methLab\RscTitles.hpp"
 #include "..\Delivery\RscTitles.hpp"
 #include "..\Jail\RscTitles.hpp"
+#include "..\Taser\RscTitles.hpp"
