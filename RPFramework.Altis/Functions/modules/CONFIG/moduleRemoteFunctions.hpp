@@ -9,3 +9,4 @@
 #include "..\methLab\RemoteFunctions.hpp"
 #include "..\Delivery\RemoteFunctions.hpp"
 #include "..\Jail\RemoteFunctions.hpp"
+#include "..\Taser\RemoteFunctions.hpp"

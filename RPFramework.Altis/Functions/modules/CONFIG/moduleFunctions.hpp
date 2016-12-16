@@ -9,3 +9,4 @@
 #include "..\methLab\Functions.hpp"
 #include "..\Delivery\Functions.hpp"
 #include "..\Jail\Functions.hpp"
+#include "..\Taser\Functions.hpp"

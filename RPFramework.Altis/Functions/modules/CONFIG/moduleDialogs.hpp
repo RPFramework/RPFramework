@@ -9,3 +9,4 @@
 #include "..\methLab\Dialogs.hpp"
 #include "..\Delivery\Dialogs.hpp"
 #include "..\Jail\Dialogs.hpp"
+#include "..\Taser\Dialogs.hpp"
