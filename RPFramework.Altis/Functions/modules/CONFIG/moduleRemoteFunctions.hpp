@@ -10,3 +10,4 @@
 #include "..\Delivery\RemoteFunctions.hpp"
 #include "..\Jail\RemoteFunctions.hpp"
 #include "..\Taser\RemoteFunctions.hpp"
+#include "..\PlayerNames\RemoteFunctions.hpp"

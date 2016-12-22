@@ -34,5 +34,3 @@ _items = [items player]call Client_fnc_sortArray;
 }forEach _items;
 _control = (findDisplay 1019) displayCtrl 1500;
 lbSortByValue _control;
-
-false

@@ -59,7 +59,7 @@ if (_found == 0) then {
 
 _classVeh = typeOf _veh;
 _maxLoad = getNumber(configFile >> "CfgVehicles" >> _classVeh >> "maximumLoad");
-_trunksize = round(_maxLoad/300);
+_trunksize = round(_maxLoad/RPF_TrunkDivide);
 _count = 0;
 {
 _count = _count + (_x select 1);

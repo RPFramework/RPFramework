@@ -10,3 +10,4 @@
 #include "..\Delivery\Dialogs.hpp"
 #include "..\Jail\Dialogs.hpp"
 #include "..\Taser\Dialogs.hpp"
+#include "..\PlayerNames\Dialogs.hpp"

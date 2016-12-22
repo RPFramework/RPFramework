@@ -10,6 +10,12 @@ RPF_UnconsciousTime = 300;
 player setVariable ["unconscious", false, true];
 player setVariable ["stabilized", false, true];
 
+{
+	if (((_x select 1) select 0) == "Use Item") exitWith {
+		((RPF_InteractionMenuItems select _forEachIndex) select 0) pushBack "!(player getVariable 'unconscious')";
+	};
+}forEach RPF_InteractionMenuItems;
+
 [] call ClientModules_fnc_initBasicMedicalMenu;
 
 player addEventHandler["HandleDamage",{

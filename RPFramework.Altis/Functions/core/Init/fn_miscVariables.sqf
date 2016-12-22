@@ -6,6 +6,8 @@ First Edit: 23.11.2015
 RPF_Handcuffs = "RPF_Items_Handcuffs";
 RPF_HandcuffKeys = "RPF_Items_HandcuffKeys";
 
+RPF_TrunkDivide = 300;
+
 /* ## https://community.bistudio.com/wiki/ListOfKeyCodes You're welcome! ## */
 RPF_InteractionKey = 15;
 
@@ -48,5 +50,4 @@ RPF_Usables = [
 	["RPF_Items_WaterBottle", "['RPF_Items_WaterBottle']call Client_fnc_drinkItem"]
 ];
 
-RPF_PhysicalItems = [];
 RPF_ownedFurniture = [];

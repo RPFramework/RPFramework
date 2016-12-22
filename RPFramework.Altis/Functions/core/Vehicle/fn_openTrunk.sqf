@@ -8,7 +8,7 @@ createDialog "trunk";
 
 _class = typeOf _veh;
 _maxLoad = getNumber(configFile >> "CfgVehicles" >> _class >> "maximumLoad");
-_trunksize = round(_maxLoad/300);
+_trunksize = round(_maxLoad/RPF_TrunkDivide);
 
 if (_trunksize < 1) exitWith { closeDialog 0; };
 

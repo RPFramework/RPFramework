@@ -10,3 +10,4 @@
 #include "..\Delivery\Sounds.hpp"
 #include "..\Jail\Sounds.hpp"
 #include "..\Taser\Sounds.hpp"
+#include "..\PlayerNames\Sounds.hpp"
