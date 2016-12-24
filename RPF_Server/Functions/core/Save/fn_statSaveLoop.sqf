@@ -21,14 +21,14 @@ for "_i" from 0 to 1 step 0 do {
 			_items = [(uniformItems _x), (vestItems _x), (backpackItems _x), (assignedItems _x)];
 			_clothes = [(uniform _x), (vest _x), (backpack _x), (headgear _x)];
 			_weapons = [];
-			if (primaryWeapon _player != "") then {
-				_weapons pushBack [0, primaryWeapon _player, primaryWeaponMagazine _player, primaryWeaponItems _player, _player ammo (primaryWeapon _player)];
+			if (primaryWeapon _x != "") then {
+				_weapons pushBack [0, primaryWeapon _x, primaryWeaponMagazine _x, primaryWeaponItems _x, _x ammo (primaryWeapon _x)];
 			};
-			if (secondaryWeapon _player != "") then {
-				_weapons pushBack [1, secondaryWeapon _player, secondaryWeaponMagazine _player, secondaryWeaponItems _player, _player ammo (secondaryWeapon _player)];
+			if (secondaryWeapon _x != "") then {
+				_weapons pushBack [1, secondaryWeapon _x, secondaryWeaponMagazine _x, secondaryWeaponItems _x, _x ammo (secondaryWeapon _x)];
 			};
-			if (handgunWeapon _player != "") then {
-				_weapons pushBack [2, handgunWeapon _player, handgunMagazine _player, handgunItems _player, _player ammo (handgunWeapon _player)];
+			if (handgunWeapon _x != "") then {
+				_weapons pushBack [2, handgunWeapon _x, handgunMagazine _x, handgunItems _x, _x ammo (handgunWeapon _x)];
 			};
 			
 			_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7", _items, _clothes, _weapons, _cash, _bank, _position, _uid];

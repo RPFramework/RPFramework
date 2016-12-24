@@ -14,11 +14,12 @@ if (isServer) then {
 	
 	[] call ServerModules_fnc_initModules;
 } else {
-	waitUntil {sleep 0.1; !(isNil {player}) && player == player && alive player};
+	waitUntil {!(isNil {player}) && player == player && alive player};
 	cutText ["Loading in...","BLACK",1];
-	sleep 5;
-	[player] remoteExecCall ["Server_fnc_initStats", 2];
-	sleep 3;
+	
+	[player, false] remoteExec ["Server_fnc_initStats", 2];
+	
+	waitUntil {player getVariable ["loadedIn", false]};
 	
 	cutText ["","plain",1];
 	[] spawn Client_fnc_initHudLoop;

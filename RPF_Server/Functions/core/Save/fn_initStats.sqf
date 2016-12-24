@@ -2,7 +2,7 @@
 Author: Kerkkoh
 Last Edit: 23.11.2015
 */
-_player = _this select 0;
+params ["_player", "_firstLogin"];
 
 _uid = getPlayerUID _player;
 
@@ -25,6 +25,7 @@ if (_booli) then {
 	_ems = _res select 6;
 	_position = _res select 7;
 	_bankAccount = _res select 8;
+	_phone = _res select 9;
 	
 	_player setVariable ["cash", _cash, true];
 	_player setVariable ["bank", _bank, true];
@@ -35,7 +36,13 @@ if (_booli) then {
 	_player setVariable ["ems", 0, true];
 	_player setVariable ["emsoffduty", _ems, true];
 	
+	_player setVariable ["phone", _phone, true];
+	
 	[_items, _clothes, _weapons, _position] remoteExecCall ["Client_fnc_loadInventory", _player];
+	
+	if (_firstLogin) then {
+		[_player]call ServerModules_fnc_firstLogin;
+	};
 } else {
 	_name = name _player;
 	_items = [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)];
@@ -47,11 +54,13 @@ if (_booli) then {
 	_ems = -1;
 	_position = position _player;
 	
-	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10", _uid, _name, _items, _clothes, _weapons, _cash, _bank, _cop, _ems, _position];
+	_phone = []call Server_fnc_phoneNumber;
+	
+	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11", _uid, _name, _items, _clothes, _weapons, _cash, _bank, _cop, _ems, _position, _phone];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	
 	sleep 3;
 	
-	[_player] spawn Server_fnc_initStats;
+	[_player, true] spawn Server_fnc_initStats;
 }
 

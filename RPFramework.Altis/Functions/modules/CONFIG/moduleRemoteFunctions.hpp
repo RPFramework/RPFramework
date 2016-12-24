@@ -11,3 +11,4 @@
 #include "..\Jail\RemoteFunctions.hpp"
 #include "..\Taser\RemoteFunctions.hpp"
 #include "..\PlayerNames\RemoteFunctions.hpp"
+#include "..\Phone\RemoteFunctions.hpp"

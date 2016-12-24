@@ -15,7 +15,8 @@ _sModules = [
 	"ServerModules_fnc_initATM",
 	"ServerModules_fnc_initMethLab",
 	"ServerModules_fnc_initDeliverySystem",
-	"ServerModules_fnc_initJail"
+	"ServerModules_fnc_initJail",
+	"ServerModules_fnc_initPhone"
 ];
 
 {

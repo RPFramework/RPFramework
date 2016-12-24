@@ -20,6 +20,7 @@ class CfgFunctions
             class initStats {};
             class statSave {};
             class statSaveLoop {};
+            class phoneNumber {};
 		};
 		class Garage
 		{
@@ -51,6 +52,7 @@ class CfgFunctions
 		{
 			file = "RPF_Server\Functions\modules\CONFIG";
 			class initModules {};
+			class firstLogin {};
 		};
 		#include "Functions\modules\CONFIG\moduleFunctions.hpp"
 	};

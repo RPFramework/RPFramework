@@ -21,7 +21,8 @@ _cModules = [
 	"ClientModules_fnc_initDeliverySystem",
 	"ClientModules_fnc_initJail",
 	"ClientModules_fnc_initTaser",
-	"ClientModules_fnc_initPlayerNames"
+	"ClientModules_fnc_initPlayerNames",
+	"ClientModules_fnc_initPhone"
 ];
 
 

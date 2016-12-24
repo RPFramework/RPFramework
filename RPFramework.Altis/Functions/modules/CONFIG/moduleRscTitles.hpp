@@ -11,3 +11,4 @@
 #include "..\Jail\RscTitles.hpp"
 #include "..\Taser\RscTitles.hpp"
 #include "..\PlayerNames\RscTitles.hpp"
+#include "..\Phone\RscTitles.hpp"

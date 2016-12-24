@@ -11,3 +11,4 @@
 #include "..\Jail\Functions.hpp"
 #include "..\Taser\Functions.hpp"
 #include "..\PlayerNames\Functions.hpp"
+#include "..\Phone\Functions.hpp"

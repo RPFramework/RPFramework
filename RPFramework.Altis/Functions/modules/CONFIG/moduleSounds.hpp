@@ -11,3 +11,4 @@
 #include "..\Jail\Sounds.hpp"
 #include "..\Taser\Sounds.hpp"
 #include "..\PlayerNames\Sounds.hpp"
+#include "..\Phone\Sounds.hpp"

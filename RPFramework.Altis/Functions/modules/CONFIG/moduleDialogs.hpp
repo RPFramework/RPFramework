@@ -11,3 +11,4 @@
 #include "..\Jail\Dialogs.hpp"
 #include "..\Taser\Dialogs.hpp"
 #include "..\PlayerNames\Dialogs.hpp"
+#include "..\Phone\Dialogs.hpp"
