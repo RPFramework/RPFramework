@@ -10,4 +10,4 @@ params ["_ct"];
 player playMoveNow "AinvPknlMstpSnonWnonDr_medic0";
 sleep 9.1;
 
-_ct setVariable ["unconscious", false, true];
+_ct setVariable ["unconscious", nil, true];

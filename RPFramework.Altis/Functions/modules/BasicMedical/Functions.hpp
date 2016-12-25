@@ -6,5 +6,5 @@
 			class basicMedicalUnconscious {};
 			class basicMedicalMarker {};
 			class basicMedicalRevive {};
-			class basicMedicalStabilize {};
+			class basicMedicalLoadout {};
 		};
