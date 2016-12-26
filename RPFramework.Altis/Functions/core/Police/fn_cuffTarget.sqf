@@ -6,4 +6,5 @@ while {true} do {
 	if (!(player getVariable "cuffed")) exitWith {};
 	if(!alive player) exitWith {player setVariable ["cuffed",false,true];};
 	if (isNull objectParent player) then {player playMove "AmovPercMstpSnonWnonDnon_Ease";};
+	if (!(isNull objectParent player) && ((driver vehicle player) == player)) then {player action ["eject", vehicle player];};
 };
