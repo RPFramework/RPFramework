@@ -17,11 +17,11 @@ _medics = []call Client_fnc_getMedics;
 	[0, getPlayerUID _unit, getPos _unit] remoteExecCall ["ClientModules_fnc_basicMedicalMarker", _x];
 }forEach _medics;
 
-/*_escEH = (findDisplay 46) displayAddEventHandler ["KeyDown", {
+_escEH = (findDisplay 46) displayAddEventHandler ["KeyDown", {
 	if ((_this select 1) == 1) then {
 		true;
 	}
-}];*/
+}];
 
 _cash = _unit getVariable "cash";
 [_cash]call Client_fnc_removeCash;
@@ -48,7 +48,7 @@ _medics = []call Client_fnc_getMedics;
 {
 	[1, getPlayerUID player, getPos _unit] remoteExecCall ["ClientModules_fnc_basicMedicalMarker", _x];
 }forEach _medics;
-/*(findDisplay 46) displayRemoveEventHandler ["KeyDown", _escEH];
-deleteVehicle _unit;*/
+(findDisplay 46) displayRemoveEventHandler ["KeyDown", _escEH];
+deleteVehicle _unit;
 cutText ["","PLAIN",1];
 player setVariable ["unconscious", nil, true];

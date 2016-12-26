@@ -8,7 +8,7 @@ Add actions for medics
 _menuItems = [
 	[
 		["player getVariable ['ems', 0] > 0", "cursorObject getVariable ['unconscious', false]"],
-		["Revive", "[cursorObject] spawn ClientModules_fnc_basicMedicalCPR"]
+		["Revive", "[cursorObject] spawn ClientModules_fnc_basicMedicalRevive"]
 	],
 	[
 		["player getVariable ['ems', 0] > 0", "(count (attachedObjects player)) <= 0", "cursorObject getVariable ['unconscious', false]"],
@@ -29,6 +29,6 @@ _menuItems = [
 
 {
 	if (((_x select 1) select 0) == "Use Item") exitWith {
-		((RPF_InteractionMenuItems select _forEachIndex) select 0) pushBack "!(player getVariable 'unconscious')";
+		((RPF_InteractionMenuItems select _forEachIndex) select 0) pushBack "!(player getVariable ['unconscious', false])";
 	};
 }forEach RPF_InteractionMenuItems;
