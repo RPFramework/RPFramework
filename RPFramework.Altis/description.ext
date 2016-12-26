@@ -9,9 +9,9 @@ enableDebugConsole = 1;
 respawn = "BASE";
 disabledAI = 1;
 author = "RPFramework Team";
-onLoadName = "RPFramework 4.2.3";
+onLoadName = "RPFramework 4.2.4";
 onLoadMission = "RPFramework by RPFramework Team";
-respawndelay = 10;
+respawndelay = 1;
 
 wreckLimit = 5;
 wreckRemovalMaxTime = 300;
