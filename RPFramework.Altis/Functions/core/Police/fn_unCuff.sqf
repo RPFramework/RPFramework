@@ -9,3 +9,5 @@ _ct setVariable ["cuffed", false, true];
 
 [player, "handcuffs"] remoteExecCall ["Client_fnc_playSound", 0];
 remoteExecCall ["Client_fnc_unCuffTarget", _ct];
+
+player addItem RPF_Handcuffs;

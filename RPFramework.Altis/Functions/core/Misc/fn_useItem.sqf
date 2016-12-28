@@ -2,35 +2,31 @@
 Author: Kerkkoh
 First Edit: 24.4.2016
 */
-_index = lbCurSel 1500;
-if (_index == -1) exitWith {};
-_dataS = lbData [1500, _index];
+
+if ((lbCurSel 1500) == -1) exitWith {};
+_dataS = lbData [1500, lbCurSel 1500];
+if (isNil {_dataS}) exitWith {};
 _data = call compile _dataS;
 _item = _data select 0;
-_amount = _data select 1;
 
 {
-	_class = _x select 0;
-	if (_class == _item) then {
-		_action = _x select 1;
-		call compile _action;
+	if ((_x select 0) == _item) then {
+		call compile (_x select 1);
 	};
 }forEach RPF_Usables;
 
 player removeItem _item;
 
 lbClear 1500;
-_items = [items player]call Client_fnc_sortArray;
+
 {
 	_y = _x;
 	{
 		if ((_y select 0) == (_x select 0)) then {
-			_name = [_y select 0]call Client_fnc_getWeaponName;
-			_itemString = format ["%1 x %2", _name, _y select 1];
-			_shopItem = lbAdd [1500, _itemString];
+			_shopItem = lbAdd [1500, format["%1 x %2", [_y select 0]call Client_fnc_getWeaponName, _y select 1]];
 			lbSetData [1500, _shopItem, str _y];
 		};
 	}forEach RPF_Usables;
-}forEach _items;
-_control = (findDisplay 1019) displayCtrl 1500;
-lbSortByValue _control;
+}forEach ([items player]call Client_fnc_sortArray);
+
+lbSortByValue ((findDisplay 1019) displayCtrl 1500);

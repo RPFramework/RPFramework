@@ -9,11 +9,11 @@ Params:
 1 - Predefined statement name and its params, in format "exampleQuery:input:input:input"
 */
 
-private ["_querstr", "_quer", "_array"];
+private ["_quer", "_array"];
 params ["_mode", "_query"];
 
-_querstr = format ["%1:%2:%3", _mode, (call extDB_SQL_CUSTOM_ID), _query];
-_quer = "extDB3" callExtension _querstr;
+_q = format["%1:%2:%3", _mode, call extDB_SQL_CUSTOM_ID, _query];
+_quer = "extDB3" callExtension _q;
 _array = call compile _quer;
 _return = _array select 1;
 

@@ -11,8 +11,7 @@ for "_i" from 0 to 1 step 0 do {
 		2 cutRsc ["HUD","PLAIN"];
 	};
 	
-	_health = str (round (100 - ((damage player) * 100)));
-	(_hud displayCtrl 1001) ctrlSetText _health;
+	(_hud displayCtrl 1001) ctrlSetText (str (round (100 - ((damage player) * 100))));
 	
 	(_hud displayCtrl 1000) ctrlSetText (str (player getVariable "cash"));
 	

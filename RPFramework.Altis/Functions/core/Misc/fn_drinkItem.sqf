@@ -6,10 +6,8 @@ First Edit: 24.4.2016
 params ["_item"];
 
 {
-	_class = _x select 0;
-	if (_class == _item) then {
-		_thirstAmount = _x select 1;
-		RPF_thirst = RPF_thirst - _thirstAmount;
+	if ((_x select 0) == _item) then {
+		RPF_thirst = RPF_thirst - (_x select 1);
 	};
 }forEach RPF_Drinkables;
 

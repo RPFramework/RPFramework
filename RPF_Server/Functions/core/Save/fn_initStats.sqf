@@ -6,60 +6,32 @@ params ["_player", "_firstLogin"];
 
 _uid = getPlayerUID _player;
 
-_checkstr = format ["existPlayerInfo:%1", _uid];
-_check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
-_booli = (_check select 0) select 0;
+_check = [0, (format["existPlayerInfo:%1", _uid])] call ExternalS_fnc_ExtDBquery;
 
-if (_booli) then {
+if ((_check select 0) select 0) then {
 	_fetchstr = format ["playerInfo:%1", _uid];
 	_fetch = [_fetchstr, 2] call ExternalS_fnc_ExtDBasync;
-	_returned = str _fetch;
 	_res = _fetch select 0;
 	
-	_items = _res select 0;
-	_clothes = _res select 1;
-	_weapons = _res select 2;
-	_cash = _res select 3;
-	_bank = _res select 4;
-	_cop = _res select 5;
-	_ems = _res select 6;
-	_position = _res select 7;
-	_bankAccount = _res select 8;
-	_phone = _res select 9;
-	
-	_player setVariable ["cash", _cash, true];
-	_player setVariable ["bank", _bank, true];
-	_player setVariable ["bankAccount", _bankAccount, true];
-	
+	_player setVariable ["cash", _res select 3, true];
+	_player setVariable ["bank", _res select 4, true];
+	_player setVariable ["bankAccount", _res select 8, true];
 	_player setVariable ["cop", 0, true];
-	_player setVariable ["copoffduty", _cop, true];
+	_player setVariable ["copoffduty", _res select 5, true];
 	_player setVariable ["ems", 0, true];
-	_player setVariable ["emsoffduty", _ems, true];
+	_player setVariable ["emsoffduty", _res select 6, true];
+	_player setVariable ["phone", _res select 9, true];
 	
-	_player setVariable ["phone", _phone, true];
-	
-	[_items, _clothes, _weapons, _position] remoteExecCall ["Client_fnc_loadInventory", _player];
+	[_res select 0, _res select 1, _res select 2, _res select 7] remoteExecCall ["Client_fnc_loadInventory", _player];
 	
 	if (_firstLogin) then {
 		[_player]call ServerModules_fnc_firstLogin;
 	};
 } else {
-	_name = name _player;
-	_items = [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)];
-	_clothes = [(uniform _player), (vest _player), (backpack _player), (headgear _player)];
-	_weapons = [];
-	_cash = 1;
-	_bank = 2000;
-	_cop = -1;
-	_ems = -1;
-	_position = position _player;
-	
-	_phone = []call Server_fnc_phoneNumber;
-	
-	_insertstr = format ["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11", _uid, _name, _items, _clothes, _weapons, _cash, _bank, _cop, _ems, _position, _phone];
+	_insertstr = format["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11", _uid, name _player, [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], [], 1, 2000, -1, -1, position _player, []call Server_fnc_phoneNumber];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	
-	sleep 3;
+	uiSleep 3;
 	
 	[_player, true] spawn Server_fnc_initStats;
 }
