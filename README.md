@@ -6,7 +6,7 @@
 [![GitHub release](https://img.shields.io/github/release/RPFramework/RPFramework.svg)](https://github.com/RPFramework/RPFramework/releases)
 [![license](https://img.shields.io/github/license/RPFramework/RPFramework.svg)](https://github.com/RPFramework/RPFramework/blob/master/LICENSE.txt)
 
-Modular roleplaying mission framework for Arma 3. For license, check the LICENSE.txt file. Please note that this is by no means a mission that you can start playing on with your friends. This is a framework that you can build your own mission on. You can join the RPFramework Team simply by forking the repository on github and starting to make changes. Every contribution is appreciated.
+Modular roleplaying mission framework for Arma 3. For license, check the LICENSE.txt file. Please note that this is by no means a mission that you can start playing on with your friends. This is a framework that you can build your own mission on. You can join the RPFramework Team simply by forking the repository on github and starting to make changes. Every contribution is appreciated. You can find new modules and submit your own ones on our [website](https://rpframework.github.io/).
 
 
 ## Benefits of a modular approach
