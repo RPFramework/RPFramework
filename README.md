@@ -2,6 +2,7 @@
 
 [![DISCORD](https://img.shields.io/badge/Discord-Join-7289DA.svg)](https://discord.gg/JvRRuTm)
 [![TRELLO](https://img.shields.io/badge/Trello-View-0079BF.svg)](https://trello.com/b/eqwxQ4hr/rpframework)
+[![Website](https://img.shields.io/website-up-down-green-red/https/rpframework.github.io.svg)](https://rpframework.github.io/)
 [![GitHub release](https://img.shields.io/github/release/RPFramework/RPFramework.svg)](https://github.com/RPFramework/RPFramework/releases)
 [![license](https://img.shields.io/github/license/RPFramework/RPFramework.svg)](https://github.com/RPFramework/RPFramework/blob/master/LICENSE.txt)
 
@@ -38,6 +39,8 @@ So why should you hop on board with the modular approach to this framework? This
 	4. Note for people using a default module called **ShopSystem**: Please edit shop positions to correspond to places on your new map in **RPF_Server\server\modules\fn_initShops.sqf**!!
 
 ## Installing Modules (General guidelines)
+* Visit our [website](https://rpframework.github.io/) to get more modules or submit your own!
+
 1. **These are general guidelines, you should read the readme provided by the module you are installing**
 2. Download all files for the module you are installing and **read the module's readme and license!!**
 3. Setting up the database
