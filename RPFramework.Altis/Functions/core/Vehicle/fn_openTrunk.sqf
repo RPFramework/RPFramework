@@ -6,9 +6,12 @@ params ["_veh"];
 
 createDialog "trunk";
 
-_class = typeOf _veh;
-_maxLoad = getNumber(configFile >> "CfgVehicles" >> _class >> "maximumLoad");
-_trunksize = round(_maxLoad/RPF_TrunkDivide);
+_trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/RPF_TrunkDivide);
+{
+	if ((_x select 0) == (typeOf _veh)) exitWith {
+		_trunksize = (_x select 1);
+	};
+}forEach RPF_TrunkException;
 
 if (_trunksize < 1) exitWith { closeDialog 0; };
 
@@ -26,7 +29,6 @@ lbClear 1500;
 
 {
 	_class = _x select 0;
-	_amount = _x select 1;
 	
 	_stringName = [_class]call Client_fnc_getVehicleName;
 	if (_isFishingModule == 1) then {
@@ -34,14 +36,13 @@ lbClear 1500;
 			_stringName = "Fishing Net";
 		};
 	};
-	_finalName = format ["%1 x %2", _stringName, _amount];
-	_item = lbAdd [1500, _finalName];
+	_item = lbAdd [1500, (format["%1 x %2", _stringName, (_x select 1)])];
 	lbSetData [1500, _item, _class];
 }forEach _trunk;
 
 _count = 0;
 {
-_count = _count + (_x select 1);
+	_count = _count + (_x select 1);
 }forEach _trunk;
 
 if (!(count (attachedObjects player) > 0) || _count >= _trunksize) then {
@@ -51,5 +52,4 @@ if (!(count _trunk > 0)) then {
 	ctrlShow [1601, false];
 };
 
-_text = format ["Trunk - %1/%2", _count, _trunksize];
-ctrlSetText [1000, _text];
+ctrlSetText [1000, (format["Trunk - %1/%2", _count, _trunksize])];

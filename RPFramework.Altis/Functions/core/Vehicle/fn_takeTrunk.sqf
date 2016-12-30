@@ -4,11 +4,11 @@ First Edit: 23.9.2016
 */
 params ["_veh"];
 
-_currentitemindex = lbCurSel 1500;
-if (_currentitemindex == -1) exitWith {};
-_classname = lbData [1500, _currentitemindex];
+if ((lbCurSel 1500) == -1) exitWith {};
+_classname = lbData [1500, lbCurSel 1500];
 
-_trunkItem = _classname createVehicle position player;
+_trunkItem = _classname createVehicle [0,0,0];
+_trunkItem setPos (getPos player);
 
 [_trunkItem] call Client_fnc_pickUp;
 RPF_ownedFurniture pushBack _trunkItem;

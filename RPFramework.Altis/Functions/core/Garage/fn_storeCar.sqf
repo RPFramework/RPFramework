@@ -2,14 +2,10 @@
 Author: Kerkkoh
 First Edit: 6.9.2016
 */
-
 params ["_ct"];
 
-_pia = RPF_Cars find _ct;
-RPF_Cars deleteAt _pia;
+RPF_Cars deleteAt (RPF_Cars find _ct);
 
-_hit = [_ct]call Client_fnc_vehicleHitGet;
-
-[typeOf _ct, _hit, player] remoteExecCall ["Server_fnc_insertGarage", 2];
+[typeOf _ct, [_ct]call Client_fnc_vehicleHitGet, player] remoteExecCall ["Server_fnc_insertGarage", 2];
 
 deleteVehicle _ct;

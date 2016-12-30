@@ -9,6 +9,7 @@ _unit = _this select 0;
 _deadLoadout = [0, _unit, []]call ClientModules_fnc_basicMedicalLoadout;
 
 _unit setVariable ["unconscious", true, true];
+player setVariable ["loadedIn", false, true];
 
 _timer = time + RPF_UnconsciousTime;
 
@@ -51,4 +52,5 @@ _medics = []call Client_fnc_getMedics;
 (findDisplay 46) displayRemoveEventHandler ["KeyDown", _escEH];
 deleteVehicle _unit;
 cutText ["","PLAIN",1];
+player setVariable ["loadedIn", true, true];
 player setVariable ["unconscious", nil, true];

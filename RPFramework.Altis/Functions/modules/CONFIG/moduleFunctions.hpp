@@ -12,3 +12,5 @@
 #include "..\Taser\Functions.hpp"
 #include "..\PlayerNames\Functions.hpp"
 #include "..\Phone\Functions.hpp"
+#include "..\PolicePlus\Functions.hpp"
+#include "..\Housing\Functions.hpp"

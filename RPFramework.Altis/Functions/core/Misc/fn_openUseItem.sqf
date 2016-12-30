@@ -4,21 +4,16 @@ First Edit: 24.4.2016
 */
 createDialog "useItem";
 
-_items = [items player]call Client_fnc_sortArray;
-
 {
 	_y = _x;
 	{
 		if ((_y select 0) == (_x select 0)) then {
-			_name = [_y select 0]call Client_fnc_getWeaponName;
-			_itemString = format ["%1 x %2", _name, _y select 1];
-			_shopItem = lbAdd [1500, _itemString];
+			_shopItem = lbAdd [1500, format["%1 x %2", [_y select 0]call Client_fnc_getWeaponName, _y select 1]];
 			lbSetData [1500, _shopItem, str _y];
 		};
 	}forEach RPF_Usables;
-}forEach _items;
+}forEach ([items player]call Client_fnc_sortArray);
 
-_control = (findDisplay 1019) displayCtrl 1500;
-lbSortByValue _control;
+lbSortByValue ((findDisplay 1019) displayCtrl 1500);
 
 lbSetCurSel [1500, 0];

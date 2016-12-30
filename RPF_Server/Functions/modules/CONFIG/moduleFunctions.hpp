@@ -7,3 +7,5 @@
 #include "..\Delivery\Functions.hpp"
 #include "..\Jail\Functions.hpp"
 #include "..\Phone\Functions.hpp"
+#include "..\PolicePlus\Functions.hpp"
+#include "..\Housing\Functions.hpp"
