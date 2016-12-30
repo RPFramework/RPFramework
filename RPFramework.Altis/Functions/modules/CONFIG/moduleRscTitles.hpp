@@ -12,3 +12,5 @@
 #include "..\Taser\RscTitles.hpp"
 #include "..\PlayerNames\RscTitles.hpp"
 #include "..\Phone\RscTitles.hpp"
+#include "..\PolicePlus\RscTitles.hpp"
+#include "..\Housing\RscTitles.hpp"

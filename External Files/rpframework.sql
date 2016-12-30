@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: 25.12.2016 klo 11:53
+-- Generation Time: 30.12.2016 klo 11:43
 -- Palvelimen versio: 5.5.49-log
--- PHP Version: 7.0.6
+-- PHP Version: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -25,6 +25,31 @@ USE `rpframework`;
 -- --------------------------------------------------------
 
 --
+-- Rakenne taululle `crimes`
+--
+
+CREATE TABLE IF NOT EXISTS `crimes` (
+  `id` int(11) NOT NULL,
+  `crime` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `criminal` int(11) NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Rakenne taululle `criminals`
+--
+
+CREATE TABLE IF NOT EXISTS `criminals` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `wanted` varchar(150) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'no'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Rakenne taululle `garage`
 --
 
@@ -33,6 +58,20 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `class` varchar(100) NOT NULL,
   `user` varchar(50) NOT NULL,
   `hit` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Rakenne taululle `houses`
+--
+
+CREATE TABLE IF NOT EXISTS `houses` (
+  `id` int(11) NOT NULL,
+  `class` varchar(100) NOT NULL,
+  `pos` varchar(50) NOT NULL,
+  `owner` varchar(50) NOT NULL,
+  `price` int(11) NOT NULL DEFAULT '-1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -74,10 +113,28 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 --
+-- Indexes for table `crimes`
+--
+ALTER TABLE `crimes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `criminals`
+--
+ALTER TABLE `criminals`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `garage`
 --
 ALTER TABLE `garage`
   ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `houses`
+--
+ALTER TABLE `houses`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `phonecontacts`
@@ -97,9 +154,24 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `crimes`
+--
+ALTER TABLE `crimes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `criminals`
+--
+ALTER TABLE `criminals`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `garage`
 --
 ALTER TABLE `garage`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `houses`
+--
+ALTER TABLE `houses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `phonecontacts`

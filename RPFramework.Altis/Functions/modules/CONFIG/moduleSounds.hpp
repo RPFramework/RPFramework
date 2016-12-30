@@ -12,3 +12,5 @@
 #include "..\Taser\Sounds.hpp"
 #include "..\PlayerNames\Sounds.hpp"
 #include "..\Phone\Sounds.hpp"
+#include "..\PolicePlus\Sounds.hpp"
+#include "..\Housing\Sounds.hpp"

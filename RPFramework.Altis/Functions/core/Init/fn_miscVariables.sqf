@@ -7,6 +7,10 @@ RPF_Handcuffs = "RPF_Items_Handcuffs";
 RPF_HandcuffKeys = "RPF_Items_HandcuffKeys";
 
 RPF_TrunkDivide = 300;
+/*	[classname, customTrunkSize]	*/
+RPF_TrunkException = [
+	["B_MRAP_01_F", 30]
+];
 
 /* ## https://community.bistudio.com/wiki/ListOfKeyCodes You're welcome! ## */
 RPF_InteractionKey = 15;

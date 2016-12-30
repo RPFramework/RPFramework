@@ -7,6 +7,11 @@ params ["_veh"];
 createDialog "trunk";
 
 _trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/RPF_TrunkDivide);
+{
+	if ((_x select 0) == (typeOf _veh)) exitWith {
+		_trunksize = (_x select 1);
+	};
+}forEach RPF_TrunkException;
 
 if (_trunksize < 1) exitWith { closeDialog 0; };
 
