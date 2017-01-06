@@ -105,7 +105,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   `ems` int(13) NOT NULL,
   `position` varchar(50) NOT NULL,
   `bankaccount` int(11) NOT NULL,
-  `phone` varchar(10) NOT NULL DEFAULT '-1'
+  `phone` varchar(10) NOT NULL DEFAULT '-1',
+  `hunger` int(13) NOT NULL DEFAULT '0',
+  `thirst` int(13) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

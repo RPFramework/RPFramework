@@ -9,3 +9,4 @@
 #include "..\Phone\Functions.hpp"
 #include "..\PolicePlus\Functions.hpp"
 #include "..\Housing\Functions.hpp"
+#include "..\Garage\Functions.hpp"

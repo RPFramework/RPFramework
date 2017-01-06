@@ -23,7 +23,7 @@ class garage
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,1};
 			colorActive[] = {0,0,0,1};
-			action = []call Client_fnc_fetchCar;
+			action = []call ClientModules_fnc_fetchCar;
 		};
 		class RscListbox_1500: RscListbox
 		{

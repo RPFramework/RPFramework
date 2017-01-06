@@ -7,6 +7,7 @@ params ["_player", "_time", "_reason"];
 
 _freeCells = [];
 _pos = [];
+_cellPos = 0;
 {
 	if (_x select 2) then {
 		_freeCells pushBack _x;
@@ -15,7 +16,6 @@ _pos = [];
 
 if ((count _freeCells) > 0) then {
 	_pos = ((_freeCells select 0) select 1);
-	_cellPos = 0;
 	{
 		_isEqual = [_x select 1, _pos]call BIS_fnc_areEqual;
 		if (_isEqual) then {
@@ -27,5 +27,7 @@ if ((count _freeCells) > 0) then {
 	_pos = ((RPF_JailCells select 0) select 1);
 	((RPF_JailCells select 0) select 0) pushBack _player;
 };
+
+(RPF_JailCells select _cellPos) set [2, false];
 
 [_pos, _time, _reason] remoteExec ["ClientModules_fnc_receiveJailCell", _player];

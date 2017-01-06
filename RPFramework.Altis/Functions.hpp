@@ -2,14 +2,6 @@ class CfgFunctions
 {
 	class Client
 	{
-		class Garage
-		{
-			file = "Functions\core\Garage";
-			class fetchCar {};
-			class openGarage {};
-			class receiveGarage {};
-			class storeCar {};
-		};
 		class Init
 		{
 			file = "Functions\core\Init";

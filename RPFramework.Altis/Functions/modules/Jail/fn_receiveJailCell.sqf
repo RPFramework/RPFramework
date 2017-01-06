@@ -14,12 +14,14 @@ player setPos _pos;
 _timer = time + _timeInSecs;
 
 for "_i" from 0 to 1 step 0 do {
-	if (!alive player || time >= _timer || isNull player) exitWith {};
+	if (!alive player || time >= _timer || isNull player || !(player getVariable ["jailed", false])) exitWith {};
 	_text = format ["Time left in jail: %1 minutes. Reason: %2", ceil ((_timer - time) / 60), _reason];
 	cutText [_text,"PLAIN",1];
 	sleep 10;
 };
 
 cutText ["","PLAIN",1];
+
+if (!(player getVariable "jailed")) then {};
 
 [player] remoteExecCall ["ServerModules_fnc_releaseFromJail", 2];

@@ -23,9 +23,6 @@ class CfgRemoteExec {
 
         /* Server functions */
         Function(Server_fnc_initStats,SERVER)
-		Function(Server_fnc_fetchGarage,SERVER)
-		Function(Server_fnc_insertGarage,SERVER)
-		Function(Server_fnc_removeGarage,SERVER)
 		Function(Server_fnc_replicateMoney,SERVER)
 
         /* Anyone functions */

@@ -4,9 +4,6 @@ First Edit: 23.11.2015
 */
 params ["_items", "_clothes", "_weapons", "_position"];
 
-RPF_hunger = 0;
-RPF_thirst = 0;
-
 player setPos _position;
 
 removeAllItems player;

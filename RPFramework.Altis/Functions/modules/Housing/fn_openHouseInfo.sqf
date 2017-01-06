@@ -10,6 +10,9 @@ createDialog "houseInfo";
 if ((_house getVariable ["price", -1]) != -1) then {
 	ctrlSetText[1001, "Yes"];
 	ctrlSetText[1003, str (_house getVariable "price")];
+	if ((_house getVariable ['owner', '0']) == (getPlayerUID player)) then {
+		ctrlEnable[1600, false];
+	};
 } else {
 	if (!(isNil {_house getVariable "owner"})) then {
 		ctrlEnable[1600, false];

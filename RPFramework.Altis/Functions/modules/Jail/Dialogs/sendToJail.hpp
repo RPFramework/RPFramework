@@ -55,6 +55,8 @@ class sendToJail
 			y = 0.390043 * safezoneH + safezoneY;
 			w = 0.165 * safezoneW;
 			h = 0.0329871 * safezoneH;
+			style = 16;
+			lineSpacing = 1;
 		};
 	};
 };

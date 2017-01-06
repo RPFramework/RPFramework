@@ -22,7 +22,7 @@ for "_i" from 0 to 1 step 0 do {
 				_weapons pushBack [2, handgunWeapon _x, handgunMagazine _x, handgunItems _x, _x ammo (handgunWeapon _x)];
 			};
 			
-			_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7", [(uniformItems _x), (vestItems _x), (backpackItems _x), (assignedItems _x)], [(uniform _x), (vest _x), (backpack _x), (headgear _x)], _weapons, _x getVariable "cash", _x getVariable "bank", position _x, _uid];
+			_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9", [(uniformItems _x), (vestItems _x), (backpackItems _x), (assignedItems _x)], [(uniform _x), (vest _x), (backpack _x), (headgear _x)], _weapons, _x getVariable "cash", _x getVariable "bank", position _x, (_x getVariable "hunger"), (_x getVariable "thirst"), _uid];
 			_update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
 		};
 	}forEach allPlayers;

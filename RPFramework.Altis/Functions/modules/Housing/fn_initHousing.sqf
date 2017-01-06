@@ -147,19 +147,19 @@ RPF_houseTypes = [
 
 _menuItems = [
 	[
-		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in RPF_houseTypes"],
+		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in RPF_houseTypes", "(player distance cursorObject) <= 5"],
 		["Manage Sell", "[cursorObject] call ClientModules_fnc_openManageHouseSale"]
 	],
 	[
-		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in RPF_houseTypes", "!(cursorObject getVariable ['locked', true])"],
+		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in RPF_houseTypes", "!(cursorObject getVariable ['locked', true])", "(player distance cursorObject) <= 5"],
 		["Lock", "[cursorObject, 1] call ClientModules_fnc_manageHouseLock"]
 	],
 	[
-		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in RPF_houseTypes", "cursorObject getVariable ['locked', true]"],
+		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in RPF_houseTypes", "cursorObject getVariable ['locked', true]", "(player distance cursorObject) <= 5"],
 		["Unlock", "[cursorObject, 0] call ClientModules_fnc_manageHouseLock"]
 	],
 	[
-		["(typeOf cursorObject) in RPF_houseTypes"],
+		["(typeOf cursorObject) in RPF_houseTypes", "(player distance cursorObject) <= 5"],
 		["House Info", "[cursorObject] call ClientModules_fnc_openHouseInfo"]
 	]
 ];

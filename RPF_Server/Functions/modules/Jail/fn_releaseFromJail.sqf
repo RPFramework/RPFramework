@@ -10,7 +10,7 @@ _counter = 0;
 _posPlayer = 0;
 {
 	_y = _x;
-	_counter = _counter + 1;
+	_counter = _forEachIndex;
 	{
 		if (_x == _player) then {
 			_posPlayer = _forEachIndex;
@@ -18,6 +18,8 @@ _posPlayer = 0;
 		};
 	}forEach (_y select 0);
 }forEach RPF_JailCells;
+
+(RPF_JailCells select _posCell) set [2, true];
 
 ((RPF_JailCells select _posCell) select 0) deleteAt _posPlayer;
 

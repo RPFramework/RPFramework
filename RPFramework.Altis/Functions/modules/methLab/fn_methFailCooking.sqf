@@ -28,9 +28,9 @@ RPF_methLabPlayerItems = [
 lbClear 1501;
 
 if (_smokeColor == 1) then {
-	[curMethLab, [0.02,0.302,0]]spawn ClientModules_fnc_methSmoke;
+	[curMethLab, [0.02,0.302,0]] remoteExec ["ClientModules_fnc_methSmoke", 0];
 } else {
-	[curMethLab, [0.439,0,0.075]]spawn ClientModules_fnc_methSmoke;
+	[curMethLab, [0.439,0,0.075]] remoteExec ["ClientModules_fnc_methSmoke", 0];
 };
 
 closeDialog 0;

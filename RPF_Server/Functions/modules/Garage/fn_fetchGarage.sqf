@@ -6,4 +6,4 @@ params["_player"];
 
 _vehicles = [(format["garageVehicles:%1", getPlayerUID _player]), 2] call ExternalS_fnc_ExtDBasync;
 
-[_vehicles] remoteExecCall ["Client_fnc_receiveGarage", _player];
+[_vehicles] remoteExecCall ["ClientModules_fnc_receiveGarage", _player];

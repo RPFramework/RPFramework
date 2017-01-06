@@ -18,6 +18,6 @@ _source2 setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 1
 _source2 setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.2], 0, 0, 360];
 _source2 setDropInterval 0.03;
 
-sleep (10+random 5);
+sleep (25+random 5);
 deletevehicle _source;
 deletevehicle _source2;

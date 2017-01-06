@@ -53,14 +53,6 @@ RPF_InteractionMenuItems = [
 		["Search", "[cursorObject] call Client_fnc_search"]
 	],
 	[
-		["cursorObject isKindOf 'Car'", "cursorObject in RPF_Cars", "[10, 'garage']call Client_fnc_nearMarker", "(player distance cursorObject) <= 5"],
-		["Store Garage", "[cursorObject] call Client_fnc_storeCar"]
-	],
-	[
-		["!(isNil {cursorObject getVariable 'garage'})", "(player distance cursorObject) <= 5"],
-		["Open Garage", "[cursorObject] call Client_fnc_openGarage"]
-	],
-	[
 		["(count (attachedObjects player)) <= 0", "cursorObject in RPF_ownedFurniture", "(player distance cursorObject) <= 5"],
 		["Pick up", "[cursorObject] call Client_fnc_pickUp"]
 	],

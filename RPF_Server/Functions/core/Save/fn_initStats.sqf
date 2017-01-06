@@ -21,6 +21,8 @@ if ((_check select 0) select 0) then {
 	_player setVariable ["ems", 0, true];
 	_player setVariable ["emsoffduty", _res select 6, true];
 	_player setVariable ["phone", _res select 9, true];
+	_player setVariable ["hunger", _res select 10, true];
+	_player setVariable ["thirst", _res select 11, true];
 	
 	[_res select 0, _res select 1, _res select 2, _res select 7] remoteExecCall ["Client_fnc_loadInventory", _player];
 	
@@ -31,7 +33,7 @@ if ((_check select 0) select 0) then {
 	_insertstr = format["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11", _uid, name _player, [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], [], 1, 2000, -1, -1, position _player, []call Server_fnc_phoneNumber];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	
-	uiSleep 3;
+	uiSleep 4;
 	
 	[_player, true] spawn Server_fnc_initStats;
 }

@@ -5,40 +5,23 @@ First Edit: 23.4.2016
 params
 0 - Object - cursorObject
 
-_array =
-[
-	"Shop Name",
-	[
-		["RPF_Items_PoppySeed", 2, 0],
-		["RPF_Items_OliveSeed", 1, 0],
-		["hgun_Rook40_F", 700, 2],
-		["30Rnd_9x21_Mag", 15, 1],
-		["muzzle_snds_L", 300, 0],
-		["U_NikosAgedBody", 30, 3],
-		["V_Rangemaster_belt", 40, 4],
-		["H_Cap_surfer", 10, 5],
-		["B_Kitbag_mcamo", 50, 6],
-		["class", BUYprice, type]
-	],
-	[
-		["RPF_Items_Poppy", 100, 0],
-		["RPF_Items_Olives", 50, 0],
-		["hgun_Rook40_F", 350, 2],
-		["30Rnd_9x21_Mag", 5, 1],
-		["class", SELLprice, type]
-	]
-];
-cursorObject setVariable ["shopSystemShop", _array, true];
-Types:
-0 - Item
-1 - Magazine
-2 - Weapon
-3 - Uniform
-4 - Vest
-5 - Headgear
-6 - Backpack
+Format:
+	["name", buyArray, sellArray]
 
-onLbSelChanged = []call ClientModules_fnc_shopSystemRefresh;
+Example:
+_array = [
+		"Shop Name",
+		[
+			["class", BUYprice, type]
+		],
+		[
+			["class", SELLprice, type]
+		]
+	];
+Types:
+	0 - Item, 1 - Magazine, 2 - Weapon, 3 - Uniform, 4 - Vest, 5 - Headgear, 6 - Backpack
+
+cursorObject setVariable ["shopSystemShop", _array, true];
 */
 params ["_ct"];
 

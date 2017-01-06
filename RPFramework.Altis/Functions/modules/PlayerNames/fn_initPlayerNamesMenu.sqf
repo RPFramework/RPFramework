@@ -9,7 +9,7 @@ This is a script showing you how to add menu items to the cba fleximenu used by 
 
 _menuItems = [
 	[
-		["isPlayer cursorObject", "alive cursorObject"],
+		["isPlayer cursorObject", "alive cursorObject", "(player distance cursorObject) <= 5"],
 		["Set Name", "createDialog 'setName'"]
 	]
 ];

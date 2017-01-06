@@ -5,6 +5,7 @@ First Edit: 22.4.2016
 params ["_ct"];
 
 _array = _ct getVariable "buyableThing";
+_vars = _ct getVariable ["vars", []];
 _class = _array select 0;
 _price = _array select 1;
 _type = _array select 2;
@@ -49,12 +50,15 @@ switch (true) do {
 			_newfurn = _class createVehicle position player;
 			[_newfurn] call Client_fnc_pickUp;
 			RPF_ownedFurniture pushBack _newfurn;
-			if (_class == RPF_Fishingnet) then {
-				[_newfurn] remoteExecCall ["ServerModules_fnc_addFishingnet", 2];
+			if (!(isNil {RPF_Fishingnet})) then {
+				if (_class == RPF_Fishingnet) then {
+					[_newfurn] remoteExecCall ["ServerModules_fnc_addFishingnet", 2];
+				};
 			};
 			if (!(isNil {_ct getVariable 'methLab'})) then {
 				_newfurn setVariable ["methLab", 1, true];
 			};
+			_newfurn setVariable ["vars", _vars, true];
 			hint "You have bought the item! Here you go.";
 		} else {
 			closeDialog 0;

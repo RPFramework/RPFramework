@@ -5,7 +5,7 @@ First Edit: 28.12.2016
 
 _menuItems = [
 	[
-		["!(isNil {cursorObject getVariable 'policeStation'})", "(player distance cursorObject) <= 5", "player getVariable ['cop', 0] > 0 || player getVariable ['ems', 0] > 0"],
+		["!(isNil {cursorObject getVariable 'policeStation'})", "(player distance cursorObject) <= 5", "player getVariable ['cop', 0] > 0 || player getVariable ['ems', 0] > 0", "(player distance cursorObject) <= 5"],
 		["Dispatch", "[] spawn ClientModules_fnc_policePlusDopen"]
 	],
 	[

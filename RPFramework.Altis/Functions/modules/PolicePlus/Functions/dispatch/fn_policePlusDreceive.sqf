@@ -51,6 +51,7 @@ for "_i" from 0 to 1 step 0 do {
 		[] remoteExecCall ["ServerModules_fnc_policePlusDremoveDispatch", 2];
 		{deleteMarkerLocal _x;} count _markers;
 		{deleteMarkerLocal _x;} count RPF_dispatchMarkers;
+		deleteMarkerLocal "tdm";
 		RPF_dispatchMedicCars = nil;
 		RPF_dispatchPoliceCars = nil;
 		RPF_currentDispatchTasks = nil;

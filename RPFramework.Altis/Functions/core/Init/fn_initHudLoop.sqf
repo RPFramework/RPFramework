@@ -15,9 +15,9 @@ for "_i" from 0 to 1 step 0 do {
 	
 	(_hud displayCtrl 1000) ctrlSetText (str (player getVariable "cash"));
 	
-	(_hud displayCtrl 1002) ctrlSetText (str RPF_hunger);
+	(_hud displayCtrl 1002) ctrlSetText (str (player getVariable "hunger"));
 	
-	(_hud displayCtrl 1003) ctrlSetText (str RPF_thirst);
+	(_hud displayCtrl 1003) ctrlSetText (str (player getVariable "thirst"));
 	
 	sleep 0.5;
 };

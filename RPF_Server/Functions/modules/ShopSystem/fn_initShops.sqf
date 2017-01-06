@@ -1,33 +1,68 @@
 /*
 Author: Kerkkoh
 First Edit: 24.4.2016
+
+############
+Physical items format:
+["classname", position, direction, price, type(0 - Car, 1 - Item, 2 - Physical item (Furniture / Fishing nets)), isMethLab]
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!To spawn in car shops look at ShopSystem\fn_vehicleShopLoop.sqf!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+############
+
+############
+Markers format:
+["marker name", position, "shape", "type", "text"]
+############
+
+############
+shopSystemShop variable format:
+["name", buyArray, sellArray]
+Example:
+[
+	"Shop Name",
+	[
+		["class", BUYprice, type]
+	],
+	[
+		["class", SELLprice, type]
+	]
+];
+Types: 0 - Item, 1 - Magazine, 2 - Weapon, 3 - Uniform, 4 - Vest, 5 - Headgear, 6 - Backpack
+############
+
+############
+Shops format:
+["classname", position, direction, [shopSystemShop variable array (Look up)], isPoliceStation, isMedicStation]
+############
 */
 
 _physicals = [
-["C_SUV_01_F", [16741.5,12505.9,0.0241032], 319.798,10000,0, true, false],
-["C_Offroad_01_F", [16735.7,12501.3,-0.00195217], 321.902,10000, 0, true, false],
-["C_Van_01_box_F", [16730,12497,0.0254688], 322.976, 15000, 0, true, false],
-["CargoNet_01_box_F", [16777.7,12630.4,-0.0249977], 93.6125, 50, 2, false ,false],
-["OfficeTable_01_new_F", [16776,12635.4,-0.0249977], 2.99588, 100, 2, false ,true]
+	["CargoNet_01_box_F", [16777.7,12630.4,-0.0249977], 93.6125, 50, 2, false],
+	["OfficeTable_01_new_F", [16776,12635.4,-0.0249977], 2.99588, 100, 2, true]
 ];
 {
 	_veh = (_x select 0) createVehicle (_x select 1);
 	_veh setDir (_x select 2);
 	_veh setVariable ["buyableThing", [_x select 0, _x select 3, _x select 4], true];
-	if (_x select 5) then {_veh lock true;_veh allowDamage false;};
-	if (_x select 6) then {_veh setVariable ["methLab", true, true];};
+	if (_x select 5) then {
+		_veh setVariable ["methLab", true, true];
+		_vars = _veh getVariable ["vars", []];
+		_vars pushBack ["methLab", true];
+		_veh setVariable ["vars", _vars, true];
+	};
 }forEach _physicals;
 
 []spawn ServerModules_fnc_vehicleShopLoop;
 
 _markers = [
-["vehicleStore",[16736.5,12502.5,0.00124454],"ICON","hd_dot","Vehicle Store"],
-["generalStore",[16774.1,12633,-0.0249958],"ICON","hd_dot","General Store"],
-["drugDealer",[16940,12635.2,0.00168991],"ICON","hd_dot","Drug Dealer"],
-["farmStore",[16797.4,12551.2,-0.0250072],"ICON","hd_dot","Farm Store"],
-["gunStore",[16685.3,12450.8,-0.0249996],"ICON","hd_dot","Gun Store"],
-["polStore",[16565.4,12729.2,-9.53674e-006],"ICON","hd_dot","Police Store"],
-["emsStore",[16550.2,12764.8,0.00196266],"ICON","hd_dot","EMS Store"]
+	["vehicleStore",[16736.5,12502.5,0.00124454],"ICON","hd_dot","Vehicle Store"],
+	["generalStore",[16774.1,12633,-0.0249958],"ICON","hd_dot","General Store"],
+	["drugDealer",[16940,12635.2,0.00168991],"ICON","hd_dot","Drug Dealer"],
+	["farmStore",[16797.4,12551.2,-0.0250072],"ICON","hd_dot","Farm Store"],
+	["gunStore",[16685.3,12450.8,-0.0249996],"ICON","hd_dot","Gun Store"],
+	["polStore",[16565.4,12729.2,-9.53674e-006],"ICON","hd_dot","Police Store"],
+	["emsStore",[16550.2,12764.8,0.00196266],"ICON","hd_dot","EMS Store"]
 ];
 
 {

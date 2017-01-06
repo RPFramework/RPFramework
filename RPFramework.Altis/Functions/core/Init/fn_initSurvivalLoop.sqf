@@ -5,37 +5,40 @@ First Edit: 19.4.2016
 
 for "_i" from 0 to 1 step 0 do {
 	sleep 240;
-	RPF_hunger = RPF_hunger + 1;
-	RPF_thirst = RPF_thirst + 2;
+	_hunger = (player getVariable "hunger");
+	_thirst = (player getVariable "thirst");
+	
+	player setVariable ["hunger", _hunger + 1, true];
+	player setVariable ["thirst", _thirst + 2, true];
 	switch (true) do {
-		case (RPF_hunger >= 100): {
+		case (_hunger >= 100): {
 			_ndmg = (damage player) + 0.2;
 			if (_ndmg >= 1) then {
-				RPF_hunger = 0;
-				RPF_thirst = 0;
+				player setVariable ["hunger", 0, true];
+				player setVariable ["thirst", 0, true];
 				player setDamage 1;
 			} else {
 				player setDamage _ndmg;
 			};
 			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#750016' size='1.2'>Starvation imminent!!</t>");
 		};
-		case (RPF_hunger >= 90): {
+		case (_hunger >= 90): {
 			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#B80000'>You are starving!</t>");
 		};
 	};
 	switch (true) do {
-		case (RPF_thirst >= 100): {
+		case (_thirst >= 100): {
 			_ndmg = (damage player) + 0.2;
 			if (_ndmg >= 1) then {
-				RPF_hunger = 0;
-				RPF_thirst = 0;
+				player setVariable ["hunger", 0, true];
+				player setVariable ["thirst", 0, true];
 				player setDamage 1;
 			} else {
 				player setDamage _ndmg;
 			};
 			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#0F0094' size='1.2'>You are dying of thirst!!</t>");
 		};
-		case (RPF_thirst >= 90): {
+		case (_thirst >= 90): {
 			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#1700E6'>You really need a drink!</t>");
 		};
 	};

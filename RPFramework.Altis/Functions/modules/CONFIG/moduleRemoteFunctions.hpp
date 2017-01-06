@@ -14,3 +14,4 @@
 #include "..\Phone\RemoteFunctions.hpp"
 #include "..\PolicePlus\RemoteFunctions.hpp"
 #include "..\Housing\RemoteFunctions.hpp"
+#include "..\Garage\RemoteFunctions.hpp"

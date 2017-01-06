@@ -22,13 +22,6 @@ class CfgFunctions
             class statSaveLoop {};
             class phoneNumber {};
 		};
-		class Garage
-		{
-			file = "RPF_Server\Functions\core\Garage";
-			class fetchGarage {};
-            class insertGarage {};
-            class removeGarage {};
-		};
 		class Money
 		{
 			file = "RPF_Server\Functions\core\Money";

@@ -1,6 +1,11 @@
 /*
 Author: Kerkkoh
 First Edit: 23.9.2016
+
+Trunk format:
+[
+	[randID, "classname", _vars]
+]
 */
 params ["_veh"];
 
@@ -28,22 +33,19 @@ if (isNil {RPF_Fishingnet}) then {
 lbClear 1500;
 
 {
-	_class = _x select 0;
-	
+	_class = _x select 1;
 	_stringName = [_class]call Client_fnc_getVehicleName;
-	if (_isFishingModule == 1) then {
-		if (_class == RPF_Fishingnet) then {
-			_stringName = "Fishing Net";
+	if (_isFishingModule == 1) then {if (_class == RPF_Fishingnet) then {_stringName = "Fishing Net";};};
+	{
+		if ((_x select 0) == "methLab") exitWith {
+			_stringName = "Meth Lab";
 		};
-	};
-	_item = lbAdd [1500, (format["%1 x %2", _stringName, (_x select 1)])];
-	lbSetData [1500, _item, _class];
+	}forEach (_x select 2);
+	_item = lbAdd [1500, _stringName];
+	lbSetData [1500, _item, str (_x select 0)];
 }forEach _trunk;
 
-_count = 0;
-{
-	_count = _count + (_x select 1);
-}forEach _trunk;
+_count = count _trunk;
 
 if (!(count (attachedObjects player) > 0) || _count >= _trunksize) then {
 	ctrlShow [1600, false];

@@ -14,3 +14,4 @@
 #include "..\Phone\Dialogs.hpp"
 #include "..\PolicePlus\Dialogs.hpp"
 #include "..\Housing\Dialogs.hpp"
+#include "..\Garage\Dialogs.hpp"

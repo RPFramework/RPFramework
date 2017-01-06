@@ -16,5 +16,5 @@ if (handgunWeapon _player != "") then {
 	_weapons pushBack [2, handgunWeapon _player, handgunMagazine _player, handgunItems _player, _player ammo (handgunWeapon _player)];
 };
 
-_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7", [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], _weapons, _player getVariable "cash", _player getVariable "bank", position _player, _uid];
+_updatestr = format ["updatePlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9", [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], _weapons, _player getVariable "cash", _player getVariable "bank", position _player, (_player getVariable "hunger"), (_player getVariable "thirst"), _uid];
 _update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;

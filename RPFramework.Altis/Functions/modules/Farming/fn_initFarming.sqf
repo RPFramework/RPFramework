@@ -36,11 +36,11 @@ _usables = [
 
 _menuItems = [
 	[
-		["(typeOf cursorObject) in RPF_plantTypes"],
+		["(typeOf cursorObject) in RPF_plantTypes", "(player distance cursorObject) <= 5"],
 		["Destroy Plant", "[cursorObject] call ClientModules_fnc_destroyPlantae"]
 	],
 	[
-		["(typeOf cursorObject) in RPF_plantTypes"],
+		["(typeOf cursorObject) in RPF_plantTypes", "(player distance cursorObject) <= 5"],
 		["Harvest Plant", "[cursorObject] call ClientModules_fnc_harvestPlantae"]
 	]
 ];
