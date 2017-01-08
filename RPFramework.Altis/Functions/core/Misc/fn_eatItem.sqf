@@ -5,16 +5,14 @@ First Edit: 24.4.2016
 
 params ["_item"];
 
-_hunger = (player getVariable "hunger");
-
 {
 	if ((_x select 0) == _item) then {
-		player setVariable ["hunger", _hunger - (_x select 1), true];
+		_newHunger = (player getVariable "hunger") - (_x select 1);
+		if (_newHunger < 0) then {
+			_newHunger = 0;
+		};
+		player setVariable ["hunger", _newHunger, true];
 	};
 }forEach RPF_Edibles;
-
-if (_hunger < 0) then {
-	player setVariable ["hunger", 0, true];
-};
 
 false

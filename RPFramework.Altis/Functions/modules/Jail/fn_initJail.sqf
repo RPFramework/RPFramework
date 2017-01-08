@@ -5,7 +5,7 @@ First Edit: 22.4.2016
 
 _menuItems = [
 	[
-		["player getVariable ['cop', 0] > 0", "((position player) distance (getMarkerPos 'jail')) <= 15", "cursorObject isKindOf 'Man'", "(player distance cursorObject) <= 2"],
+		["player getVariable ['cop', 0] > 0", "((position player) distance (getMarkerPos 'jail')) <= 15", "isPlayer cursorObject", "(player distance cursorObject) <= 2"],
 		["Arrest", "[cursorObject] call ClientModules_fnc_openArrestMenu"]
 	],
 	[

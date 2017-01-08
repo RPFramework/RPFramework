@@ -4,6 +4,8 @@ Last Edit: 23.11.2015
 */
 params ["_player", "_firstLogin"];
 
+waitUntil {!(isNil{extDB_SQL_CUSTOM_ID})};
+
 _uid = getPlayerUID _player;
 
 _check = [0, (format["existPlayerInfo:%1", _uid])] call ExternalS_fnc_ExtDBquery;
@@ -33,7 +35,7 @@ if ((_check select 0) select 0) then {
 	_insertstr = format["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11", _uid, name _player, [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], [], 1, 2000, -1, -1, position _player, []call Server_fnc_phoneNumber];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	
-	uiSleep 4;
+	uiSleep 2;
 	
 	[_player, true] spawn Server_fnc_initStats;
 }

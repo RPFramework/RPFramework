@@ -25,15 +25,15 @@ RPF_InteractionMenuItems = [
 		["Holster", "[] call Client_fnc_holster"]
 	],
 	[
-		["(RPF_Handcuffs in (items player)) || (RPF_Handcuffs in (magazines player))", "cursorObject isKindOf 'Man'", "(player distance cursorObject) <= 5"],
+		["(RPF_Handcuffs in (items player)) || (RPF_Handcuffs in (magazines player))", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
 		["Cuff", "[cursorObject] spawn Client_fnc_cuff"]
 	],
 	[
-		["(RPF_HandcuffKeys in (items player)) || (RPF_HandcuffKeys in (magazines player))", "cursorObject isKindOf 'Man'", "cursorObject getVariable ['cuffed',false]", "(player distance cursorObject) <= 5"],
+		["(RPF_HandcuffKeys in (items player)) || (RPF_HandcuffKeys in (magazines player))", "isPlayer cursorObject", "cursorObject getVariable ['cuffed',false]", "(player distance cursorObject) <= 5"],
 		["Open Cuffs", "[cursorObject] call Client_fnc_unCuff"]
 	],
 	[
-		["(count (attachedObjects player)) <= 0", "cursorObject isKindOf 'Man'", "cursorObject getVariable ['cuffed',false]", "(player distance cursorObject) <= 5"],
+		["(count (attachedObjects player)) <= 0", "isPlayer cursorObject", "cursorObject getVariable ['cuffed',false]", "(player distance cursorObject) <= 5"],
 		["Escort", "[cursorObject] call Client_fnc_escort"]
 	],
 	[
@@ -49,7 +49,7 @@ RPF_InteractionMenuItems = [
 		["Pull out", "[cursorObject] call Client_fnc_pullOut"]
 	],
 	[
-		["player getVariable ['cop', 0] > 0", "cursorObject isKindOf 'Man'", "(player distance cursorObject) <= 5"],
+		["player getVariable ['cop', 0] > 0", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
 		["Search", "[cursorObject] call Client_fnc_search"]
 	],
 	[

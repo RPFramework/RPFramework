@@ -8,7 +8,7 @@ Adds basic ticketing on site for police personel
 
 _menuItems = [
 	[
-		["(player getVariable ['cop', 0]) > 0", "cursorObject isKindOf 'Man'", "(player distance cursorObject) <= 5"],
+		["(player getVariable ['cop', 0]) > 0", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
 		["Issue Ticket", "[cursorObject] call ClientModules_fnc_ticket"]
 	]
 ];
