@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class RPF_Items
 	{
-		units[] = {"RPF_Plants"};
+		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F_Items","A3_Weapons_F","RPF_General"};

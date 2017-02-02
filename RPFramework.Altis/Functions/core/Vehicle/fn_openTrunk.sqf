@@ -25,24 +25,20 @@ if (count _trunk == 0) then {
 	_veh setVariable ["trunk", [], true];
 };
 
-_isFishingModule = 1;
-if (isNil {RPF_Fishingnet}) then {
-	_isFishingModule = 0;
-};
 
 lbClear 1500;
 
 {
-	_class = _x select 1;
+	_y = _x;
+	_class = _y select 1;
 	_stringName = [_class]call Client_fnc_getVehicleName;
-	if (_isFishingModule == 1) then {if (_class == RPF_Fishingnet) then {_stringName = "Fishing Net";};};
 	{
-		if ((_x select 0) == "methLab") exitWith {
-			_stringName = "Meth Lab";
+		if ((_x select 0) == _class) exitWith {
+			_stringName = (_x select 1);
 		};
-	}forEach (_x select 2);
+	}forEach RPF_ItemNames;
 	_item = lbAdd [1500, _stringName];
-	lbSetData [1500, _item, str (_x select 0)];
+	lbSetData [1500, _item, str (_y select 0)];
 }forEach _trunk;
 
 _count = count _trunk;

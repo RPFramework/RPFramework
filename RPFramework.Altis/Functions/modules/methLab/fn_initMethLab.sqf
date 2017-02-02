@@ -11,3 +11,5 @@ _menuItems = [
 {
 	RPF_InteractionMenuItems pushBack _x;
 }forEach _menuItems;
+
+RPF_ItemNames pushBack ["OfficeTable_01_new_F", "Meth Lab"];

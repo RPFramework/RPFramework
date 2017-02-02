@@ -1,0 +1,1 @@
+#include "Dialogs\processMinerals.hpp"

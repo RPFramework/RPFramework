@@ -15,3 +15,4 @@
 #include "..\PolicePlus\Dialogs.hpp"
 #include "..\Housing\Dialogs.hpp"
 #include "..\Garage\Dialogs.hpp"
+#include "..\Mining\Dialogs.hpp"

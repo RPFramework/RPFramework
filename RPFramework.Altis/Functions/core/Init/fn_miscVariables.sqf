@@ -7,9 +7,14 @@ RPF_Handcuffs = "RPF_Items_Handcuffs";
 RPF_HandcuffKeys = "RPF_Items_HandcuffKeys";
 
 RPF_TrunkDivide = 300;
+
 /*	[classname, customTrunkSize]	*/
 RPF_TrunkException = [
 	["B_MRAP_01_F", 30]
+];
+
+/*	[classname, name]	*/
+RPF_ItemNames = [
 ];
 
 /* ## https://community.bistudio.com/wiki/ListOfKeyCodes You're welcome! ## */
@@ -19,6 +24,7 @@ RPF_PoliceCars = [
 	"B_MRAP_01_F",
 	"O_Heli_Light_02_unarmed_F"
 ];
+
 RPF_MedicCars = [];
 
 RPF_Edibles = [

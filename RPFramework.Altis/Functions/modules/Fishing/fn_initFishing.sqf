@@ -7,3 +7,5 @@ Just adding the fishing net object to physical items in a module, what a waste o
 */
 
 RPF_Fishingnet = "CargoNet_01_box_F";
+
+RPF_ItemNames pushBack ["CargoNet_01_box_F", "Fishing net"];
