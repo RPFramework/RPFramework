@@ -15,3 +15,4 @@
 #include "..\PolicePlus\RemoteFunctions.hpp"
 #include "..\Housing\RemoteFunctions.hpp"
 #include "..\Garage\RemoteFunctions.hpp"
+#include "..\Mining\RemoteFunctions.hpp"

@@ -19,16 +19,14 @@ _class = "";
 	deleteVehicle _x;
 } forEach attachedObjects player;
 
-_isFishingModule = 1;
-if (isNil {RPF_Fishingnet}) then {
-	_isFishingModule = 0;
-};
-
 _trunk = _veh getVariable ["trunk", []];
 
 _stringName = [_class]call Client_fnc_getVehicleName;
-if (_isFishingModule == 1) then {if (_class == RPF_Fishingnet) then {_stringName = "Fishing Net";};};
-{if ((_x select 0) == "methLab") exitWith {_stringName = "Meth Lab";};}forEach _vars;
+{
+	if ((_x select 0) == _class) exitWith {
+		_stringName = (_x select 1);
+	};
+}forEach RPF_ItemNames;
 
 _item = lbAdd [1500, _stringName];
 _randID = round (random 9999);

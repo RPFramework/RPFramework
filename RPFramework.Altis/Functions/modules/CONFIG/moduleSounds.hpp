@@ -15,3 +15,4 @@
 #include "..\PolicePlus\Sounds.hpp"
 #include "..\Housing\Sounds.hpp"
 #include "..\Garage\Sounds.hpp"
+#include "..\Mining\Sounds.hpp"
