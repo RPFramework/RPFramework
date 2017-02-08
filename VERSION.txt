@@ -1,1 +1,1 @@
-4.4.1 STABLE
+4.4.2 STABLE
