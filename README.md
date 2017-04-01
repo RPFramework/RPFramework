@@ -21,6 +21,7 @@ So why should you hop on board with the modular approach to this framework? This
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework
+* Check out a [Brazilian Portuguese](https://github.com/devcjax/RPFramework) translation by devcjax50 while we work on adding a stringtable for translations!
 1. Download all the files from github or a mirror if available
 2. Read documents called **LICENSE.txt** and **COPYING.txt**
 3. Setting up the database
