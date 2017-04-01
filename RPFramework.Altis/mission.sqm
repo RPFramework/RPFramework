@@ -1,12 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 5.24
-//Produced on Sat Apr 30 20:08:54 2016 : Created on Sat Apr 30 20:08:54 2016
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
-
-//Class RPFramework.Altis : mission.sqm{
 version = 52;
 class EditorData
 {
@@ -25,13 +16,48 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[] = {16831.676,74.85697,12692.587};
-		dir[] = {-0.56460047,-0.6483949,-0.5109486};
-		up[] = {-0.480835,0.7611771,-0.43513796};
-		aside[] = {-0.6710652,2.1851156e-007,0.7415314};
+		pos[] = {16695.621,26.621742,12626.569};
+		dir[] = {0.90303105,-0.33389553,0.27074787};
+		up[] = {0.32005098,0.94250613,0.095953256};
+		aside[] = {0.28721496,-7.338822e-007,-0.9579725};
 	};
 };
-addons[] = {"A3_Structures_F_EPC_Civ_Accessories","A3_Structures_F_Heli_Furniture","A3_Characters_F_Civil","a3_characters_f"};
+addons[] = {"A3_Ui_F","A3_Structures_F_EPC_Civ_Accessories","A3_Structures_F_Heli_Furniture","A3_Characters_F","RPF_Mining"};
+class AddonsMetaData
+{
+	class List
+	{
+		items = 4;
+		class Item0
+		{
+			className = "A3_Ui_F";
+			name = "Arma 3 - User Interface";
+			author = "Bohemia Interactive";
+			url = "http://www.arma3.com";
+		};
+		class Item1
+		{
+			className = "A3_Structures_F_EPC";
+			name = "Arma 3 Win Episode - Buildings and Structures";
+			author = "Bohemia Interactive";
+			url = "http://www.arma3.com";
+		};
+		class Item2
+		{
+			className = "A3_Structures_F_Heli";
+			name = "Arma 3 Helicopters - Buildings and Structures";
+			author = "Bohemia Interactive";
+			url = "http://www.arma3.com";
+		};
+		class Item3
+		{
+			className = "A3_Characters_F";
+			name = "Arma 3 Alpha - Characters and Clothing";
+			author = "Bohemia Interactive";
+			url = "http://www.arma3.com";
+		};
+	};
+};
 randomSeed = 5922132;
 class ScenarioData
 {
@@ -3250,4 +3276,3 @@ class Mission
 		};
 	};
 };
-//};

@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 22.9.2016
 */
 
-params ["_object", "_col"];
+params ["_object", "_col", "_time"];
 _c1 = _col select 0;
 _c2 = _col select 1;
 _c3 = _col select 2;
@@ -18,6 +18,6 @@ _source2 setParticleParams [["\A3\data_f\ParticleEffects\Universal\Universal", 1
 _source2 setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.2], 0, 0, 360];
 _source2 setDropInterval 0.03;
 
-sleep (25+random 5);
+sleep _time;
 deletevehicle _source;
 deletevehicle _source2;

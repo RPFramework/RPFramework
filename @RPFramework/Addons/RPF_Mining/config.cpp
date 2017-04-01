@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class RPF_Mining
 	{
-		units[] = {};
+		units[] = {"RPF_Mining_Grinder","RPF_Mining_Rock1","RPF_Mining_Rock2","RPF_Mining_Rock3"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"RPF_General"};
@@ -46,7 +46,7 @@ class CfgWeapons
 	};
 	class RPF_Mining_Gold: ToolKit
 	{
-		displayName = "Gold Ignot";
+		displayName = "Gold Ingot";
 		descriptionShort = "Gold";
 		count = 1;
 		class ItemInfo {
@@ -61,7 +61,7 @@ class CfgWeapons
 	};
 	class RPF_Mining_Iron: ToolKit
 	{
-		displayName = "Iron Ignot";
+		displayName = "Iron Ingot";
 		descriptionShort = "Iron";
 		count = 1;
 		class ItemInfo {
@@ -76,7 +76,7 @@ class CfgWeapons
 	};
 	class RPF_Mining_Copper: ToolKit
 	{
-		displayName = "Copper Ignot";
+		displayName = "Copper Ingot";
 		descriptionShort = "Copper";
 		count = 1;
 		class ItemInfo {

@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class RPF_General
 	{
-		units[] = {"RPF_Phys"};
+		units[] = {"RPF_Phys", "RPF_PhysBase"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Data_F"};

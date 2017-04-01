@@ -24,15 +24,20 @@ So why should you hop on board with the modular approach to this framework? This
 1. Download all the files from github or a mirror if available
 2. Read documents called **LICENSE.txt** and **COPYING.txt**
 3. Setting up the database
-	1. Navigate to folder **External Files**, take out **rpframework.sql** and import it into a MySQL database
+	1. Navigate to folder **External Files**, take out **rpframework.sql** and import it into a MySQL database. You can use programs like MAMP to host a MySQL server.
 	2. Download ExtDB3 https://bitbucket.org/torndeco/extdb3/downloads and set it up on your server (Instructions here: https://bitbucket.org/torndeco/extdb3/wiki/Installation)
 	3. Replace **extdb-conf.ini** in **@ExtDB3** with the same file provided in folder **External Files** and find line **74** where you should change the mysql details to correspond to your database's.
-	4. Drag and drop the **extDB** folder from **External Files** to **@ExtDB3** and choose to replace everything
+	4. Drag and drop the **sql_custom** folder from **External Files** to **@ExtDB3** and choose to replace everything.
+    5. If you have problems with the database, try using the root user, but in the long run, it isn't the best idea ever.
 4. Setting up the mission and server files for RPFramework
 	1. Navigate to folder **bin** and move **@RPF_Server** and **@RPFramework** to your server's main Arma 3 Folder
 	2. Move **RPFramework.Altis** to your server's MPMissions folder
 5. Distribute @RPFramework or the addons inside it to your players
-6. **ADDITIONAL INFO: Modifying RPFramework and porting it to another map:**
+6. Testing RPFramework
+    1. Enable @RPFramework, @RPF_Server and @ExtDB3 on your server. If you're using TADST, your parameters should look like this ` -port=2302 "-config=armaLocation\Arma 3\TADST\rpf\TADST_config.cfg" "-cfg=armaLocation\Arma 3\TADST\rpf\TADST_basic.cfg" "-profiles=armaLocation\Arma 3\TADST\rpf" -name=rpf -pid=pid.log -ranking=ranking.log "-mod=@extDB3;@RPF_Server;@RPFramework"`
+    2. Enable @RPFramework in Arma 3 mods, start up the server and try joining it
+    3. If something is wrong, head over to our [discord server](https://discord.gg/JvRRuTm) and ask for support
+7. **ADDITIONAL INFO: Modifying RPFramework and porting it to another map:**
 	1. Change mission's map suffix to .yourMap
 	2. Navigate to **RPFramework.yourMap\Functions\core\Init** and open up **fn_miscVariables.sqf**. Here you can change item classes, usable items, vehicle classes, keybinds and physical items that you can pick up.
 	3. Glance through every module's init scripts in **RPF_Server\server\modules** and **RPFramework.yourMap\Functions\modules** and change everything that is needed.

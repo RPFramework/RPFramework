@@ -22,7 +22,7 @@ for "_i" from 0 to 1 step 0 do
 			_veh = _class createVehicle _pos;
 			_veh setDir _dir;
 			_veh setVariable ["buyableThing", [_class, _price, 0], true];
-			_veh lock true;
+			_veh lock 2;
 			_veh allowDamage false;
 		};
 	}forEach RPF_vehicleShopVehicles;
