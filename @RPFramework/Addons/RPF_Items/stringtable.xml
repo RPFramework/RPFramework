@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="RPFramework">
+	<Package name="RPF_Items">
+		<Container name="Names">
+			<Key ID="STR_RPF_ITEMS_HANDCUFFS_NAME">
+				<Original>Handcuffs</Original>
+				<English>Handcuffs</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_HANDCUFFS_DESC">
+				<Original>Handcuffs</Original>
+				<English>Handcuffs</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_HANDCUFFKEYS_NAME">
+				<Original>Handcuff Keys</Original>
+				<English>Handcuff Keys</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_HANDCUFFKEYS_DESC">
+				<Original>Handcuff Keys</Original>
+				<English>Handcuff Keys</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_METH_NAME">
+				<Original>Meth</Original>
+				<English>Meth</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_METH_DESC">
+				<Original>1g of Meth</Original>
+				<English>1g of Meth</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_SALEMA_NAME">
+				<Original>Salema</Original>
+				<English>Salema</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_SALEMA_DESC">
+				<Original>Salema Fish</Original>
+				<English>Salema Fish</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_POPPYSEED_NAME">
+				<Original>Poppy Seed</Original>
+				<English>Poppy Seed</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_POPPYSEED_DESC">
+				<Original>Poppy Seed</Original>
+				<English>Poppy Seed</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_POPPY_NAME">
+				<Original>Raw Opium</Original>
+				<English>Raw Opium</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_POPPY_DESC">
+				<Original>1g of Raw Opium</Original>
+				<English>1g of Raw Opium</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_OLIVESEED_NAME">
+				<Original>Olive Seed</Original>
+				<English>Olive Seed</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_OLIVESEED_DESC">
+				<Original>Olive Seed</Original>
+				<English>Olive Seed</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_OLIVES_NAME">
+				<Original>Black Olives</Original>
+				<English>Black Olives</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_OLIVES_DESC">
+				<Original>Black Olives</Original>
+				<English>Black Olives</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_ANTIBIOTICS_NAME">
+				<Original>Antibiotics</Original>
+				<English>Antibiotics</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_ANTIBIOTICS_DESC">
+				<Original>Antibiotics</Original>
+				<English>Antibiotics</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_PAINKILLERS_NAME">
+				<Original>Painkillers</Original>
+				<English>Painkillers</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_PAINKILLERS_DESC">
+				<Original>Painkillers</Original>
+				<English>Painkillers</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_VITAMINS_NAME">
+				<Original>Vitamins</Original>
+				<English>Vitamins</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_VITAMINS_DESC">
+				<Original>Vitamins</Original>
+				<English>Vitamins</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BATTERY_NAME">
+				<Original>Battery</Original>
+				<English>Battery</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BATTERY_DESC">
+				<Original>Battery</Original>
+				<English>Battery</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BAKEDBEANS_NAME">
+				<Original>Baked Beans</Original>
+				<English>Baked Beans</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BAKEDBEANS_DESC">
+				<Original>Baked Beans</Original>
+				<English>Baked Beans</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_WATERBOTTLE_NAME">
+				<Original>Water Bottle</Original>
+				<English>Water Bottle</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_WATERBOTTLE_DESC">
+				<Original>Water Bottle</Original>
+				<English>Water Bottle</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_CANTEEN_NAME">
+				<Original>Canteen</Original>
+				<English>Canteen</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_CANTEEN_DESC">
+				<Original>Canteen</Original>
+				<English>Canteen</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_CEREAL_NAME">
+				<Original>A Cereal Box</Original>
+				<English>A Cereal Box</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_CEREAL_DESC">
+				<Original>A Cereal Box</Original>
+				<English>A Cereal Box</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_RICEBOX_NAME">
+				<Original>A Rice Box</Original>
+				<English>A Rice Box</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_RICEBOX_DESC">
+				<Original>A Rice Box</Original>
+				<English>A Rice Box</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BUTANECANISTER_NAME">
+				<Original>A Butane Canister</Original>
+				<English>A Butane Canister</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BUTANECANISTER_DESC">
+				<Original>A Butane Canister</Original>
+				<English>A Butane Canister</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_GASCANISTER_NAME">
+				<Original>A Gas Canister</Original>
+				<English>A Gas Canister</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_GASCANISTER_DESC">
+				<Original>A Gas Canister</Original>
+				<English>A Gas Canister</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_MATCHES_NAME">
+				<Original>A Box Of Matches</Original>
+				<English>A Box Of Matches</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_MATCHES_DESC">
+				<Original>A Box Of Matches</Original>
+				<English>A Box Of Matches</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_CLEANERSPRAY_NAME">
+				<Original>Alcohol Based Cleaner</Original>
+				<English>Alcohol Based Cleaner</English>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_CLEANERSPRAY_DESC">
+				<Original>Cleaner spray with a high level of ethanol</Original>
+				<English>Cleaner spray with a high level of ethanol</English>
+			</Key>
+		</Container>
+	</Package>
+</Project>

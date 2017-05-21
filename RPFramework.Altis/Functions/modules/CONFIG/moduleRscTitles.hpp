@@ -16,3 +16,4 @@
 #include "..\Housing\RscTitles.hpp"
 #include "..\Garage\RscTitles.hpp"
 #include "..\Mining\RscTitles.hpp"
+#include "..\Licenses\RscTitles.hpp"

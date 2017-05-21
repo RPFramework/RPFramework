@@ -29,7 +29,7 @@ class manageHouseSale
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Currently not for sale"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_HOUSING_NOTFORSALE;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.183333 * safezoneW;
@@ -38,7 +38,7 @@ class manageHouseSale
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Price"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_HOUSING_PRICEMANAGE;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.434026 * safezoneH + safezoneY;
 			w = 0.183333 * safezoneW;
@@ -47,7 +47,7 @@ class manageHouseSale
 		class RscEdit_1400: RscEdit
 		{
 			idc = 1400;
-			text = ""; //--- ToDo: Localize;
+			text = "";
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.467013 * safezoneH + safezoneY;
 			w = 0.183333 * safezoneW;
@@ -56,7 +56,7 @@ class manageHouseSale
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Sell"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_HOUSING_SELL;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.510996 * safezoneH + safezoneY;
 			w = 0.0859375 * safezoneW;
@@ -66,7 +66,7 @@ class manageHouseSale
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "Stop selling"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_HOUSING_STOPSELLING;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.510996 * safezoneH + safezoneY;
 			w = 0.0859375 * safezoneW;
@@ -76,7 +76,7 @@ class manageHouseSale
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			text = "Set price"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_HOUSING_SETPRICE;
 			x = 0.505729 * safezoneW + safezoneX;
 			y = 0.510996 * safezoneH + safezoneY;
 			w = 0.0859375 * safezoneW;

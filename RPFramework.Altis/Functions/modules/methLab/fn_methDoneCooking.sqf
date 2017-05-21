@@ -23,7 +23,7 @@ RPF_methLabPlayerItems = [
 
 lbClear 1501;
 
-hint "You notice vapors raising from the flask revealing beautiful blue crystals.";
+hint (localize "STR_RPF_MODULES_METHLAB_DONECOOKING");
 
 _amount = 5 + round(random 10);
 
@@ -36,4 +36,4 @@ RPF_methLabProducts = [
 	["RPF_Items_Meth", _amount]
 ];
 
-ctrlSetText [1000, "Success!"];
+ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_SUCCESS")];

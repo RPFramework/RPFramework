@@ -11,3 +11,4 @@
 #include "..\Housing\Functions.hpp"
 #include "..\Garage\Functions.hpp"
 #include "..\Mining\Functions.hpp"
+#include "..\Licenses\Functions.hpp"

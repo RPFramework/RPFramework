@@ -24,6 +24,8 @@ class CfgRemoteExec {
         /* Server functions */
         Function(Server_fnc_initStats,SERVER)
 		Function(Server_fnc_replicateMoney,SERVER)
+		Function(Server_fnc_confirmMoney,SERVER)
+        Function(Server_fnc_statSave,SERVER)
 
         /* Anyone functions */
         Function(Client_fnc_playSound,ANYONE)
@@ -37,5 +39,10 @@ class CfgRemoteExec {
 
         Function(setFuel,ANYONE)
         Function(setOwner,ANYONE)
+        /*
+		Don't uncomment these unless you're in a testing environment
+		Function(spawn,ANYONE)
+        Function(call,ANYONE)
+        Function(execVM,ANYONE)*/
     };
 };

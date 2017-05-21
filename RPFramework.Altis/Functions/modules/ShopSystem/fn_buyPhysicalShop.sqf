@@ -5,7 +5,6 @@ First Edit: 22.4.2016
 params ["_ct"];
 
 _array = _ct getVariable "buyableThing";
-_vars = _ct getVariable ["vars", []];
 _class = _array select 0;
 _price = _array select 1;
 _type = _array select 2;
@@ -18,12 +17,12 @@ switch (true) do {
 			_ct setVariable ["buyableThing", nil, true];
 			closeDialog 0;
 			RPF_Cars pushBack _ct;
-			hint "Congratulations for buying a new car! Here are the keys.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
 			[_ct, clientOwner] remoteExec ["setOwner", 2];
 			_ct allowDamage true;
 		} else {
 			closeDialog 0;
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case (_type == 1): {
@@ -36,10 +35,10 @@ switch (true) do {
 			for "_i" from 1 to _amount step 1 do {
 				player addItem _class;
 			};
-			hint "You have bought the item(s)! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEMS");
 		} else {
 			closeDialog 0;
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case (_type == 2): {
@@ -50,19 +49,24 @@ switch (true) do {
 			_newfurn = _class createVehicle position player;
 			[_newfurn] call Client_fnc_pickUp;
 			RPF_ownedFurniture pushBack _newfurn;
-			if (!(isNil {RPF_Fishingnet})) then {
-				if (_class == RPF_Fishingnet) then {
-					[_newfurn] remoteExecCall ["ServerModules_fnc_addFishingnet", 2];
-				};
-			};
 			if (!(isNil {_ct getVariable 'methLab'})) then {
 				_newfurn setVariable ["methLab", 1, true];
 			};
+			_vars = _ct getVariable ["vars", []];
+			if (!(isNil {RPF_Fishingnet})) then {
+				if (_class == RPF_Fishingnet) then {
+					[netId _newfurn, 0] remoteExecCall ["ServerModules_fnc_manageFishingnet", 2];
+					_newfurn setVariable ["action", [true, "[%1, 1] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]", "[%1, 0] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]"]];
+					
+					_vars pushBack ["action", [true, "[%1, 1] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]", "[%1, 0] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]"]];
+					_newfurn setVariable ["vars", _vars, true];
+				};
+			};
 			_newfurn setVariable ["vars", _vars, true];
-			hint "You have bought the item! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEM");
 		} else {
 			closeDialog 0;
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 };

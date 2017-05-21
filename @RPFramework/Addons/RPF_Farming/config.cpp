@@ -13,11 +13,11 @@ class CfgVehicles {
 	class RPF_Plant_Olive: RPF_PhysBase {
 		scope = 2;
 		model = "A3\plants_f\Bush\b_FicusC1s_F.p3d";
-		displayName = "Olive Plant";
+		displayName = "$STR_RPF_FARMING_PLANTS_OLIVE";
 	};
 	class RPF_Plant_Poppy: RPF_PhysBase {
 		scope = 2;
 		model = "A3\plants_f\Bush\b_NeriumO2s_F.p3d";
-		displayName = "Poppy Plant";
+		displayName = "$STR_RPF_FARMING_PLANTS_POPPY";
 	};
 };

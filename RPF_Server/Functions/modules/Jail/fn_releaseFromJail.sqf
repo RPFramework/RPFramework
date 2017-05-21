@@ -25,4 +25,4 @@ _posPlayer = 0;
 
 _player setVariable ["jailed", false, true];
 
-_player setPos RPF_JailReleaseLocation;
+_player setPos ((configFile >> "RPF_jailServerModule" >> "jailReleaseLocation") call BIS_fnc_getCfgData);

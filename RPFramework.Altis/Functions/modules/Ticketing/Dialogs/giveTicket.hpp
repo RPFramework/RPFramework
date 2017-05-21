@@ -15,7 +15,7 @@ class giveTicket
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Ticket Amount"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_TICKETAMOUNT; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.34606 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
@@ -24,7 +24,7 @@ class giveTicket
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Ticket Reason"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_TICKETREASON; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.434026 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
@@ -33,7 +33,7 @@ class giveTicket
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Submit"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_SUBMIT; //--- ToDo: Localize;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.57697 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;

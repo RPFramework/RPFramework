@@ -56,7 +56,7 @@ class policeDatabase
 		class RscEdit_1400: RscEdit
 		{
 			idc = 1400;
-			text = "Name"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_NAME; //--- ToDo: Localize;
 			x = 0.282292 * safezoneW + safezoneX;
 			y = 0.0821629 * safezoneH + safezoneY;
 			w = 0.263542 * safezoneW;
@@ -65,7 +65,7 @@ class policeDatabase
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Run"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_RUN; //--- ToDo: Localize;
 			x = 0.551563 * safezoneW + safezoneX;
 			y = 0.0821629 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -75,7 +75,7 @@ class policeDatabase
 		class RscButton_1604: RscButton
 		{
 			idc = 1604;
-			text = "Add"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_ADD; //--- ToDo: Localize;
 			x = 0.608854 * safezoneW + safezoneX;
 			y = 0.0821629 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -85,7 +85,7 @@ class policeDatabase
 		class RscButton_1605: RscButton
 		{
 			idc = 1605;
-			text = "Remove"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_REM; //--- ToDo: Localize;
 			x = 0.666146 * safezoneW + safezoneX;
 			y = 0.0821629 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -95,7 +95,7 @@ class policeDatabase
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Name"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_NAME; //--- ToDo: Localize;
 			x = 0.522917 * safezoneW + safezoneX;
 			y = 0.126146 * safezoneH + safezoneY;
 			w = 0.194792 * safezoneW;
@@ -104,7 +104,7 @@ class policeDatabase
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Wanted:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_WANTED; //--- ToDo: Localize;
 			x = 0.522917 * safezoneW + safezoneX;
 			y = 0.159133 * safezoneH + safezoneY;
 			w = 0.194792 * safezoneW;
@@ -124,7 +124,7 @@ class policeDatabase
 		class RscText_1003: RscText
 		{
 			idc = 1003;
-			text = "Priors"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_PRIORS; //--- ToDo: Localize;
 			x = 0.282292 * safezoneW + safezoneX;
 			y = 0.302077 * safezoneH + safezoneY;
 			w = 0.0802083 * safezoneW;
@@ -162,7 +162,7 @@ class policeDatabase
 		class RscText_1005: RscText
 		{
 			idc = 1005;
-			text = "Add a prior"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_ADDAPRIOR; //--- ToDo: Localize;
 			x = 0.282292 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;
@@ -182,7 +182,7 @@ class policeDatabase
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "Add prior"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_ADDPRIOR; //--- ToDo: Localize;
 			x = 0.282292 * safezoneW + safezoneX;
 			y = 0.774893 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;
@@ -192,7 +192,7 @@ class policeDatabase
 		class RscText_1007: RscText
 		{
 			idc = 1007;
-			text = "Set wanted"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_SETWANTED; //--- ToDo: Localize;
 			x = 0.522917 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.194792 * safezoneW;
@@ -212,7 +212,7 @@ class policeDatabase
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			text = "Set wanted"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_SETWANTED; //--- ToDo: Localize;
 			x = 0.522917 * safezoneW + safezoneX;
 			y = 0.774893 * safezoneH + safezoneY;
 			w = 0.194792 * safezoneW;
@@ -222,7 +222,7 @@ class policeDatabase
 		class RscButton_1603: RscButton
 		{
 			idc = 1603;
-			text = "Clear wanted status"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_CWANTEDSTATUS; //--- ToDo: Localize;
 			x = 0.522917 * safezoneW + safezoneX;
 			y = 0.291081 * safezoneH + safezoneY;
 			w = 0.194792 * safezoneW;

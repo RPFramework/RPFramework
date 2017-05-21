@@ -15,7 +15,7 @@ class virtualShop
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Shop Name"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_SHOPNAME;
 			x = 0.419792 * safezoneW + safezoneX;
 			y = 0.280086 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -33,7 +33,7 @@ class virtualShop
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Price:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_PRICE;
 			x = 0.414063 * safezoneW + safezoneX;
 			y = 0.587966 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -42,7 +42,7 @@ class virtualShop
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = ""; //--- ToDo: Localize;
+			text = "";
 			x = 0.477083 * safezoneW + safezoneX;
 			y = 0.587966 * safezoneH + safezoneY;
 			w = 0.126042 * safezoneW;
@@ -51,7 +51,7 @@ class virtualShop
 		class RscText_1003: RscText
 		{
 			idc = 1003;
-			text = "Amount:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_AMOUNT;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.631948 * safezoneH + safezoneY;
 			w = 0.0630208 * safezoneW;
@@ -68,7 +68,7 @@ class virtualShop
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Buy"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_BUY;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.686927 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;
@@ -78,7 +78,7 @@ class virtualShop
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "Sell To Shop"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_SELLTOSHOP;
 			x = 0.511459 * safezoneW + safezoneX;
 			y = 0.686927 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;

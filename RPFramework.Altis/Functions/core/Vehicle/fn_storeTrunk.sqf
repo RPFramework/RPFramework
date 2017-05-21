@@ -16,6 +16,9 @@ _class = "";
 	_rem = RPF_ownedFurniture deleteAt (RPF_ownedFurniture find _x);
 	_vars = _x getVariable ["vars", []];
 	_class = typeOf _x;
+	if ((_x getVariable ["action",[false]] select 0)) then {
+		call compile (format[((_x getVariable "action") select 1), str (netId _x)]);
+	};
 	deleteVehicle _x;
 } forEach attachedObjects player;
 
@@ -33,16 +36,16 @@ _randID = round (random 9999);
 lbSetData [1500, _item, str _randID];
 _trunk pushBack [_randID, _class, _vars];
 
-_trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/RPF_TrunkDivide);
+_trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/((missionConfigFile >> "RPF_Config" >> "trunkDivivde") call BIS_fnc_getCfgData));
 {
 	if ((_x select 0) == (typeOf _veh)) exitWith {
 		_trunksize = (_x select 1);
 	};
-}forEach RPF_TrunkException;
+}forEach ((missionConfigFile >> "RPF_Config" >> "trunkException") call BIS_fnc_getCfgData);
 
 _count = count _trunk;
 
-ctrlSetText [1000, (format["Trunk - %1/%2", _count, _trunksize])];
+ctrlSetText [1000, (format[(localize "STR_RPF_CORE_TRUNK_TITLE"), _count, _trunksize])];
 
 if (!(count (attachedObjects player) > 0) || _count >= _trunksize) then {
 	ctrlShow [1600, false];

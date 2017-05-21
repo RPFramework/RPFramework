@@ -4,24 +4,23 @@ First Edit: 23.11.2015
 */
 enableSaving [false, false];
 
-sleep 1;
+uiSleep 1;
 
 if (isServer) then {
-	["rpframework", "SQL_CUSTOM", "rpframework.ini"] spawn ExternalS_fnc_ExtDBinit;
-	sleep 3;
 	[] call Server_fnc_handleDisconnect;
 	[] spawn Server_fnc_statSaveLoop;
 	
 	[] call ServerModules_fnc_initModules;
 } else {
-	waitUntil {!(isNil {player}) && player == player && alive player};
+	waitUntil {uiSleep 0.01; !(isNil {player}) && player == player && alive player};
 	cutText ["Loading in...","BLACK",1];
 	
 	[player, false] remoteExec ["Server_fnc_initStats", 2];
 	
-	waitUntil {player getVariable ["loadedIn", false]};
+	waitUntil {uiSleep 0.01; player getVariable ["loadedIn", false]};
 	
 	cutText ["","plain",1];
+	
 	[] spawn Client_fnc_initHudLoop;
 
 	[] call Client_fnc_miscVariables;
@@ -33,7 +32,7 @@ if (isServer) then {
 	RPF_Holstered = 0;
 	
 	(findDisplay 46) displayAddEventHandler ["KeyDown", {
-		if ((_this select 1) == RPF_InteractionKey) then {
+		if ((_this select 1) == ((missionConfigFile >> "RPF_Config" >> "interactionKey") call BIS_fnc_getCfgData)) then {
 				[]call Client_fnc_openInteraction;
 			false;
 		}

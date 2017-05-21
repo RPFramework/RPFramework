@@ -60,7 +60,7 @@ class dispatch
 				 lineWidthThin = 0.008;
 				 textureComboBoxColor = "#(argb,8,8,3)color(1,1,1,1)";
 			 };
-			onMouseButtonClick = "[_this select 0, _this select 2, _this select 3] call ClientModules_fnc_policePlusDaddMarker"; //--- control,button,x,y,shift,ctrl,alt
+			onMouseButtonClick = "[_this select 0, _this select 2, _this select 3] call ClientModules_fnc_policePlusDaddMarker";
 		};
 		class RscListbox_1500: RscListbox
 		{
@@ -74,7 +74,7 @@ class dispatch
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Name"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_NAME;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.324069 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -83,7 +83,7 @@ class dispatch
 		class RscEdit_1400: RscEdit
 		{
 			idc = 1400;
-			text = ""; //--- ToDo: Localize;
+			text = "";
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.368051 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -92,7 +92,7 @@ class dispatch
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Description"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_DESC;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.412034 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -101,7 +101,7 @@ class dispatch
 		class RscEdit_1401: RscEdit
 		{
 			idc = 1401;
-			text = ""; //--- ToDo: Localize;
+			text = "";
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.456016 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -112,7 +112,7 @@ class dispatch
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "New"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_NEW;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.796884 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -122,7 +122,7 @@ class dispatch
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "Done"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_DONE;
 			x = 0.597396 * safezoneW + safezoneX;
 			y = 0.796884 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -132,7 +132,7 @@ class dispatch
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			text = "Assign"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_ASSIGN;
 			x = 0.660417 * safezoneW + safezoneX;
 			y = 0.796884 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
@@ -151,7 +151,7 @@ class dispatch
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = "[]"; //--- ToDo: Localize;
+			text = "[]";
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.675931 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -160,7 +160,7 @@ class dispatch
 		class RscCombo_2100: RscCombo
 		{
 			idc = 2100;
-			text = "policec"; //--- ToDo: Localize;
+			text = "";
 			x = 0.729167 * safezoneW + safezoneX;
 			y = 0.357056 * safezoneH + safezoneY;
 			w = 0.217708 * safezoneW;
@@ -170,7 +170,7 @@ class dispatch
 		class RscText_1003: RscText
 		{
 			idc = 1003;
-			text = "Caller:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_CALLER;
 			x = 0.0416667 * safezoneW + safezoneX;
 			y = 0.631948 * safezoneH + safezoneY;
 			w = 0.246354 * safezoneW;
@@ -188,7 +188,7 @@ class dispatch
 		class RscText_1005: RscText
 		{
 			idc = 1005;
-			text = "Police Units"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_POLUNITS;
 			x = 0.729167 * safezoneW + safezoneX;
 			y = 0.0491758 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -197,7 +197,7 @@ class dispatch
 		class RscCombo_2101: RscCombo
 		{
 			idc = 2101;
-			text = "emsc"; //--- ToDo: Localize;
+			text = "";
 			x = 0.729167 * safezoneW + safezoneX;
 			y = 0.752901 * safezoneH + safezoneY;
 			w = 0.217708 * safezoneW;
@@ -207,7 +207,7 @@ class dispatch
 		class RscText_1006: RscText
 		{
 			idc = 1006;
-			text = "EMS Units"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_EMSUNITS;
 			x = 0.729167 * safezoneW + safezoneX;
 			y = 0.445021 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
@@ -216,7 +216,7 @@ class dispatch
 		class RscButton_1608: RscButton
 		{
 			idc = 1608;
-			text = "Clear selections"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_CSELECTIONS;
 			x = 0.838021 * safezoneW + safezoneX;
 			y = 0.445021 * safezoneH + safezoneY;
 			w = 0.108854 * safezoneW;
@@ -226,7 +226,7 @@ class dispatch
 		class RscText_1007: RscText
 		{
 			idc = 1007;
-			text = "[]"; //--- ToDo: Localize;
+			text = "[]";
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.719914 * safezoneH + safezoneY;
 			w = 0.171875 * safezoneW;
@@ -235,7 +235,7 @@ class dispatch
 		class RscText_1004: RscText
 		{
 			idc = 1004;
-			text = "Message"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_MESSAGE;
 			x = 0.29375 * safezoneW + safezoneX;
 			y = 0.675931 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;
@@ -255,7 +255,7 @@ class dispatch
 		class RscButton_1604: RscButton
 		{
 			idc = 1604;
-			text = "Police Database"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_POLICEDB;
 			x = 0.29375 * safezoneW + safezoneX;
 			y = 0.631948 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;

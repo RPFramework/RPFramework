@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="RPFramework">
+	<Package name="RPF_MINING">
+		<Container name="Names">
+			<Key ID="STR_RPF_MINING_GRINDER_NAME">
+				<Original>Grinder</Original>
+				<English>Grinder</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_GRINDER_DESC">
+				<Original>Grinder</Original>
+				<English>Grinder</English>
+			</Key>
+			
+			<Key ID="STR_RPF_MINING_MINERALS_NAME">
+				<Original>Minerals</Original>
+				<English>Minerals</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_MINERALS_DESC">
+				<Original>Some minerals</Original>
+				<English>Some minerals</English>
+			</Key>
+			
+			<Key ID="STR_RPF_MINING_GOLD_NAME">
+				<Original>Gold Ingot</Original>
+				<English>Gold Ingot</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_GOLD_DESC">
+				<Original>Gold Ingot</Original>
+				<English>Gold Ingot</English>
+			</Key>
+			
+			<Key ID="STR_RPF_MINING_IRON_NAME">
+				<Original>Iron Ingot</Original>
+				<English>Iron Ingot</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_IRON_DESC">
+				<Original>Iron Ingot</Original>
+				<English>Iron Ingot</English>
+			</Key>
+			
+			<Key ID="STR_RPF_MINING_COPPER_NAME">
+				<Original>Copper Ingot</Original>
+				<English>Copper Ingot</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_COPPER_DESC">
+				<Original>Copper Ingot</Original>
+				<English>Copper Ingot</English>
+			</Key>
+			
+			<Key ID="STR_RPF_MINING_ROCKONE_NAME">
+				<Original>Rock 1</Original>
+				<English>Rock 1</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_ROCKTWO_NAME">
+				<Original>Rock 2</Original>
+				<English>Rock 2</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_ROCKTHREE_NAME">
+				<Original>Rock 3</Original>
+				<English>Rock 3</English>
+			</Key>
+		</Container>
+	</Package>
+</Project>

@@ -20,7 +20,8 @@ _sModules = [
 	"ServerModules_fnc_initPolicePlus",
 	"ServerModules_fnc_initHousing",
 	"ServerModules_fnc_initGarage",
-	"ServerModules_fnc_initMining"
+	"ServerModules_fnc_initMining",
+	"ServerModules_fnc_initLicenses"
 ];
 
 {

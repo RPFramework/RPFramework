@@ -23,7 +23,7 @@ class useItem
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Use"; //--- ToDo: Localize;
+			text = $STR_RPF_CORE_USEITEM_USE;
 			x = 0.477083 * safezoneW + safezoneX;
 			y = 0.631949 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;

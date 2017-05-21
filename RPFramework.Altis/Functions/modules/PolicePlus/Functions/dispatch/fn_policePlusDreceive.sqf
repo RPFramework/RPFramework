@@ -41,7 +41,7 @@ lbClear 2101;
 	lbSetData [2100, _new, _x select 1];
 	_new = lbAdd [2101, _x select 0];
 	lbSetData [2101, _new, _x select 1];
-}forEach [["Busy", "[1, 0, 0, 1]"],["Available", "[0, 1, 0, 1]"],["Away", "[1, 1, 0, 1]"]];
+}forEach [[(localize "STR_RPF_MODULES_POLICEPLUS_BUSY"), "[1, 0, 0, 1]"],[(localize "STR_RPF_MODULES_POLICEPLUS_AVAILABLE"), "[0, 1, 0, 1]"],[(localize "STR_RPF_MODULES_POLICEPLUS_AWAY"), "[1, 1, 0, 1]"]];
 
 _markers = [];
 RPF_dispatching = true;

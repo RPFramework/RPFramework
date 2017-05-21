@@ -9,7 +9,7 @@ _car = call compile _str;
 
 _position = (RPF_curGarage modelToWorld [0,-5,0]);
 _nearest = nearestObjects [_position, ["Car"], 3];
-if (count _nearest != 0) exitWith {hint "Something is blocking the garage";};
+if (count _nearest != 0) exitWith {hint (localize "STR_RPF_MODULES_GARAGE_BLOCKING");};
 
 lbDelete [1500, lbCurSel 1500];
 

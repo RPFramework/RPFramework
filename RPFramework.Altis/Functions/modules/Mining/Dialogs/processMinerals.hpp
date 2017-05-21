@@ -15,7 +15,7 @@ class processMinerals
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = ""; //--- ToDo: Localize;
+			text = "";
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.313073 * safezoneH + safezoneY;
 			w = 0.2062497 * safezoneW;
@@ -24,7 +24,7 @@ class processMinerals
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Process"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_MINING_PROCESS;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;

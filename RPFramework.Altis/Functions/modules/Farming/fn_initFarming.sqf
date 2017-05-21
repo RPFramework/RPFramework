@@ -1,30 +1,7 @@
 /*
 Author: Kerkkoh
 First Edit: 20.4.2016
-
-Additional Information:
-This is the example additional module.
-This mainly gives an idea how you can structure your module and what kind of things modules can currently do in RPF.
-
-Read the readme file for full documentation on modules.
 */
-RPF_farmGroundTypes = [
-	"#GdtStratisDryGrass",
-	"#GdtStratisGreenGrass",
-	"#GdtStratisForestPine",
-	"#GdtStratisDirt",
-	"#GdtDirt",
-	"#GdtGrassGreen",
-	"#GdtGrassDry",
-	"#GdtSoil",
-	"#GdtThorn",
-	"#GdtMarsh",
-	"#GdtVRsurface01"
-];
-RPF_plantTypes = [
-	"RPF_Plant_Olive",
-	"RPF_Plant_Poppy"
-];
 
 _usables = [
 	["RPF_Items_PoppySeed", "['RPF_Items_PoppySeed']call ClientModules_fnc_plantPlantae"],
@@ -36,12 +13,12 @@ _usables = [
 
 _menuItems = [
 	[
-		["(typeOf cursorObject) in RPF_plantTypes", "(player distance cursorObject) <= 5"],
-		["Destroy Plant", "[cursorObject] call ClientModules_fnc_destroyPlantae"]
+		["(typeOf cursorObject) in ((missionConfigFile >> 'RPF_farmingModule' >> 'plantTypes') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5"],
+		[(localize "STR_RPF_MODULES_FARMING_DESTROY"), "[cursorObject] call ClientModules_fnc_destroyPlantae"]
 	],
 	[
-		["(typeOf cursorObject) in RPF_plantTypes", "(player distance cursorObject) <= 5"],
-		["Harvest Plant", "[cursorObject] call ClientModules_fnc_harvestPlantae"]
+		["(typeOf cursorObject) in ((missionConfigFile >> 'RPF_farmingModule' >> 'plantTypes') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5"],
+		[(localize "STR_RPF_MODULES_FARMING_HARVEST"), "[cursorObject] call ClientModules_fnc_harvestPlantae"]
 	]
 ];
 {

@@ -26,7 +26,8 @@ _cModules = [
 	"ClientModules_fnc_initPolicePlus",
 	"ClientModules_fnc_initHousing",
 	"ClientModules_fnc_initGarage",
-	"ClientModules_fnc_initMining"
+	"ClientModules_fnc_initMining",
+	"ClientModules_fnc_initLicenses"
 ];
 
 

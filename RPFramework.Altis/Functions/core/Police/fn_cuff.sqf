@@ -8,7 +8,7 @@ player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 [player, "handcuffs"] remoteExecCall ["Client_fnc_playSound", 0];
 sleep 0.833;
 
-player removeItem RPF_Handcuffs;
+player removeItem ((missionConfigFile >> "RPF_Config" >> "handcuffs_item") call BIS_fnc_getCfgData);
 
 _ct setVariable ["cuffed", true, true];
 

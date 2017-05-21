@@ -3,13 +3,14 @@
 #include "Dialogs\Dialogs.hpp"
 #include "CfgRemoteExec.hpp"
 #include "RscTitles.hpp"
+#include "config.hpp"
 
 enableDebugConsole = 1;
 
 respawn = "BASE";
 disabledAI = 1;
 author = "RPFramework Team";
-onLoadName = "RPFramework 4.4.2";
+onLoadName = $STR_RPF_CORE_ONLOADNAME;
 onLoadMission = "RPFramework by RPFramework Team";
 respawndelay = 1;
 

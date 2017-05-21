@@ -33,7 +33,7 @@ class checkDispatchs
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Unit:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_UNIT;
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.247099 * safezoneH + safezoneY;
 			w = 0.217708 * safezoneW;
@@ -53,7 +53,7 @@ class checkDispatchs
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = "Callout:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_CALLOUT;
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.390043 * safezoneH + safezoneY;
 			w = 0.217708 * safezoneW;
@@ -73,7 +73,7 @@ class checkDispatchs
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Add officer"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_ADDOFFICER;
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.686927 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;
@@ -83,7 +83,7 @@ class checkDispatchs
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "Remove Officer"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_REMOVEOFFICER;
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.73091 * safezoneH + safezoneY;
 			w = 0.0916667 * safezoneW;
@@ -101,7 +101,7 @@ class checkDispatchs
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			text = "Register Unit"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_REGUNIT;
 			x = 0.5 * safezoneW + safezoneX;
 			y = 0.697923 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
@@ -111,7 +111,7 @@ class checkDispatchs
 		class RscButton_1603: RscButton
 		{
 			idc = 1603;
-			text = "UnRegister Unit"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_POLICEPLUS_UNREGUNIT;
 			x = 0.5 * safezoneW + safezoneX;
 			y = 0.741906 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;

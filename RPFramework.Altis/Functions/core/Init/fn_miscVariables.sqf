@@ -3,30 +3,11 @@ Author: Kerkkoh
 First Edit: 23.11.2015
 */
 
-RPF_Handcuffs = "RPF_Items_Handcuffs";
-RPF_HandcuffKeys = "RPF_Items_HandcuffKeys";
-
-RPF_TrunkDivide = 300;
-
-/*	[classname, customTrunkSize]	*/
-RPF_TrunkException = [
-	["B_MRAP_01_F", 30]
-];
-
-/*	[classname, name]	*/
+/* These names will be used for items in trunks and so on. For example meth lab uses this [classname, name]	*/
 RPF_ItemNames = [
 ];
 
-/* ## https://community.bistudio.com/wiki/ListOfKeyCodes You're welcome! ## */
-RPF_InteractionKey = 15;
-
-RPF_PoliceCars = [
-	"B_MRAP_01_F",
-	"O_Heli_Light_02_unarmed_F"
-];
-
-RPF_MedicCars = [];
-
+/* Your modules can add edible items here with pushBack */
 RPF_Edibles = [
 	["RPF_Items_Salema", 50],
 	["RPF_Items_Olives", 40],
@@ -34,12 +15,15 @@ RPF_Edibles = [
 	["RPF_Items_Cereal", 40],
 	["RPF_Items_RiceBox", 50]
 ];
+
+/* Your modules can add drinkable items here with pushBack */
 RPF_Drinkables = [
 	["RPF_Items_CleanerSpray", 30],
 	["RPF_Items_Canteen", 100],
 	["RPF_Items_WaterBottle", 90]
 ];
 
+/* Your modules can add usable items here with pushBack */
 RPF_Usables = [
 	["RPF_Items_Meth", "player removeItem 'RPF_Items_Meth';"],
 	["RPF_Items_Poppy", "player removeItem 'RPF_Items_Poppy';"],

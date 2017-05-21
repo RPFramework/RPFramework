@@ -5,27 +5,19 @@ First Edit: 20.4.2016
 
 params ["_plant", "_player"];
 
-_state = _plant getVariable "state";
-
-if (_state >= 0) then {
+if ((_plant getVariable "state") >= 0) then {
 	switch (typeOf _plant) do {
 		case "RPF_Plant_Poppy": {
-			_item = "RPF_Items_Poppy";
-			_pia = RPF_plantArray find _plant;
-			
-			RPF_plantArray deleteAt _pia;
+			RPF_plantArray deleteAt (RPF_plantArray find _plant);
 			deleteVehicle _plant;
-			_player addItem _item;
+			_player addItem "RPF_Items_Poppy";
 		};
 		case "RPF_Plant_Olive": {
-			_item = "RPF_Items_Olives";
-			_pia = RPF_plantArray find _plant;
-			
-			RPF_plantArray deleteAt _pia;
+			RPF_plantArray deleteAt (RPF_plantArray find _plant);
 			deleteVehicle _plant;
-			_player addItem _item;
+			_player addItem "RPF_Items_Olives";
 		};
 	};
 } else {
-	["This plant is not fully grown yet!"] remoteExecCall ["Client_fnc_hintMP", _player];
+	[(localize "STR_RPF_FARMING_NOTFULLYGROWN")] remoteExecCall ["Client_fnc_hintMP", _player];
 };

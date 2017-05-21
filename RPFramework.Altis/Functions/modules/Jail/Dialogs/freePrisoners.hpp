@@ -24,7 +24,7 @@ class freePrisoners
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Free"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_JAIL_FREE;
 			x = 0.477083 * safezoneW + safezoneX;
 			y = 0.631949 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;

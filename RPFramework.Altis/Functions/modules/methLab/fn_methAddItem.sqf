@@ -4,10 +4,9 @@ First Edit: 22.9.2016
 */
 
 _currentitemindex = lbCurSel 1500;
-if (_currentitemindex == -1) exitWith {ctrlSetText [1000, "STATUS: Nothing add!"];};
+if (_currentitemindex == -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTA")];};
 _classname = lbData [1500, _currentitemindex];
 lbClear 1500;
-player removeItem _classname;
 
 {
 	_class2 = _x select 0;

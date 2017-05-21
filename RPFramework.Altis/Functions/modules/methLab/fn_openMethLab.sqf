@@ -70,4 +70,4 @@ lbClear 1500;
 
 lbSetCurSel [1500, 0];
 
-ctrlSetText [1000, "STATUS: Ready"];
+ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_READY")];

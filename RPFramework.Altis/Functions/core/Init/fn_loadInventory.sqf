@@ -6,6 +6,8 @@ params ["_items", "_clothes", "_weapons", "_position"];
 
 player setPos _position;
 
+player setVariable ["loadedIn", true, true];
+
 removeAllItems player;
 removeAllContainers player;
 removeAllWeapons player;
@@ -49,5 +51,3 @@ player addHeadgear (_clothes select 3);
 {player addItemToVest _x}count (_items select 1);
 {player addItemToBackpack _x}count (_items select 2);
 {player addItem _x; player assignItem _x}count (_items select 3);
-
-player setVariable ["loadedIn", true, true];

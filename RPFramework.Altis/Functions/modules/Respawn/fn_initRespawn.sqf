@@ -14,8 +14,6 @@ player addEventHandler["Respawn",{
 	removeHeadgear player;
 
 	player addUniform "U_C_Poloshirt_blue";
-	player addItem "ItemMap";
-	player assignItem "ItemMap";
-	player addItem "ItemCompass";
-	player assignItem "ItemCompass";
+	player linkItem "ItemMap";
+	player linkItem "ItemCompass";
 }];

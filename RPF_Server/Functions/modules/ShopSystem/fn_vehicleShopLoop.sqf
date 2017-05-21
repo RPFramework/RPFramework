@@ -4,12 +4,34 @@ First Edit: 24.4.2016
 
 Array format
 ["classname", position, direction, price]
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+To make new buyable cars in the editor, put this in their init:
+
+this setVariable ["carShop", PRICEHERE, true];
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+
 RPF_vehicleShopVehicles = [
 	["C_SUV_01_F", [16741.5,12505.9,0.0241032], 322.976, 10000],
 	["C_Offroad_01_F", [16735.7,12501.3,-0.00195217], 322.976, 10000],
 	["C_Van_01_box_F", [16730,12497,0.0254688], 322.976, 15000]
 ];
+
+{
+	if ((_x getVariable ["carShop", -1]) > 0) then {
+		RPF_vehicleShopVehicles pushBack [typeOf _x, getPos _x, getDir _x, (_x getVariable "carShop")];
+		_x setVariable ["buyableThing", [typeOf _x, (_x getVariable "carShop"), 0], true];
+		_x lock 2;
+		_x allowDamage false;
+	};
+}forEach ([0,0] nearObjects ["Car", 30000]);
+
 for "_i" from 0 to 1 step 0 do 
 {
 	{

@@ -15,7 +15,7 @@ class jailBreakout
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Secure Jail Lock"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_JAIL_SECURELOCK; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.313073 * safezoneH + safezoneY;
 			w = 0.2062497 * safezoneW;
@@ -24,7 +24,7 @@ class jailBreakout
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Hack"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_JAIL_HACK; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;

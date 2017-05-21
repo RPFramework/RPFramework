@@ -11,7 +11,7 @@ class CfgPatches
 class cfgVehicleClasses {
 
 	class RPF_Phys {
-		displayName = "RPF Physical";
+		displayName = "$STR_RPF_PHYSICAL_CLASS";
 	};
 };
 class CfgVehicles {

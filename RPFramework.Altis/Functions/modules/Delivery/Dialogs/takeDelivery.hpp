@@ -15,7 +15,7 @@ class takeDelivery
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Delivery:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_DELIVERY_TITLE; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.313073 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -33,7 +33,7 @@ class takeDelivery
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = "Reward:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_DELIVERY_REWARD; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.357056 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -51,7 +51,7 @@ class takeDelivery
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Take task"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_DELIVERY_TAKETASK; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;

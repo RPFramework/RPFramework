@@ -9,7 +9,7 @@ Adds basic ticketing on site for police personel
 _menuItems = [
 	[
 		["(player getVariable ['cop', 0]) > 0", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
-		["Issue Ticket", "[cursorObject] call ClientModules_fnc_ticket"]
+		[(localize "STR_RPF_MODULES_TICKETING_ISSUE"), "[cursorObject] call ClientModules_fnc_ticket"]
 	]
 ];
 {

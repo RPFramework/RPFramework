@@ -15,7 +15,7 @@ class giveCash
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Amount"; //--- ToDo: Localize;
+			text = $STR_RPF_CORE_GIVECASH_AMT;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.34606 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
@@ -24,7 +24,7 @@ class giveCash
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Give"; //--- ToDo: Localize;
+			text = $STR_RPF_CORE_GIVECASH_GIVE;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.57697 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;

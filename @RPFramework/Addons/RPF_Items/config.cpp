@@ -11,9 +11,8 @@ class CfgPatches
 class CfgWeapons
 {
 	class ToolKit;
-	class RPF_Items_Handcuffs: ToolKit
+	class RPF_Items_Base: ToolKit
 	{
-		displayName = "Handcuffs";
 		count = 1;
 		class ItemInfo
 		{
@@ -24,45 +23,42 @@ class CfgWeapons
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	};
+	class RPF_Items_BaseL: ToolKit
+	{
+		count = 1;
+		class ItemInfo
+		{
+			allowedSlots[] = {701,801,901};
+			mass = 6;
+			scope = 0;
+			type = 620;
+			uniformModel = "\A3\Weapons_F\Items\Toolkit";
+		};
+		model = "\A3\weapons_F\ammo\mag_univ.p3d";
+	};
+	class RPF_Items_Handcuffs: RPF_Items_Base
+	{
+		displayName = "$STR_RPF_ITEMS_HANDCUFFS_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_HANDCUFFS_DESC";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Handcuffs.paa";
-		descriptionShort = "Handcuffs";
 	};
-	class RPF_Items_HandcuffKeys: ToolKit
+	class RPF_Items_HandcuffKeys: RPF_Items_Base
 	{
-		displayName = "Handcuff Keys";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 6;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
-		model = "\A3\weapons_F\ammo\mag_univ.p3d";
+		displayName = "$STR_RPF_ITEMS_HANDCUFFKEYS_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_HANDCUFFKEYS_DESC";
 		picture = "\RPF_Items\Data\UI\RPF_Items_HandcuffKeys.paa";
-		descriptionShort = "Handcuff Keys";
 	};
-	class RPF_Items_Meth: ToolKit
+	class RPF_Items_Meth: RPF_Items_Base
 	{
-		displayName = "Meth";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 6;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
-		model = "\A3\weapons_F\ammo\mag_univ.p3d";
+		displayName = "$STR_RPF_ITEMS_METH_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_METH_DESC";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Meth.paa";
-		descriptionShort = "1g of Meth";
 	};
-	class RPF_Items_Salema: ToolKit
+	class RPF_Items_Salema: RPF_Items_Base
 	{
-		displayName = "Salema";
-		count = 1;
+		displayName = "$STR_RPF_ITEMS_SALEMA_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_SALEMA_DESC";
 		class ItemInfo
 		{
 			allowedSlots[] = {701,801,901};
@@ -73,28 +69,17 @@ class CfgWeapons
 		};
 		model = "\A3\animals_f\Fishes\Salema_porgy_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Fish.paa";
-		descriptionShort = "Salema Fish";
 	};
-	class RPF_Items_PoppySeed: ToolKit
+	class RPF_Items_PoppySeed: RPF_Items_BaseL
 	{
-		displayName = "Poppy Seed";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
-		model = "\A3\weapons_F\ammo\mag_univ.p3d";
+		displayName = "$STR_RPF_ITEMS_POPPYSEED_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_POPPYSEED_DESC";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Seeds.paa";
-		descriptionShort = "Poppy Seed";
 	};
-	class RPF_Items_Poppy: ToolKit
+	class RPF_Items_Poppy: RPF_Items_Base
 	{
-		displayName = "1g of Raw Opium";
-		count = 1;
+		displayName = "$STR_RPF_ITEMS_POPPY_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_POPPY_DESC";
 		class ItemInfo
 		{
 			allowedSlots[] = {701,801,901};
@@ -103,248 +88,111 @@ class CfgWeapons
 			type = 620;
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
-		model = "\A3\weapons_F\ammo\mag_univ.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Poppy.paa";
-		descriptionShort = "About 1g of Raw Opium";
 	};
-	class RPF_Items_OliveSeed: ToolKit
+	class RPF_Items_OliveSeed: RPF_Items_BaseL
 	{
-		displayName = "Olive Seed";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_OLIVESEED_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_OLIVESEED_DESC";
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Seeds.paa";
-		descriptionShort = "Olive Seed";
 	};
-	class RPF_Items_Olives: ToolKit
+	class RPF_Items_Olives: RPF_Items_Base
 	{
-		displayName = "Black Olives";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 4;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_OLIVES_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_OLIVES_DESC";
 		model = "\A3\weapons_F\ammo\mag_univ.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Olives.paa";
-		descriptionShort = "Some black olives";
 	};
-	class RPF_Items_Antibiotics: ToolKit
+	class RPF_Items_Antibiotics: RPF_Items_BaseL
 	{
-		displayName = "Antibiotics";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_ANTIBIOTICS_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_ANTIBIOTICS_DESC";
 		model = "\A3\structures_f_epa\Items\Medical\Antibiotic_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Antibiotics.paa";
-		descriptionShort = "Antibiotics";
 	};
-	class RPF_Items_Painkillers: ToolKit
+	class RPF_Items_Painkillers: RPF_Items_BaseL
 	{
-		displayName = "Painkillers";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_PAINKILLERS_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_PAINKILLERS_DESC";
 		model = "\A3\structures_f_epa\Items\Medical\PainKillers_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Painkillers.paa";
-		descriptionShort = "Painkillers";
 	};
-	class RPF_Items_Vitamins: ToolKit
+	class RPF_Items_Vitamins: RPF_Items_BaseL
 	{
-		displayName = "Vitamins";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_VITAMINS_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_VITAMINS_DESC";
 		model = "\A3\structures_f_epa\Items\Medical\VitaminBottle_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Vitamins.paa";
-		descriptionShort = "Vitamins";
 	};
-	class RPF_Items_Battery: ToolKit
+	class RPF_Items_Battery: RPF_Items_BaseL
 	{
-		displayName = "Battery";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_BATTERY_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_BATTERY_DESC";
 		model = "\A3\structures_f_epa\Items\Electronics\Battery_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Battery.paa";
-		descriptionShort = "Battery";
 	};
-	class RPF_Items_BakedBeans: ToolKit
+	class RPF_Items_BakedBeans: RPF_Items_BaseL
 	{
-		displayName = "Baked Beans";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_BAKEDBEANS_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_BAKEDBEANS_DESC";
 		model = "\A3\structures_f_epa\Items\Food\BakedBeans_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_BakedBeans.paa";
-		descriptionShort = "Baked Beans";
 	};
-	class RPF_Items_WaterBottle: ToolKit
+	class RPF_Items_WaterBottle: RPF_Items_BaseL
 	{
-		displayName = "Water Bottle";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_WATERBOTTLE_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_WATERBOTTLE_DESC";
 		model = "\A3\structures_f_epa\Items\Food\BottlePlastic_V2_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_WaterBottle.paa";
-		descriptionShort = "Water Bottle full of water";
 	};
-	class RPF_Items_Canteen: ToolKit
+	class RPF_Items_Canteen: RPF_Items_BaseL
 	{
-		displayName = "Canteen";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_CANTEEN_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_CANTEEN_DESC";
 		model = "\A3\structures_f_epa\Items\Food\Canteen_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Canteen.paa";
-		descriptionShort = "Canteen full of water";
 	};
-	class RPF_Items_Cereal: ToolKit
+	class RPF_Items_Cereal: RPF_Items_BaseL
 	{
-		displayName = "Cereal";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_CEREAL_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_CEREAL_DESC";
 		model = "\A3\structures_f_epa\Items\Food\CerealsBox_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Cereal.paa";
-		descriptionShort = "Some cereal";
 	};
-	class RPF_Items_RiceBox: ToolKit
+	class RPF_Items_RiceBox: RPF_Items_BaseL
 	{
-		displayName = "Rice Box";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_RICEBOX_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_RICEBOX_DESC";
 		model = "\A3\structures_f_epa\Items\Food\RiceBox_F.p3d";
 		picture = "\RPF_General\data\placeholder.paa";
-		descriptionShort = "Rice Box";
 	};
-	class RPF_Items_ButaneCanister: ToolKit
+	class RPF_Items_ButaneCanister: RPF_Items_BaseL
 	{
-		displayName = "Butane Canister";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_BUTANECANISTER_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_BUTANECANISTER_DESC";
 		model = "\A3\structures_f_epa\Items\Tools\ButaneCanister_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Butane.paa";
-		descriptionShort = "A canister of butane";
 	};
-	class RPF_Items_GasCanister: ToolKit
+	class RPF_Items_GasCanister: RPF_Items_BaseL
 	{
-		displayName = "Gas Canister";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_GASCANISTER_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_GASCANISTER_DESC";
 		model = "\A3\structures_f_epa\Items\Tools\GasCanister_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Gascan.paa";
-		descriptionShort = "A canister of gas";
 	};
-	class RPF_Items_Matches: ToolKit
+	class RPF_Items_Matches: RPF_Items_BaseL
 	{
-		displayName = "Matches";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_MATCHES_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_MATCHES_DESC";
 		model = "\A3\structures_f_epa\Items\Tools\Matches_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Matches.paa";
-		descriptionShort = "A box of matches";
 	};
-	class RPF_Items_CleanerSpray: ToolKit
+	class RPF_Items_CleanerSpray: RPF_Items_BaseL
 	{
-		displayName = "Alcohol Based Cleaner";
-		count = 1;
-		class ItemInfo
-		{
-			allowedSlots[] = {701,801,901};
-			mass = 2;
-			scope = 0;
-			type = 620;
-			uniformModel = "\A3\Weapons_F\Items\Toolkit";
-		};
+		displayName = "$STR_RPF_ITEMS_CLEANERSPRAY_NAME";
+		descriptionShort = "$STR_RPF_ITEMS_CLEANERSPRAY_DESC";
 		model = "\A3\structures_f_epa\Items\Medical\DisinfectantSpray_F.p3d";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Spray.paa";
-		descriptionShort = "High Alcohol Based Cleaner";
 	};
 };

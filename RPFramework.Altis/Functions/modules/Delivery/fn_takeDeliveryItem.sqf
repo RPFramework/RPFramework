@@ -16,5 +16,5 @@ _deliveryItem = _class createVehicle position player;
 [_deliveryItem] call Client_fnc_pickUp;
 RPF_ownedFurniture pushBack _deliveryItem;
 
-_str = format ["Items left: %1/%2)", _left, _amount];
+_str = format [(localize "STR_RPF_MODULES_DELIVERY_ITEMSLEFTHINT"), _left, _amount];
 hint _str;

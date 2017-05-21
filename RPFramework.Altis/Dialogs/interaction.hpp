@@ -3,10 +3,6 @@ class interaction
 	idd = 1014;
 	class controls 
 	{
-		////////////////////////////////////////////////////////
-		// GUI EDITOR OUTPUT START (by Kerkkoh Frost, v1.063, #Waqyjy)
-		////////////////////////////////////////////////////////
-
 		class RscFrame_1800: RscText
 		{
 			idc = 1800;
@@ -19,7 +15,7 @@ class interaction
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "RPFramework"; //--- ToDo: Localize;
+			text = "RPFramework";
 			x = 0.43125 * safezoneW + safezoneX;
 			y = 0.258094 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
@@ -106,8 +102,5 @@ class interaction
 			h = 0.0329871 * safezoneH;
 			action = [8] call Client_fnc_interactionAction;
 		};
-		////////////////////////////////////////////////////////
-		// GUI EDITOR OUTPUT END
-		////////////////////////////////////////////////////////
 	};
 };

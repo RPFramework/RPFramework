@@ -21,4 +21,4 @@ _house setVariable ["id", _id, true];
 _house setVariable ["owner", _owner, true];
 _house setVariable ["locked", false, true];
 
-["Welcome to your brand new house!"] remoteExecCall ["Client_fnc_hintMP", _player];
+[(localize "STR_RPF_HOUSING_WELCOME")] remoteExecCall ["Client_fnc_hintMP", _player];

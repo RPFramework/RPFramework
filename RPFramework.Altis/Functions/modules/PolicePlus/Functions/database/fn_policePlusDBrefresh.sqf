@@ -14,7 +14,7 @@ if ((_data select 1) != "no") then {
 	ctrlSetText [1002, _data select 1];
 	((findDisplay 1085) displayCtrl 1002) ctrlSetTextColor [1, 0, 0, 1];
 } else {
-	ctrlSetText [1002, "No"];
+	ctrlSetText [1002, (localize "STR_RPF_MODULES_POLICEPLUS_NO")];
 	((findDisplay 1085) displayCtrl 1002) ctrlSetTextColor [1, 1, 1, 1];
 };
 

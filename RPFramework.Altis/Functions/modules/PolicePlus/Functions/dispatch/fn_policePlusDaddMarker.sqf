@@ -10,7 +10,7 @@ deleteMarkerLocal "tdm";
 _m = createMarkerLocal ["tdm", _ctrl ctrlMapScreenToWorld [_xC,_yC]]; 
 _m setMarkerShapeLocal "ICON";
 _m setMarkerTypeLocal "hd_objective";
-_m setMarkerTextLocal "Dispatch Location";
+_m setMarkerTextLocal (localize "STR_RPF_MODULES_POLICEPLUS_DLOCATION");
 _m setMarkerColorLocal "ColorYellow";
 
 ctrlSetText [1002, str (getMarkerPos "tdm")];

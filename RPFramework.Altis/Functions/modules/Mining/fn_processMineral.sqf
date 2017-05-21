@@ -13,6 +13,6 @@ _class = selectRandom _ignots;
 
 player addItem _class;
 
-hint format ["You got a %1", [_class]call Client_fnc_getWeaponName];
+hint format [(localize "STR_RPF_MODULES_MINING_YOUGOT"), [_class]call Client_fnc_getWeaponName];
 
-ctrlSetText [1000, format["You have %1 minerals", {_x == "RPF_Mining_Minerals"} count (items player)]];
+ctrlSetText [1000, format[(localize "STR_RPF_MODULES_MINING_YOURMINERALS"), {_x == "RPF_Mining_Minerals"} count (items player)]];

@@ -26,7 +26,7 @@ if (_anon) then {
 	_author = player getVariable "phone";
 };
 
-if (_number == RPF_emergencyNumber) then {
+if (_number == ((missionConfigFile >> "RPF_phoneModule" >> "emergencyNumber") call BIS_fnc_getCfgData)) then {
 	_police = []call Client_fnc_getPolice;
 	_medics = []call Client_fnc_getMedics;
 	{
@@ -35,7 +35,7 @@ if (_number == RPF_emergencyNumber) then {
 	{
 		[_author, _msg, true] remoteExecCall ["ClientModules_fnc_receiveText", _x];
 	}forEach _medics;
-	hint "Message sent.";
+	hint (localize "STR_RPF_MODULES_PHONE_MSGSENT");
 } else {
 	_player = objNull;
 	{
@@ -45,8 +45,8 @@ if (_number == RPF_emergencyNumber) then {
 	}forEach allPlayers;
 	if (!(isNull _player)) then {
 		[_author, _msg, false] remoteExecCall ["ClientModules_fnc_receiveText", _player];
-		hint "Message sent.";
+		hint (localize "STR_RPF_MODULES_PHONE_MSGSENT");
 	} else {
-		hint "You can not reach this number right now.";
+		hint (localize "STR_RPF_MODULES_PHONE_NNOTAVAIL");
 	};
 };

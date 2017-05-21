@@ -8,7 +8,7 @@ params["_house"];
 createDialog "manageHouseSale";
 
 if ((_house getVariable ["price", -1]) != -1) then {
-	ctrlSetText[1000, "Currently for sale"];
+	ctrlSetText[1000, (localize "STR_RPF_MODULES_HOUSING_CURFORSALE")];
 	ctrlSetText[1400, str (_house getVariable "price")];
 	ctrlShow[1600, false];
 } else {
@@ -18,5 +18,5 @@ if ((_house getVariable ["price", -1]) != -1) then {
 		if ((_x select 0) == typeOf _house) then {
 			ctrlSetText[1400, str (_x select 1)];
 		};
-	}forEach RPF_buyableHouses;
+	}forEach ((missionConfigFile >> "RPF_housingModule" >> "buyableHouses") call BIS_fnc_getCfgData);
 };

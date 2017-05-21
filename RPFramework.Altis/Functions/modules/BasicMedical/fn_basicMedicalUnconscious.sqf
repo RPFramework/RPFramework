@@ -11,7 +11,7 @@ _deadLoadout = [0, _unit, []]call ClientModules_fnc_basicMedicalLoadout;
 _unit setVariable ["unconscious", true, true];
 player setVariable ["loadedIn", false, true];
 
-_timer = time + RPF_UnconsciousTime;
+_timer = time + ((missionConfigFile >> "RPF_basicMedicalModule" >> "unconsciousTime") call BIS_fnc_getCfgData);
 
 _medics = []call Client_fnc_getMedics;
 {
@@ -31,7 +31,7 @@ _money setVariable ["money", _cash, true];
 
 for "_i" from 0 to 1 step 0 do {
 	if (time >= _timer || !(_unit getVariable ["unconscious",  false])) exitWith {};
-	_text = format ["You're bleeding out in %1 seconds!", round (_timer - time)];
+	_text = format [(localize "STR_RPF_MODULES_BASICMEDICAL_BLEEDINGOUT"), round (_timer - time)];
 	cutText [_text,"BLACK FADED",1];
 	sleep 0.1;
 };
@@ -44,6 +44,9 @@ if (!(_unit getVariable ["unconscious",  false])) then {
 } else {
 	_unit setVariable ["unconscious", nil, true];
 	player setVariable ["unconscious", nil, true];
+	player setVariable ["hunger", 0, true];
+	player setVariable ["thirst", 0, true];
+	[player, 0, getPlayerUID player, name player] remoteExec ["Server_fnc_statSave", 2];
 };
 _medics = []call Client_fnc_getMedics;
 {

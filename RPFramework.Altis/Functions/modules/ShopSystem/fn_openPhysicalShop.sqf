@@ -23,9 +23,9 @@ _price = _array select 1;
 ctrlSetText [1003, str _price];
 _type = _array select 2;
 
-if ((_class in RPF_PoliceCars) && (player getVariable ['cop', 0] <= 0)) exitWith {closeDialog 0;};
+if ((_class in ((missionConfigFile >> "RPF_Config" >> "policeCars") call BIS_fnc_getCfgData)) && (player getVariable ['cop', 0] <= 0)) exitWith {closeDialog 0;};
 
-if ((_class in RPF_MedicCars) && (player getVariable ['ems', 0] <= 0)) exitWith {closeDialog 0;};
+if ((_class in ((missionConfigFile >> "RPF_Config" >> "medicCars") call BIS_fnc_getCfgData)) && (player getVariable ['ems', 0] <= 0)) exitWith {closeDialog 0;};
 
 switch (true) do {
 	case (_type == 0): {
@@ -43,11 +43,11 @@ switch (true) do {
 		ctrlSetText [1001, _name];
 	};
 	case (_type == 2 && _class == RPF_Fishingnet): {
-		_name = "Fishing net";
+		_name = (localize "STR_RPF_MODULES_SHOPSYSTEM_FNET");
 		ctrlSetText [1001, _name];
 	};
 	case (_type == 2 && _methLab): {
-		_name = "Chemistry Table";
+		_name = (localize "STR_RPF_MODULES_SHOPSYSTEM_CHEMTABLE");
 		ctrlSetText [1001, _name];
 	};
 };

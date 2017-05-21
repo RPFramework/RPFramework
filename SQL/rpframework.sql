@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: 30.12.2016 klo 11:43
+-- Generation Time: 21.05.2017 klo 17:39
 -- Palvelimen versio: 5.5.49-log
 -- PHP Version: 7.0.9
 
@@ -77,6 +77,19 @@ CREATE TABLE IF NOT EXISTS `houses` (
 -- --------------------------------------------------------
 
 --
+-- Rakenne taululle `licenses`
+--
+
+CREATE TABLE IF NOT EXISTS `licenses` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `license` varchar(1500) NOT NULL,
+  `uid` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Rakenne taululle `phonecontacts`
 --
 
@@ -98,11 +111,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `name` varchar(50) DEFAULT NULL,
   `items` varchar(1500) NOT NULL,
   `clothes` varchar(1500) NOT NULL,
-  `weapons` varchar(1500) NOT NULL,
-  `cash` int(13) NOT NULL,
-  `bank` int(13) NOT NULL,
-  `cop` int(13) NOT NULL,
-  `ems` int(13) NOT NULL,
+  `weapons` varchar(1500) NOT NULL DEFAULT '[]',
+  `cash` int(13) NOT NULL DEFAULT '1',
+  `bank` int(13) NOT NULL DEFAULT '2000',
+  `cop` int(13) NOT NULL DEFAULT '-1',
+  `ems` int(13) NOT NULL DEFAULT '-1',
   `position` varchar(50) NOT NULL,
   `bankaccount` int(11) NOT NULL,
   `phone` varchar(10) NOT NULL DEFAULT '-1',
@@ -136,6 +149,12 @@ ALTER TABLE `garage`
 -- Indexes for table `houses`
 --
 ALTER TABLE `houses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `licenses`
+--
+ALTER TABLE `licenses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -174,6 +193,11 @@ ALTER TABLE `garage`
 -- AUTO_INCREMENT for table `houses`
 --
 ALTER TABLE `houses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `licenses`
+--
+ALTER TABLE `licenses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `phonecontacts`

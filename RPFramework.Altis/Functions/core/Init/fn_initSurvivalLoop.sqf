@@ -20,10 +20,10 @@ for "_i" from 0 to 1 step 0 do {
 			} else {
 				player setDamage _ndmg;
 			};
-			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#750016' size='1.2'>Starvation imminent!!</t>");
+			hint (parseText (localize "STR_RPF_CORE_SURVIVALLOOP_STARVINGIMMINENT"));
 		};
 		case (_hunger >= 90): {
-			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#B80000'>You are starving!</t>");
+			hint (parseText (localize "STR_RPF_CORE_SURVIVALLOOP_STARVING"));
 		};
 	};
 	switch (true) do {
@@ -36,10 +36,10 @@ for "_i" from 0 to 1 step 0 do {
 			} else {
 				player setDamage _ndmg;
 			};
-			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#0F0094' size='1.2'>You are dying of thirst!!</t>");
+			hint (parseText (localize "STR_RPF_CORE_SURVIVALLOOP_DYINGOFTHIRST"));
 		};
 		case (_thirst >= 90): {
-			hint (parseText "<t color='#fff95b' size='1.3' align='center'>Survival:<br /></t><t color='#1700E6'>You really need a drink!</t>");
+			hint (parseText (localize "STR_RPF_CORE_SURVIVALLOOP_NEEDADRINK"));
 		};
 	};
 };

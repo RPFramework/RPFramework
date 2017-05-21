@@ -11,12 +11,12 @@ params ["_veh"];
 
 createDialog "trunk";
 
-_trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/RPF_TrunkDivide);
+_trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/((missionConfigFile >> "RPF_Config" >> "trunkDivivde") call BIS_fnc_getCfgData));
 {
 	if ((_x select 0) == (typeOf _veh)) exitWith {
 		_trunksize = (_x select 1);
 	};
-}forEach RPF_TrunkException;
+}forEach ((missionConfigFile >> "RPF_Config" >> "trunkException") call BIS_fnc_getCfgData);
 
 if (_trunksize < 1) exitWith { closeDialog 0; };
 
@@ -50,4 +50,4 @@ if (!(count _trunk > 0)) then {
 	ctrlShow [1601, false];
 };
 
-ctrlSetText [1000, (format["Trunk - %1/%2", _count, _trunksize])];
+ctrlSetText [1000, (format[(localize "STR_RPF_CORE_TRUNK_TITLE"), _count, _trunksize])];

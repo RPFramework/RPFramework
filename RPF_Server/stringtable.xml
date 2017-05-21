@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="RPFramework">
+	<Package name="RPF_Server">
+		<Container name="ATM">
+			<Key ID="STR_RPF_ATM_INIT">
+				<Original># ATM: Module Loaded #</Original>
+				<English># ATM: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_RECEIVED">
+				<Original>You have received money!</Original>
+				<English>You have received money!</English>
+			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_COMPLETED">
+				<Original>Transfer completed!</Original>
+				<English>Transfer completed!</English>
+			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_NOTENOUGHBANK">
+				<Original>You don't have enough money in your bank account to do this!</Original>
+				<English>You don't have enough money in your bank account to do this!</English>
+			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_ACCNOTFOUND">
+				<Original>Account not found!</Original>
+				<English>Account not found!</English>
+			</Key>
+		</Container>
+		
+		<Container name="DELIVERY">
+			<Key ID="STR_RPF_DELIVERY_INIT">
+				<Original># Delivery: Module Loaded #</Original>
+				<English># Delivery: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_DELIVERY_DP">
+				<Original>Delivery Depot</Original>
+				<English>Delivery Depot</English>
+			</Key>
+		</Container>
+		
+		<Container name="EXAMPLE">
+			<Key ID="STR_RPF_EXAMPLE_INIT">
+				<Original># Example: Module Loaded #</Original>
+				<English># Example: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_EXAMPLE_NEWPLAYER">
+				<Original>Example Module: %1's First time login on %2/%3/%4 %5:%6</Original>
+				<English>Example Module: %1's First time login on %2/%3/%4 %5:%6</English>
+			</Key>
+		</Container>
+		
+		<Container name="FARMING">
+			<Key ID="STR_RPF_FARMING_INIT">
+				<Original># Farming: Module Loaded #</Original>
+				<English># Farming: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_FARMING_NOTFULLYGROWN">
+				<Original>This plant is not fully grown yet!</Original>
+				<English>This plant is not fully grown yet!</English>
+			</Key>
+			<Key ID="STR_RPF_FARMING_TOOCLOSE">
+				<Original>You can't plant a new plant so close to another one!</Original>
+				<English>You can't plant a new plant so close to another one!</English>
+			</Key>
+		</Container>
+		
+		<Container name="FISHING">
+			<Key ID="STR_RPF_FISHING_INIT">
+				<Original># Fishing: Module Loaded #</Original>
+				<English># Fishing: Module Loaded #</English>
+			</Key>
+		</Container>
+		
+		<Container name="GARAGE">
+			<Key ID="STR_RPF_GARAGE_INIT">
+				<Original># Garage: Module Loaded #</Original>
+				<English># Garage: Module Loaded #</English>
+			</Key>
+		</Container>
+		
+		<Container name="HOUSING">
+			<Key ID="STR_RPF_HOUSING_INIT">
+				<Original># Housing: Module Loaded #</Original>
+				<English># Housing: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_HOUSING_WELCOME">
+				<Original>Welcome to your brand new house!</Original>
+				<English>Welcome to your brand new house!</English>
+			</Key>
+			<Key ID="STR_RPF_HOUSING_RECEIVEDMONEY">
+				<Original>You have received money!</Original>
+				<English>You have received money!</English>
+			</Key>
+		</Container>
+		
+		<Container name="JAIL">
+			<Key ID="STR_RPF_JAIL_INIT">
+				<Original># Jail: Module Loaded #</Original>
+				<English># Jail: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_JAIL_JAIL">
+				<Original>Jail</Original>
+				<English>Jail</English>
+			</Key>
+		</Container>
+		
+		<Container name="LICENSES">
+			<Key ID="STR_RPF_LICENSES_INIT">
+				<Original># Licenses: Module Loaded #</Original>
+				<English># Licenses: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_LICENSES_NEWLICENSE">
+				<Original>You've been granted a %1</Original>
+				<English>You've been granted a %1</English>
+			</Key>
+			<Key ID="STR_RPF_LICENSES_REVOKED">
+				<Original>Your %1 has been revoked.</Original>
+				<English>Your %1 has been revoked.</English>
+			</Key>
+		</Container>
+		
+		<Container name="METHLAB">
+			<Key ID="STR_RPF_METHLAB_INIT">
+				<Original># methLab: Module Loaded #</Original>
+				<English># methLab: Module Loaded #</English>
+			</Key>
+		</Container>
+		
+		<Container name="MINING">
+			<Key ID="STR_RPF_MINING_INIT">
+				<Original># Mining: Module Loaded #</Original>
+				<English># Mining: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_MINE">
+				<Original>Mine</Original>
+				<English>Mine</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_TRADER">
+				<Original>Mineral trader</Original>
+				<English>Mineral trader</English>
+			</Key>
+			<Key ID="STR_RPF_MINING_PROCESSING">
+				<Original>Mineral processing</Original>
+				<English>Mineral processing</English>
+			</Key>
+		</Container>
+		
+		<Container name="PHONE">
+			<Key ID="STR_RPF_PHONE_INIT">
+				<Original># Phone: Module Loaded #</Original>
+				<English># Phone: Module Loaded #</English>
+			</Key>
+		</Container>
+		
+		<Container name="POLICEPLUS">
+			<Key ID="STR_RPF_POLICEPLUS_INIT">
+				<Original># Police+: Module Loaded #</Original>
+				<English># Police+: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_POLICEPLUSDB_INIT">
+				<Original># Police+: Police Database Loaded #</Original>
+				<English># Police+: Police Database Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_POLICEPLUSDISPATCH_INIT">
+				<Original># Police+ Module Loaded #</Original>
+				<English># Police+ Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_POLICEPLUSDISPATCH_OCCUPIED">
+				<Original>%1 is already the dispatcher!</Original>
+				<English>%1 is already the dispatcher!</English>
+			</Key>
+		</Container>
+		
+		<Container name="SHOPSYSTEM">
+			<Key ID="STR_RPF_SHOPSYSTEM_INIT">
+				<Original># Shop System: Module Loaded #</Original>
+				<English># Shop System: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_VEHICLESTORE">
+				<Original>Vehicle Store</Original>
+				<English>Vehicle Store</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_GENERALSTORE">
+				<Original>General Store</Original>
+				<English>General Store</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_DRUGDEALER">
+				<Original>Drug Dealer</Original>
+				<English>Drug Dealer</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_FARMSTORE">
+				<Original>Farm Store</Original>
+				<English>Farm Store</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_GUNSTORE">
+				<Original>Gun Store</Original>
+				<English>Gun Store</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_POLSTORE">
+				<Original>Police Store</Original>
+				<English>Police Store</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_EMSSTORE">
+				<Original>EMS Store</Original>
+				<English>EMS Store</English>
+			</Key>
+		</Container>
+	</Package>
+</Project>

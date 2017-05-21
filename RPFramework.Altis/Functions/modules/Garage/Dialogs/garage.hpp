@@ -15,7 +15,7 @@ class garage
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Fetch Car"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_GARAGE_FETCHCAR; //--- ToDo: Localize;
 			x = 0.465625 * safezoneW + safezoneX;
 			y = 0.620953 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
@@ -36,7 +36,7 @@ class garage
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Garage"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_GARAGE_TITLE; //--- ToDo: Localize;
 			x = 0.43125 * safezoneW + safezoneX;
 			y = 0.302077 * safezoneH + safezoneY;
 			w = 0.1375 * safezoneW;

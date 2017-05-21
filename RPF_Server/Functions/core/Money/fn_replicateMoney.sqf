@@ -26,13 +26,16 @@ if (_cashOrBank == 0) then {
 } else {
 	_fetch = [(format["playerCashBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
 };
+_oldBalance = ((_fetch select 0) select 0);
 
 _newBalance = nil;
 if (_type == 0) then {
-	_newBalance = ((_fetch select 0) select 0) - _amount;
+	_newBalance = _oldBalance - _amount;
 } else {
-	_newBalance = ((_fetch select 0) select 0) + _amount;
+	_newBalance = _oldBalance + _amount;
 };
+
+if (_newBalance < 0) exitWith {};
 
 if (_cashOrBank == 0) then {
 	_insert = [0, (format["updatePlayerBalance:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;

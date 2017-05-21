@@ -3,23 +3,28 @@ Author: Kerkkoh
 First Edit: 20.11.2016
 */
 
-_physicals = [
-	["OfficeTable_01_new_F", [16758.184, 12500.937, 0.275], 143.888, "delivery"],
-	["OfficeTable_01_new_F", [14882.873, 11054.816, 0], 178.702, "dp1"],
-	["OfficeTable_01_new_F", [16987.119, 14904.747, 0], 89.324, "dp2"]
-];
-_markers = [
-	["deliveryStation",[16758.184, 12500.937, 0.275],"ICON","hd_dot","Delivery Depot"]
-];
-{
-	_veh = (_x select 0) createVehicle (_x select 1);
-	_veh setDir (_x select 2);
-	_veh setVariable [_x select 3, true, true];
-}forEach _physicals;
+_mC = "RPF_deliveryServerModule";
 
 {
-	_marker = createMarker [_x select 0, _x select 1];
-	_marker setMarkerShape (_x select 2);
-	_marker setMarkerType (_x select 3);
-	_marker setMarkerText (_x select 4);
-}forEach _markers;
+	_classname = (configFile >> _mC >> _x >> "className") call BIS_fnc_getCfgData;
+	_pos = (configFile >> _mC >> _x >> "pos") call BIS_fnc_getCfgData;
+	_dir = (configFile >> _mC >> _x >> "dir") call BIS_fnc_getCfgData;
+	_variable = (configFile >> _mC >> _x >> "variable") call BIS_fnc_getCfgData;
+	
+	_veh = _classname createVehicle _pos;
+	_veh setDir _dir;
+	_veh setVariable [_variable, true, true];
+	
+}forEach ((configFile >> _mC >> "deliveryPhysicals") call BIS_fnc_getCfgData);
+{
+	_name = (configFile >> _mC >> _x >> "name") call BIS_fnc_getCfgData;
+	_pos = (configFile >> _mC >> _x >> "pos") call BIS_fnc_getCfgData;
+	_shape = (configFile >> _mC >> _x >> "shape") call BIS_fnc_getCfgData;
+	_type = (configFile >> _mC >> _x >> "type") call BIS_fnc_getCfgData;
+	_text = (configFile >> _mC >> _x >> "text") call BIS_fnc_getCfgData;
+	
+	_marker = createMarker [_name, _pos];
+	_marker setMarkerShape _shape;
+	_marker setMarkerType _type;
+	_marker setMarkerText _text;
+}forEach ((configFile >> _mC >> "deliveryMarkers") call BIS_fnc_getCfgData);

@@ -16,3 +16,4 @@
 #include "..\Housing\Dialogs.hpp"
 #include "..\Garage\Dialogs.hpp"
 #include "..\Mining\Dialogs.hpp"
+#include "..\Licenses\Dialogs.hpp"

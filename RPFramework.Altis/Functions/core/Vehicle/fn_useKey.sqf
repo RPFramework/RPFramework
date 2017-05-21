@@ -13,5 +13,5 @@ if (_veh in RPF_Cars) then {
 		_veh lock 2;
 	};
 } else {
-	hint "Your key can't open this vehicle.";
+	hint (localize "STR_RPF_CORE_VEHICLE_CANTUSEKEY");
 };

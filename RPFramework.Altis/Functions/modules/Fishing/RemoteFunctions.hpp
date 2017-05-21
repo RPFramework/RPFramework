@@ -1,1 +1,1 @@
-        Function(ServerModules_fnc_addFishingnet,SERVER)
+        Function(ServerModules_fnc_manageFishingnet,SERVER)

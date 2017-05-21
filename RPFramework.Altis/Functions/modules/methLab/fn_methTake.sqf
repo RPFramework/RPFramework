@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 22.9.2016
 */
 _currentitemindex = lbCurSel 1502;
-if (_currentitemindex == -1) exitWith {ctrlSetText [1000, "STATUS: Nothing to take!"];};
+if (_currentitemindex == -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTT")];};
 _classname = lbData [1502, _currentitemindex];
 player addItem _classname;
 

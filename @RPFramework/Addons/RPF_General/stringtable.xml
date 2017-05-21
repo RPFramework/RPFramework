@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="RPFramework">
+	<Package name="RPF_Physical">
+		<Container name="Names">
+			<Key ID="STR_RPF_PHYSICAL_CLASS">
+				<Original>RPF Physical</Original>
+				<English>RPF Physical</English>
+			</Key>
+		</Container>
+	</Package>
+</Project>

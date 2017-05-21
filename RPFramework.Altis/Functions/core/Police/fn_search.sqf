@@ -28,4 +28,4 @@ _w = [];
 }forEach ([weapons _ct]call Client_fnc_sortArray);
 _wFinal = _w joinString "";
 
-hint (parseText (format ["Searched player has:<br/>%1", ([_iFinal, _mFinal, _wFinal] joinString "")]));
+hint (parseText (format [(localize "STR_RPF_CORE_POLICE_SEARCHEDHAS"), ([_iFinal, _mFinal, _wFinal] joinString "")]));

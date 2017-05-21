@@ -19,5 +19,5 @@ if (_author != "Anonymous") then {
 	}forEach RPF_phoneContacts;
 };
 
-ctrlSetText [1003, format ["Caller: %1",_author]];
+ctrlSetText [1003, format [(localize "STR_RPF_MODULES_POLICEPLUS_CALLERREFRESH"),_author]];
 ctrlSetText [1004, _msg];

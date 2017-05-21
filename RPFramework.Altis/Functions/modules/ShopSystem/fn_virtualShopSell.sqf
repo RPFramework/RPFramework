@@ -15,64 +15,64 @@ switch (_type) do {
 		if (_class in (items player)) then {
 			player removeItem _class;
 			[_price] call Client_fnc_addCash;
-			hint "You have sold an item!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_SOLDANITEM");
 		} else {
-			hint "You don't have that item!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT");
 		};
 	};
 	case 1: {
 		if (_class in (magazines player)) then {
 			player removeMagazine _class;
 			[_price] call Client_fnc_addCash;
-			hint "You have sold a magazine!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_SOLDANITEM");
 		} else {
-			hint "You don't have that magazine!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT");
 		};
 	};
 	case 2: {
 		if (_class in (weapons player)) then {
 			player removeWeapon _class;
 			[_price] call Client_fnc_addCash;
-			hint "You have sold a weapon!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_SOLDANITEM");
 		} else {
-			hint "You don't have that weapon!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT");
 		};
 	};
 	case 3: {
 		if (_class == uniform player) then {
 			removeUniform player;
 			[_price] call Client_fnc_addCash;
-			hint "You have sold some clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_SOLDCLOTHES");
 		} else {
-			hint "You don't have those clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT");
 		};
 	};
 	case 4: {
 		if (_class == vest player) then {
 			removeVest player;
 			[_price] call Client_fnc_addCash;
-			hint "You have sold some clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_SOLDCLOTHES");
 		} else {
-			hint "You don't have those clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT");
 		};
 	};
 	case 5: {
 		if (_class == headgear player) then {
 			removeHeadgear player;
 			[_price] call Client_fnc_addCash;
-			hint "You have sold some clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_SOLDCLOTHES");
 		} else {
-			hint "You don't have those clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT");
 		};
 	};
 	case 6: {
 		if (_class == backpack player) then {
 			removeBackpack player;
 			[_price] call Client_fnc_addCash;
-			hint "You have sold some clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_SOLDCLOTHES");
 		} else {
-			hint "You don't have those clothes!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT");
 		};
 	};
-	default { hint "Error >> Wrong shop element type!"; closeDialog 0; };
+	default { hint "Error >> System admin hasn't defined a type"; closeDialog 0; };
 };

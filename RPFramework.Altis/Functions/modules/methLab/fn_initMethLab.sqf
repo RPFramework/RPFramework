@@ -5,7 +5,7 @@ First Edit: 22.9.2016
 _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'methLab'})", "isNil {cursorObject getVariable 'buyableThing'}", "(player distance cursorObject) <= 3"],
-		["Open Lab", "[cursorObject] call ClientModules_fnc_openMethLab"]
+		[(localize "STR_RPF_MODULES_METHLAB_OPENLAB"), "[cursorObject] call ClientModules_fnc_openMethLab"]
 	]
 ];
 {

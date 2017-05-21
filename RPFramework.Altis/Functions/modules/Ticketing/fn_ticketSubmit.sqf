@@ -14,5 +14,5 @@ if (_amount > 0) then
 }
 else 
 {
-	hint "Ticket amount must be more than $0!";
+	hint (localize "STR_RPF_MODULES_TICKETING_AMOUNTGTZ");
 };

@@ -24,7 +24,7 @@ class phoneMessages
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "From:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_PHONE_FROM;
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.42303 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -51,7 +51,7 @@ class phoneMessages
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Compose a message"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_PHONE_COMPOSE;
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.675931 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;

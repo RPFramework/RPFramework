@@ -16,3 +16,4 @@
 #include "..\Housing\Sounds.hpp"
 #include "..\Garage\Sounds.hpp"
 #include "..\Mining\Sounds.hpp"
+#include "..\Licenses\Sounds.hpp"

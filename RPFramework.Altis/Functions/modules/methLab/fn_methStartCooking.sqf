@@ -4,7 +4,7 @@ First Edit: 22.9.2016
 */
 
 params ["_recipe"];
-ctrlSetText [1000, "You're applying heat..."];
+ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_APPLYINGHEAT")];
 sleep 25;
 
 _cts = 0;
@@ -16,33 +16,19 @@ if (_recipe == 1) then {
 
 _rand = round (random 100);
 if (_rand < _cts) then {
-	ctrlSetText [1000, "Cooking.."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking..."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking...."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking....."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking......"];
-	sleep 5;
-	ctrlSetText [1000, "Cooking.."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking..."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking...."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking....."];
-	sleep 5;
-	ctrlSetText [1000, "Cooking......"];
-	sleep 5;
-	ctrlSetText [1000, "Cooking......."];
-	sleep 5;
+	for "_i" from 1 to 10 step 1 do {
+		if (_i % 2) then {
+			ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGONE")];
+		} else {
+			ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGTWO")];
+		};
+		sleep 5;
+	};
 	[]call ClientModules_fnc_methDoneCooking;
 } else {
-	ctrlSetText [1000, "Cooking.."];
+	ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGTWO")];
 	sleep 5;
-	ctrlSetText [1000, "Cooking..."];
+	ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGONE")];
 	sleep 5;
-	[["You accidentally nudge the flask enough to mess up the cooking.", "Some dirt has gone into the flask and it's starting to produce smoke and flames.", "Applying heat doesn't star the chemical reaction and only burns the ingredients. Seems like an unlucky chemical error."], 2]call ClientModules_fnc_methFailCooking;
+	[[(localize "STR_RPF_MODULES_METHLAB_MSGONE"), (localize "STR_RPF_MODULES_METHLAB_MSGTWO"), (localize "STR_RPF_MODULES_METHLAB_MSGTHREE")], 2]call ClientModules_fnc_methFailCooking;
 };

@@ -28,6 +28,6 @@ if (_delivered == _amount) then {
 	[_reward] call Client_fnc_addCash;
 	deleteMarkerLocal "dp";
 } else {
-	_str = format ["Items delivered: %1/%2)", _delivered, _amount];
+	_str = format [(localize "STR_RPF_MODULES_DELIVERY_ITEMSDELIVERED"), _delivered, _amount];
 	hint _str;
 };

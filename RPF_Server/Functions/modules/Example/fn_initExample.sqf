@@ -6,4 +6,4 @@ Additional Information:
 Here you can add some scripts to run on the server.
 */
 
-diag_log "#EXAMPLE MODULE#";
+diag_log (localize "STR_RPF_EXAMPLE_INIT");

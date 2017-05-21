@@ -9,9 +9,9 @@ if (_check) then
 {
 	[_amount] call Client_fnc_removeBank;
 	closeDialog 0;
-	["Ticketed person PAID the ticket!"] remoteExecCall ["Client_fnc_hintMP", _officer];
+	[(localize "STR_RPF_MODULES_TICKETING_PAIDTICKET")] remoteExecCall ["Client_fnc_hintMP", _officer];
 } else {
 	closeDialog 0;
-	hint "You don't have enough money in your bank account!";
-	["Ticketed person DOESN'T HAVE ENOUGH MONEY to pay the ticket!"] remoteExecCall ["Client_fnc_hintMP", _officer];
+	hint (localize "STR_RPF_MODULES_TICKETING_NOTENOUGHBANK");
+	[(localize "STR_RPF_MODULES_TICKETING_FAILEDNOTENOUGH")] remoteExecCall ["Client_fnc_hintMP", _officer];
 };

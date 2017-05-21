@@ -15,7 +15,7 @@ class getTicket
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Ticket"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_TICKET; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.335064 * safezoneH + safezoneY;
 			w = 0.17875 * safezoneW;
@@ -24,7 +24,7 @@ class getTicket
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Amount"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_AMOUNT; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.379047 * safezoneH + safezoneY;
 			w = 0.04125 * safezoneW;
@@ -33,7 +33,7 @@ class getTicket
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = "Reason"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_REASON; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.445021 * safezoneH + safezoneY;
 			w = 0.04125 * safezoneW;
@@ -58,7 +58,7 @@ class getTicket
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Pay"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_PAY; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.554979 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
@@ -68,7 +68,7 @@ class getTicket
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "Refuse"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_TICKETING_REFUSE; //--- ToDo: Localize;
 			x = 0.54125 * safezoneW + safezoneX;
 			y = 0.554979 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;

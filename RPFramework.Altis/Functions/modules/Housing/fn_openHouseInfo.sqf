@@ -24,6 +24,6 @@ if ((_house getVariable ["price", -1]) != -1) then {
 			if ((_x select 0) == typeOf _house) exitWith {
 				ctrlSetText[1003, str (_x select 1)];
 			};
-		}forEach RPF_buyableHouses;
+		}forEach ((missionConfigFile >> "RPF_housingModule" >> "buyableHouses") call BIS_fnc_getCfgData);
 	};
 };

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="RPFramework">
+	<Package name="RPF_Farming">
+		<Container name="Names">
+			<Key ID="STR_RPF_FARMING_PLANTS_OLIVE">
+				<Original>Olive Plant</Original>
+				<English>Olive Plant</English>
+			</Key>
+			<Key ID="STR_RPF_FARMING_PLANTS_POPPY">
+				<Original>Poppy Plant</Original>
+				<English>Poppy Plant</English>
+			</Key>
+		</Container>
+	</Package>
+</Project>

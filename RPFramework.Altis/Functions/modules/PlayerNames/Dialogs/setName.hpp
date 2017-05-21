@@ -15,7 +15,7 @@ class setName
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Name"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_PLAYERNAMES_NAME; //--- ToDo: Localize;
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.34606 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
@@ -24,7 +24,7 @@ class setName
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Set"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_PLAYERNAMES_SET; //--- ToDo: Localize;
 			x = 0.534375 * safezoneW + safezoneX;
 			y = 0.57697 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;

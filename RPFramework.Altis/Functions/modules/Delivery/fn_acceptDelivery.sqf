@@ -18,9 +18,9 @@ RPF_curDelivery set [4, _dpvar];
 _marker = createMarkerLocal ["dp", _loc];
 _marker setMarkerShapeLocal "ICON";
 _marker setMarkerTypeLocal "hd_dot";
-_marker setMarkerTextLocal "Delivery Point";
+_marker setMarkerTextLocal (localize "STR_RPF_MODULES_DELIVERY_DP");
 
-["TaskAssigned", ["","Deliver items"]] call BIS_fnc_showNotification;
+["TaskAssigned", ["",(localize "STR_RPF_MODULES_DELIVERY_DELIVERITEMS")]] call BIS_fnc_showNotification;
 
 closeDialog 0;
 

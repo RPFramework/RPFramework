@@ -13,10 +13,10 @@ if (_amount > 0) then {
 		[_amount] call Client_fnc_removeCash;
 		[_amount] remoteExecCall ["Client_fnc_addCash", _target];
 
-		[format["%1 gave you %2 $", _giver, _amount]] remoteExecCall ["Client_fnc_hintMP", _target];
+		[format[(localize "STR_RPF_CORE_MONEY_GAVEYOU"), _giver, _amount]] remoteExecCall ["Client_fnc_hintMP", _target];
 	} else {
-		hint "You don't have that much cash!";
+		hint (localize "STR_RPF_CORE_MONEY_NOTENOUGHCASH");
 	};
 } else {
-	hint "Amount must be more than $0!";
+	hint (localize "STR_RPF_CORE_MONEY_GREATERTHANZERO");
 };

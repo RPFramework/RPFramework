@@ -17,7 +17,7 @@ _numberArray = [];
 _number = (_numberArray joinString "");
 
 if ((count _number) != 10) exitWith {
-	ctrlSetText [1401, "Invalid Number"];
+	ctrlSetText [1401, (localize "STR_RPF_MODULES_PHONE_INVNMBR")];
 };
 
 _updating = false;
@@ -34,10 +34,10 @@ if (_updating) then {
 	[_name, _number, _id] remoteExecCall ["ServerModules_fnc_updatePhoneContact", 2];
 	(RPF_phoneContacts select _indx) set [0, _name];
 	(RPF_phoneContacts select _indx) set [1, _number];
-	hint "Contact updated.";
+	hint (localize "STR_RPF_MODULES_PHONE_CONTACTUPDATED");
 } else {
 	[player, _name, _number] remoteExecCall ["ServerModules_fnc_insertPhoneContact", 2];
-	hint "Contact added.";
+	hint (localize "STR_RPF_MODULES_PHONE_CONTACTADDED");
 };
 
 closeDialog 0;

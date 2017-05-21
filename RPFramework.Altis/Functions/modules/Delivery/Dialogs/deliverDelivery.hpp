@@ -15,7 +15,7 @@ class deliverDelivery
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Status:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_DELIVERY_STATUS; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.313073 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -33,7 +33,7 @@ class deliverDelivery
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = "Reward:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_DELIVERY_REWARD; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.357056 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -51,7 +51,7 @@ class deliverDelivery
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Deliver"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_DELIVERY_DELIVER; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;

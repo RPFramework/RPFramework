@@ -30,7 +30,7 @@ _car = objNull;
 	};
 }forEach _array;
 
-if (!(isNil {(_car getVariable "curTask")})) exitWith { hint "This unit is already busy."; };
+if (!(isNil {(_car getVariable "curTask")})) exitWith { hint (localize "STR_RPF_MODULES_POLICEPLUS_UNITBUSY"); };
 
 _strData = lbData [1500, _indx];
 _taskID = call compile _strData;

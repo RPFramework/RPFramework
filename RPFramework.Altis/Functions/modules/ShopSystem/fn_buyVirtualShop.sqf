@@ -21,9 +21,9 @@ switch (_type) do {
 			for "_i" from 1 to _amount step 1 do {
 				player addItem _class;
 			};
-			hint "You have bought the item(s)! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEMS");
 		} else {
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case 1: {
@@ -33,9 +33,9 @@ switch (_type) do {
 			for "_i" from 1 to _amount step 1 do {
 				player addMagazine _class;
 			};
-			hint "You have bought the magazine(s)! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTMAGS");
 		} else {
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case 2: {
@@ -43,9 +43,9 @@ switch (_type) do {
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
 			player addWeapon _class;
-			hint "You have bought the weapon! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTWEAPONS");
 		} else {
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case 3: {
@@ -53,9 +53,9 @@ switch (_type) do {
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
 			player addUniform _class;
-			hint "You have bought the clothes! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTCLOTHES");
 		} else {
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case 4: {
@@ -63,9 +63,9 @@ switch (_type) do {
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
 			player addVest _class;
-			hint "You have bought the clothes! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTCLOTHES");
 		} else {
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case 5: {
@@ -73,9 +73,9 @@ switch (_type) do {
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
 			player addHeadgear _class;
-			hint "You have bought the clothes! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTCLOTHES");
 		} else {
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case 6: {
@@ -83,10 +83,10 @@ switch (_type) do {
 		if (_check) then {
 			[_price] call Client_fnc_removeCash;
 			player addBackpack _class;
-			hint "You have bought the clothes! Here you go.";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTCLOTHES");
 		} else {
-			hint "You don't have enough money!";
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
-	default { hint "Error >> No shop item type!"; closeDialog 0; };
+	default { hint "Error >> System admin hasn't defined a type"; closeDialog 0; };
 };

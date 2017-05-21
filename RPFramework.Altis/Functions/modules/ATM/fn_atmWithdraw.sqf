@@ -2,22 +2,15 @@
 Author: Kerkkoh
 First Edit: 30.11.2015
 */
+
+if (player getVariable ["isDoingATMstuff", false]) exitWith {hint (localize "STR_RPF_MODULES_ATM_WAIT")};
+player setVariable ["isDoingATMstuff", true, true];
+
 _amount = round (parseNumber (ctrlText 1400));
 
 if (_amount > 0) then {
-	_check = [2, _amount] call Client_fnc_checkMoney;
-	if (_check) then {
-		_bank = player getVariable "bank";
-		_cash = player getVariable "cash";
-		
-		[_bank, _amount, 0, 0] call ClientModules_fnc_atmRefresh;
-		[_cash, _amount, 1, 1] call ClientModules_fnc_atmRefresh;
-	
-		[_amount] call Client_fnc_removeBank;
-		[_amount] call Client_fnc_addCash;
-	} else {
-		hint "Not enough bank balance!";
-	};
+	[_amount, 0] call ClientModules_fnc_atmRefresh;
+	[player, player getVariable "bankAccount", _amount, 0] remoteExecCall ["ServerModules_fnc_atmReplicateMoney", 2];
 } else {
-	hint "Withdrawal amount must be more than $0!";
+	hint (localize "STR_RPF_MODULES_ATM_WITHDRAWALGTZ");
 };

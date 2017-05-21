@@ -35,6 +35,10 @@ _trunkItem setPos (getPos player);
 _trunkItem setVariable ["vars", _vars, true];
 _trunk deleteAt _pia;
 
+if ((_trunkItem getVariable ["action",[false]] select 0)) then {
+	call compile (format[((_trunkItem getVariable "action") select 2), str (netId _trunkItem)]);
+};
+
 [_trunkItem] call Client_fnc_pickUp;
 RPF_ownedFurniture pushBack _trunkItem;
 

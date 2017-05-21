@@ -15,7 +15,7 @@ class physicalShop
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "Name:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_NAME; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.313073 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -24,7 +24,7 @@ class physicalShop
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Buy"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_BUY; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;
@@ -43,7 +43,7 @@ class physicalShop
 		class RscText_1002: RscText
 		{
 			idc = 1002;
-			text = "Price:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_PRICE; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.357056 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -61,7 +61,7 @@ class physicalShop
 		class RscText_1004: RscText
 		{
 			idc = 1004;
-			text = "Amount:"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_SHOPSYSTEM_AMOUNT; //--- ToDo: Localize;
 			x = 0.373958 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;

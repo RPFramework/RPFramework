@@ -10,7 +10,7 @@ This is a script showing you how to add menu items to the cba fleximenu used by 
 _menuItems = [
 	[
 		["alive player"],
-		["Example", "[] call ClientModules_fnc_hintExample"]
+		[(localize "STR_RPF_MODULES_EXAMPLE_MENUACT"), "[] call ClientModules_fnc_hintExample"]
 	]
 ];
 {

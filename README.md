@@ -18,21 +18,19 @@ So why should you hop on board with the modular approach to this framework? This
 * **NiiRoZz**
 * **InnovativeStudios / J. Schmidt**
 * **TheFlyingJets**
+* **Optix** (Most dedicated support guy ever)
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework
-* Check out a [Brazilian Portuguese](https://github.com/devcjax/RPFramework) translation by devcjax50 while we work on adding a stringtable for translations!
 1. Download all the files from github or a mirror if available
 2. Read documents called **LICENSE.txt** and **COPYING.txt**
 3. Setting up the database
-	1. Navigate to folder **External Files**, take out **rpframework.sql** and import it into a MySQL database. You can use programs like MAMP to host a MySQL server.
-	2. Download ExtDB3 https://bitbucket.org/torndeco/extdb3/downloads and set it up on your server (Instructions here: https://bitbucket.org/torndeco/extdb3/wiki/Installation)
-	3. Replace **extdb-conf.ini** in **@ExtDB3** with the same file provided in folder **External Files** and find line **74** where you should change the mysql details to correspond to your database's.
-	4. Drag and drop the **sql_custom** folder from **External Files** to **@ExtDB3** and choose to replace everything.
-    5. If you have problems with the database, try using the root user, but in the long run, it isn't the best idea ever.
-4. Setting up the mission and server files for RPFramework
-	1. Navigate to folder **bin** and move **@RPF_Server** and **@RPFramework** to your server's main Arma 3 Folder
-	2. Move **RPFramework.Altis** to your server's MPMissions folder
+	1. Navigate to folder **SQL**, take out **rpframework.sql** and import it into a MySQL database. You can use programs like MAMP to host a MySQL server.
+	2. Install Visual Studio C++ Redistributable 2015 32bit + 64bit version https://www.microsoft.com/en-us/download/details.aspx?id=48145 (Required for ExtDB3)
+    4. If you have problems with the database, try using the root user, but in the long run, it isn't the best idea ever.
+4. Setting up the mission and server files for RPFramework and ExtDB3
+	1. Drag and drop everything form the **bin** folder into your Arma 3 folder (Or the folder in which you have all your mods and the MPMissions folder)
+    2. The included ExtDB3 version will be outdated and you can get the most recent one from https://bitbucket.org/torndeco/extdb3/downloads/
 5. Distribute @RPFramework or the addons inside it to your players
 6. Testing RPFramework
     1. Enable @RPFramework, @RPF_Server and @ExtDB3 on your server. If you're using TADST, your parameters should look like this ` -port=2302 "-config=armaLocation\Arma 3\TADST\rpf\TADST_config.cfg" "-cfg=armaLocation\Arma 3\TADST\rpf\TADST_basic.cfg" "-profiles=armaLocation\Arma 3\TADST\rpf" -name=rpf -pid=pid.log -ranking=ranking.log "-mod=@extDB3;@RPF_Server;@RPFramework"`
@@ -40,9 +38,7 @@ So why should you hop on board with the modular approach to this framework? This
     3. If something is wrong, head over to our [discord server](https://discord.gg/JvRRuTm) and ask for support
 7. **ADDITIONAL INFO: Modifying RPFramework and porting it to another map:**
 	1. Change mission's map suffix to .yourMap
-	2. Navigate to **RPFramework.yourMap\Functions\core\Init** and open up **fn_miscVariables.sqf**. Here you can change item classes, usable items, vehicle classes, keybinds and physical items that you can pick up.
-	3. Glance through every module's init scripts in **RPF_Server\server\modules** and **RPFramework.yourMap\Functions\modules** and change everything that is needed.
-	4. Note for people using a default module called **ShopSystem**: Please edit shop positions to correspond to places on your new map in **RPF_Server\server\modules\fn_initShops.sqf**!!
+	2. Go through RPF_Server/Functions/modules and look at each module's config file and change the locations of the markers and shops for example to match the new map. **If you're using ShopSystem module, remember to change the shop and marker locations in its config on the server side!** You can also do general configuration in RPFramework mission file's config.
 
 ## Installing Modules (General guidelines)
 * Visit our [website](https://rpframework.github.io/) to get more modules or submit your own!

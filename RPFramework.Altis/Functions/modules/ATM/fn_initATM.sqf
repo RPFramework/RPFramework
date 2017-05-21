@@ -7,7 +7,7 @@ Type: Default Module
 _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'atm'})", "(player distance cursorObject) <= 5"],
-		["Open ATM", "[cursorObject] call ClientModules_fnc_openATM"]
+		[(localize "STR_RPF_MODULES_ATM_OPEN"), "[cursorObject] call ClientModules_fnc_openATM"]
 	]
 ];
 {

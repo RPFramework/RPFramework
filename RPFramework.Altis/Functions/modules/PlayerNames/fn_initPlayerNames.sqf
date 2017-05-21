@@ -7,23 +7,8 @@ First Edit: 18.12.2016
 
 RPF_savedNames = [];
 
-RPF_hideIdentityMasks = [
-	"G_Bandanna_tan",
-	"G_Balaclava_blk",
-	"G_Balaclava_combat",
-	"G_Balaclava_lowprofile",
-	"G_Balaclava_oli",
-	"G_Bandanna_aviator",
-	"G_Bandanna_beast",
-	"G_Bandanna_blk",
-	"G_Bandanna_oli",
-	"G_Bandanna_khk",
-	"G_Bandanna_shades",
-	"G_Bandanna_sport"
-];
-
 onEachFrame {
-	_units = player nearEntities 10;
+	_units = player nearEntities ((missionConfigFile >> "RPF_playerNamesModule" >> "drawDistance") call BIS_fnc_getCfgData);
 	{
 		if ((alive _x) && !(isNull _x)) then {
 			_y = _x;
@@ -33,8 +18,8 @@ onEachFrame {
 					_name = (_x select 1);
 				};
 			}forEach RPF_savedNames;
-			if ((goggles _x) in RPF_hideIdentityMasks) then {
-				_name = "Masked";
+			if ((goggles _x) in ((missionConfigFile >> "RPF_playerNamesModule" >> "hideIdentityMasks") call BIS_fnc_getCfgData)) then {
+				_name = (localize "STR_RPF_MODULES_PLAYERNAMES_MASKED");
 			};
 			if (_name != "") then {
 				_ypos = getPosATL _y;
