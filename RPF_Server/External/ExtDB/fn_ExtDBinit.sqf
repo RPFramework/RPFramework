@@ -13,9 +13,9 @@
 
 private["_database","_protocol","_protocol_options","_return","_result","_random_number","_extDB_SQL_CUSTOM_ID"];
 
-_database = (configFile >> "RPF_serverConfig" >> "databaseName") call BIS_fnc_getCfgData;
-_protocol = (configFile >> "RPF_serverConfig" >> "databaseProtocol") call BIS_fnc_getCfgData;
-_protocol_options = (configFile >> "RPF_serverConfig" >> "databaseProtocol_options") call BIS_fnc_getCfgData;
+_database = [_this,0,"",[""]] call BIS_fnc_param;
+_protocol = [_this,1,"",[""]] call BIS_fnc_param;
+_protocol_options = [_this,2,"",[""]] call BIS_fnc_param;
 
 
 _return = false;

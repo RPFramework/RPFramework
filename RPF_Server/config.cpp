@@ -14,15 +14,11 @@ class RPF_serverConfig {
 	statSaveLoop = 1;
 	// How often it should loop in seconds
 	statSaveLoopTime = 300;
-	
-	// extDB3 init stuff
-	databaseName = "rpframework";
-	databaseProtocol = "SQL_CUSTOM";
-	databaseProtocol_options = "rpframework.ini";
 };
+
 #include "Functions\modules\CONFIG\moduleConfigs.hpp"
 
-class CfgFunctions 
+class CfgFunctions
 {
 	class Server
 	{
@@ -48,9 +44,10 @@ class CfgFunctions
 		{
 			file = "RPF_Server\External\ExtDB";
 			class ExtDBasync {};
-            class ExtDBinit {};
+      class ExtDBinit {};
 			class ExtDBstrip {};
 			class ExtDBquery {};
+			class DBSetup {preinit=1};
 		};
 	};
 	class ServerModules
