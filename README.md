@@ -34,8 +34,9 @@ So why should you hop on board with the modular approach to this framework? This
 5. Distribute @RPFramework or the addons inside it to your players
 6. Testing RPFramework
     1. Enable @RPFramework, @RPF_Server and @ExtDB3 on your server. If you're using TADST, your parameters should look like this ` -port=2302 "-config=armaLocation\Arma 3\TADST\rpf\TADST_config.cfg" "-cfg=armaLocation\Arma 3\TADST\rpf\TADST_basic.cfg" "-profiles=armaLocation\Arma 3\TADST\rpf" -name=rpf -pid=pid.log -ranking=ranking.log "-mod=@extDB3;@RPF_Server;@RPFramework"`
-    2. Enable @RPFramework in Arma 3 mods, start up the server and try joining it
-    3. If something is wrong, head over to our [discord server](https://discord.gg/JvRRuTm) and ask for support
+	2. You should use the arma3server_x64.exe to run the server
+    3. Enable @RPFramework in Arma 3 mods, start up the server and try joining it
+    4. If something is wrong, head over to our [discord server](https://discord.gg/JvRRuTm) and ask for support
 7. **ADDITIONAL INFO: Modifying RPFramework and porting it to another map:**
 	1. Change mission's map suffix to .yourMap
 	2. Go through RPF_Server/Functions/modules and look at each module's config file and change the locations of the markers and shops for example to match the new map. **If you're using ShopSystem module, remember to change the shop and marker locations in its config on the server side!** You can also do general configuration in RPFramework mission file's config.

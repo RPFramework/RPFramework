@@ -1,1 +1,1 @@
-5.0.1 STABLE
+5.0.2 STABLE

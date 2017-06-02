@@ -1,11 +1,11 @@
 class CfgPatches
 {
-	class RPF_Mining
+	class rpf_mining
 	{
 		units[] = {"RPF_Mining_Grinder","RPF_Mining_Rock1","RPF_Mining_Rock2","RPF_Mining_Rock3"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"RPF_General"};
+		requiredAddons[] = {"rpf_general"};
 	};
 };
 
@@ -26,7 +26,7 @@ class CfgWeapons
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
 		model = "\A3\structures_f\items\tools\Grinder_F.p3d";
-		picture = "\RPF_Mining\data\ui\RPF_Mining_Grinder.paa";
+		picture = "\rpf_mining\data\ui\RPF_Mining_Grinder.paa";
 	};
 	class RPF_Mining_Minerals: ToolKit
 	{
@@ -41,7 +41,7 @@ class CfgWeapons
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
 		model = "\A3\structures_f\Civ\Market\Sack_F.p3d";
-		picture = "\RPF_Mining\data\ui\RPF_Mining_Minerals.paa";
+		picture = "\rpf_mining\data\ui\RPF_Mining_Minerals.paa";
 	};
 	class RPF_Mining_Gold: ToolKit
 	{
@@ -56,7 +56,7 @@ class CfgWeapons
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
 		model = "\A3\structures_f\Civ\Market\Sack_F.p3d";
-		picture = "\RPF_Mining\data\ui\RPF_Mining_Gold.paa";
+		picture = "\rpf_mining\data\ui\RPF_Mining_Gold.paa";
 	};
 	class RPF_Mining_Iron: ToolKit
 	{
@@ -71,7 +71,7 @@ class CfgWeapons
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
 		model = "\A3\structures_f\Civ\Market\Sack_F.p3d";
-		picture = "\RPF_Mining\data\ui\RPF_Mining_Iron.paa";
+		picture = "\rpf_mining\data\ui\RPF_Mining_Iron.paa";
 	};
 	class RPF_Mining_Copper: ToolKit
 	{
@@ -86,7 +86,7 @@ class CfgWeapons
 			uniformModel = "\A3\Weapons_F\Items\Toolkit";
 		};
 		model = "\A3\structures_f\Civ\Market\Sack_F.p3d";
-		picture = "\RPF_Mining\data\ui\RPF_Mining_Copper.paa";
+		picture = "\rpf_mining\data\ui\RPF_Mining_Copper.paa";
 	};
 };
 

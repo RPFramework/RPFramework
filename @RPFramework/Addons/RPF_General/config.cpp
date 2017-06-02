@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class RPF_General
+	class rpf_general
 	{
 		units[] = {"RPF_Phys", "RPF_PhysBase"};
 		weapons[] = {};
@@ -18,7 +18,7 @@ class CfgVehicles {
 	class Fence;
 	class RPF_PhysBase: Fence {
 		class DestructionEffects;
-		icon = "RPF_General\data\placeholder.paa";
+		icon = "rpf_general\data\placeholder.paa";
 		accuracy = 0.300000;
 		vehicleclass = "RPF_Phys";
 	};

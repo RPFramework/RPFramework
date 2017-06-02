@@ -1,11 +1,11 @@
 class CfgPatches
 {
-	class RPF_Farming
+	class rpf_farming
 	{
 		units[] = {"RPF_Plant_Olive","RPF_Plant_Poppy"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"RPF_General"};
+		requiredAddons[] = {"rpf_general"};
 	};
 };
 class CfgVehicles {

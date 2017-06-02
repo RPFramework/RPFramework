@@ -13,4 +13,5 @@ if (_amount > 0) then {
 	[player, player getVariable "bankAccount", _amount, 0] remoteExecCall ["ServerModules_fnc_atmReplicateMoney", 2];
 } else {
 	hint (localize "STR_RPF_MODULES_ATM_WITHDRAWALGTZ");
+	player setVariable ["isDoingATMstuff", nil, true];
 };
