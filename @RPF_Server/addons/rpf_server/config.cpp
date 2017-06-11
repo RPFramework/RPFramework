@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class rpf_server
+	class RPF_Server
 	{
 		units[] = {};
 		weapons[] = {};
@@ -24,7 +24,7 @@ class CfgFunctions
 	{
 		class Save
 		{
-			file = "rpf_server\Functions\core\Save";
+			file = "RPF_Server\Functions\core\Save";
 			class handleDisconnect {};
             class initStats {};
             class statSave {};
@@ -33,7 +33,7 @@ class CfgFunctions
 		};
 		class Money
 		{
-			file = "rpf_server\Functions\core\Money";
+			file = "RPF_Server\Functions\core\Money";
 			class replicateMoney {};
 			class confirmMoney {};
 		};
@@ -42,7 +42,7 @@ class CfgFunctions
 	{
 		class ExtDB
 		{
-			file = "rpf_server\External\ExtDB";
+			file = "RPF_Server\External\ExtDB";
 			class ExtDBasync {};
       class ExtDBinit {};
 			class ExtDBstrip {};
@@ -54,7 +54,7 @@ class CfgFunctions
 	{
 		class Config
 		{
-			file = "rpf_server\Functions\modules\CONFIG";
+			file = "RPF_Server\Functions\modules\CONFIG";
 			class initModules {};
 			class firstLogin {};
 		};
