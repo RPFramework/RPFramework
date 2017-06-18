@@ -1,3 +1,2 @@
 		Function(ServerModules_fnc_fetchGarage,SERVER)
-		Function(ServerModules_fnc_insertGarage,SERVER)
-		Function(ServerModules_fnc_removeGarage,SERVER)
+		Function(Server_fnc_removeVehicle,SERVER)

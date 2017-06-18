@@ -1,8 +1,5 @@
-/*
-Author: Kerkkoh
-First Edit: 6.9.2016
-*/
-params ["_ct"];
+params ["_killed"];
+
 _recursiveFind = {
     params["_array","_toFind"];
     {
@@ -12,14 +9,9 @@ _recursiveFind = {
             _idx breakOut "searchLoop"
         }
     } forEach _array;
-    -1;
 };
 
-private _idx = [RPF_Cars,_ct] call _recursiveFind;
-if (_idx isEqualTo -1) exitWith {};
+private _idx = [RPF_Cars,_killed] call _recursiveFind;
 private _vehID = RPF_Cars select _idx select 1;
 RPF_Cars deleteAt _idx;
-
-[typeOf _ct, [_ct]call Client_fnc_vehicleHitGet, player, false, true, _vehID] remoteExecCall ["Server_fnc_handleVehicle", 2];
-
-deleteVehicle _ct;
+[_vehID] call Server_fnc_removeVehicle;

@@ -13,16 +13,22 @@ switch (true) do {
 	case (_type == 0): {
 		_check = [1, _price] call Client_fnc_checkMoney;
 		if (_check) then {
-			[_price] call Client_fnc_removeCash;
-			_ct setVariable ["buyableThing", nil, true];
-			closeDialog 0;
-			RPF_Cars pushBack _ct;
-			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
-			[_ct, clientOwner] remoteExec ["setOwner", 2];
-			_ct allowDamage true;
+		    scopeName "insertVehicle";
+		    [_price] call Client_fnc_removeCash;
+		    _ct setVariable["buyableThing", nil, true];
+		    closeDialog 0;
+		    hint(localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
+		    [_ct, clientOwner] remoteExec["setOwner", 2];
+		    [_ct, ["Killed", {_this call Server_fnc_destroyedHandler}]] remoteExecCall ["addEventHander", 2]; //Add an eventHandler on the server
+		    private _varName = call ClientModules_fnc_sockVar;
+		    ["Server_fnc_handleVehicle", _varName, [typeOf _ct, damage _ct, getPlayerUID player]] call ClientModules_fnc_sockInit;
+		    waitUntil {!isNil _varName};
+		    private _insertID = call compile(format["%1", _varName]);
+		    RPF_Cars pushBack[_ct, _insertID];
+		    _ct allowDamage true;
 		} else {
-			closeDialog 0;
-			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
+		    closeDialog 0;
+		    hint(localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case (_type == 1): {

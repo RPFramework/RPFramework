@@ -57,7 +57,8 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `id` int(11) NOT NULL,
   `class` varchar(100) NOT NULL,
   `user` varchar(50) NOT NULL,
-  `hit` varchar(1000) NOT NULL
+  `hit` varchar(1000) NOT NULL,
+  `inGarage` int(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

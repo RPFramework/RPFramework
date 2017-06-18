@@ -16,3 +16,4 @@ _menuItems = [
 {
 	RPF_InteractionMenuItems pushBack _x;
 }forEach _menuItems;
+
