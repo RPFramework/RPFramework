@@ -11,7 +11,7 @@ _recursiveFind = {
     } forEach _array;
 };
 
-private _idx = [RPF_Cars,_killed] call _recursiveFind;
-private _vehID = RPF_Cars select _idx select 1;
+private _idx = RPF_Cars find _killed;
+private _vehID = _killed getVariable "rowID";
 RPF_Cars deleteAt _idx;
 [_vehID] call Server_fnc_removeVehicle;

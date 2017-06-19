@@ -15,12 +15,14 @@ lbDelete [1500, lbCurSel 1500];
 
 closeDialog 0;
 
-["",0,objNull,false,false,_car select 0] remoteExecCall ["Server_fnc_handleVehicle", 2];
 
 _vehicle = (_car select 1) createVehicle [0,0,0];
+_vehicle setVariable ["rowID",_car select 0,true]; //Set rowID
 _vehicle setPos _position;
 _vehicle setDir (getDir RPF_curGarage);
 [_car select 3, _vehicle]call Client_fnc_vehicleHitLoad;
 _vehicle lock 2;
+[_car select 0,false/*Not in garage anymore*/,_car select 3] remoteExecCall ["Server_fnc_updateVehicle", 2];
 
-RPF_Cars pushBack [_vehicle,_car select 0];
+
+RPF_Cars pushBack _vehicle;

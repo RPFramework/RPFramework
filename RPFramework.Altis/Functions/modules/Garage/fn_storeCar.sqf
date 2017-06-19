@@ -15,11 +15,11 @@ _recursiveFind = {
     -1;
 };
 
-private _idx = [RPF_Cars,_ct] call _recursiveFind;
+private _idx = RPF_Cars find _ct;
 if (_idx isEqualTo -1) exitWith {};
-private _vehID = RPF_Cars select _idx select 1;
+private _vehID = _ct getVariable "rowID";
 RPF_Cars deleteAt _idx;
 
-[typeOf _ct, [_ct]call Client_fnc_vehicleHitGet, player, false, true, _vehID] remoteExecCall ["Server_fnc_handleVehicle", 2];
+[_vehID,1,damage _ct] remoteExecCall ["Server_fnc_updateVehicle", 2];
 
 deleteVehicle _ct;

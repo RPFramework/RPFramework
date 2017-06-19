@@ -1,1 +1,0 @@
-FUNCTION(Server_fnc_handleVehicle,SERVER)

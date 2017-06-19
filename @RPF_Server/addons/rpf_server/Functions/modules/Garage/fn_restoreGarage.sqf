@@ -1,3 +1,3 @@
 params ["_uid"];
 
-_check = [1, "restoreGarage"] call ExternalS_fnc_ExtDBquery;
+["restoreGarage", 1] call ExternalS_fnc_ExtDBasync;

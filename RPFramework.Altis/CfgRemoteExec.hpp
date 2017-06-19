@@ -26,7 +26,7 @@ class CfgRemoteExec {
 		Function(Server_fnc_replicateMoney,SERVER)
 		Function(Server_fnc_confirmMoney,SERVER)
         Function(Server_fnc_statSave,SERVER)
-		Function(Server_fnc_handleVehicle,SERVER)
+		Function(Server_fnc_updateVehicle,SERVER)
 
         /* Anyone functions */
         Function(Client_fnc_playSound,ANYONE)
