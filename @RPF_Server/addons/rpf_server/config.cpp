@@ -42,7 +42,9 @@ class CfgFunctions
 			file = "RPF_Server\Functions\core\Vehicle";
 			class destroyedHandler {};
 			class updateVehicle {};
-			class removeVehicle {};
+			class insertVehicle {};
+	        class deleteVehicle {};
+	        class setupVehicle {};
 		};
 	};
 	class ExternalS

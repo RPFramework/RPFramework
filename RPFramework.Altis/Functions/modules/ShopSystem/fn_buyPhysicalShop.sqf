@@ -18,7 +18,7 @@ switch (true) do {
 		    _ct setVariable["buyableThing", nil, true];
 		    closeDialog 0;
 		    hint(localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
-		    [_ct,player] remoteExecCall ["Server_fnc_newVehicle",2];
+		    [_ct,getPlayerUID player] remoteExecCall ["Server_fnc_insertVehicle",2];
 		    [_ct, clientOwner] remoteExec ["setOwner", 2];
 		    RPF_Cars pushBack _ct;
 		    _ct allowDamage true;

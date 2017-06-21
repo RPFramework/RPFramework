@@ -17,7 +17,7 @@ closeDialog 0;
 
 
 _vehicle = (_car select 1) createVehicle [0,0,0];
-_vehicle setVariable ["rowID",_car select 0,true]; //Set rowID
+[_vehicle,_car select 0,getPlayerUID player] remoteExecCall ["Server_fnc_setupVehicle",2];
 _vehicle setPos _position;
 _vehicle setDir (getDir RPF_curGarage);
 [_car select 3, _vehicle]call Client_fnc_vehicleHitLoad;
