@@ -18,7 +18,8 @@ So why should you hop on board with the modular approach to this framework? This
 * **NiiRoZz**
 * **InnovativeStudios / J. Schmidt**
 * **TheFlyingJets**
-* **Optix** (Most dedicated support guy ever and a lifesaver)
+* **Optix**
+* **Dardo**
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework
