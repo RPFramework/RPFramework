@@ -37,6 +37,15 @@ class CfgFunctions
 			class replicateMoney {};
 			class confirmMoney {};
 		};
+		class Vehicle
+		{
+			file = "RPF_Server\Functions\core\Vehicle";
+			class destroyedHandler {};
+			class updateVehicle {};
+			class insertVehicle {};
+	        class deleteVehicle {};
+	        class setupVehicle {};
+		};
 	};
 	class ExternalS
 	{
