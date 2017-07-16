@@ -41,8 +41,6 @@ class CfgFunctions
 		class Vehicle
 		{
 			file = "RPF_Server\Functions\core\Vehicle";
-			class destroyedHandler {};
-			class updateVehicle {};
 			class insertVehicle {};
 	        class deleteVehicle {};
 	        class setupVehicle {};
@@ -54,7 +52,7 @@ class CfgFunctions
 		{
 			file = "RPF_Server\External\ExtDB";
 			class ExtDBasync {};
-      class ExtDBinit {};
+    		class ExtDBinit {};
 			class ExtDBstrip {};
 			class ExtDBquery {};
 			class DBSetup {preinit=1};
