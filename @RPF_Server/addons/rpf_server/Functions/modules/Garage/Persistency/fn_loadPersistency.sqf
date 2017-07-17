@@ -42,17 +42,21 @@ private _RPF_Vehicles = profileNameSpace getVariable "RPF_Vehicles";
     private _inventory = _x select 5;
     private _variables = _x select 6;
     private _vehicle = _className createVehicle [0,0,0];
-    {
-        private _name = _x select 0;
-        private _value = _x select 1;
-        _vehicle setVariable [_name,_value,true];
-    } forEach _variables; //Set Variables
+    
+    //Set Variables
+    for "_i" from 0 to (count(_variables)-1) do {
+        private _curVar = _variables select 0 select _i;
+        private _curVal = _variables select 1 select _i;
+        _vehicle setVariable [_curVar,_curVal,true];
+    };
+    
+    //Set textures
     {
         _vehicle setObjectTextureGlobal [_forEachIndex,_x]
-    } forEach _textures; //Set textures
+    } forEach _textures; 
    
     _vehicle setPos _position;
-    _vehicle addMPEventHandler ["killed",{_this call Server_fnc_destroyedHandler}];
+    _vehicle addMPEventHandler ["mpkilled",{_this call Server_fnc_destroyedHandler}];
     [_damage, _vehicle]call Client_fnc_vehicleHitLoad;
     _vehicle lock 2;
     

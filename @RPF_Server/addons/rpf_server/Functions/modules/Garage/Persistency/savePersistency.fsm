@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "D:\Librerie\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, savePersistency">*/
+/*%FSM<COMPILE "E:\LibreriaSteam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, savePersistency">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Define_update__main",2,250,-97.042709,-282.821777,-7.042694,-232.821777,0.000000,"Define/update" \n " main vars"};
@@ -6,38 +6,33 @@ item1[] = {"Are_there_any_vehicles",4,218,-116.600960,-170.122513,17.147507,-99.
 item2[] = {"No_vehicles",8,218,-299.340851,-284.296539,-209.340851,-234.296555,0.000000,"No vehicles"};
 item3[] = {"Assign_current_time",2,250,-297.920471,-473.519897,-207.920471,-423.519897,0.000000,"Assign current" \n "time" \n ""};
 item4[] = {"Wait_a_bit_",4,218,-96.107727,-470.964539,-6.107727,-420.964539,0.000000,"Wait a bit" \n ""};
-item5[] = {"Iterate_the_shit",2,4346,-114.762154,0.159462,12.227417,76.189133,0.000000,"Iterate the shit out"};
-item6[] = {"Is__RPF_Vehicles",4,218,-450.066315,88.828491,-157.504868,159.609436,200.000000,"Is _RPF_Vehicles actually different" \n "from the array already" \n "stored in profileNameSpace?"};
-item7[] = {"Save_everything",2,250,-374.568542,232.508408,-235.587311,278.249146,0.000000,"Save everything to" \n "profileNameSpace" \n ""};
-item8[] = {"Arrays_are_equal",8,218,106.819061,99.483231,236.769257,169.458298,0.000000,"" \n "Arrays are equal" \n ""};
-item9[] = {"",7,210,164.072510,-258.344635,172.072510,-250.344635,0.000000,""};
-item10[] = {"",7,210,166.618698,253.274200,174.618698,261.274200,0.000000,""};
-item11[] = {"Are_there_any_vehicles",4,218,-121.137177,348.462708,24.614960,422.356506,800.000000,"Are there any vehicles" \n "to remove?"};
-item12[] = {"Remove_vehicles",2,250,-628.785950,343.842712,-490.434631,402.000305,0.000000,"Remove vehicles" \n "in _toRemove" \n "from _RPF_Vehicles"};
-item13[] = {"",7,210,-566.834167,119.513321,-558.834167,127.513321,0.000000,""};
-item14[] = {"Static_Vars",0,250,228.270081,-615.747925,375.940063,-530.439880,0.000000,"Static Vars"};
-item15[] = {"Arma_Shit__serverTime",4,218,233.786102,-370.818146,374.911072,-292.689209,0.000000,"Arma Shit" \n "(serverTime may result" \n "uninitialized)"};
+item5[] = {"Iterate_the_shit",2,250,-125.000000,200.000000,0.000000,275.000000,0.000000,"Iterate the shit out"};
+item6[] = {"",7,210,171.000000,520.999939,179.000000,529.000000,0.000000,""};
+item7[] = {"Wait_",4,218,125.000000,-150.000000,225.000000,-100.000000,0.000000,"" \n "Wait" \n ""};
+item8[] = {"",7,210,164.072510,-258.344635,172.072510,-250.344635,0.000000,""};
+item9[] = {"",7,210,171.000000,233.500000,179.000000,241.500000,0.000000,""};
+item10[] = {"Are_there_any_vehicles",4,218,300.000000,200.000000,450.000000,275.000000,100.000000,"Are there any vehicles" \n "to remove?"};
+item11[] = {"Remove_vehicles",2,4346,300.000000,500.000000,450.000000,550.000000,0.000000,"Remove vehicles" \n "in _toRemove" \n "from _RPF_Vehicles"};
+item12[] = {"Static_Vars",0,250,228.270081,-615.747925,375.940063,-530.439880,0.000000,"Static Vars"};
+item13[] = {"Arma_Shit__serverTime",4,218,233.786102,-370.818146,374.911072,-292.689209,0.000000,"Arma Shit" \n "(serverTime may result" \n "uninitialized)"};
 link0[] = {0,1};
 link1[] = {0,2};
 link2[] = {1,5};
 link3[] = {2,3};
 link4[] = {3,4};
 link5[] = {4,0};
-link6[] = {5,6};
-link7[] = {5,8};
-link8[] = {5,11};
-link9[] = {6,7};
-link10[] = {7,10};
-link11[] = {8,9};
-link12[] = {9,0};
-link13[] = {10,8};
-link14[] = {11,12};
-link15[] = {12,13};
-link16[] = {13,6};
-link17[] = {14,15};
-link18[] = {15,0};
-globals[] = {0.000000,0,0,0,0,640,480,1,18,6316128,1,-639.706421,190.688721,521.046265,-285.580872,559,543,1};
-window[] = {0,-1,-1,-32000,-32000,843,96,1536,96,1,581};
+link6[] = {5,9};
+link7[] = {6,9};
+link8[] = {7,8};
+link9[] = {8,0};
+link10[] = {9,7};
+link11[] = {9,10};
+link12[] = {10,11};
+link13[] = {11,6};
+link14[] = {12,13};
+link15[] = {13,0};
+globals[] = {0.000000,0,0,0,0,640,480,1,21,6316128,1,-459.071686,1112.868042,838.854309,-170.292191,891,572,1};
+window[] = {2,-1,-1,-1,-1,825,78,1448,78,3,909};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -49,10 +44,12 @@ class FSM
                 {
                         name = "Define_update__main";
                         itemno = 0;
-                        init = /*%FSM<STATEINIT""">*/"_vehicles = (entities [[""Car"",""Ship"",""Air""],[""Tank""], false, true]) select {!isNil {_x getVariable ""ownerUID""} && !isNil {_x getVariable ""rowID""} && isNil {_x getVariable 'buyableThing'}};    " \n
+                        init = /*%FSM<STATEINIT""">*/"" \n
+                         "_vehicles = (entities [[""Car"",""Ship"",""Air""],[], false, true]) select {!isNil {_x getVariable ""ownerUID""} && !isNil {_x getVariable ""rowID""} && isNil {_x getVariable 'buyableThing'}};    " \n
                          "" \n
                          "_RPF_Vehicles = [];" \n
-                         "_time = serverTime;"/*%FSM</STATEINIT""">*/;
+                         "_time = serverTime;" \n
+                         "saveProfileNameSpace;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -117,14 +114,16 @@ class FSM
                          "		private _direction = getDir _x;		" \n
                          "		private _pos = getPos _x;" \n
                          "		private _textures = getObjectTextures _x;" \n
-                         "		private _variables = [];" \n
+                         "		private _variables = [[],[]];" \n
                          "		" \n
                          "		" \n
                          "		private _varNames = allVariables _x;" \n
                          "		{" \n
                          "			if (toLower(_x) in _varNames) then {" \n
-                         "			private _curVar = [_x,(_curVehicle getVariable _x)];" \n
-                         " 	      _variables pushBack _curVar;" \n
+                         "			private _curVarName = toLower(_x);" \n
+                         " 	        private _curVarValue = _curVehicle getVariable _x;" \n
+                         " 	        (_variables select 0) pushBack _curVarName;" \n
+                         " 	        (_variables select 1) pushBack _curVarValue;" \n
                          "			};" \n
                          "		} forEach _allowedVars;" \n
                          "		" \n
@@ -132,65 +131,33 @@ class FSM
                          "		private _finalArray = [_className,_damage,_pos,_textures,_direction,_inventory,_variables];" \n
                          "		_RPF_Vehicles pushBack _finalArray;" \n
                          "		nil;" \n
-                         "} count _vehicles;"/*%FSM</STATEINIT""">*/;
+                         "} count _vehicles;" \n
+                         "" \n
+                         "//Update time" \n
+                         "_time = serverTime;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
                                 /*%FSM<LINK "Are_there_any_vehicles">*/
                                 class Are_there_any_vehicles
                                 {
-                                        itemno = 11;
-                                        priority = 800.000000;
+                                        itemno = 10;
+                                        priority = 100.000000;
                                         to="Remove_vehicles";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"count _toRemove > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
-                                /*%FSM<LINK "Is__RPF_Vehicles">*/
-                                class Is__RPF_Vehicles
+                                /*%FSM<LINK "Wait_">*/
+                                class Wait_
                                 {
-                                        itemno = 6;
-                                        priority = 200.000000;
-                                        to="Save_everything";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"isNil {profileNameSpace getVariable ""RPF_Vehicles""} || {not((profileNameSpace getVariable ""RPF_Vehicles"") isEqualTo _RPF_Vehicles)}"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "Arrays_are_equal">*/
-                                class Arrays_are_equal
-                                {
-                                        itemno = 8;
+                                        itemno = 7;
                                         priority = 0.000000;
                                         to="Define_update__main";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"serverTime - _time > _intervalTime"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"saveProfileNameSpace"/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "Save_everything">*/
-                class Save_everything
-                {
-                        name = "Save_everything";
-                        itemno = 7;
-                        init = /*%FSM<STATEINIT""">*/"profileNameSpace setVariable [""RPF_Vehicles"",_RPF_Vehicles];" \n
-                         "_time = serverTime;"/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "Arrays_are_equal">*/
-                                class Arrays_are_equal
-                                {
-                                        itemno = 8;
-                                        priority = 0.000000;
-                                        to="Define_update__main";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"serverTime - _time > _intervalTime"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"saveProfileNameSpace"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/"profileNameSpace setVariable [""RPF_Vehicles"",_RPF_Vehicles];"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -200,60 +167,48 @@ class FSM
                 class Remove_vehicles
                 {
                         name = "Remove_vehicles";
-                        itemno = 12;
-                        init = /*%FSM<STATEINIT""">*/"_rowFind = {" \n
-                         "    params[""_array"", ""_toFind""];" \n
-                         "    private _finalIDX = -1; " \n
-                         "	scopeName ""Main"";" \n
-                         "	{" \n
-                         "        if (typeName _x == ""ARRAY"") then {" \n
-                         "            private _curArray = _x; " \n
-                         "			{" \n
-                         "				if (typeName _x == ""ARRAY"") then {" \n
-                         "					if (_forEachIndex isEqualTo 4) then { //Let's check we are in the variables array" \n
-                         "						private _idx = _x find _toFind;" \n
-                         "						if (_idx != -1) then {" \n
-                         "							_finalIDX = _array find _curArray;" \n
-                         "							breakTo ""Main"";" \n
-                         "						}" \n
-                         "					}" \n
-                         "				};" \n
-                         "				nil;" \n
-                         "            } count _curArray;" \n
-                         "        };" \n
-                         "		nil;" \n
-                         "    } count _array;" \n
-                         "	_finalIDX;" \n
-                         "};" \n
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"private _vehiclesVars = _RPF_Vehicles apply {_x select 6};" \n
                          "" \n
                          "private _iterations = [];" \n
-                         "{	" \n
-                         "	private _vehIDX = [_RPF_Vehicles, _x] call _rowFind;	" \n
                          "" \n
-                         "	if (_vehIDX != -1) then {" \n
-                         "		_RPF_Vehicles deleteAt _vehIDX;" \n
-                         "		_iterations pushBack _forEachIndex; //It is possible that _toRemove has been updated,so don't wipe the whole var" \n
-                         "	};" \n
-                         "} forEach _toRemove; //rowIDs" \n
-                         "" \n
-                         "_iterations sort false;" \n
                          "{" \n
-                         "	_toRemove deleteAt _x;" \n
-                         "nil;" \n
-                         "} count _iterations; //Hacky way,but will not wipe the var" \n
+                         "    private _curNames = _x select 0;" \n
+                         "    private _curValues = _x select 1;" \n
+                         "    private _IDX = _curNames find ""rowid"";" \n
+                         "    if (not(_IDX isEqualTo -1) && {(_curValues select _IDX) in _toRemove}) then {" \n
+                         "        _RPF_Vehicles deleteAt _forEachIndex;" \n
+                         "        _iterations pushBack _forEachIndex;" \n
+                         "    };" \n
+                         "} forEach _vehiclesVars;" \n
+                         "" \n
+                         "{" \n
+                         "_toRemove deleteAt _iterations;" \n
+                         "} count _iterations;" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
-                                /*%FSM<LINK "Is__RPF_Vehicles">*/
-                                class Is__RPF_Vehicles
+                                /*%FSM<LINK "Are_there_any_vehicles">*/
+                                class Are_there_any_vehicles
                                 {
-                                        itemno = 6;
-                                        priority = 200.000000;
-                                        to="Save_everything";
+                                        itemno = 10;
+                                        priority = 100.000000;
+                                        to="Remove_vehicles";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"isNil {profileNameSpace getVariable ""RPF_Vehicles""} || {not((profileNameSpace getVariable ""RPF_Vehicles"") isEqualTo _RPF_Vehicles)}"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count _toRemove > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Wait_">*/
+                                class Wait_
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Define_update__main";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"serverTime - _time > _intervalTime"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"profileNameSpace setVariable [""RPF_Vehicles"",_RPF_Vehicles];"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -263,7 +218,7 @@ class FSM
                 class Static_Vars
                 {
                         name = "Static_Vars";
-                        itemno = 14;
+                        itemno = 12;
                         init = /*%FSM<STATEINIT""">*/"_allowedVars = (configFile >> ""RPF_GaragePersistencyServerModule"" >> ""variablesToSave"") call BIS_fnc_getCfgData;" \n
                          "_intervalTime = (configFile >> ""RPF_GaragePersistencyServerModule"" >> ""intervalTime"") call BIS_fnc_getCfgData;" \n
                          "_toRemove = [];" \n
@@ -274,7 +229,7 @@ class FSM
                                 /*%FSM<LINK "Arma_Shit__serverTime">*/
                                 class Arma_Shit__serverTime
                                 {
-                                        itemno = 15;
+                                        itemno = 13;
                                         priority = 0.000000;
                                         to="Define_update__main";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
