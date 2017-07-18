@@ -11,7 +11,6 @@ class CfgPatches
 
 class RPF_serverConfig {
 	// 1 (true) if we use a loop to constantly save player data
-	// If you experience low server performance / high player count, I suggest setting this to 0
 	statSaveLoop = 1;
 	// How often it should loop in seconds
 	statSaveLoopTime = 300;
