@@ -16,7 +16,12 @@ switch (true) do {
 			[_price] call Client_fnc_removeCash;
 			_ct setVariable ["buyableThing", nil, true];
 			closeDialog 0;
-			RPF_Cars pushBack _ct;
+			
+			
+			[_ct, player] remoteExecCall ["Server_fnc_insertKey", 2];
+			
+			// Wait until the key gets assigned to the vehicle and after that insert it to the database since there are no ties connecting the garage and vk tables since one is core and the other isn't
+			
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
 			[_ct, clientOwner] remoteExec ["setOwner", 2];
 			_ct allowDamage true;

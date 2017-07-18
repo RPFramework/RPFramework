@@ -21,6 +21,5 @@ _vehicle = (_car select 1) createVehicle [0,0,0];
 _vehicle setPos _position;
 _vehicle setDir (getDir RPF_curGarage);
 [_car select 3, _vehicle]call Client_fnc_vehicleHitLoad;
+_vehicle setVariable ["key", _car select 4, true];
 _vehicle lock 2;
-
-RPF_Cars pushBack _vehicle;

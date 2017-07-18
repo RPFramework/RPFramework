@@ -5,4 +5,5 @@
 			class initGarage {};
             class insertGarage {};
             class removeGarage {};
+            class updateGarage {};
 		};

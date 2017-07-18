@@ -20,17 +20,25 @@ class CfgRemoteExec {
         Function(Client_fnc_putInCarTarget,CLIENT)
         Function(Client_fnc_unCuffTarget,CLIENT)
 		Function(Client_fnc_receiveGarage,CLIENT)
-
+		Function(Client_fnc_receiveKeys,CLIENT)
+		
         /* Server functions */
         Function(Server_fnc_initStats,SERVER)
 		Function(Server_fnc_replicateMoney,SERVER)
 		Function(Server_fnc_confirmMoney,SERVER)
         Function(Server_fnc_statSave,SERVER)
+        Function(Server_fnc_insertKey,SERVER)
+        Function(Server_fnc_deleteKey,SERVER)
+        Function(Server_fnc_deleteKeys,SERVER)
 
         /* Anyone functions */
         Function(Client_fnc_playSound,ANYONE)
 		
 		#include "Functions\modules\CONFIG\moduleRemoteFunctions.hpp"
+		/*
+		Don't uncomment these unless you're in a testing environment
+        Function(bis_fnc_execvm,ANYONE)
+        Function(bis_fnc_debugconsoleexec,ANYONE)*/
     };
 
     class Commands {

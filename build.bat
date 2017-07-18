@@ -2,7 +2,7 @@ SET pbomanager="C:\Program Files\PBO Manager v.1.4 beta\PBOConsole.exe"
 SET repo="C:\Users\Kerkkoh\Documents\GitHub\RPFramework\"
 SET binlocation="C:\Users\Kerkkoh\Documents\GitHub\RPFramework\"
 
-SET reposerver="%repo:~1, -1%rpf_server"
+SET reposerver="%repo:~1, -1%@RPF_Server\addons\rpf_server"
 SET repomission="%repo:~1, -1%RPFramework.Altis"
 
 SET pboserver="%binlocation:~1, -1%bin\@RPF_Server\Addons\rpf_server.pbo"
