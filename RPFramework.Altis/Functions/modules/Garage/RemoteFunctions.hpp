@@ -1,2 +1,3 @@
-Function(ServerModules_fnc_fetchGarage,SERVER)
-Function(ClientModules_fnc_updateCars,CLIENT)
+		Function(ServerModules_fnc_fetchGarage,SERVER)
+		Function(ServerModules_fnc_insertGarage,SERVER)
+		Function(ServerModules_fnc_removeGarage,SERVER)

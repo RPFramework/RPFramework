@@ -13,18 +13,16 @@ switch (true) do {
 	case (_type == 0): {
 		_check = [1, _price] call Client_fnc_checkMoney;
 		if (_check) then {
-		    scopeName "insertVehicle";
-		    [_price] call Client_fnc_removeCash;
-		    _ct setVariable["buyableThing", nil, true];
-		    closeDialog 0;
-		    hint(localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
-		    [_ct,getPlayerUID player] remoteExecCall ["Server_fnc_insertVehicle",2];
-		    [_ct, clientOwner] remoteExec ["setOwner", 2];
-		    RPF_Cars pushBack _ct;
-		    _ct allowDamage true;
+			[_price] call Client_fnc_removeCash;
+			_ct setVariable ["buyableThing", nil, true];
+			closeDialog 0;
+			RPF_Cars pushBack _ct;
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
+			[_ct, clientOwner] remoteExec ["setOwner", 2];
+			_ct allowDamage true;
 		} else {
-		    closeDialog 0;
-		    hint(localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
+			closeDialog 0;
+			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH");
 		};
 	};
 	case (_type == 1): {

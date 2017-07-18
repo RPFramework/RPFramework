@@ -7,5 +7,4 @@
 			class openGarage {};
 			class receiveGarage {};
 			class storeCar {};
-			class updateCars {};
 		};
