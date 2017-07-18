@@ -10,7 +10,8 @@ class CfgPatches
 };
 
 class RPF_serverConfig {
-	// 1 (true) if we use a loop to constantly save player data
+	// 1 (true) if we use a loop to constantly save player data, 0 to only save on disconnect
+	// Please set this to 0 or change the looping time on high traffic servers to avoid shitty performance
 	statSaveLoop = 1;
 	// How often it should loop in seconds
 	statSaveLoopTime = 300;
@@ -37,6 +38,15 @@ class CfgFunctions
 			class replicateMoney {};
 			class confirmMoney {};
 		};
+		class Keys
+		{
+			file = "RPF_Server\Functions\core\Keys";
+			class deleteKey {};
+			class deleteKeys {};
+			class fetchKeys {};
+			class generateKey {};
+			class insertKey {};
+		};
 	};
 	class ExternalS
 	{
@@ -44,7 +54,7 @@ class CfgFunctions
 		{
 			file = "RPF_Server\External\ExtDB";
 			class ExtDBasync {};
-      class ExtDBinit {};
+			class ExtDBinit {};
 			class ExtDBstrip {};
 			class ExtDBquery {};
 			class DBSetup {preinit=1};
