@@ -1,5 +1,6 @@
 /*
     File : fn_killedHandlerGarage.sqf
+    Module: Garage
     Author: Dardo
     Description:
     Remove vehicle from garage table

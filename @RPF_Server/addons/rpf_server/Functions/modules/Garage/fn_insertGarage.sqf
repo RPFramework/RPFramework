@@ -6,7 +6,7 @@ First Edit: 6.9.2016
 params ["_vehicle", "_player", ["_krand",nil,[""]]];
 private _class = typeOf _vehicle;
 private _playerUID = getPlayerUID _player;
-private _hit = [_vehicle] call Client_fnc_vehicleHitLoad;
+private _hit = [_vehicle] call Client_fnc_vehicleHitGet;
 
 
 //Let's check if the krand is NOT defined

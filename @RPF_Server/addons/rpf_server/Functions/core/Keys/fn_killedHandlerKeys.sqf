@@ -1,5 +1,6 @@
 /*
     File : fn_killedHandlerKeys.sqf
+    Module: Garage
     Author: Dardo
     Description:
     Remove vehicle's key from keys table
