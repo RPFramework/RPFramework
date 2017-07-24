@@ -46,6 +46,7 @@ class CfgFunctions
 			class fetchKeys {};
 			class generateKey {};
 			class insertKey {};
+			class killedHandlerKeys {};
 		};
 	};
 	class ExternalS

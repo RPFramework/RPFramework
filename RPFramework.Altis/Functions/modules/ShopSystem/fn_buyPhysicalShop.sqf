@@ -17,10 +17,18 @@ switch (true) do {
 			_ct setVariable ["buyableThing", nil, true];
 			closeDialog 0;
 			
-			
-			[_ct, player] remoteExecCall ["Server_fnc_insertKey", 2];
-			
-			// Wait until the key gets assigned to the vehicle and after that insert it to the database since there are no ties connecting the garage and vk tables since one is core and the other isn't
+			//Add vehicle to database (If garage module is installed)
+			if (!isNil "RPF_GarageModule") then {
+				//Make sure to delete vehicle from database(Add EH)
+				_ct addMPEventHandler ["mpkilled",{if (!isServer) exitWith {}; _this call ServerModules_fnc_killedHandlerGarage}];
+				[_ct,player] remoteExecCall ["ServerModules_fnc_insertGarage", 2];
+			} else {
+				//Garage module is not enabled,just insert the key
+				[_ct, player] remoteExecCall ["Server_fnc_insertKey", 2];
+			};
+
+			//Clean keys when vehicle gets destroyed(Add EH)
+			_ct addMPEventHandler ["mpkilled",{if (!isServer) exitWith {}; _this call Server_fnc_killedHandlerKeys}];
 			
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
 			[_ct, clientOwner] remoteExec ["setOwner", 2];
