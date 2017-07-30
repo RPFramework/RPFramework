@@ -5,7 +5,7 @@ First Edit: 16.4.2016
 RPF_InteractionButtons = [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608];
 RPF_InteractionMenuItems = [
 	[
-		["cursorObject isKindOf 'Car'", "(cursorObject getVariable ['key', 'nuh']) in RPF_vehKeys", "(player distance cursorObject) <= 5"],
+		["cursorObject isKindOf 'AllVehicles'", "(cursorObject getVariable ['key', 'nuh']) in RPF_vehKeys", "(player distance cursorObject) <= 5"],
 		[(localize 'STR_RPF_CORE_INTERACTION_CARKEY'), "[cursorObject] call Client_fnc_useKey"]
 	],
 	[

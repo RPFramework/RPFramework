@@ -18,4 +18,4 @@ params [["_vehicle",objNull,[objNull]]];
 _vehicle addMPEventHandler ["mpkilled",{if (!isServer) exitWith {}; _this call Server_fnc_killedHandlerKeys}];
 
 //Remove from database
-_vehicle addMPEventHandler ["mpkilled",{if (!isServer) exitWith {}; _this call Server_fnc_killedHandlerGarage}];
+_vehicle addMPEventHandler ["mpkilled",{if (!isServer) exitWith {}; _this call ServerModules_fnc_killedHandlerGarage}];
