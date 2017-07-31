@@ -22,5 +22,5 @@ _vehicle setPos _position;
 _vehicle setDir (getDir RPF_curGarage);
 [_car select 3, _vehicle]call Client_fnc_vehicleHitLoad;
 _vehicle setVariable ["key", _car select 4, true];
-[_vehicle] remoteExecCall ["ServerModules_fnc_setupHandlersGarage", 2];
+[_vehicle] remoteExecCall ["Server_fnc_setupVehiclesKilledHandlers", 2];
 _vehicle lock 2;

@@ -30,6 +30,7 @@ class CfgRemoteExec {
         Function(Server_fnc_insertKey,SERVER)
         Function(Server_fnc_deleteKey,SERVER)
         Function(Server_fnc_deleteKeys,SERVER)
+		Function(Server_fnc_setupVehiclesKilledHandlers,SERVER)
 
         /* Anyone functions */
         Function(Client_fnc_playSound,ANYONE)
