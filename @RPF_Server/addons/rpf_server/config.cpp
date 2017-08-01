@@ -48,6 +48,12 @@ class CfgFunctions
 			class insertKey {};
 			class killedHandlerKeys {};
 		};
+		class Vehicles
+		{
+			file = "RPF_Server\Functions\core\Vehicles";
+			class initVehiclesKilledHandlers {preInit=1};
+			class setupVehiclesKilledHandlers {};
+		};
 	};
 	class ExternalS
 	{

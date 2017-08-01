@@ -8,8 +8,10 @@
     Arguments:
         1 - Vehicle Object
 */
-params [["_vehicle",objNull,[objNull]]];
+//Make sure we are on the server
+if (!isServer) exitWith {};
 
+params [["_vehicle",objNull,[objNull]]];
 
 //Wipe keys
 private _key = _vehicle getVariable "key";
