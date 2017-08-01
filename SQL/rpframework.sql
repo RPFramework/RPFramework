@@ -19,7 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `rpframework`
 --
-DROP DATABASE `rpframework`;
 CREATE DATABASE IF NOT EXISTS `rpframework` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `rpframework`;
 

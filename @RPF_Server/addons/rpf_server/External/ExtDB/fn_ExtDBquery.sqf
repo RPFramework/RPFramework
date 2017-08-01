@@ -5,7 +5,7 @@
 Author: Kerkkoh
 First Edit: 19.3.2016
 Params:
-0 - Async mode (Anything will do to this script)
+0 - Async mode
 1 - Predefined statement name and its params, in format "exampleQuery:input:input:input"
 */
 
