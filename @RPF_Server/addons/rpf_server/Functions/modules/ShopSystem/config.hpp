@@ -1,10 +1,21 @@
 class RPF_shopSystemServerModule {
-	// We need to list all the classes in seperate arrays so the scripts can easily access them
+	// List all your physical items for sale here
 	shopSystemPhysicals[] = {
 		"phys1",
 		"phys2"
 	};
 	
+	/*
+	* className: classname of the physical item that's spawned
+	* pos[]: position at which the item is spawned
+	* dir: direction at which the item is pointing 0-360
+	* price: price of the item
+	* type: 0 - Car (a vehicle)
+	*		1 - Item (Like a magazine of ammunition)
+	*		2 - Physical item (Furniture / Fishing nets)
+	* isMethLab: 0 - This physical item is not a meth lab
+	*			 1 - This physical item is a meth lab
+	*/
 	class phys1 {
 		className = "CargoNet_01_box_F";
 		pos[] = {16777.7,12630.4,-0.0249977};
@@ -22,6 +33,7 @@ class RPF_shopSystemServerModule {
 		isMethLab = 1;
 	};
 	
+	// List of all the names of the markers that we'll spawn (See below)
 	shopMarkers[] = {
 		"marker1",
 		"marker2",
@@ -32,6 +44,13 @@ class RPF_shopSystemServerModule {
 		"marker7"
 	};
 	
+	/*
+	* name: Name of the marker (This is just the handle used to access it; has to be unique)
+	* pos[]: Position of the marker
+	* shape: Shape of the marker (used for command setMarkerShape)
+	* type: Type of the marker (used for command setMarkerType)
+	* text: Text shown on the map at the marker's position (These are localized)
+	*/
 	class marker1 {
 		name = "vehicleStore";
 		pos[] = {16736.5,12502.5,0.00124454};
@@ -82,6 +101,7 @@ class RPF_shopSystemServerModule {
 		text = $STR_RPF_SHOPSYSTEM_EMSSTORE;
 	};
 	
+	// List all shops that you define as classes below
 	shops[] = {
 		"shop1",
 		"shop2",
@@ -94,6 +114,30 @@ class RPF_shopSystemServerModule {
 	// buyItems & sellItems arrays:
 	// {"class", price, type}
 	// Types: 0 - Item, 1 - Magazine, 2 - Weapon, 3 - Uniform, 4 - Vest, 5 - Headgear, 6 - Backpack
+	/*
+	* classname: Classname of the shop that we spawn
+	* pos[]: Position of the shop
+	* dir: Direction of the shop 0-360
+	* shopName: The name of the shop (This is localized)
+	*
+	* buyItems[]: Array of items that you can buy from the store
+	*			{ classname, price, type }
+	*			Where classname is the classname of the item, price is the price of it and type is one of the types listed below
+	*			Types:	0 - Item
+	*					1 - Magazine
+	*					2 - Weapon
+	*					3 - Uniform
+	*					4 - Vest
+	*					5 - Headgear
+	*					6 - Backpack
+	*			These types are needed for adding different kinds of items.
+	*
+	* sellItems[]: Same as buy items but for items you can sell to the store
+	*
+	* isPoliceStation: 	0 - This shop isn't a police station where officers can go on duty
+	*					1 - This shop is a police station where officers can go on duty
+	* isMedicStation: Same as isPoliceStation but for medic station
+	*/
 	class shop1 {
 		className = "OfficeTable_01_new_F";
 		pos[] = {16774.6,12631.1,1.4553};
