@@ -155,7 +155,7 @@ class RscText
 	w = 0.3;
 	style = 0;
 	shadow = 1;
-	font = "EtelkaNarrowMediumPro";
+	font = "PuristaMedium";
 	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	linespacing = 1;
 };

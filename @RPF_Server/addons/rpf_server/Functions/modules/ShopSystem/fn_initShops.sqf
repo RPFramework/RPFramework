@@ -86,7 +86,7 @@ _mC = "RPF_shopSystemServerModule";
 	_isMedicStation = (configFile >> _mC >> _x >> "isMedicStation") call BIS_fnc_getCfgData;
 
 	_store = _className createVehicle [0,0,0];
-	_store setPosASL _pos;
+	_store setPosATL _pos;
 	_store setDir _dir;
 	_store allowDamage false;
 	

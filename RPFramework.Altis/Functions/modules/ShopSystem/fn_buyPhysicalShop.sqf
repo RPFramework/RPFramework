@@ -16,7 +16,18 @@ switch (true) do {
 			[_price] call Client_fnc_removeCash;
 			_ct setVariable ["buyableThing", nil, true];
 			closeDialog 0;
-			RPF_Cars pushBack _ct;
+			
+			//Add vehicle to database (If garage module is installed)
+			if (!isNil "RPF_GarageModule") then {
+				[_ct,player] remoteExecCall ["ServerModules_fnc_insertGarage", 2];
+			} else {
+				//Garage module is not enabled,just insert the key
+				[_ct, player] remoteExecCall ["Server_fnc_insertKey", 2];
+			};
+
+			//Setup mpkilled EHs
+			[_ct] remoteExecCall ["Server_fnc_setupVehiclesKilledHandlers", 2];
+
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
 			[_ct, clientOwner] remoteExec ["setOwner", 2];
 			_ct allowDamage true;

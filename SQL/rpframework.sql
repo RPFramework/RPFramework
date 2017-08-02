@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: 21.05.2017 klo 17:39
+-- Generation Time: 18.07.2017 klo 15:09
 -- Palvelimen versio: 5.5.49-log
 -- PHP Version: 7.0.9
 
@@ -57,8 +57,10 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `id` int(11) NOT NULL,
   `class` varchar(100) NOT NULL,
   `user` varchar(50) NOT NULL,
-  `hit` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `hit` varchar(1000) NOT NULL,
+  `krand` varchar(50) NOT NULL,
+  `inGarage` int(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -123,6 +125,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `thirst` int(13) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Rakenne taululle `vk`
+--
+
+CREATE TABLE IF NOT EXISTS `vk` (
+  `id` int(11) NOT NULL,
+  `uid` varchar(50) NOT NULL,
+  `krand` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -171,6 +185,13 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `uid` (`uid`);
 
 --
+-- Indexes for table `vk`
+--
+ALTER TABLE `vk`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `key` (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -188,7 +209,7 @@ ALTER TABLE `criminals`
 -- AUTO_INCREMENT for table `garage`
 --
 ALTER TABLE `garage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `houses`
 --
@@ -209,6 +230,11 @@ ALTER TABLE `phonecontacts`
 --
 ALTER TABLE `users`
   MODIFY `bankaccount` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `vk`
+--
+ALTER TABLE `vk`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

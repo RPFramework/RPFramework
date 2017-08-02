@@ -30,7 +30,7 @@ RPF_vehicleShopVehicles = [
 		_x lock 2;
 		_x allowDamage false;
 	};
-}forEach ([0,0] nearObjects ["Car", 30000]);
+}forEach (entities [["LandVehicle","Air","Ship"],[], false, true]);
 
 for "_i" from 0 to 1 step 0 do 
 {

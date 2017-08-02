@@ -16,6 +16,8 @@ if ((([(format["existPlayerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) s
 	
 	[_res select 0, _res select 1, _res select 2, _res select 7] remoteExecCall ["Client_fnc_loadInventory", _player];
 	
+	[_player]call Server_fnc_fetchKeys;
+	
 	_player setVariable ["cash", _res select 3, true];
 	_player setVariable ["bank", _res select 4, true];
 	_player setVariable ["bankAccount", _res select 8, true];

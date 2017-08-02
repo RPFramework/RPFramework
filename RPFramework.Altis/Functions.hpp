@@ -9,6 +9,7 @@ class CfgFunctions
 			class miscVariables {};
 			class initHudLoop {};
 			class initSurvivalLoop {};
+			class receiveKeys {};
 		};
 		class Interaction
 		{
@@ -37,6 +38,7 @@ class CfgFunctions
 			class getPolice {};
 			class pickUp {};
 			class switchDutyStatus {};
+			class animateCtrl {};
 		};
 		class Money
 		{

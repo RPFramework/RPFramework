@@ -15,7 +15,7 @@ class RPF_shopSystemServerModule {
 	};
 	class phys2 {
 		className = "OfficeTable_01_new_F";
-		pos[] = {16776,12635.4,-0.0249977};
+		pos[] = {16776,12635.4,1.4553};
 		dir = 2.99588;
 		price = 100;
 		type = 2;
@@ -96,8 +96,8 @@ class RPF_shopSystemServerModule {
 	// Types: 0 - Item, 1 - Magazine, 2 - Weapon, 3 - Uniform, 4 - Vest, 5 - Headgear, 6 - Backpack
 	class shop1 {
 		className = "OfficeTable_01_new_F";
-		pos[] = {16773.7,12632.5,21.9305};
-		dir = 91.2246;
+		pos[] = {16774.6,12631.1,1.4553};
+		dir = 272.448;
 		shopName = $STR_RPF_SHOPSYSTEM_GENERALSTORE;
 		buyItems[] = {
 			{"RPF_Items_Salema", 20, 0},
