@@ -3,6 +3,7 @@
 			file = "Functions\modules\ShopSystem";
 			class buyPhysicalShop {};
 			class buyVirtualShop {};
+			class findItemType {};
 			class initShopSystem {};
 			class openPhysicalShop {};
 			class openVirtualShop {};

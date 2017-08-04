@@ -1,4 +1,11 @@
 class RPF_shopSystemServerModule {
+	class trackedItems {
+		class RPF_Items_Antibiotics {
+			buyPrice = 30;
+			sellPrice = 10;
+		};
+	};
+
 	// List all your physical items for sale here
 	shopSystemPhysicals[] = {
 		"phys1",
