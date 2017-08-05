@@ -1,16 +1,16 @@
 class RPF_shopSystemServerModule {
 	class trackedItems {
 		/*
-    class ExampleClass {
-			buyPrice = 30;
-			sellPrice = 10;
-		};
-    */
+    	class ExampleClass {
+				buyPrice = 30;
+				sellPrice = 10;
+			};
+    	*/
 	};
 
 	// List all your physical items for sale here
 
-class physicalShops {
+	class physicalShops {
 		/*
 		* className: classname of the physical item that's spawned
 		* pos[]: position at which the item is spawned
@@ -38,9 +38,9 @@ class physicalShops {
 			type = 2;
 			isMethLab = 1;
 		};	
-};
+	};
 	
-class shopMarkers {
+	class shopMarkers {
 		/*
 		* name: Name of the marker (This is just the handle used to access it; has to be unique)
 		* pos[]: Position of the marker

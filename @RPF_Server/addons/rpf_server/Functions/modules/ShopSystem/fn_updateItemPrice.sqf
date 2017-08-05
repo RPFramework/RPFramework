@@ -14,7 +14,7 @@
 params [["_itemClass","",[""]],["_newPrice",0,[0]],["_buySell",0,[0]]];
 
 scopeName "Main";
-waitUntil {isNil "shopSystem_priceUpdate"; sleep 1};
+waitUntil { uiSleep 1; isNil "shopSystem_priceUpdate";};
 shopSystem_priceUpdate = true;
 
 private _globalIndex = (RPF_shopSystemPricesArray select 0) find _itemClass;
@@ -30,7 +30,7 @@ if (_buySell isEqualTo 0) then {
     (RPF_shopSystemPricesArray select 1 select _globalIndex) set [1,_newPrice];
 };
 
-publicVariable "RPF_shopSystemPricesArray"
+publicVariable "RPF_shopSystemPricesArray";
 
 sleep 1;
 

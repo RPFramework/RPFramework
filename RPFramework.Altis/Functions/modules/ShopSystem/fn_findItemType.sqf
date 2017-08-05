@@ -18,7 +18,7 @@
 		
 params [["_classname","",[""]]];
 
-private _itemType = ["_classname"] call BIS_fnc_itemType;
+private _itemType = [_classname] call BIS_fnc_itemType;
 
 //Is it an item? 
 if (toLower(_itemType select 0) isEqualTo "item") exitWith { 0 };
@@ -40,3 +40,5 @@ if (toLower(_itemType select 1) isEqualTo "headgear") exitWith { 5 };
 
 //Is it a backpack? 
 if (toLower(_itemType select 1) isEqualTo "backpack") exitWith { 6 };
+
+0

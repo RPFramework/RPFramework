@@ -5,8 +5,8 @@ First Edit: 22.4.2016
 
 
 /*
-----RPF_buyShopStatements Documentation----
-The RPF_buyShopStatements array allows module makers to add code within buyPhysicalShop script when a furniture is bought.
+----RPF_buyPhysicalShopStatements Documentation----
+The RPF_buyPhysicalShopStatements array allows module makers to add code within buyPhysicalShop script when a furniture is bought.
 (Often you would want to execute specific code when a player buys a furniture)
 
 The structure is the following
@@ -22,7 +22,7 @@ Here's the local variables you might want to use:
 _ct - Shop Object
 _newfurn - Object you are trying to buy
 */
-RPF_buyShopStatements = [];
+RPF_buyPhysicalShopStatements = [];
 
 _menuItems = [
 	[

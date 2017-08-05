@@ -67,7 +67,7 @@ switch (_type) do {
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
 				
-			} forEach RPF_buyShopStatements;
+			} forEach RPF_buyPhysicalShopStatements;
 			_newfurn setVariable ["vars", _vars, true];
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEM");
 		} else {
