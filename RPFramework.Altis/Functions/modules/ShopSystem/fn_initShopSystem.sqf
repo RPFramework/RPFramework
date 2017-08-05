@@ -3,6 +3,27 @@ Author: Kerkkoh
 First Edit: 22.4.2016
 */
 
+
+/*
+----RPF_buyShopStatements Documentation----
+The RPF_buyShopStatements array allows module makers to add code within buyPhysicalShop script when a furniture is bought.
+(Often you would want to execute specific code when a player buys a furniture)
+
+The structure is the following
+[
+[{OurConditionToBeTrue},{OurStatements}],
+[{not(isNil "checkVar")},{hint "We are good"}]
+]
+
+Keep in mind that the executed code WILL have access to all local variables in the buyPhysicalShop script.
+So,theoretically,it will be just like manually adding code to the buyPhysicalShop script.
+
+Here's the local variables you might want to use:
+_ct - Shop Object
+_newfurn - Object you are trying to buy
+*/
+RPF_buyShopStatements = [];
+
 _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'buyableThing'})", "(player distance cursorObject) <= 5"],
