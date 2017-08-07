@@ -18,11 +18,10 @@ _medics = []call Client_fnc_getMedics;
 	[0, getPlayerUID _unit, getPos _unit] remoteExecCall ["ClientModules_fnc_basicMedicalMarker", _x];
 }forEach _medics;
 
-_escEH = (findDisplay 46) displayAddEventHandler ["KeyDown", {
-	if ((_this select 1) == 1) then {
+_escEH = [1,
+{
 		true;
-	}
-}];
+}] call Client_fnc_addHotkey;
 
 _cash = _unit getVariable "cash";
 [_cash]call Client_fnc_removeCash;

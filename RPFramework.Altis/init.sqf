@@ -33,12 +33,11 @@ if (isServer) then {
 	
 	waituntil {uiSleep 0.01; !(isNull (findDisplay 46))};
 	
-	(findDisplay 46) displayAddEventHandler ["KeyDown", {
-		if ((_this select 1) == ((missionConfigFile >> "RPF_Config" >> "interactionKey") call BIS_fnc_getCfgData)) then {
-				[]call Client_fnc_openInteraction;
-			false;
-		}
-	}];
+	[(missionConfigFile >> "RPF_Config" >> "interactionKey") call BIS_fnc_getCfgData, 
+	{
+		[]call Client_fnc_openInteraction;
+		false;
+	}] call Client_fnc_addHotkey;
 	
 	[] spawn Client_fnc_initSurvivalLoop;
 	
