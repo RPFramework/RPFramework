@@ -5,59 +5,72 @@
 			<Key ID="STR_RPF_MINING_GRINDER_NAME">
 				<Original>Grinder</Original>
 				<English>Grinder</English>
+				<French>Broyeur</French>
 			</Key>
 			<Key ID="STR_RPF_MINING_GRINDER_DESC">
 				<Original>Grinder</Original>
 				<English>Grinder</English>
+				<French>Broyeur</French>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_MINERALS_NAME">
 				<Original>Minerals</Original>
 				<English>Minerals</English>
+				<French>Minéraux</French>
 			</Key>
 			<Key ID="STR_RPF_MINING_MINERALS_DESC">
 				<Original>Some minerals</Original>
 				<English>Some minerals</English>
+				<French>Des minéraux</French>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_GOLD_NAME">
 				<Original>Gold Ingot</Original>
 				<English>Gold Ingot</English>
+				<French>Lingot d'or</French>
 			</Key>
 			<Key ID="STR_RPF_MINING_GOLD_DESC">
 				<Original>Gold Ingot</Original>
 				<English>Gold Ingot</English>
+				<French>Lingot d'or</French>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_IRON_NAME">
 				<Original>Iron Ingot</Original>
 				<English>Iron Ingot</English>
+				<French>Lingot de fer</French>
 			</Key>
 			<Key ID="STR_RPF_MINING_IRON_DESC">
 				<Original>Iron Ingot</Original>
 				<English>Iron Ingot</English>
+				<French>Lingot de fer</French>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_COPPER_NAME">
 				<Original>Copper Ingot</Original>
 				<English>Copper Ingot</English>
+				<French>Lingot de cuivre</French>
 			</Key>
 			<Key ID="STR_RPF_MINING_COPPER_DESC">
 				<Original>Copper Ingot</Original>
 				<English>Copper Ingot</English>
+				<French>Lingot de cuivre</French>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_ROCKONE_NAME">
 				<Original>Rock 1</Original>
 				<English>Rock 1</English>
+				<French>Rocher 1</French>
 			</Key>
 			<Key ID="STR_RPF_MINING_ROCKTWO_NAME">
 				<Original>Rock 2</Original>
 				<English>Rock 2</English>
+				<French>Rocher 2</French>
 			</Key>
 			<Key ID="STR_RPF_MINING_ROCKTHREE_NAME">
 				<Original>Rock 3</Original>
 				<English>Rock 3</English>
+				<French>Rocher 3</French>
 			</Key>
 		</Container>
 	</Package>
