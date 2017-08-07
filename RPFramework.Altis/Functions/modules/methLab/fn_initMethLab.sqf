@@ -12,4 +12,8 @@ _menuItems = [
 	RPF_InteractionMenuItems pushBack _x;
 }forEach _menuItems;
 
+//Add conditions and statements to the buyPhysicalShop script
+[{not (isNil {_ct getVariable 'methLab'})}, //Condition <Code>
+{_newfurn setVariable ["methLab", 1, true]}] spawn ClientModules_fnc_buyPhysicalShopStatement;
+
 RPF_ItemNames pushBack ["OfficeTable_01_new_F", "Meth Lab"];
