@@ -6,7 +6,7 @@ First Edit: 24.4.2016
 if ((lbCurSel 1500) == -1) exitWith {};
 _dataS = lbData [1500, lbCurSel 1500];
 if (isNil {_dataS}) exitWith {};
-_data = call compile _dataS;
+_data = parseSimpleArray _dataS;
 _item = _data select 0;
 
 {

@@ -12,8 +12,8 @@ params [["_DIKKey",0,[0]],["_Statement",{},[{}]]];
 
 //Manipulate _statement
 private _stringCodeArray = toArray(str(_statement));
-_stringCodeArray deleteAt 0; //First element
-_stringCodeArray deleteAt (count(_stringCodeArray) - 1); //Last element
+_stringCodeArray deleteAt 0; //First "
+_stringCodeArray deleteAt (count(_stringCodeArray) - 1); //Last "
 _stringCode = toString(_stringCodeArray);
 private _condition = format["if not((_this select 1) isEqualTo %1) exitWith {};",_DIKKey];
 

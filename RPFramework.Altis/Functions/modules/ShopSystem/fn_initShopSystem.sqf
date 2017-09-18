@@ -22,7 +22,7 @@ Here's the local variables you might want to use:
 _ct - Shop Object
 _newfurn - Object you are trying to buy
 */
-RPF_buyPhysicalShopStatements = [];
+RPF_buyPhysicalShopStatements = [[],[],[]];
 
 _menuItems = [
 	[

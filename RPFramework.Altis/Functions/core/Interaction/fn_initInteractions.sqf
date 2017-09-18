@@ -16,14 +16,14 @@ RPF_InteractionMenuItems = [
 		["isPlayer cursorObject", "(player distance cursorObject) <= 5"],
 		[(localize 'STR_RPF_CORE_INTERACTION_GIVECASH'), "[cursorObject] call Client_fnc_giveCash"]
 	],
-	[
-		["RPF_Holstered == 1", "alive player"],
+  /*[
+		["primaryWeapon player != '' || handgunWeapon player != ''", "alive player"],
 		[(localize 'STR_RPF_CORE_INTERACTION_UNHOLSTER'), "[] call Client_fnc_holster"]
 	],
 	[
-		["RPF_Holstered == 0", "handgunWeapon player != ''", "alive player"],
+		["currentWeapon player != ''", "alive player"],
 		[(localize 'STR_RPF_CORE_INTERACTION_HOLSTER'), "[] call Client_fnc_holster"]
-	],
+	], */
 	[
 		["(((missionConfigFile >> 'RPF_Config' >> 'handcuffs_item') call BIS_fnc_getCfgData) in (items player)) || (((missionConfigFile >> 'RPF_Config' >> 'handcuffs_item') call BIS_fnc_getCfgData) in (magazines player))", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
 		[(localize 'STR_RPF_CORE_INTERACTION_CUFF'), "[cursorObject] spawn Client_fnc_cuff"]

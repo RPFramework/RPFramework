@@ -14,7 +14,7 @@ params ["_mode", "_query"];
 
 _q = format["%1:%2:%3", _mode, call extDB_SQL_CUSTOM_ID, _query];
 _quer = "extDB3" callExtension _q;
-_array = call compile _quer;
+_array = parseSimpleArray _quer;
 _return = _array select 1;
 
 
