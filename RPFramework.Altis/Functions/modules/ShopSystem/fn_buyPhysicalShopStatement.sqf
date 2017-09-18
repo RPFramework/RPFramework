@@ -9,12 +9,16 @@
     Arguments:
         1 - Condition <Code>
         2 - Statement to execute <Code>
+        3 - In which block should the code get executed? <Int>
+            0 - Vehicle Buy
+            1 - Item Buy
+            2 - Furniture Buy
 */
-params [["_condition",{},[{}]],["_code",{},[{}]]];
+params [["_condition",{},[{}]],["_code",{},[{}]],["_codeblock",0,[0]]];
 
-uiSleep 5;
+uiSleep 5; //Wait for other modules to initialize
 if (isNil "RPF_buyPhysicalShopStatements") exitWith {};
-RPF_buyPhysicalShopStatements pushBack [
+(RPF_buyPhysicalShopStatements select _codeblock) pushBack [
 _condition, //Condition <Code>
 _code //Statement to execute <Code>
 ];
