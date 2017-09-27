@@ -33,6 +33,8 @@ if (isServer) then {
 	
 	waituntil {uiSleep 0.01; !(isNull (findDisplay 46))};
 	
+	//Hotkeys Setup
+	call Client_fnc_initHotkeys;
 	[(missionConfigFile >> "RPF_Config" >> "interactionKey") call BIS_fnc_getCfgData, 
 	{
 		[]call Client_fnc_openInteraction;

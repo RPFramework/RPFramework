@@ -21,7 +21,7 @@ if (!params [
 _key = "extDB3" callExtension format["%1:%2:%3",_mode, (call extDB_SQL_CUSTOM_ID), _queryStmt];
 if(_mode isEqualTo 1) exitWith {true};
 
-_key = call compile format["%1",_key];
+_key = parseSimpleArray format["%1",_key];
 _key = _key select 1;
 
 /*_start = diag_tickTime;
@@ -60,7 +60,7 @@ for "_i" from 0 to 1 step 0 do {
 };
 
 
-_queryResult = call compile _queryResult;
+_queryResult = parseSimpleArray _queryResult;
 
 if ((_queryResult select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Protocol Error: %1", _queryResult]; []};
 _return = (_queryResult select 1);
