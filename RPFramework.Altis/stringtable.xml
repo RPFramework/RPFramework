@@ -260,6 +260,26 @@
 				<English>Deposit amount must be more than $0!</English>
 				<French>le montant à déposer doit être supérieur à 0$!</French>
 			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_RECEIVED">
+				<Original>You have received money!</Original>
+				<English>You have received money!</English>
+				<French>You have received money!</French>
+			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_COMPLETED">
+				<Original>Transfer completed!</Original>
+				<English>Transfer completed!</English>
+				<French>Transfer completed!</French>
+			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_NOTENOUGHBANK">
+				<Original>You don't have enough money in your bank account to do this!</Original>
+				<English>You don't have enough money in your bank account to do this!</English>
+				<French>You don't have enough money in your bank account to do this!</French>
+			</Key>
+			<Key ID="STR_RPF_ATM_TRANSFER_ACCNOTFOUND">
+				<Original>Account not found!</Original>
+				<English>Account not found!</English>
+				<French>Account not found!</French>
+			</Key>
 		</Container>
 		<Container name="BASICMEDICAL">
 			<Key ID="STR_RPF_MODULES_BASICMEDICAL_REVIVE">
@@ -369,10 +389,9 @@
 				<English>Take Items</English>
 				<French>Prendre les objets</French>
 			</Key>
-			<Key ID="STR_RPF_MODULES_DELIVERY_">
-				<Original>asdasd</Original>
-				<English>asdaasd</English>
-				<French>asdaasd</French>
+			<Key ID="STR_RPF_DELIVERY_DP">
+				<Original>Delivery Depot</Original>
+				<English>Delivery Depot</English>
 			</Key>
 		</Container>
 		<Container name="EXAMPLE">
@@ -402,6 +421,16 @@
 				<Original>Harvest Plant</Original>
 				<English>Harvest Plant</English>
 				<French>Récolte</French>
+			</Key>
+			<Key ID="STR_RPF_FARMING_NOTFULLYGROWN">
+				<Original>This plant is not fully grown yet!</Original>
+				<English>This plant is not fully grown yet!</English>
+				<French>This plant is not fully grown yet!</French>
+			</Key>
+			<Key ID="STR_RPF_FARMING_TOOCLOSE">
+				<Original>You can't plant a new plant so close to another one!</Original>
+				<English>You can't plant a new plant so close to another one!</English>
+				<French>You can't plant a new plant so close to another one!</French>
 			</Key>
 		</Container>
 		<Container name="GARAGE">
@@ -516,6 +545,16 @@
 				<Original>Currently for sale</Original>
 				<English>Currently for sale</English>
 				<French>En vente</French>
+			</Key>
+			<Key ID="STR_RPF_HOUSING_WELCOME">
+				<Original>Welcome to your brand new house!</Original>
+				<English>Welcome to your brand new house!</English>
+				<French>Welcome to your brand new house!</French>
+			</Key>
+			<Key ID="STR_RPF_HOUSING_RECEIVEDMONEY">
+				<Original>You have received money!</Original>
+				<English>You have received money!</English>
+				<French>You have received money!</French>
 			</Key>
 		</Container>
 		<Container name="JAIL">
@@ -1174,6 +1213,10 @@
 				<English>Caller: %1</English>
 				<French>Appelant: %1</French>
 			</Key>
+			<Key ID="STR_RPF_POLICEPLUSDISPATCH_OCCUPIED">
+				<Original>%1 is already the dispatcher!</Original>
+				<English>%1 is already the dispatcher!</English>
+			</Key>
 		</Container>
 		<Container name="SHOPSYSTEM">
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_NAME">
@@ -1271,16 +1314,6 @@
 				<English>Chemistry Table</English>
 				<French>Livre de chimie.</French>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_POLICESHOP">
-				<Original>Police</Original>
-				<English>Police</English>
-				<French>Police</French>
-			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_EMSSHOP">
-				<Original>EMS</Original>
-				<English>EMS</English>
-				<French>Unités médicales</French>
-			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SOLDANITEM">
 				<Original>You have sold an item!</Original>
 				<English>You have sold an item!</English>
@@ -1295,6 +1328,41 @@
 				<Original>You don't have that!</Original>
 				<English>You don't have that!</English>
 				<French>Vous n'avez pas ça!</French>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_VEHICLESTORE">
+				<Original>Vehicle Store</Original>
+				<English>Vehicle Store</English>
+				<French>Vehicle Store</French>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_GENERALSTORE">
+				<Original>General Store</Original>
+				<English>General Store</English>
+				<French>General Store</French>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_DRUGDEALER">
+				<Original>Drug Dealer</Original>
+				<English>Drug Dealer</English>
+				<French>Drug Dealer</French>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_FARMSTORE">
+				<Original>Farm Store</Original>
+				<English>Farm Store</English>
+				<French>Farm Store</French>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_GUNSTORE">
+				<Original>Gun Store</Original>
+				<English>Gun Store</English>
+				<French>Gun Store</French>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_POLSTORE">
+				<Original>Police Store</Original>
+				<English>Police Store</English>
+				<French>Police Magasin</French>
+			</Key>
+			<Key ID="STR_RPF_SHOPSYSTEM_EMSSTORE">
+				<Original>EMS Store</Original>
+				<English>EMS Store</English>
+				<French>Unités médicales Magasin</French>
 			</Key>
 		</Container>
 		<Container name="TICKETING">
@@ -1394,6 +1462,16 @@
 				<Original>Manage Licenses</Original>
 				<English>Manage Licenses</English>
 				<French>Gêrer les permis</French>
+			</Key>
+			<Key ID="STR_RPF_LICENSES_NEWLICENSE">
+				<Original>You've been granted a %1</Original>
+				<English>You've been granted a %1</English>
+				<French>You've been granted a %1</French>
+			</Key>
+			<Key ID="STR_RPF_LICENSES_REVOKED">
+				<Original>Your %1 has been revoked.</Original>
+				<English>Your %1 has been revoked.</English>
+				<French>Your %1 has been revoked.</French>
 			</Key>
 		</Container>
 	</Package>

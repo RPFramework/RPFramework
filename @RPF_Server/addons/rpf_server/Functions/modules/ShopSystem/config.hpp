@@ -132,7 +132,7 @@ class RPF_shopSystemServerModule {
 			className = "OfficeTable_01_new_F";
 			pos[] = {16774.6,12631.1,1.4553};
 			dir = 272.448;
-			shopName = $STR_RPF_SHOPSYSTEM_GENERALSTORE;
+			shopName = "STR_RPF_SHOPSYSTEM_GENERALSTORE";
 			buyItems[] = {
 				{"RPF_Items_Salema", 20},
 				{"RPF_Items_Antibiotics", 30},
@@ -192,7 +192,7 @@ class RPF_shopSystemServerModule {
 			className = "C_man_hunter_1_F";
 			pos[] = {16940,12635.2,0.00168991};
 			dir = 0;
-			shopName = $STR_RPF_SHOPSYSTEM_DRUGDEALER;
+			shopName = "STR_RPF_SHOPSYSTEM_DRUGDEALER";
 			buyItems[] = {
 				{"RPF_Items_PoppySeed", 3},
 				{"RPF_Items_Poppy", 150},
@@ -210,7 +210,7 @@ class RPF_shopSystemServerModule {
 			className = "OfficeTable_01_new_F";
 			pos[] = {16797.4,12551.2,-0.0250072};
 			dir = 272.56;
-			shopName = $STR_RPF_SHOPSYSTEM_FARMSTORE;
+			shopName = "STR_RPF_SHOPSYSTEM_FARMSTORE";
 			buyItems[] = {
 				{"RPF_Items_OliveSeed", 2},
 				{"RPF_Items_Olives", 35}
@@ -226,7 +226,7 @@ class RPF_shopSystemServerModule {
 			className = "OfficeTable_01_new_F";
 			pos[] = {16685.3,12450.8,-0.0249996};
 			dir = 227.006;
-			shopName = $STR_RPF_SHOPSYSTEM_GUNSTORE;
+			shopName = "STR_RPF_SHOPSYSTEM_GUNSTORE";
 			buyItems[] = {
 				{"hgun_Pistol_heavy_01_F", 700},
 				{"11Rnd_45ACP_Mag", 15},
@@ -249,7 +249,7 @@ class RPF_shopSystemServerModule {
 			className = "OfficeTable_01_new_F";
 			pos[] = {16565.4,12729.2,-9.53674e-006};
 			dir = 219.919;
-			shopName = $STR_RPF_SHOPSYSTEM_POLSTORE;
+			shopName = "STR_RPF_SHOPSYSTEM_POLSTORE";
 			buyItems[] = {
 				{"hgun_Rook40_F", 700},
 				{"30Rnd_9x21_Mag", 15},
@@ -301,7 +301,7 @@ class RPF_shopSystemServerModule {
 			className = "OfficeTable_01_new_F";
 			pos[] = {16550.2,12764.8,0.00196266};
 			dir = 305.069;
-			shopName = $STR_RPF_SHOPSYSTEM_EMSSTORE;
+			shopName = "STR_RPF_SHOPSYSTEM_EMSSTORE";
 			buyItems[] = {
 				{"Medikit", 10},
 				{"FirstAidKit", 5},

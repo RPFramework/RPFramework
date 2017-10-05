@@ -28,11 +28,11 @@ params ["_ct"];
 createDialog "virtualShop";
 
 _array = _ct getVariable "shopSystemShop";
-_shopName = _array select 0;
+_shopName = localize (_array select 0);
 
-if ((_shopName == (localize "STR_RPF_MODULES_SHOPSYSTEM_POLICESHOP")) && (player getVariable ['cop', 0] <= 0)) exitWith {closeDialog 0;};
+if ((_shopName == (localize "STR_RPF_SHOPSYSTEM_POLSTORE")) && (player getVariable ['cop', 0] <= 0)) exitWith {closeDialog 0;};
 
-if ((_shopName == (localize "STR_RPF_MODULES_SHOPSYSTEM_EMSSHOP")) && (player getVariable ['ems', 0] <= 0)) exitWith {closeDialog 0;};
+if ((_shopName == (localize "STR_RPF_SHOPSYSTEM_EMSSTORE")) && (player getVariable ['ems', 0] <= 0)) exitWith {closeDialog 0;};
 
 
 _shopItems = _array select 1;

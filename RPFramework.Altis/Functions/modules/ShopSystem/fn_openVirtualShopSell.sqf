@@ -11,7 +11,7 @@ closeDialog 0;
 createDialog "virtualShopSell";
 
 _array = _ct getVariable "shopSystemShop";
-_shopName = _array select 0;
+_shopName = localize (_array select 0);
 _shopItems = _array select 2;
 ctrlSetText [1000, _shopName];
 

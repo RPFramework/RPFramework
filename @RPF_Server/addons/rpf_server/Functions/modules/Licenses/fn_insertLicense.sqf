@@ -9,4 +9,4 @@ _insert = [0, (format["insertLicense:%1:%2:%3", _lname, _license, getPlayerUID _
 
 [_player] call ServerModules_fnc_fetchLicenses;
 
-[(format[(localize "STR_RPF_LICENSES_NEWLICENSE"), _lname])] remoteExecCall ["Client_fnc_hintMP", _player];
+["STR_RPF_LICENSES_NEWLICENSE", _lname] remoteExecCall ["Client_fnc_hintMP", _player];

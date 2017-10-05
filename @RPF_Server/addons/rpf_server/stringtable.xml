@@ -6,22 +6,6 @@
 				<Original># ATM: Module Loaded #</Original>
 				<English># ATM: Module Loaded #</English>
 			</Key>
-			<Key ID="STR_RPF_ATM_TRANSFER_RECEIVED">
-				<Original>You have received money!</Original>
-				<English>You have received money!</English>
-			</Key>
-			<Key ID="STR_RPF_ATM_TRANSFER_COMPLETED">
-				<Original>Transfer completed!</Original>
-				<English>Transfer completed!</English>
-			</Key>
-			<Key ID="STR_RPF_ATM_TRANSFER_NOTENOUGHBANK">
-				<Original>You don't have enough money in your bank account to do this!</Original>
-				<English>You don't have enough money in your bank account to do this!</English>
-			</Key>
-			<Key ID="STR_RPF_ATM_TRANSFER_ACCNOTFOUND">
-				<Original>Account not found!</Original>
-				<English>Account not found!</English>
-			</Key>
 		</Container>
 		
 		<Container name="DELIVERY">
@@ -51,14 +35,6 @@
 				<Original># Farming: Module Loaded #</Original>
 				<English># Farming: Module Loaded #</English>
 			</Key>
-			<Key ID="STR_RPF_FARMING_NOTFULLYGROWN">
-				<Original>This plant is not fully grown yet!</Original>
-				<English>This plant is not fully grown yet!</English>
-			</Key>
-			<Key ID="STR_RPF_FARMING_TOOCLOSE">
-				<Original>You can't plant a new plant so close to another one!</Original>
-				<English>You can't plant a new plant so close to another one!</English>
-			</Key>
 		</Container>
 		
 		<Container name="FISHING">
@@ -80,14 +56,6 @@
 				<Original># Housing: Module Loaded #</Original>
 				<English># Housing: Module Loaded #</English>
 			</Key>
-			<Key ID="STR_RPF_HOUSING_WELCOME">
-				<Original>Welcome to your brand new house!</Original>
-				<English>Welcome to your brand new house!</English>
-			</Key>
-			<Key ID="STR_RPF_HOUSING_RECEIVEDMONEY">
-				<Original>You have received money!</Original>
-				<English>You have received money!</English>
-			</Key>
 		</Container>
 		
 		<Container name="JAIL">
@@ -105,14 +73,6 @@
 			<Key ID="STR_RPF_LICENSES_INIT">
 				<Original># Licenses: Module Loaded #</Original>
 				<English># Licenses: Module Loaded #</English>
-			</Key>
-			<Key ID="STR_RPF_LICENSES_NEWLICENSE">
-				<Original>You've been granted a %1</Original>
-				<English>You've been granted a %1</English>
-			</Key>
-			<Key ID="STR_RPF_LICENSES_REVOKED">
-				<Original>Your %1 has been revoked.</Original>
-				<English>Your %1 has been revoked.</English>
 			</Key>
 		</Container>
 		
@@ -161,10 +121,6 @@
 			<Key ID="STR_RPF_POLICEPLUSDISPATCH_INIT">
 				<Original># Police+ Module Loaded #</Original>
 				<English># Police+ Module Loaded #</English>
-			</Key>
-			<Key ID="STR_RPF_POLICEPLUSDISPATCH_OCCUPIED">
-				<Original>%1 is already the dispatcher!</Original>
-				<English>%1 is already the dispatcher!</English>
 			</Key>
 		</Container>
 		
