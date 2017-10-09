@@ -8,16 +8,12 @@
         1 - Direct Input Keyboard Code <Int> ( https://community.bistudio.com/wiki/DIK_KeyCodes )
         2 - Statement to execute <Code>
 */
-params [["_DIKKey",0,[0]],["_Statement",{},[{}]]];
+params [["_DIKKey",0,[0]],["_statement",{},[{}]]];
 
-//Manipulate _statement
-private _stringCodeArray = toArray(str(_statement));
-_stringCodeArray deleteAt 0; //First "
-_stringCodeArray deleteAt (count(_stringCodeArray) - 1); //Last "
-_stringCode = toString(_stringCodeArray);
+//Manipulate _condition
 private _condition = format["if not((_this select 1) isEqualTo %1) exitWith {};",_DIKKey];
 
-private _finalStatement = compile(_condition + endl + _stringCode);
+private _finalStatement = compile(_condition + endl + "_this call " + str(_statement));
 
 _return = (findDisplay 46) displayAddEventHandler ["KeyDown",_finalStatement];
 
