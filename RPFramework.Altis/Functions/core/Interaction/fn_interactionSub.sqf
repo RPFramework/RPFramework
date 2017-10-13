@@ -19,13 +19,8 @@ createDialog "interaction";
 	ctrlShow [_x, false];
 }forEach RPF_InteractionButtons;
 
-// Animate fading in for the dialog (the first call hides it, second fades it in)
 _displ = findDisplay 1014;
 ctrlSetText [1000, _name call BIS_fnc_localize];
-[_displ, 1800, ctrlPosition (_displ displayCtrl 1800), 1, 0] call Client_fnc_animateCtrl;
-[_displ, 1800, ctrlPosition (_displ displayCtrl 1800), 0, 0.2] call Client_fnc_animateCtrl;
-[_displ, 1000, ctrlPosition (_displ displayCtrl 1000), 1, 0] call Client_fnc_animateCtrl;
-[_displ, 1000, ctrlPosition (_displ displayCtrl 1000), 0, 0.2] call Client_fnc_animateCtrl;
 
 // Clear the current action array and run through all the items in interaction array to push the relevant ones to the action array
 RPF_iCurActionArray = [];
