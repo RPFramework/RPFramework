@@ -25,6 +25,5 @@ _menuItems = [
 		[(localize "STR_RPF_MODULES_HOUSING_HINFO"), "[cursorObject] call ClientModules_fnc_openHouseInfo"]
 	]
 ];
-{
-	RPF_InteractionMenuItems pushBack _x;
-}forEach _menuItems;
+
+["STR_RPF_CORE_INTERACTION_CAT_INTERACTION", _menuItems]call Client_fnc_addSubInteractions;

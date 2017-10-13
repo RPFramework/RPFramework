@@ -7,4 +7,5 @@
 			class basicMedicalMarker {};
 			class basicMedicalRevive {};
 			class basicMedicalLoadout {};
+			class addUnconsciousHook {};
 		};

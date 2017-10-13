@@ -23,7 +23,10 @@ class CfgFunctions
 			file = "Functions\core\Interaction";
 			class initInteractions {};
 			class interactionAction {};
+			class interactionBack {};
 			class openInteraction {};
+			class interactionSub {};
+			class addSubInteractions {};
 		};
 		class Misc
 		{

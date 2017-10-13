@@ -13,6 +13,4 @@ _menuItems = [
 		[(localize "STR_RPF_MODULES_POLICEPLUS_MANAGEUNIT"), "[] call ClientModules_fnc_policePlusDopenCar"]
 	]
 ];
-{
-	RPF_InteractionMenuItems pushBack _x;
-}forEach _menuItems;
+["STR_RPF_CORE_INTERACTION_CAT_OTHER", _menuItems]call Client_fnc_addSubInteractions;

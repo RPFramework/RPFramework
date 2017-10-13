@@ -3,9 +3,9 @@
 	<Package name="RPFMission">
 		<Container name="CORE">
 			<Key ID="STR_RPF_CORE_ONLOADNAME">
-				<Original>RPFramework 5.1.0</Original>
-				<English>RPFramework 5.1.0</English>
-				<French>RPFramework 5.1.0</French>
+				<Original>RPFramework 6.0.0</Original>
+				<English>RPFramework 6.0.0</English>
+				<French>RPFramework 6.0.0</French>
 			</Key>
 			
 			<Key ID="STR_RPF_CORE_GIVECASH_AMT">
@@ -173,6 +173,31 @@
 				<English>Your key can't open this vehicle.</English>
 				<French>Votre clé ne peux ouvrir ce véhicule.</French>
 			</Key>
+			<Key ID="STR_RPF_CORE_INTERACTION_BACK">
+				<Original>Back</Original>
+				<English>Back</English>
+				<French>Back</French>
+			</Key>
+			<Key ID="STR_RPF_CORE_INTERACTION_CAT_OTHER">
+				<Original>Other</Original>
+				<English>Other</English>
+				<French>Other</French>
+			</Key>
+			<Key ID="STR_RPF_CORE_INTERACTION_CAT_PLAYER">
+				<Original>Player</Original>
+				<English>Player</English>
+				<French>Player</French>
+			</Key>
+			<Key ID="STR_RPF_CORE_INTERACTION_CAT_VEHICLES">
+				<Original>Vehicles</Original>
+				<English>Vehicles</English>
+				<French>Vehicles</French>
+			</Key>
+			<Key ID="STR_RPF_CORE_INTERACTION_CAT_INTERACTION">
+				<Original>Interaction</Original>
+				<English>Interaction</English>
+				<French>Interaction</French>
+			</Key>
 		</Container>
 		<Container name="ATM">
 			<Key ID="STR_RPF_MODULES_ATM_WAIT">
@@ -303,8 +328,8 @@
 				<French>Extraire du véhicule</French>
 			</Key>
 			<Key ID="STR_RPF_MODULES_BASICMEDICAL_UNCONSCPERS">
-				<Original>[EMS] Unconscious Person</Original>
-				<English>[EMS] Unconscious Person</English>
+				<Original>[MEDIC] Unconscious Person</Original>
+				<English>[MEDIC] Unconscious Person</English>
 				<French>[MEDIC] Personne inconsciente</French>
 			</Key>
 			<Key ID="STR_RPF_MODULES_BASICMEDICAL_UNCONSC">
@@ -316,6 +341,11 @@
 				<Original>You're bleeding out in %1 seconds!</Original>
 				<English>You're bleeding out in %1 seconds!</English>
 				<French>Vous allez êtres exangues dans %1 secondes!</French>
+			</Key>
+			<Key ID="STR_RPF_MODULES_BASICMEDICAL_MEDICAL">
+				<Original>Medical</Original>
+				<English>Medical</English>
+				<French>Medical</French>
 			</Key>
 		</Container>
 		<Container name="DELIVERY">
