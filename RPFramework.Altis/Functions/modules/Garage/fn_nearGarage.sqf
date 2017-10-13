@@ -7,7 +7,7 @@ _nearest = nearestObjects [player, [], 10];
 _return = false;
 {
 	if (!(isNil {_x getVariable 'garage'})) then {
-		_return = ((player distance _x) <= _distance);
+		_return = ((player distance _x) <= 10);
 	};
 }forEach _nearest;
 
