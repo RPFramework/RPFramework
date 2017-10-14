@@ -11,7 +11,11 @@ _menuItems = [
 ["STR_RPF_CORE_INTERACTION_CAT_OTHER", _menuItems]call Client_fnc_addSubInteractions;
 
 //Add conditions and statements to the buyPhysicalShop script
+//Spawn a thread and wait a bit before calling shopSystem's module function
+[] spawn {
+uiSleep 2;
 [{not (isNil {_ct getVariable 'methLab'})}, //Condition <Code>
-{_newfurn setVariable ["methLab", 1, true]},2] spawn ClientModules_fnc_buyPhysicalShopStatement;
+{_newfurn setVariable ["methLab", 1, true]},2] call ClientModules_fnc_buyPhysicalShopStatement;
+};
 
 RPF_ItemNames pushBack ["OfficeTable_01_new_F", "Meth Lab"];
