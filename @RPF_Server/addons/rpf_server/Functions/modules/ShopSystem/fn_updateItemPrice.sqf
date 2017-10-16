@@ -32,6 +32,6 @@ if (_buySell isEqualTo 0) then {
 
 publicVariable "RPF_shopSystemPricesArray";
 
-sleep 1;
+uiSleep 1;
 
 shopSystem_priceUpdate = nil;

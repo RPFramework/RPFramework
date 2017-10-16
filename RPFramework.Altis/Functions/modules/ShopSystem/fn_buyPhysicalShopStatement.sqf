@@ -16,7 +16,6 @@
 */
 params [["_condition",{},[{}]],["_code",{},[{}]],["_codeblock",0,[0]]];
 
-uiSleep 5; //Wait for other modules to initialize
 if (isNil "RPF_buyPhysicalShopStatements") exitWith {};
 (RPF_buyPhysicalShopStatements select _codeblock) pushBack [
 _condition, //Condition <Code>
