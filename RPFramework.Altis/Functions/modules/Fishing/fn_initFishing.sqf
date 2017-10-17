@@ -15,6 +15,7 @@ RPF_ItemNames pushBack [RPF_Fishingnet, "Fishing net"];
 //Add conditions and statements to the buyPhysicalShop script
 //Spawn a thread and wait a bit before calling shopSystem's module function
 [] spawn {
+   if (isNil "ClientModules_fnc_buyPhysicalShopStatement") exitWith {};
    uiSleep 2;
    [
    {( (not(isNil {RPF_Fishingnet})) && {_class == RPF_Fishingnet} )},	
