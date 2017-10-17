@@ -4,6 +4,13 @@ First Edit: 22.4.2016
 */
 RPF_curDelivery = ["", 0, 0, 0, "", 0];
 
+_pos = -1;
+{
+	if ((_x select 0) isEqualTo (localize "STR_RPF_CORE_INTERACTION_CAT_OTHER")) exitWith {
+		_pos = _forEachIndex;
+	};
+}forEach RPF_InteractionSubItems;
+
 _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'delivery'})", "(RPF_curDelivery select 4) == ''", "(player distance cursorObject) <= 5"],
@@ -19,5 +26,5 @@ _menuItems = [
 	]
 ];
 {
-	RPF_InteractionMenuItems pushBack _x;
+	(RPF_InteractionSubItems select _pos) pushBack _x;
 }forEach _menuItems;

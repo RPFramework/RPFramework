@@ -19,5 +19,5 @@ if (count (nearestObjects [_player, ((configFile >> "RPF_farmingServerModule" >>
 		};
 	};
 } else {
-	[(localize "STR_RPF_FARMING_TOOCLOSE")] remoteExecCall ["Client_fnc_hintMP", _player];
+	["STR_RPF_FARMING_TOOCLOSE"] remoteExecCall ["Client_fnc_hintMP", _player];
 };

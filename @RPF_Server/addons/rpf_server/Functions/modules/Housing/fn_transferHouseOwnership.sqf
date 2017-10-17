@@ -37,7 +37,7 @@ if (isNull _found) then {
 } else {
 	_bankAccount = _found getVariable "bankAccount";
 	[_found, _bankAccount, _amount, 1, 0]call Server_fnc_replicateMoney;
-	[(localize "STR_RPF_HOUSING_RECEIVEDMONEY")] remoteExecCall ["Client_fnc_hintMP", _found];
+	["STR_RPF_HOUSING_RECEIVEDMONEY"] remoteExecCall ["Client_fnc_hintMP", _found];
 };
 
 _pacc = _player getVariable "bankAccount";
@@ -48,4 +48,4 @@ _pacc = _player getVariable "bankAccount";
 _house setVariable ["owner", getPlayerUID _player, true];
 _house setVariable ["price", nil, true];
 
-[(localize "STR_RPF_HOUSING_WELCOME")] remoteExecCall ["Client_fnc_hintMP", _player];
+["STR_RPF_HOUSING_WELCOME"] remoteExecCall ["Client_fnc_hintMP", _player];

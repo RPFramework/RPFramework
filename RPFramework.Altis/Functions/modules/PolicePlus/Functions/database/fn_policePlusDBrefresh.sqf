@@ -7,7 +7,7 @@ _indx = lbCurSel 1500;
 if (_indx == -1) exitWith {};
 _name = lbText [1500, _indx];
 _str = lbData [1500, _indx];
-_data = call compile _str;
+_data = parseSimpleArray _str;
 
 ctrlSetText [1000, _name];
 if ((_data select 1) != "no") then {
