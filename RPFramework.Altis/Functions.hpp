@@ -11,12 +11,22 @@ class CfgFunctions
 			class initSurvivalLoop {};
 			class receiveKeys {};
 		};
+		class Hotkeys
+		{
+			file = "Functions\core\Hotkeys";
+			class addHotkey {};
+			class initHotkeys {};
+			class removeHotkey {};
+		};
 		class Interaction
 		{
 			file = "Functions\core\Interaction";
 			class initInteractions {};
 			class interactionAction {};
+			class interactionBack {};
 			class openInteraction {};
+			class interactionSub {};
+			class addSubInteractions {};
 		};
 		class Misc
 		{

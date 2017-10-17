@@ -6,7 +6,7 @@ First Edit: 28.12.2016
 params ["_player"];
 
 if (!isNil{RPF_dispatcher}) exitWith {
-	[format[(localize "STR_RPF_POLICEPLUSDISPATCH_OCCUPIED"), name RPF_dispatcher]] remoteExecCall ["Client_fnc_hintMP", _player];
+	["STR_RPF_POLICEPLUSDISPATCH_OCCUPIED", name RPF_dispatcher] remoteExecCall ["Client_fnc_hintMP", _player];
 };
 
 RPF_dispatcher = _player;

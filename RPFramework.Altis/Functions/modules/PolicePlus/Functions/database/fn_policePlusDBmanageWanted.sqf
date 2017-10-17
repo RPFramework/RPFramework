@@ -8,7 +8,7 @@ _indx = lbCurSel 1500;
 if (_indx == -1) exitWith {hint (localize "STR_RPF_MODULES_POLICEPLUS_NOTHINGSELECTED")};
 _name = format["%1%2%3", "%", lbText [1500, _indx], "%"];
 _str = lbData [1500, _indx];
-_data = call compile _str;
+_data = parseSimpleArray _str;
 if (_a == 0) then {
 	if ((ctrlText 1403) == "") exitWith {hint (localize "STR_RPF_MODULES_POLICEPLUS_DESCEMPTY")};
 	[_data select 0, ctrlText 1403, 0] remoteExecCall ["ServerModules_fnc_policePlusDBmanageWanted", 2];

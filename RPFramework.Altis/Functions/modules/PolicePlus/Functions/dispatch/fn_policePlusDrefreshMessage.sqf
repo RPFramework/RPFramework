@@ -6,7 +6,7 @@ First Edit: 28.12.2016
 _indx = lbCurSel 1503;
 if (_indx == -1) exitWith {};
 _str = lbData [1503, _indx];
-_data = call compile _str;
+_data = parseSimpleArray _str;
 
 _author = _data select 0;
 _msg = _data select 1;

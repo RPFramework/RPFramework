@@ -5,10 +5,12 @@
 			<Key ID="STR_RPF_FARMING_PLANTS_OLIVE">
 				<Original>Olive Plant</Original>
 				<English>Olive Plant</English>
+				<French>Plant d'olivier</French>
 			</Key>
 			<Key ID="STR_RPF_FARMING_PLANTS_POPPY">
 				<Original>Poppy Plant</Original>
 				<English>Poppy Plant</English>
+				<French>Plant de pavot</French>
 			</Key>
 		</Container>
 	</Package>

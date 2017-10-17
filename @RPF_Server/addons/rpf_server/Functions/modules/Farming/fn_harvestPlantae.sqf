@@ -19,5 +19,5 @@ if ((_plant getVariable "state") >= 0) then {
 		};
 	};
 } else {
-	[(localize "STR_RPF_FARMING_NOTFULLYGROWN")] remoteExecCall ["Client_fnc_hintMP", _player];
+	["STR_RPF_FARMING_NOTFULLYGROWN"] remoteExecCall ["Client_fnc_hintMP", _player];
 };

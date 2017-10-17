@@ -26,6 +26,12 @@ _w = [];
 	_wString = format ["%1 x %2<br/>", _name, _x select 1];
 	_w pushBack _wString;
 }forEach ([weapons _ct]call Client_fnc_sortArray);
+if (RPF_Holstered == 1) then {
+	_name = [RPF_Holster select 0]call Client_fnc_getWeaponName;
+	_wString = format ["%1 x 1<br/>", _name];
+	_w pushBack _wString;
+};
 _wFinal = _w joinString "";
+
 
 hint (parseText (format [(localize "STR_RPF_CORE_POLICE_SEARCHEDHAS"), ([_iFinal, _mFinal, _wFinal] joinString "")]));

@@ -11,7 +11,7 @@ _booli = (_check select 0) select 0;
 _fetch = [(format["playerBankBalance:%1", (_player getVariable "bankAccount")]), 2] call ExternalS_fnc_ExtDBasync;
 
 if ((((_fetch select 0) select 0) - _amount) < 0) exitWith {
-	[(localize "STR_RPF_ATM_TRANSFER_NOTENOUGHBANK")] remoteExecCall ["Client_fnc_hintMP", _player];
+	["STR_RPF_ATM_TRANSFER_NOTENOUGHBANK"] remoteExecCall ["Client_fnc_hintMP", _player];
 };
 
 if (_booli) then {
@@ -26,14 +26,14 @@ if (_booli) then {
 	} else {
 		_bankAccount = _found getVariable "bankAccount";
 		[_found, _bankAccount, _amount, 1, 0]call Server_fnc_replicateMoney;
-		[(localize "STR_RPF_ATM_TRANSFER_RECEIVED")] remoteExecCall ["Client_fnc_hintMP", _found];
+		["STR_RPF_ATM_TRANSFER_RECEIVED"] remoteExecCall ["Client_fnc_hintMP", _found];
 	};
 	
 	[_player, (_player getVariable "bankAccount"), _amount, 0, 0]call Server_fnc_replicateMoney;
 
-	[(localize "STR_RPF_ATM_TRANSFER_COMPLETED")] remoteExecCall ["Client_fnc_hintMP", _player];
+	["STR_RPF_ATM_TRANSFER_COMPLETED"] remoteExecCall ["Client_fnc_hintMP", _player];
 } else {
-	[(localize "STR_RPF_ATM_TRANSFER_ACCNOTFOUND")] remoteExecCall ["Client_fnc_hintMP", _player];
+	["STR_RPF_ATM_TRANSFER_ACCNOTFOUND"] remoteExecCall ["Client_fnc_hintMP", _player];
 };
 
 _player setVariable ["isDoingATMstuff", nil, true];

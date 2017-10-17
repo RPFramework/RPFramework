@@ -11,3 +11,20 @@ RPF_Fishingnet variable is used out of the module so we'll let it stay here and 
 RPF_Fishingnet = ((missionConfigFile >> "RPF_fishingModule" >> "fishingNet") call BIS_fnc_getCfgData);
 
 RPF_ItemNames pushBack [RPF_Fishingnet, "Fishing net"];
+
+//Add conditions and statements to the buyPhysicalShop script
+//Spawn a thread and wait a bit before calling shopSystem's module function
+[] spawn {
+   uiSleep 2;
+   [
+   {( (not(isNil {RPF_Fishingnet})) && {_class == RPF_Fishingnet} )},	
+   {
+      [netId _newfurn, 0] remoteExecCall ["ServerModules_fnc_manageFishingnet", 2];
+      _newfurn setVariable ["action", [true, "[%1, 1] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]", "[%1, 0] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]"]];
+      
+      _vars pushBack ["action", [true, "[%1, 1] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]", "[%1, 0] remoteExecCall ['ServerModules_fnc_manageFishingnet', 2]"]];
+      _newfurn setVariable ["vars", _vars, true];
+   },
+   2 //Furniture block
+   ] call ClientModules_fnc_buyPhysicalShopStatement;
+};
