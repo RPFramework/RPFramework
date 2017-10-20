@@ -463,6 +463,13 @@
 				<French>You can't plant a new plant so close to another one!</French>
 			</Key>
 		</Container>
+		<Container name ="Fishing">
+			<Key ID="STR_RPF_MODULES_FISHING_FNET">
+				<Original>Fishing net</Original>
+				<English>Fishing net</English>
+				<French>Canne à pêche.</French>
+			</Key>			
+		</Container>
 		<Container name="GARAGE">
 			<Key ID="STR_RPF_MODULES_GARAGE_TITLE">
 				<Original>Garage</Original>
@@ -670,6 +677,11 @@
 			</Key>
 		</Container>
 		<Container name="METHLAB">
+			<Key ID="STR_RPF_MODULES_METHLAB_CHEMTABLE">
+				<Original>Chemistry Table</Original>
+				<English>Chemistry Table</English>
+				<French>Livre de chimie.</French>
+			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_COOK">
 				<Original>Cook</Original>
 				<English>Cook</English>
@@ -1333,16 +1345,6 @@
 				<Original>Open shop</Original>
 				<English>Open shop</English>
 				<French>ouvrez le magasin.</French>
-			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_FNET">
-				<Original>Fishing net</Original>
-				<English>Fishing net</English>
-				<French>Canne à pêche.</French>
-			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_CHEMTABLE">
-				<Original>Chemistry Table</Original>
-				<English>Chemistry Table</English>
-				<French>Livre de chimie.</French>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SOLDANITEM">
 				<Original>You have sold an item!</Original>
