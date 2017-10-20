@@ -22,4 +22,4 @@ uiSleep 2;
 ] call ClientModules_fnc_buyPhysicalShopStatement;
 };
 
-RPF_ItemNames pushBack ["OfficeTable_01_new_F", "Meth Lab"];
+RPF_ItemNames pushBack ["OfficeTable_01_new_F", localize("STR_RPF_MODULES_METHLAB_CHEMTABLE")];
