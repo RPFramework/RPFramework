@@ -9,7 +9,7 @@ RPF_houseTypes = [
 
 _menuItems = [
 	[
-		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in ((missionConfigFile >> 'RPF_housingModule' >> 'houseTypes') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5"], //TBR
+		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in ((missionConfigFile >> 'RPF_housingModule' >> 'houseTypes') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5"],
 		[(localize "STR_RPF_MODULES_HOUSING_MANAGESELL"), "[cursorObject] call ClientModules_fnc_openManageHouseSale"]
 	],
 	[
@@ -23,6 +23,10 @@ _menuItems = [
 	[
 		["(typeOf cursorObject) in ((missionConfigFile >> 'RPF_housingModule' >> 'houseTypes') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5"],
 		[(localize "STR_RPF_MODULES_HOUSING_HINFO"), "[cursorObject] call ClientModules_fnc_openHouseInfo"]
+	],
+	[
+		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in ((missionConfigFile >> 'RPF_housingModule' >> 'houseTypes') call BIS_fnc_getCfgData)", "!cursorObject getVariable ['locked', true]", "[cursorObject,player] call ClientModules_fnc_insideHouseConditions"],
+		[(localize "STR_RPF_MODULES_HOUSING_MANAGESELL"), "[cursorObject,player] call ClientModules_fnc_openHouseTrunk"]
 	]
 ];
 
