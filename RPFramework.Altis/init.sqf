@@ -31,6 +31,8 @@ if (isServer) then {
 
 	RPF_Holstered = 0;
 	
+	RPF_trunkKinds = ["Air","Car","Ship"];
+	
 	waituntil {uiSleep 0.01; !(isNull (findDisplay 46))};
 	
 	//Hotkeys Setup

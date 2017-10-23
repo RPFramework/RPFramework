@@ -9,7 +9,7 @@ RPF_houseTypes = [
 
 _menuItems = [
 	[
-		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in ((missionConfigFile >> 'RPF_housingModule' >> 'houseTypes') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5"],
+		["(cursorObject getVariable ['owner', '0']) == (getPlayerUID player)", "(typeOf cursorObject) in ((missionConfigFile >> 'RPF_housingModule' >> 'houseTypes') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5"], //TBR
 		[(localize "STR_RPF_MODULES_HOUSING_MANAGESELL"), "[cursorObject] call ClientModules_fnc_openManageHouseSale"]
 	],
 	[
@@ -27,3 +27,5 @@ _menuItems = [
 ];
 
 ["STR_RPF_CORE_INTERACTION_CAT_INTERACTION", _menuItems]call Client_fnc_addSubInteractions;
+
+RPF_trunkKinds pushBack "House_F";

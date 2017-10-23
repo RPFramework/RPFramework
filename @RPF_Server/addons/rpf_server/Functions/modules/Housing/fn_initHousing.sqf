@@ -7,12 +7,13 @@ diag_log (localize "STR_RPF_HOUSING_INIT");
 
 {
 	_class = _x select 1;
-	_price = _x select 4;	
+	_price = _x select 4;
+	_trunk = _x select 6;
 	_house = nearestObject [(_x select 2), _class];
-	
 	_house setVariable ["id", (_x select 0), true];
 	_house setVariable ["owner", (_x select 3), true];
 	_house setVariable ["locked", true, true];
+	_house setvariable ["trunk",_trunk,true];
 	if (_price != -1) then {
 		_house setVariable ["price", _price, true];
 	};
