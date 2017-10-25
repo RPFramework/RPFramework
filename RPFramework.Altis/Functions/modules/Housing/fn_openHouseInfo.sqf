@@ -21,7 +21,7 @@ if ((_house getVariable ["price", -1]) != -1) then {
 	} else {
 		ctrlSetText[1001, "Yes"];
 		//Select house's price
-		private _price = ((missionConfigFile >> "RPF_Housing" >> "Houses" >> (typeOf _house) >> "price") call BIS_fnc_getCfgData);
+		private _price = (missionConfigFile >> "RPF_housingModule" >> "Houses" >> (typeOf _house) >> "price") call BIS_fnc_getCfgData;		
 		ctrlSetText[1003, str _price];
 
 	};
