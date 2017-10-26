@@ -38,16 +38,8 @@ switch (true) do {
 		ctrlShow [1400, true];
 		ctrlShow [1004, true];
 	};
-	case (_type == 2 && _class != RPF_Fishingnet && !_methLab): {
+	case (_type == 2): {
 		_name = [_class]call Client_fnc_getVehicleName;
-		ctrlSetText [1001, _name];
-	};
-	case (_type == 2 && _class == RPF_Fishingnet): {
-		_name = (localize "STR_RPF_MODULES_SHOPSYSTEM_FNET");
-		ctrlSetText [1001, _name];
-	};
-	case (_type == 2 && _methLab): {
-		_name = (localize "STR_RPF_MODULES_SHOPSYSTEM_CHEMTABLE");
 		ctrlSetText [1001, _name];
 	};
 };
