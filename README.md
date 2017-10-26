@@ -18,8 +18,10 @@ So why should you hop on board with the modular approach to this framework? This
 * **NiiRoZz**
 * **InnovativeStudios / J. Schmidt**
 * **TheFlyingJets**
-* **Optix** (Most dedicated support guy ever and a lifesaver)
+* **Optix**
 * **Dardo**
+* **chick69**
+* **devcjax**
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework
@@ -40,21 +42,15 @@ So why should you hop on board with the modular approach to this framework? This
     4. If something is wrong, head over to our [discord server](https://discord.gg/JvRRuTm) and ask for support
 7. **ADDITIONAL INFO: Modifying RPFramework and porting it to another map:**
 	1. Change mission's map suffix to .yourMap
-	2. Go through RPF_Server/Functions/modules and look at each module's config file and change the locations of the markers and shops for example to match the new map. **If you're using ShopSystem module, remember to change the shop and marker locations in its config on the server side!** You can also do general configuration in RPFramework mission file's config.
-
-## Installing Modules (General guidelines)
+	2. Go through RPF_Server/Functions/modules and look at each module's config file and change the locations of the markers and shops for example to match the new map. **If you're using ShopSystem/Mining/Delivery modules, remember to change the shop and marker locations in their config on the server side!** You can also do general configuration in RPFramework server & mission config files.
+8. You can localize marker names etc. in @RPF_Server\addons\rpf_server\stringtable.xml
+	
+## Installing Modules
 * Visit our [website](https://rpframework.github.io/) to get more modules or submit your own!
-
-1. **These are general guidelines, you should read the readme provided by the module you are installing**
-2. Download all files for the module you are installing and **read the module's readme and license!!**
-3. Setting up the database
-	1. Refer to the module's readme
-4. Setting up addons
-	1. Module should have provided a **@RPFramework\Addons** folder where you have addons that you need to distribute to your players
-5. Navigate to **RPFramework.yourMap\Functions\modules** and place the module's folder there
-6. Navigate to **RPFramework.yourMap\Functions\modules\CONFIG** and open up **fn_initModules.sqf**, **moduleDialogs.hpp**, **moduleFunctions.hpp**, **moduleRscTitles.hpp**, **moduleSounds.hpp**
-7. In **fn_initModules.sqf** add an element to array called **_cModules** in format `"ClientModules_fnc_initMODULE"`, remember that the last array element doesn't need a comma after it but every element before it does
-8. In **moduleDialogs.hpp**, **moduleFunctions.hpp**, **moduleRscTitles.hpp** and **moduleSounds.hpp** add a new line in format `#include "..\MODULE\CURRENTFILESUFFIX.hpp"` where **CURRENTFILESUFFIX** is the "suffix" of the current file. For **moduleFunctions.hpp** the **CURRENTFILESUFFIX** would be **Functions**.
+https://github.com/RPFramework/RPFramework/wiki/Installing-modules
 
 ## Module documentation
 https://github.com/RPFramework/RPFramework/wiki/Module-Documentation
+
+## Wiki
+https://github.com/RPFramework/RPFramework/wiki/
