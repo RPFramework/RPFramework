@@ -1,3 +1,5 @@
 Function(ServerModules_fnc_insertHouse,SERVER)
 Function(ServerModules_fnc_transferHouseOwnership,SERVER)
 Function(ServerModules_fnc_updateHouse,SERVER)
+Function(ServerModules_fnc_updateHouseContainer,SERVER)
+Function(ServerModules_fnc_updateHouseTrunk,SERVER)

@@ -36,12 +36,18 @@ _randID = round (random 9999);
 lbSetData [1500, _item, str _randID];
 _trunk pushBack [_randID, _class, _vars];
 
-_trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/((missionConfigFile >> "RPF_Config" >> "trunkDivivde") call BIS_fnc_getCfgData));
+//Get trunkSize of the object
+private _trunkSize;
+if (isNil {(findDisplay 1020) getVariable "trunkSize"}) then {
+_trunkSize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/((missionConfigFile >> "RPF_Config" >> "trunkDivivde") call BIS_fnc_getCfgData));
 {
 	if ((_x select 0) == (typeOf _veh)) exitWith {
-		_trunksize = (_x select 1);
+		_trunkSize = (_x select 1);
 	};
 }forEach ((missionConfigFile >> "RPF_Config" >> "trunkException") call BIS_fnc_getCfgData);
+} else {
+	_trunkSize = (findDisplay 1020) getVariable "trunkSize";
+};
 
 _count = count _trunk;
 

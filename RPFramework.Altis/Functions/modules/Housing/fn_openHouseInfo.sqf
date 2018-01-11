@@ -20,10 +20,9 @@ if ((_house getVariable ["price", -1]) != -1) then {
 		ctrlShow [1003, false];
 	} else {
 		ctrlSetText[1001, "Yes"];
-		{
-			if ((_x select 0) == typeOf _house) exitWith {
-				ctrlSetText[1003, str (_x select 1)];
-			};
-		}forEach ((missionConfigFile >> "RPF_housingModule" >> "buyableHouses") call BIS_fnc_getCfgData);
+		//Select house's price
+		private _price = (missionConfigFile >> "RPF_housingModule" >> "Houses" >> (typeOf _house) >> "price") call BIS_fnc_getCfgData;		
+		ctrlSetText[1003, str _price];
+
 	};
 };

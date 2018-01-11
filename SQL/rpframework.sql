@@ -73,7 +73,9 @@ CREATE TABLE IF NOT EXISTS `houses` (
   `class` varchar(100) NOT NULL,
   `pos` varchar(50) NOT NULL,
   `owner` varchar(50) NOT NULL,
-  `price` int(11) NOT NULL DEFAULT '-1'
+  `price` int(11) NOT NULL DEFAULT '-1',
+  `trunk` varchar(1500) NOT NULL DEFAULT '[]',
+  `container` varchar(2048) NOT NULL DEFAULT '[]'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
