@@ -61,7 +61,7 @@ RPF_InteractionSubItems = [
 				[(localize 'STR_RPF_CORE_INTERACTION_CARKEY'), "[vehicle player] call Client_fnc_useKey"]
 			],
 			[
-				["(cursorObject isKindOf 'Car') || (cursorObject isKindOf 'Air') || (cursorObject isKindOf 'Ship')", "(player distance cursorObject) <= 5", "(locked cursorObject) == 0"],
+				["(cursorObject isKindOf 'Car') || (cursorObject isKindOf 'Air') || (cursorObject isKindOf 'Ship')", "(player distance cursorObject) <= 5", "(locked cursorObject) == 0 "],
 				[(localize 'STR_RPF_CORE_INTERACTION_TRUNK'), "[cursorObject] call Client_fnc_openTrunk"]
 			]
 		]

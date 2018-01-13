@@ -7,11 +7,14 @@ Trunk format:
 	[randID, "classname", _vars]
 ]
 */
-params ["_veh"];
+params [["_veh",objNull,[objNull]],["_trunkSize",0,[0]]];
 
 createDialog "trunk";
 
+if (_trunkSize <= 0) then {
 _trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/((missionConfigFile >> "RPF_Config" >> "trunkDivivde") call BIS_fnc_getCfgData));
+};
+
 {
 	if ((_x select 0) == (typeOf _veh)) exitWith {
 		_trunksize = (_x select 1);
@@ -24,6 +27,9 @@ _trunk = _veh getVariable ["trunk", []];
 if (count _trunk == 0) then {
 	_veh setVariable ["trunk", [], true];
 };
+
+//Set a trunkSize var to the trunk display
+(findDisplay 1020) setVariable ["trunkSize",_trunkSize];
 
 
 lbClear 1500;
