@@ -76,15 +76,20 @@ class CfgFunctions
 			class unCuffTarget {};
 			class search {};
 		};
+		
+		class Trunk 
+		{
+			file = "Functions\core\Trunk";
+			class openTrunk {};
+			class storeTrunk {};
+			class takeTrunk {};
+		};
 		class Vehicle
 		{
 			file = "Functions\core\Vehicle";
 			class useKey {};
 			class vehicleHitGet {};
 			class vehicleHitLoad {};
-			class openTrunk {};
-			class storeTrunk {};
-			class takeTrunk {};
 		};
 	};
 	class ClientModules

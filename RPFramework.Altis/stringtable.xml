@@ -625,6 +625,14 @@
 				<French>Pas à vendre</French>
 				<Portuguese>Inativo para venda no momento</Portuguese>
 			</Key>
+			<Key ID="STR_RPF_MODULES_HOUSING_OPENCONTAINER">
+ 				<Original>Open Container</Original>
+ 				<English>Open Container</English>
+ 			</Key>
+ 			<Key ID="STR_RPF_MODULES_HOUSING_OPENTRUNK">
+ 				<Original>Open Trunk</Original>
+ 				<English>Open Trunk</English>
+ 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_PRICEMANAGE">
 				<Original>Price</Original>
 				<English>Price</English>
