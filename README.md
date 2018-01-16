@@ -21,7 +21,7 @@ So why should you hop on board with the modular approach to this framework? This
 * **Optix**
 * **Dardo**
 * **chick69**
-* **devcjax**
+* **devcjax50**
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework
