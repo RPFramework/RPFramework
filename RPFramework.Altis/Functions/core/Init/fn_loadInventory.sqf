@@ -4,7 +4,7 @@ First Edit: 23.11.2015
 */
 params ["_items", "_clothes", "_weapons", "_position"];
 
-player setPos _position;
+player setPosATL _position;
 
 player setVariable ["loadedIn", true, true];
 
