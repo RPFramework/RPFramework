@@ -23,7 +23,7 @@ onEachFrame {
 			};
 			if (_name != "") then {
 				_ypos = getPosATL _y;
-				drawIcon3D ["", [0, 0, 0, 1], [_ypos select 0, _ypos select 1, 2.1], 1, 1, 0, _name, 0, 0.042, "PuristaSemiBold"];
+				drawIcon3D ["", [0, 0, 0, 1], [_ypos select 0, _ypos select 1, (_ypos select 2) + 2.1], 1, 1, 0, _name, 0, 0.042, "PuristaSemiBold"];
 			};
 		};
 	}forEach _units;
