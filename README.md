@@ -1,6 +1,6 @@
 # RPFramework
 
-[![DISCORD](https://img.shields.io/badge/Discord-Join-7289DA.svg)](https://discord.gg/JvRRuTm)
+[![DISCORD](https://img.shields.io/discord/256904748509298688.svg)](https://discord.gg/JvRRuTm)
 [![TRELLO](https://img.shields.io/badge/Trello-View-0079BF.svg)](https://trello.com/b/eqwxQ4hr/rpframework)
 [![Website](https://img.shields.io/website-up-down-green-red/https/rpframework.github.io.svg)](https://rpframework.github.io/)
 [![GitHub release](https://img.shields.io/github/release/RPFramework/RPFramework.svg)](https://github.com/RPFramework/RPFramework/releases)
