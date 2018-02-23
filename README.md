@@ -30,7 +30,8 @@ So why should you hop on board with the modular approach to this framework? This
 2. Read documents called **LICENSE.txt**, **extDB3-License.txt** and **extDB3-License-FLOSS-Exception.txt**
 3. Setting up the database
 	1. Navigate to folder **SQL**, take out **rpframework.sql** and import it into a MySQL database. You can use programs like MAMP to host a MySQL server.
-	2. Install Visual Studio C++ Redistributable 2015 32bit + 64bit version https://www.microsoft.com/en-us/download/details.aspx?id=48145 (Required for ExtDB3)
+	2. **IMPORTANT!!** If you choose an another name for your database than rpframework, **you need to modify rpf_server\External\ExtDB\fn_DBSetup.sqf**. You need to change "rpframework" to "yourDB" on line 19.
+	3. Install Visual Studio C++ Redistributable 2015 32bit + 64bit version https://www.microsoft.com/en-us/download/details.aspx?id=48145 (Required for ExtDB3)
     4. If you have problems with the database, try using the root user, but in the long run, it isn't the best idea ever.
 4. Setting up the mission and server files for RPFramework and ExtDB3
 	1. Drag and drop everything form the **bin** folder into your Arma 3 folder (Or the folder in which you have all your mods and the MPMissions folder)

@@ -9,6 +9,8 @@ class CfgPatches
 	};
 };
 
+// You need to set your DB name in rpf_server\External\ExtDB\fn_DBSetup.sqf on line 19. It is rpframework by default.
+
 class RPF_serverConfig {
 	// 1 (true) if we use a loop to constantly save player data, 0 to only save on disconnect
 	// Please set this to 0 or change the looping time on high traffic servers to avoid shitty performance
