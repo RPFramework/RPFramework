@@ -15,5 +15,5 @@ lineIntersectsSurfaces [
     getPosWorld _unit vectorAdd [0, 0, 50], 
     _unit, objNull, true, 1, "GEOM", "NONE"
 ] select 0 params ["","","","_house"];
-if ( not(isNil "_house") && {_house isKindOf "House"}) exitWith {true};
+if (!(isNil "_house") && {_house isKindOf "House"}) exitWith {true};
 false
