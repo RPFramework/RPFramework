@@ -20,6 +20,8 @@ _protocol_options = [_this,2,"",[""]] call BIS_fnc_param;
 
 _return = false;
 
+diag_log format["Loading ExtDB database now. Your database name should be: %1. If it isn't, please refer to rpf_server\External\ExtDB\fn_DBSetup.sqf line 19.", _database];
+
 if ( isNil {uiNamespace getVariable "extDB_SQL_CUSTOM_ID"}) then
 {
 	// extDB Version
