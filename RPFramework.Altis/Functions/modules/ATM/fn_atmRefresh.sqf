@@ -1,6 +1,7 @@
 /*
 Author: Kerkkoh
 First Edit: 9.10.2016
+Last Edit: 26.02.2018
 
 - type
 	0 - withdraw
@@ -30,5 +31,6 @@ if ((_newBank < 0) || (_newCash < 0)) exitWith {
 	};
 };
 
-ctrlSetText [1002, str _newBank];
-ctrlSetText [1004, str _newCash];
+
+ctrlSetText [1002,([_newBank] call BIS_fnc_numberText)];
+ctrlSetText [1004,([_newCash] call BIS_fnc_numberText)];
