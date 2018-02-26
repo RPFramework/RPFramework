@@ -10,7 +10,7 @@
         3 - Shift,Ctrl,alt or nothing <String>
 */
 params [["_DIKKey",0,[0]],["_statement",{},[{}]],["_additionalKey","",["shift","ctrl","alt"]]];
-private _condition;
+private _condition = "";
 
 if not (_additionalKey in ["shift","ctrl","alt"]) then {
     _additionalKey = ""
@@ -27,7 +27,7 @@ if (_additionalKey isEqualTo "") then {
         case "alt" : {4};
     };
 
-     _condition = format["if not(((_this select 1) isEqualTo %1) && _this select %2) exitWith {};",_DIKKey,_condKeyHoldIdx];
+     _condition = format["if not(((_this select 1) isEqualTo %1) && (_this select %2)) exitWith {};",_DIKKey,_condKeyHoldIdx];
 };
 
 private _finalStatement = compile(_condition + endl + "_this call " + str(_statement));
