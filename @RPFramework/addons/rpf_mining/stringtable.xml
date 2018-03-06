@@ -57,6 +57,18 @@
 				<French>Lingot de cuivre</French>
 			</Key>
 			
+			<Key ID="STR_RPF_MINING_DIAMOND_NAME">
+				<Original>A Diamond</Original>
+				<English>A Diamond</English>
+				<French>Un Diamant</French>
+			</Key>
+			
+			<Key ID="STR_RPF_MINING_LEAD_NAME">
+				<Original>Lead Ingot</Original>
+				<English>Lead Ingot</English>
+				<French>Lingot de plomb</French>
+			</Key>
+			
 			<Key ID="STR_RPF_MINING_ROCKONE_NAME">
 				<Original>Rock 1</Original>
 				<English>Rock 1</English>
