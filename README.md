@@ -23,6 +23,7 @@ So why should you hop on board with the modular approach to this framework? This
 * **chick69**
 * **devcjax50**
 * **HoST**
+* **Heisen**
 * **You**? Just fork the project and contribute, everybody is allowed in!
 
 ## Installing RPFramework

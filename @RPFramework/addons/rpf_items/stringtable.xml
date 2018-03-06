@@ -212,6 +212,71 @@
 				<English>Cleaner spray with a high level of ethanol</English>
 				<French>Spray nettoyant à haut degré d'éthanol</French>
 			</Key>
+			<Key ID="STR_RPF_ITEMS_BANANA_NAME">
+				<Original>Banana</Original>
+				<English>Banana</English>
+				<French>Banane</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BEER_NAME">
+				<Original>Beer</Original>
+				<English>Beer</English>
+				<French>Bière</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BULLETPARTS_NAME">
+				<Original>Bullet parts</Original>
+				<English>Bullet parts</English>
+				<French>Pièces de balle</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_COKE_NAME">
+				<Original>1g of Cocaine</Original>
+				<English>1g of Cocaine</English>
+				<French>1g de Cocaïne</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_BOLTCUTTER_NAME">
+				<Original>Bolt cutter</Original>
+				<English>Bolt cutter</English>
+				<French>Coupe-boulons</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_DECODER_NAME">
+				<Original>Decoder</Original>
+				<English>Decoder</English>
+				<French>Décodeur</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_WEAPONPARTS_NAME">
+				<Original>Weapon parts</Original>
+				<English>Weapon parts</English>
+				<French>Pièces d'armes</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_HEROIN_NAME">
+				<Original>1g of Heroin</Original>
+				<English>1g of Heroin</English>
+				<French>1g d'héroïne</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_OILSHALE_NAME">
+				<Original>Oil shale</Original>
+				<English>Oil shale</English>
+				<French>Schiste bitumineux</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_ORANGE_NAME">
+				<Original>Orange</Original>
+				<English>Orange</English>
+				<French>Orange</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_SYRINGE_NAME">
+				<Original>Syringe</Original>
+				<English>Syringe</English>
+				<French>Seringue</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_WEED_NAME">
+				<Original>1g of Cannabis</Original>
+				<English>1g of Cannabis</English>
+				<French>1g de Cannabis</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_WHISKY_NAME">
+				<Original>A bottle of whisky</Original>
+				<English>A bottle of whisky</English>
+				<French>Bouteille de whisky</French>
+			</Key>
 		</Container>
 	</Package>
 </Project>
