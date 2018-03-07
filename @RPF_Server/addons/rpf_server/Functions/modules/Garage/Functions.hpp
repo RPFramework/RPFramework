@@ -6,5 +6,6 @@
 			class insertGarage {};
 			class killedHandlerGarage {};
 			class removeGarage {};
-            class switchGarage {};
+      class switchGarage {};
+				class vehicleStatsUpdateLoop {};
 		};
