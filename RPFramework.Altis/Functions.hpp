@@ -88,7 +88,6 @@ class CfgFunctions
 		{
 			file = "Functions\core\Vehicle";
 			class useKey {};
-			class vehicleHitGet {};
 			class vehicleHitLoad {};
 		};
 	};
