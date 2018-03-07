@@ -8,4 +8,7 @@ RPF_vehiclesKilledHandlers pushbackUnique "ServerModules_fnc_killedHandlerGarage
 if (((configFile >> "RPF_garageModule" >> "resetVehicles") call BIS_fnc_getCfgData) == 1) then {
 	_q = [0, "resetVehicles"] call ExternalS_fnc_ExtDBquery;
 };
+
+[]spawn ServerModules_fnc_vehicleStatsUpdateLoop;
+
 diag_log (localize "STR_RPF_GARAGE_INIT");
