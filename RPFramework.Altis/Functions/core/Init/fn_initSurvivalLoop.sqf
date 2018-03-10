@@ -5,6 +5,9 @@ First Edit: 19.4.2016
 
 for "_i" from 0 to 1 step 0 do {
 	sleep 240;
+	
+	sleep (getNumber(missionConfigFile >> "RPF_Config" >> "SurvivalSleepLoop "));
+	
 	_hunger = (player getVariable "hunger");
 	_thirst = (player getVariable "thirst");
 	
