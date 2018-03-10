@@ -27,6 +27,9 @@ class RPF_Config {
 		{ "B_MRAP_01_F", 30 }
 	};
 	
+	// Every 4 minutes deduct values according to fn_initSurvivalLoop.sqf
+	SurvivalSleepLoop = 240;
+	
 	// You can find more config optios that are mostly for modules to change in Functions\core\Init\fn_miscVariables.sqf
 	// Use (missionConfigFile >> "RPF_Config" >> "something") call BIS_fnc_getCfgData to get data from here
 	// Each module has its own configuration file called config.hpp which can house shop locations, marker locations or variables, make sure to configure those as well!
