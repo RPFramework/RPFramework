@@ -62,6 +62,12 @@ class CfgFunctions
 			file = "RPF_Server\Functions\core\Init";
 			class initModules {};
 		};
+		class Interaction
+		{
+			file = "RPF_Server\Functions\core\Interaction";
+			class initInteractions {};
+			class addSubInteractions {};
+		};
 	};
 	class ExternalS
 	{

@@ -3,8 +3,6 @@ Author: Kerkkoh
 First Edit: 18.12.2016
 */
 
-[] call ClientModules_fnc_initPlayerNamesMenu;
-
 RPF_savedNames = [];
 
 onEachFrame {

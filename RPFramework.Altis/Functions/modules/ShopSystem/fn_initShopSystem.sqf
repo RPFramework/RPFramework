@@ -23,15 +23,3 @@ _ct - Shop Object
 _newfurn - Object you are trying to buy
 */
 RPF_buyPhysicalShopStatements = [[],[],[]];
-
-_menuItems = [
-	[
-		["!(isNil {cursorObject getVariable 'buyableThing'})", "(player distance cursorObject) <= 5"],
-		[(localize "STR_RPF_MODULES_SHOPSYSTEM_BUYTHIS"), "[cursorObject] call ClientModules_fnc_openPhysicalShop"]
-	],
-	[
-		["!(isNil {cursorObject getVariable 'shopSystemShop'})", "(player distance cursorObject) <= 5"],
-		[(localize "STR_RPF_MODULES_SHOPSYSTEM_OPENSHOP"), "[cursorObject] call ClientModules_fnc_openVirtualShop"]
-	]
-];
-["STR_RPF_CORE_INTERACTION_CAT_INTERACTION", _menuItems]call Client_fnc_addSubInteractions;

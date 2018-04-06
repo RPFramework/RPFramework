@@ -12,7 +12,7 @@ params ["_category", "_array"];
 
 _pos = -1;
 {
-	if ((_x select 0) isEqualTo (_category call BIS_fnc_localize)) exitWith {
+	if (((_x select 0) call BIS_fnc_localize) isEqualTo (_category call BIS_fnc_localize)) exitWith {
 		_pos = _forEachIndex;
 	};
 }forEach RPF_InteractionSubItems;

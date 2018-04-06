@@ -2,13 +2,6 @@
 Author: Kerkkoh
 First Edit: 22.9.2016
 */
-_menuItems = [
-	[
-		["!(isNil {cursorObject getVariable 'methLab'})", "isNil {cursorObject getVariable 'buyableThing'}", "(player distance cursorObject) <= 3"],
-		[(localize "STR_RPF_MODULES_METHLAB_OPENLAB"), "[cursorObject] call ClientModules_fnc_openMethLab"]
-	]
-];
-["STR_RPF_CORE_INTERACTION_CAT_OTHER", _menuItems]call Client_fnc_addSubInteractions;
 
 //Add conditions and statements to the buyPhysicalShop script
 //Spawn a thread and wait a bit before calling shopSystem's module function

@@ -10,7 +10,8 @@ if (isServer) then {
 	[] call Server_fnc_handleDisconnect;
 	[] spawn Server_fnc_statSaveLoop;
 	
-	[] call Server_fnc_initModules;
+	[] spawn Server_fnc_initInteractions;
+	[] spawn Server_fnc_initModules;
 } else {
 	waitUntil {uiSleep 0.01; !(isNil {player}) && player == player && alive player};
 	cutText ["Loading in...","BLACK",1];
@@ -24,8 +25,6 @@ if (isServer) then {
 	[] spawn Client_fnc_initHudLoop;
 
 	[] call Client_fnc_miscVariables;
-	
-	[] call Client_fnc_initInteractions;
 	
 	player setVariable ["cuffed", false, true];
 

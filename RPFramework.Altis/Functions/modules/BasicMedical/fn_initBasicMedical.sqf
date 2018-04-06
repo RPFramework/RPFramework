@@ -7,8 +7,6 @@ Basic medical module supplied with RPFramework by default, but it can be disable
 
 */
 
-[] call ClientModules_fnc_initBasicMedicalMenu;
-
 player addEventHandler ["Killed",{
 	_this spawn ClientModules_fnc_basicMedicalUnconscious;
 }];
