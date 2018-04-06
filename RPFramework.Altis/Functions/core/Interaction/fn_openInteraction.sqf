@@ -19,9 +19,6 @@ _displ = findDisplay 1014;
 [_displ, 1000, ctrlPosition (_displ displayCtrl 1000), 1, 0] call Client_fnc_animateCtrl;
 [_displ, 1000, ctrlPosition (_displ displayCtrl 1000), 0, 0.2] call Client_fnc_animateCtrl;
 
-// Clear the current action array and run through all the items in interaction array to push the relevant ones to the action array
-// In this case, we just push everything so we don't check for conditions
-RPF_iCurActionArray = [];
 {	
 	// If (shit fits into the menu) then {put that shit in the menu};
 	if (_forEachIndex < (count RPF_InteractionButtons)) then {
@@ -30,12 +27,11 @@ RPF_iCurActionArray = [];
 		
 		ctrlShow [_idc, true];
 		ctrlSetText [_idc, format["%1 >", _x select 0]];
+		buttonSetAction [_idc, (_x select 1)];
 		
 		_ctrlPos = ctrlPosition (_displ displayCtrl _idc);
 		// Animation - just a simple fade from 1 - 0 (from completely faded to 0 faded which is visible)
 		[_displ, _idc, _ctrlPos, 1, 0] call Client_fnc_animateCtrl;
 		[_displ, _idc, _ctrlPos, 0, 0.2] call Client_fnc_animateCtrl;
-		
-		RPF_iCurActionArray pushBack (_x select 1);
 	};
 }forEach RPF_InteractionMenuItems;

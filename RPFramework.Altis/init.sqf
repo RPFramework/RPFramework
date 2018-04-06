@@ -10,7 +10,7 @@ if (isServer) then {
 	[] call Server_fnc_handleDisconnect;
 	[] spawn Server_fnc_statSaveLoop;
 	
-	[] call ServerModules_fnc_initModules;
+	[] call Server_fnc_initModules;
 } else {
 	waitUntil {uiSleep 0.01; !(isNil {player}) && player == player && alive player};
 	cutText ["Loading in...","BLACK",1];
@@ -33,15 +33,24 @@ if (isServer) then {
 	
 	waituntil {uiSleep 0.01; !(isNull (findDisplay 46))};
 	
-	//Hotkeys Setup
-	call Client_fnc_initHotkeys;
-	[(missionConfigFile >> "RPF_Config" >> "interactionKey") call BIS_fnc_getCfgData, 
-	{
-		[]call Client_fnc_openInteraction;
-		false;
-	}] call Client_fnc_addHotkey;
+	(findDisplay 46) displayAddEventHandler ["KeyDown", {
+		switch (_this select 1) do {
+			case ((missionConfigFile >> "RPF_Config" >> "interactionKey") call BIS_fnc_getCfgData): {
+				[]call Client_fnc_openInteraction;
+				false;
+			};
+			//Holster/Unholster (default key H)
+			case ((missionConfigFile >> "RPF_Config" >> "holsterKey") call BIS_fnc_getCfgData): {
+				[]call Client_fnc_holster;
+				false;
+			};
+			default {
+				false;
+			};
+		};
+	}];
 	
 	[] spawn Client_fnc_initSurvivalLoop;
 	
-	[] call ClientModules_fnc_initModules;
+	[] call Client_fnc_initModules;
 };

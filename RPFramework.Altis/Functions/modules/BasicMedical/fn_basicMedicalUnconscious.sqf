@@ -18,22 +18,29 @@ _medics = []call Client_fnc_getMedics;
 	[0, getPlayerUID _unit, getPos _unit] remoteExecCall ["ClientModules_fnc_basicMedicalMarker", _x];
 }forEach _medics;
 
-_escEH = [1,
-{
+_escEH = (findDisplay 46) displayAddEventHandler ["KeyDown", {
+	if ((_this select 1) == 1) then {
 		true;
-}] call Client_fnc_addHotkey;
+	} else {
+		false;
+	};
+}];
 
 _cash = _unit getVariable "cash";
-[_cash]call Client_fnc_removeCash;
-_money = "Land_Money_F" createVehicle position _unit;
-_money setVariable ["money", _cash, true];
+if (_cash != 0) then {
+	[_cash]call Client_fnc_removeCash;
+	_money = "Land_Money_F" createVehicle position _unit;
+	_money setVariable ["money", _cash, true];
+};
 
 for "_i" from 0 to 1 step 0 do {
-	if (time >= _timer || !(_unit getVariable ["unconscious",  false])) exitWith {};
+	if (time >= _timer || !(_unit getVariable ["unconscious",  false]) || !isNil{RPF_forcedRespawn}) exitWith {};
 	_text = format [(localize "STR_RPF_MODULES_BASICMEDICAL_BLEEDINGOUT"), round (_timer - time)];
 	cutText [_text,"BLACK FADED",1];
 	sleep 0.1;
 };
+
+RPF_forcedRespawn = nil;
 
 if (!(_unit getVariable ["unconscious",  false])) then {
 	[1, player, _deadLoadout]call ClientModules_fnc_basicMedicalLoadout;

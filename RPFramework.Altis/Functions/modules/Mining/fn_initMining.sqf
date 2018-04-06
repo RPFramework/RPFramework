@@ -20,4 +20,4 @@ _menuItems = [
 ];
 ["STR_RPF_CORE_INTERACTION_CAT_INTERACTION", _menuItems]call Client_fnc_addSubInteractions;
 
-RPF_Usables pushBack ["RPF_Mining_Grinder", "[] call ClientModules_fnc_equipGrinder"];
+RPF_Usables pushBack ["RPF_Mining_Grinder", ["RPF_Mining_Grinder"], "ClientModules_fnc_equipGrinder"];

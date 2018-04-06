@@ -8,4 +8,5 @@
 			class basicMedicalRevive {};
 			class basicMedicalLoadout {};
 			class addUnconsciousHook {};
+			class forcedRespawn {};
 		};

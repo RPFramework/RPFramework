@@ -29,6 +29,10 @@ _menuItems = [
 		[
 			["player getVariable ['ems', 0] > 0", "cursorObject isKindOf 'Car'", "(player distance cursorObject) <= 5"],
 			[(localize "STR_RPF_MODULES_BASICMEDICAL_PULLOUT"), "[cursorObject] call Client_fnc_pullOut"]
+		],
+		[
+			["player getVariable ['unconscious', false]"],
+			[(localize "str_a3_cfgvehicles_modulerespawnvehicle_f_arguments_forcedrespawn_0"), "[] call ClientModules_fnc_forcedRespawn"]
 		]
 	]
 ];

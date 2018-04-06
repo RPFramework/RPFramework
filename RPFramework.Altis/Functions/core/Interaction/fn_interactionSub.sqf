@@ -22,9 +22,6 @@ createDialog "interaction";
 _displ = findDisplay 1014;
 ctrlSetText [1000, _name call BIS_fnc_localize];
 
-// Clear the current action array and run through all the items in interaction array to push the relevant ones to the action array
-RPF_iCurActionArray = [];
-
 //Find the subinteractions
 _actions = [];
 {
@@ -52,8 +49,7 @@ _idx = 0;
 			
 			ctrlShow [_idc, true];
 			ctrlSetText [_idc, ((_x select 1) select 0)];
-			
-			RPF_iCurActionArray pushBack ((_x select 1) select 1);
+			buttonSetAction [_idc, (_x select 1) select 1];
 		};
 	};
 }forEach _actions;

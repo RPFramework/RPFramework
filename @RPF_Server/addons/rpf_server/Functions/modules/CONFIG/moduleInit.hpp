@@ -1,13 +1,11 @@
 /*
-Author: Kerkkoh
-First Edit: 16.4.2015
-
-Additional Information:
-Adding modules, creating modules -> Check README.md
-Module init function adding syntax: ServerModule_fnc_initYourModule
-Check out RPFramework's README.md or module's Readme file for info on module installation.
+	You add init files for your modules here.
+	
+	Adding modules, creating modules -> Check README.md
+	Module init function adding syntax: ServerModule_fnc_initYourModule
 */
-_sModules = [
+
+RPF_initModules[] = {
 	"ServerModules_fnc_initExample",
 	"ServerModules_fnc_initShopSystem",
 	"ServerModules_fnc_initFishing",
@@ -22,8 +20,4 @@ _sModules = [
 	"ServerModules_fnc_initGarage",
 	"ServerModules_fnc_initMining",
 	"ServerModules_fnc_initLicenses"
-];
-
-{
-	[] call (call compile _x);
-}forEach _sModules;
+};

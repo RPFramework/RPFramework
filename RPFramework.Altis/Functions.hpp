@@ -10,19 +10,12 @@ class CfgFunctions
 			class initHudLoop {};
 			class initSurvivalLoop {};
 			class receiveKeys {};
-		};
-		class Hotkeys
-		{
-			file = "Functions\core\Hotkeys";
-			class addHotkey {};
-			class initHotkeys {};
-			class removeHotkey {};
+			class initModules {};
 		};
 		class Interaction
 		{
 			file = "Functions\core\Interaction";
 			class initInteractions {};
-			class interactionAction {};
 			class interactionBack {};
 			class openInteraction {};
 			class interactionSub {};
@@ -93,11 +86,6 @@ class CfgFunctions
 	};
 	class ClientModules
 	{
-		class Config
-		{
-			file = "Functions\modules\CONFIG";
-			class initModules {};
-		};
 		#include "Functions\modules\CONFIG\moduleFunctions.hpp"
 	};
 };

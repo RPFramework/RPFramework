@@ -1,6 +1,8 @@
 class RPF_Config {
 	// TAB by default https://community.bistudio.com/wiki/ListOfKeyCodes
 	interactionKey = 15;
+	// H by default
+	holsterKey = 35;
 	
 	// Vehicle trunk size is divided with this
 	trunkDivivde = 300;
@@ -30,9 +32,24 @@ class RPF_Config {
 	// Every 4 minutes deduct values according to fn_initSurvivalLoop.sqf
 	SurvivalSleepLoop = 240;
 	
-	// You can find more config optios that are mostly for modules to change in Functions\core\Init\fn_miscVariables.sqf
-	// Use (missionConfigFile >> "RPF_Config" >> "something") call BIS_fnc_getCfgData to get data from here
-	// Each module has its own configuration file called config.hpp which can house shop locations, marker locations or variables, make sure to configure those as well!
-	// Shop locations for module ShopSystem is on the server side! There are configs on both server and client side for modules!
+	// ####### WHITELISTS #######
+	
+	// Add whitelisted functions for usable items here
+	usableWhitelist[] = {
+		#include "Functions\modules\CONFIG\moduleUsableWhitelist.hpp"
+		"Client_fnc_eatItem",
+		"Client_fnc_drinkItem"
+	};
+	
+	// ####### WHITELISTS #######
+	
+	/*
+	You can find more config optios that are mostly for modules to change in Functions\core\Init\fn_miscVariables.sqf
+	Use (missionConfigFile >> "RPF_Config" >> "something") call BIS_fnc_getCfgData to get data from here
+	Each module has its own configuration file called config.hpp which can house shop locations, marker locations or variables, make sure to configure those as well!
+	Shop locations for module ShopSystem is on the server side!
+	There are configs on both server and client side for modules!
+	*/
 };
 #include "Functions\modules\CONFIG\moduleConfigs.hpp"
+#include "Functions\modules\CONFIG\moduleInit.hpp"

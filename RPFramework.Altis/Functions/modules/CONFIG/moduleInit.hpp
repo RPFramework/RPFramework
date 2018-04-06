@@ -1,14 +1,11 @@
 /*
-Author: Kerkkoh
-First Edit: 23.11.2015
-
-Additional Information:
-Adding modules, creating modules -> Check README.md
-Module init function adding syntax: ClientModule_fnc_initYourModule
-Check out RPFramework's README.md or module's Readme file for info on module installation.
+	You add init files for your modules here.
+	
+	Adding modules, creating modules -> Check README.md
+	Module init function adding syntax: ClientModule_fnc_initYourModule
 */
 
-_cModules = [
+RPF_initModules[] = {
 	"ClientModules_fnc_initExample",
 	"ClientModules_fnc_initTicketing",
 	"ClientModules_fnc_initShopSystem",
@@ -28,10 +25,4 @@ _cModules = [
 	"ClientModules_fnc_initGarage",
 	"ClientModules_fnc_initMining",
 	"ClientModules_fnc_initLicenses"
-];
-
-
-
-{
-	[] call (call compile _x);
-}forEach _cModules;
+};

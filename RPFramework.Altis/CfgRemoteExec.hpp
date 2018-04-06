@@ -37,9 +37,9 @@ class CfgRemoteExec {
 		
 		#include "Functions\modules\CONFIG\moduleRemoteFunctions.hpp"
 		/*
-		Don't uncomment these unless you're in a testing environment
+		Don't uncomment these unless you're in a testing environment*/
         Function(bis_fnc_execvm,ANYONE)
-        Function(bis_fnc_debugconsoleexec,ANYONE)*/
+        Function(bis_fnc_debugconsoleexec,ANYONE)
     };
 
     class Commands {
@@ -49,9 +49,9 @@ class CfgRemoteExec {
         Function(setFuel,ANYONE)
         Function(setOwner,ANYONE)
         /*
-		Don't uncomment these unless you're in a testing environment
+		Don't uncomment these unless you're in a testing environment*/
 		Function(spawn,ANYONE)
         Function(call,ANYONE)
-        Function(execVM,ANYONE)*/
+        Function(execVM,ANYONE)
     };
 };
