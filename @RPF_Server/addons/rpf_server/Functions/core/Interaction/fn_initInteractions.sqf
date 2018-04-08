@@ -5,6 +5,8 @@ First Edit: 16.4.2016
 One subcategory should only have the amount of actions max as there are interaction buttons to avoid errors (including "Back" button).
 
  	These are subcategories nowadays, ["Action name", "['Category name'] call Client_fnc_interactionSub"]
+										^ 				^	These strings can be either localized or not.
+
 	The category name needs to be unique and can be pre-localized or not.
 	It needs to match with the category name in RPF_InteractionSubItems. See below
 */
@@ -30,7 +32,7 @@ RPF_InteractionMenuItems = [
 
 Consists of subcategories that are arrays inside of this one: 
 [
-	"Category name",  //< This is the unique name we defined above.
+	"Category name",  //< This is the unique name we defined above && can be localized or not
 	[
 		// Array of interaction items as you already know them
 		[
@@ -48,7 +50,7 @@ RPF_InteractionSubItems = [
 		[
 			[
 				["true"],
-				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_interactionBack"]
+				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_openInteraction"]
 			],
 			[
 				["cursorObject isKindOf 'Car'", "(cursorObject getVariable ['key', 'nuh']) in RPF_vehKeys", "(player distance cursorObject) <= 5"],
@@ -69,7 +71,7 @@ RPF_InteractionSubItems = [
 		[
 			[
 				["true"],
-				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_interactionBack"]
+				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_openInteraction"]
 			],
 			[
 				["isPlayer cursorObject", "(player distance cursorObject) <= 5"],
@@ -111,7 +113,7 @@ RPF_InteractionSubItems = [
 		[
 			[
 				["true"],
-				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_interactionBack"]
+				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_openInteraction"]
 			],
 			[
 				["(count (attachedObjects player)) <= 0", "cursorObject in RPF_ownedFurniture", "(player distance cursorObject) <= 5"],
@@ -128,7 +130,7 @@ RPF_InteractionSubItems = [
 		[
 			[
 				["true"],
-				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_interactionBack"]
+				[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_openInteraction"]
 			],
 			[
 				["alive player"],

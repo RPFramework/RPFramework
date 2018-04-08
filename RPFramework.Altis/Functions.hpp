@@ -15,7 +15,6 @@ class CfgFunctions
 		class Interaction
 		{
 			file = "Functions\core\Interaction";
-			class interactionBack {};
 			class openInteraction {};
 			class interactionSub {};
 		};
