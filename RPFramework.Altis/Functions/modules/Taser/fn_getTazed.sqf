@@ -8,4 +8,3 @@ sleep ((missionConfigFile >> "RPF_taserModule" >> "taserTime") call BIS_fnc_getC
 player allowDamage true;
 player setFatigue 1;
 disableUserInput false;
-player switchMove "";

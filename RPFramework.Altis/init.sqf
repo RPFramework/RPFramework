@@ -43,6 +43,11 @@ if (isServer) then {
 				[]call Client_fnc_holster;
 				false;
 			};
+			//Holster/Unholster (default key H)
+			case ((missionConfigFile >> "RPF_Config" >> "unlockCarKey") call BIS_fnc_getCfgData): {
+				[cursorObject]call Client_fnc_useKey;
+				false;
+			};
 			default {
 				false;
 			};

@@ -50,7 +50,7 @@ _idx = 0;
 			
 			ctrlShow [_idc, true];
 			ctrlSetText [_idc, ((_x select 1) select 0) call BIS_fnc_localize];
-			buttonSetAction [_idc, (_x select 1) select 1];
+			buttonSetAction [_idc, "closeDialog 0;"+((_x select 1) select 1)];
 		};
 	};
 }forEach _actions;

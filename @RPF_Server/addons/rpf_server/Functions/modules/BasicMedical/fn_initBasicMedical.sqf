@@ -13,7 +13,7 @@ _menuItems = [
 	[
 		[
 			["true"],
-			[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_interactionBack"]
+			[format["< %1", localize 'STR_RPF_CORE_INTERACTION_BACK'], "[] call Client_fnc_openInteraction"]
 		],
 		[
 			["player getVariable ['ems', 0] > 0", "cursorObject getVariable ['unconscious', false]", "(player distance cursorObject) <= 5"],

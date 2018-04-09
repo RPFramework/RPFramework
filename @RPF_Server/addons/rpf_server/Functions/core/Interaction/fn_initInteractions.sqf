@@ -108,7 +108,6 @@ RPF_InteractionSubItems = [
 		]
 	],
 	[
-		
 		'STR_RPF_CORE_INTERACTION_CAT_INTERACTION',
 		[
 			[

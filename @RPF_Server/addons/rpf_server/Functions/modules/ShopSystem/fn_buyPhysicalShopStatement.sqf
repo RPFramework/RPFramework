@@ -17,8 +17,9 @@
 params [["_condition",{},[{}]],["_code",{},[{}]],["_codeblock",0,[0]]];
 
 if (isNil "RPF_buyPhysicalShopStatements") exitWith {};
+
 (RPF_buyPhysicalShopStatements select _codeblock) pushBack [
-_condition, //Condition <Code>
-_code //Statement to execute <Code>
+	_condition, //Condition <Code>
+	_code //Statement to execute <Code>
 ];
 

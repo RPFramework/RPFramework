@@ -3,8 +3,11 @@ class RPF_Config {
 	interactionKey = 15;
 	// H by default
 	holsterKey = 35;
+	// U by default
+	unlockCarKey = 22;
 	
 	// Vehicle trunk size is divided with this
+	// To increase all trunk sizes you need to make this value smaller
 	trunkDivivde = 300;
 	
 	handcuffs_item = "RPF_Items_Handcuffs";
@@ -21,7 +24,8 @@ class RPF_Config {
 	medicCars[] = {
 		"B_Truck_01_medical_F",
 		"C_Boat_Civil_01_rescue_F",
-		"B_Lifeboat"
+		"B_Lifeboat",
+		"C_IDAP_Van_02_medevac_F"
 	};
 	
 	// Here you can override the trunk sizes with a custom one {classname, customTrunkSize}
@@ -39,6 +43,12 @@ class RPF_Config {
 		#include "Functions\modules\CONFIG\moduleUsableWhitelist.hpp"
 		"Client_fnc_eatItem",
 		"Client_fnc_drinkItem"
+	};
+	
+	// Add whitelisted functions for trunk items here
+	trunkWhitelist[] = {
+		#include "Functions\modules\CONFIG\moduleTrunkWhitelist.hpp"
+		"Client_fnc_hintMP"
 	};
 	
 	// ####### WHITELISTS #######

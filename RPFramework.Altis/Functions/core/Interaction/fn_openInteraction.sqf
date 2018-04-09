@@ -31,7 +31,7 @@ _displ = findDisplay 1014;
 		
 		ctrlShow [_idc, true];
 		ctrlSetText [_idc, format["%1 >", (_x select 0) call BIS_fnc_localize]];
-		buttonSetAction [_idc, (_x select 1)];
+		buttonSetAction [_idc, "closeDialog 0;"+(_x select 1)];
 		
 		_ctrlPos = ctrlPosition (_displ displayCtrl _idc);
 		// Animation - just a simple fade from 1 - 0 (from completely faded to 0 faded which is visible)

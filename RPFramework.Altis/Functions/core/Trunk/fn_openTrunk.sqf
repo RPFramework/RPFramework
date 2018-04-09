@@ -4,10 +4,12 @@ First Edit: 23.9.2016
 
 Trunk format:
 [
-	[randID, "classname", _vars]
+	["randID", "classname", _vars]
 ]
 */
 params [["_veh",objNull,[objNull]],["_trunkSize",0,[0]]];
+
+closeDialog 0;
 
 createDialog "trunk";
 
@@ -44,7 +46,7 @@ lbClear 1500;
 		};
 	}forEach RPF_ItemNames;
 	_item = lbAdd [1500, _stringName];
-	lbSetData [1500, _item, str (_y select 0)];
+	lbSetData [1500, _item, _y select 0];
 }forEach _trunk;
 
 _count = count _trunk;
