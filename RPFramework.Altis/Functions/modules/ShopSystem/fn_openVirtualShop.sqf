@@ -28,14 +28,12 @@ params ["_ct"];
 createDialog "virtualShop";
 
 _array = _ct getVariable "shopSystemShop";
-_shopName = localize (_array select 0);
+_shopName = (_array select 0) call BIS_fnc_localize;
 
 if ((_shopName == (localize "STR_RPF_SHOPSYSTEM_POLSTORE")) && (player getVariable ['cop', 0] <= 0)) exitWith {closeDialog 0;};
 
 if ((_shopName == (localize "STR_RPF_SHOPSYSTEM_EMSSTORE")) && (player getVariable ['ems', 0] <= 0)) exitWith {closeDialog 0;};
 
-
-_shopItems = _array select 1;
 ctrlSetText [1000, _shopName];
 
 {
@@ -57,7 +55,7 @@ ctrlSetText [1000, _shopName];
 	};
 	_shopItem = lbAdd [1500, _stringName];
 	lbSetData [1500, _shopItem, str _classPriceType];
-}forEach _shopItems;
+}forEach (_array select 1);
 
 lbSetCurSel [1500, 0];
 []call ClientModules_fnc_shopSystemRefresh;

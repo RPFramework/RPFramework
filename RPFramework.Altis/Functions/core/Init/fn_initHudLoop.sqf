@@ -13,7 +13,7 @@ for "_i" from 0 to 1 step 0 do {
 	
 	(_hud displayCtrl 1001) ctrlSetText (str (round (100 - ((damage player) * 100))));
 	
-	(_hud displayCtrl 1000) ctrlSetText (str (player getVariable "cash"));
+	(_hud displayCtrl 1000) ctrlSetText ([(player getVariable "cash")] call BIS_fnc_numberText);
 	
 	(_hud displayCtrl 1002) ctrlSetText (str (player getVariable "hunger"));
 	

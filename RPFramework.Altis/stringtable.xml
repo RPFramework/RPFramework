@@ -907,12 +907,6 @@
 				<French>STATUS: Prêt</French>
 				<Portuguese>STATUS: Pronto!</Portuguese>
 			</Key>
-			<Key ID="STR_RPF_MODULES_METHLAB_DONECOOKING">
-				<Original>You notice vapors raising from the flask revealing beautiful blue crystals.</Original>
-				<English>You notice vapors raising from the flask revealing beautiful blue crystals.</English>
-				<French>Vous remarquez,les vapeurs en s'échappant du ballon,que de magnifiques cristaux bleus apparaissent.</French>
-				<Portuguese>Você descobre um vapôr saindo do frasco, e logo em seguida enxerga aqueles lindos cristais azuis.</Portuguese>
-			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_SUCCESS">
 				<Original>Success!</Original>
 				<English>Success!</English>
@@ -926,16 +920,10 @@
 				<Portuguese>Você está aplicando mais calor...</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_COOKINGONE">
-				<Original>Cooking.</Original>
-				<English>Cooking.</English>
-				<French>Cuisson.</French>
-				<Portuguese>Preparando.</Portuguese>
-			</Key>
-			<Key ID="STR_RPF_MODULES_METHLAB_COOKINGTWO">
-				<Original>Cooking..</Original>
-				<English>Cooking..</English>
-				<French>Cuisson..</French>
-				<Portuguese>Preparando..</Portuguese>
+				<Original>Cooking</Original>
+				<English>Cooking</English>
+				<French>Cuisson</French>
+				<Portuguese>Preparando</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_MSGONE">
 				<Original>You accidentally nudge the flask enough to mess up the cooking process.</Original>
@@ -956,22 +944,22 @@
 				<Portuguese>Aplicar mais calor não inicia o processo químico, mas sim queima todos os ingredientes. Parece que você faltou nas aulas de química.</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_CHECKMSGONE">
-				<Original>You managed to produce some green liquid like substance that is now about to catch fire. This is not definitely meth.</Original>
-				<English>You managed to produce some green liquid like substance that is now about to catch fire. This is not definitely meth.</English>
-				<French>Vous commencez à produire une sorte de liquide vert, il faut maintenant chauffer. Ce n'est pas encore de la meth.</French>
-				<Portuguese>Parece que você produziu uma espécie de líquido verde, uma substância que agora pôs fogo em seu experimento. Isso com certeza não é metanfetamina.</Portuguese>
+				<Original>You managed to produce some green liquid like substance that is now about to catch fire. This is certainly not what you wanted.</Original>
+				<English>You managed to produce some green liquid like substance that is now about to catch fire. This is certainly not what you wanted.</English>
+				<French>Vous commencez à produire une sorte de liquide vert, il faut maintenant chauffer. Ce n'est certainement pas ce que tu voulais.</French>
+				<Portuguese>Parece que você produziu uma espécie de líquido verde, uma substância que agora pôs fogo em seu experimento. Isto certamente não é o que você queria.</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_CHECKMSGTWO">
-				<Original>Green smoke starts coming out of the cooking flask and some dark green slime is left in the flask. This is definitely not meth</Original>
-				<English>Green smoke starts coming out of the cooking flask and some dark green slime is left in the flask. This is definitely not meth</English>
-				<French>De la fumée verte s'échappe du ballon et un dépot gluant vert sombre est précipité au fond. C'est pas du tout de la meth ça.</French>
-				<Portuguese>Uma fumaça verde começa a sair do frasco de preparação e você identifica um certo lodo em seu fundo. Isso com certeza não é metanfetamina.</Portuguese>
+				<Original>Green smoke starts coming out of the cooking flask and some dark green slime is left in the flask. This is certainly not what you wanted.</Original>
+				<English>Green smoke starts coming out of the cooking flask and some dark green slime is left in the flask. This is certainly not what you wanted.</English>
+				<French>De la fumée verte s'échappe du ballon et un dépot gluant vert sombre est précipité au fond. Ce n'est certainement pas ce que tu voulais.</French>
+				<Portuguese>Uma fumaça verde começa a sair do frasco de preparação e você identifica um certo lodo em seu fundo. Isto certamente não é o que você queria.</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_CHECKMSGTHREE">
-				<Original>You can notice flames and green smoke coming out of the cooking flask and some burned substance is left in the flask. This is definitely not meth.</Original>
-				<English>You can notice flames and green smoke coming out of the cooking flask and some burned substance is left in the flask. This is definitely not meth.</English>
-				<French>Vous pouvez constater des flammes et de la fumée verte s'échappant du ballon de plus un précipité brulé réside au fond. C'est pas du tout de la meth ça.</French>
-				<Portuguese>Seu experimento pega fogo e uma fumaça verde começa a sair de seu frasco, descobrindo assim, uma substância queimada em seu fundo. Isso com certeza não é metanfetamina.</Portuguese>
+				<Original>You can notice flames and green smoke coming out of the cooking flask and some burned substance is left in the flask. This is certainly not what you wanted.</Original>
+				<English>You can notice flames and green smoke coming out of the cooking flask and some burned substance is left in the flask. This is certainly not what you wanted.</English>
+				<French>Vous pouvez constater des flammes et de la fumée verte s'échappant du ballon de plus un précipité brulé réside au fond. Ce n'est certainement pas ce que tu voulais.</French>
+				<Portuguese>Seu experimento pega fogo e uma fumaça verde começa a sair de seu frasco, descobrindo assim, uma substância queimada em seu fundo. Isto certamente não é o que você queria.</Portuguese>
 			</Key>
 		</Container>
 		<Container name="MINING">

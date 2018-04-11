@@ -1,4 +1,4 @@
-Function(ClientModules_fnc_receiveMethLabCheck,CLIENT)
+Function(ClientModules_fnc_methStartCooking,CLIENT)
 Function(ClientModules_fnc_methSmoke,CLIENT)
 
 Function(ServerModules_fnc_methLabCheck,SERVER)

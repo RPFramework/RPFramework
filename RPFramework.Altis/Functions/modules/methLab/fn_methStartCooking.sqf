@@ -3,32 +3,29 @@ Author: Kerkkoh
 First Edit: 22.9.2016
 */
 
-params ["_recipe"];
+params ["_recipe", "_successProb"];
 ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_APPLYINGHEAT")];
-sleep 25;
+[RPF_curLab, [0.8,1,0.6], 75] remoteExec ["ClientModules_fnc_methSmoke", 0];
+uiSleep 25;
 
-_cts = 0;
-if (_recipe == 1) then {
-	_cts = 90;
-} else {
-	_cts = 99;
+if (_successProb == 0) exitWith {
+	[[(localize "STR_RPF_MODULES_METHLAB_CHECKMSGONE"), (localize "STR_RPF_MODULES_METHLAB_CHECKMSGTWO"), (localize "STR_RPF_MODULES_METHLAB_CHECKMSGTHREE")], 1]call ClientModules_fnc_methFailCooking;
 };
 
-_rand = round (random 100);
-if (_rand < _cts) then {
+if ((random 1) < _successProb) then {
 	for "_i" from 1 to 10 step 1 do {
-		if (_i % 2) then {
-			ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGONE")];
+		if ((_i % 2) == 0) then {
+			ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKING")+"."];
 		} else {
-			ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGTWO")];
+			ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKING")+".."];
 		};
-		sleep 5;
+		uiSleep 5;
 	};
-	[]call ClientModules_fnc_methDoneCooking;
+	[_recipe]call ClientModules_fnc_methDoneCooking;
 } else {
 	ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGTWO")];
-	sleep 5;
+	uiSleep 5;
 	ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_COOKINGONE")];
-	sleep 5;
+	uiSleep 5;
 	[[(localize "STR_RPF_MODULES_METHLAB_MSGONE"), (localize "STR_RPF_MODULES_METHLAB_MSGTWO"), (localize "STR_RPF_MODULES_METHLAB_MSGTHREE")], 2]call ClientModules_fnc_methFailCooking;
 };

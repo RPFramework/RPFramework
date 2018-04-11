@@ -4,12 +4,11 @@ First Edit: 6.9.2016
 */
 
 if ((lbCurSel 1500) == -1) exitWith {};
-_str = lbData [1500, lbCurSel 1500];
-_car = call compile _str;
+_car = parseSimpleArray (lbData [1500, lbCurSel 1500]);
 
 _position = (RPF_curGarage modelToWorld [0,-5,0]);
-_nearest = nearestObjects [_position, ["Car"], 3];
-if (count _nearest != 0) exitWith {hint (localize "STR_RPF_MODULES_GARAGE_BLOCKING");};
+
+if (count (nearestObjects [_position, ["Car"], 3]) != 0) exitWith {hint (localize "STR_RPF_MODULES_GARAGE_BLOCKING");};
 
 lbDelete [1500, lbCurSel 1500];
 

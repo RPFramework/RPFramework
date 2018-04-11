@@ -13,7 +13,7 @@ class RPF_shopSystemServerModule {
 	class physicalShops {
 		/*
 		* className: classname of the physical item that's spawned
-		* pos[]: position at which the item is spawned
+		* pos[]: position at which the item is spawned, ATL
 		* dir: direction at which the item is pointing 0-360
 		* price: price of the item
 		* type: 0 - Car (a vehicle)
@@ -24,17 +24,17 @@ class RPF_shopSystemServerModule {
 		*/
 		class phys1 {
 			className = "CargoNet_01_box_F";
-			pos[] = {16777.7,12630.4,-0.0249977};
-			dir = 93.6125;
-			price = 50;
+			pos[] = {16776.3,12630.4,1.12842};
+			dir = 184.547;
+			price = 300;
 			type = 2;
 			isMethLab = 0;
 		};
 		class phys2 {
-			className = "OfficeTable_01_new_F";
-			pos[] = {16776,12635.4,1.4553};
-			dir = 2.99588;
-			price = 100;
+			className = "Land_TableDesk_F";
+			pos[] = {16775.9,12635.7,0.657261};
+			dir = 1.14293;
+			price = 500;
 			type = 2;
 			isMethLab = 1;
 		};	
@@ -105,9 +105,10 @@ class RPF_shopSystemServerModule {
 		// {"class", price, type}
 		// Types: 0 - Item, 1 - Magazine, 2 - Weapon, 3 - Uniform, 4 - Vest, 5 - Headgear, 6 - Backpack
 		/*
-		* classname: Classname of the shop that we spawn
-		* pos[]: Position of the shop
-		* dir: Direction of the shop 0-360
+		* classname: Classname of the shop that we spawn OR the path to the p3d model of the objet since these are simple objects
+		* pos[]: Position of the shop, FORMAT IS POSITIONWORLD https://community.bistudio.com/wiki/PositionWorld
+		*								^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ <- UPDATED IN 7.0.0
+		* dir: Direction of the shop 0-360 degrees
 		* shopName: The name of the shop (This is localized)
 		*
 		* buyItems[]: Array of items that you can buy from the store
@@ -129,13 +130,13 @@ class RPF_shopSystemServerModule {
 		* isMedicStation: Same as isPoliceStation but for medic station
 		*/
 		class shop1 {
-			className = "OfficeTable_01_new_F";
-			pos[] = {16774.6,12631.1,1.4553};
-			dir = 272.448;
+			className = "a3\structures_f\furniture\tabledesk_f.p3d";
+			pos[] = {16773.4,12632.5,22.253};
+			dir = 272.798;
 			shopName = "STR_RPF_SHOPSYSTEM_GENERALSTORE";
 			buyItems[] = {
-				{"RPF_Items_Salema", 20},
-				{"RPF_Items_Antibiotics", 30},
+				{"RPF_Items_Salema", 10},
+				{"RPF_Items_Antibiotics", 20},
 				{"RPF_Items_Painkillers", 20},
 				{"RPF_Items_Vitamins", 20},
 				{"RPF_Items_Battery", 4},
@@ -154,7 +155,7 @@ class RPF_shopSystemServerModule {
 				{"U_B_Wetsuit", 50},
 				{"U_OrestesBody", 30},
 				{"U_IG_Guerilla2_1", 30},
-				{"U_C_Poor_1", 30},
+				{"U_C_Poor_1", 10},
 				
 				{"V_Rangemaster_belt", 40},
 				{"V_RebreatherB", 100},
@@ -189,30 +190,36 @@ class RPF_shopSystemServerModule {
 			isMedicStation = 0;
 		};
 		class shop2 {
-			className = "C_man_hunter_1_F";
-			pos[] = {16940,12635.2,0.00168991};
-			dir = 0;
+			className = "a3\structures_f\furniture\tabledesk_f.p3d";
+			pos[] = {16941,12636.5,17.3792};
+			dir = 311.788;
 			shopName = "STR_RPF_SHOPSYSTEM_DRUGDEALER";
 			buyItems[] = {
-				{"RPF_Items_PoppySeed", 3},
-				{"RPF_Items_Poppy", 150},
-				{"RPF_Items_Meth", 200}
+				{"RPF_Items_PoppySeed", 2},
+				{"RPF_Items_CocaSeed", 4},
+				{"RPF_Items_WeedSeed", 1},
+				{"RPF_Items_Heroin", 300},
+				{"RPF_Items_Coke", 450},
+				{"RPF_Items_Weed", 100},
+				{"RPF_Items_Meth", 350}
 			};
 			sellItems[] = {
-				{"RPF_Items_PoppySeed", 1},
-				{"RPF_Items_Poppy", 120},
-				{"RPF_Items_Meth", 200}
+				{"RPF_Items_Poppy", 100},
+				{"RPF_Items_Heroin", 250},
+				{"RPF_Items_Coke", 400},
+				{"RPF_Items_Weed", 60},
+				{"RPF_Items_Meth", 300}
 			};
 			isPoliceStation = 0;
 			isMedicStation = 0;
 		};
 		class shop3 {
-			className = "OfficeTable_01_new_F";
-			pos[] = {16797.4,12551.2,-0.0250072};
-			dir = 272.56;
+			className = "a3\structures_f\furniture\tabledesk_f.p3d";
+			pos[] = {16797.1,12551.1,18.1514};
+			dir = 256.722;
 			shopName = "STR_RPF_SHOPSYSTEM_FARMSTORE";
 			buyItems[] = {
-				{"RPF_Items_OliveSeed", 2},
+				{"RPF_Items_OliveSeed", 1},
 				{"RPF_Items_Olives", 35}
 			};
 			sellItems[] = {
@@ -223,9 +230,9 @@ class RPF_shopSystemServerModule {
 			isMedicStation = 0;
 		};
 		class shop4 {
-			className = "OfficeTable_01_new_F";
-			pos[] = {16685.3,12450.8,-0.0249996};
-			dir = 227.006;
+			className = "a3\structures_f\furniture\tabledesk_f.p3d";
+			pos[] = {16685.3,12450.8,8.40597};
+			dir = 227;
 			shopName = "STR_RPF_SHOPSYSTEM_GUNSTORE";
 			buyItems[] = {
 				{"hgun_Pistol_heavy_01_F", 700},
@@ -246,9 +253,9 @@ class RPF_shopSystemServerModule {
 			isMedicStation = 0;
 		};
 		class shop5 {
-			className = "OfficeTable_01_new_F";
-			pos[] = {16565.4,12729.2,-9.53674e-006};
-			dir = 219.919;
+			className = "a3\structures_f\furniture\tabledesk_f.p3d";
+			pos[] = {16565.4,12729.2,11.4224};
+			dir = 219.916;
 			shopName = "STR_RPF_SHOPSYSTEM_POLSTORE";
 			buyItems[] = {
 				{"hgun_Rook40_F", 700},
@@ -298,9 +305,9 @@ class RPF_shopSystemServerModule {
 			isMedicStation = 0;
 		};
 		class shop6 {
-			className = "OfficeTable_01_new_F";
-			pos[] = {16550.2,12764.8,0.00196266};
-			dir = 305.069;
+			className = "a3\structures_f\furniture\tabledesk_f.p3d";
+			pos[] = {16550.2,12764.8,11.4246};
+			dir = 305.054;
 			shopName = "STR_RPF_SHOPSYSTEM_EMSSTORE";
 			buyItems[] = {
 				{"Medikit", 10},

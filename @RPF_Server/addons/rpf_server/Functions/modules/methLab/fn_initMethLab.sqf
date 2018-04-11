@@ -11,7 +11,7 @@ _menuItems = [
 		["STR_RPF_MODULES_METHLAB_OPENLAB", "[cursorObject] call ClientModules_fnc_openMethLab"]
 	]
 ];
-["STR_RPF_CORE_INTERACTION_CAT_OTHER", _menuItems]call Server_fnc_addSubInteractions;
+["STR_RPF_CORE_INTERACTION_CAT_INTERACTION", _menuItems]call Server_fnc_addSubInteractions;
 
 //Add conditions and statements to the buyPhysicalShop script
 //Spawn a thread and wait a bit before calling shopSystem's module function

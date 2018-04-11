@@ -4,22 +4,22 @@ class RPF_deliveryServerModule {
 	deliveryPhysicals[] = { "phys1", "phys2", "phys3" };
 	
 	class phys1 {
-		className = "OfficeTable_01_new_F";
-		pos[] = {16758.184, 12500.937, 0.275};
+		className = "a3\structures_f\furniture\tabledesk_f.p3d";
+		pos[] = {16756.6,12500.2,13.1732};
 		dir = 143.888;
 		variable = "delivery";
 	};
 	class phys2 {
-		className = "OfficeTable_01_new_F";
-		pos[] = {14882.873, 11054.816, 0};
+		className = "a3\structures_f\furniture\tabledesk_f.p3d";
+		pos[] = {14882.9,11054.8,9.88242};
 		dir = 178.702;
 		variable = "dp1";
 	};
 	class phys3 {
-		className = "OfficeTable_01_new_F";
-		pos[] = {16987.119, 14904.747, 0};
-		dir = 89.324;
-		variable = "dp1";
+		className = "a3\structures_f\furniture\tabledesk_f.p3d";
+		pos[] = {16987.1,14904.7,13.0736};
+		dir = 270;
+		variable = "dp2";
 	};
 	
 	deliveryMarkers[] = { "marker1" };

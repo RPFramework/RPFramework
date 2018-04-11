@@ -12,5 +12,4 @@
 			class methStartCooking {};
 			class methTake {};
 			class openMethLab {};
-			class receiveMethLabCheck {};
 		};

@@ -12,9 +12,12 @@ _unit setVariable ["unconscious", true, true];
 player setVariable ["loadedIn", false, true];
 
 //purgatory for now at least
-player setPos [14536.8,5774.77,0.00147748];
-player enableSimulation false;
-player allowDamage false;
+[]spawn {
+	uiSleep 2;
+	player setPos [14536.8,5774.77,0.00147748];
+	player enableSimulation false;
+	player allowDamage false;
+};
 
 _timer = time + ((missionConfigFile >> "RPF_basicMedicalModule" >> "unconsciousTime") call BIS_fnc_getCfgData);
 

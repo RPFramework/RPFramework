@@ -45,6 +45,16 @@ class CfgWeapons
 		displayName = "$STR_RPF_ITEMS_COKE_NAME";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Coke.paa";
 	};
+	class RPF_Items_Cocaleaf: RPF_Items_Base
+	{
+		displayName = "$STR_RPF_ITEMS_COCALEAF_NAME";
+		picture = "\RPF_Items\Data\UI\RPF_Items_Cocaleaf.paa";
+	};
+	class RPF_Items_CocaSeed: RPF_Items_Base
+	{
+		displayName = "$STR_RPF_ITEMS_COCASEED_NAME";
+		picture = "\RPF_Items\Data\UI\RPF_Items_Seeds.paa";
+	};
 	class RPF_Items_BoltCutter: RPF_Items_Base
 	{
 		displayName = "$STR_RPF_ITEMS_BOLTCUTTER_NAME";
@@ -84,6 +94,11 @@ class CfgWeapons
 	{
 		displayName = "$STR_RPF_ITEMS_WEED_NAME";
 		picture = "\RPF_Items\Data\UI\RPF_Items_Weed.paa";
+	};
+	class RPF_Items_WeedSeed: RPF_Items_Base
+	{
+		displayName = "$STR_RPF_ITEMS_WEEDSEED_NAME";
+		picture = "\RPF_Items\Data\UI\RPF_Items_Seeds.paa";
 	};
 	class RPF_Items_Whisky: RPF_Items_Base
 	{

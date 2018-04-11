@@ -53,8 +53,6 @@ _trunk = _veh getVariable ["trunk", []];
 _trunk pushBack [_randID, _class, _object getVariable ["vars", []]];
 _veh setVariable ["trunk", _trunk, true];
 
-deleteVehicle _object;
-
 //Get trunkSize of the vehicle
 if (isNil {(findDisplay 1020) getVariable "trunkSize"}) then {
 	_trunkSize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/((missionConfigFile >> "RPF_Config" >> "trunkDivivde") call BIS_fnc_getCfgData));
@@ -81,3 +79,5 @@ if (!(count _trunk > 0)) then {
 } else {
 	ctrlShow [1601, true];
 };
+
+deleteVehicle _object;

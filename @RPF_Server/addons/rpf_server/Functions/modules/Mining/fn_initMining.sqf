@@ -11,7 +11,7 @@ _menuItems = [
 		["STR_RPF_MODULES_MINING_UNEQUIP", "[] call ClientModules_fnc_equipGrinder"]
 	],
 	[
-		["!(isNull RPF_Grinder)", "(typeOf cursorObject) in ((missionConfigFile >> 'RPF_miningModule' >> 'rocks') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5", "isNil {RPF_Mining}"],
+		["!(isNull RPF_Grinder)", "isSimpleObject cursorObject", "((getModelInfo cursorObject) select 0) in ((configFile >> 'RPF_miningModule' >> 'rocks') call BIS_fnc_getCfgData)", "(player distance cursorObject) <= 5", "isNil {RPF_Mining}"],
 		["STR_RPF_MODULES_MINING_GRIND", "[cursorObject] spawn ClientModules_fnc_mineStone"]
 	],
 	[

@@ -15,7 +15,7 @@ _menuItems = [
 		[(localize "STR_RPF_MODULES_DELIVERY_TAKEITEMS"), "[] call ClientModules_fnc_openTakeDeliveryItem"]
 	],
 	[
-		["!(isNil {cursorObject getVariable 'dp1'}) || !(isNil {cursorObject getVariable 'dp2'})", "!(isNil {cursorObject getVariable (RPF_curDelivery select 4)})", "count (attachedObjects player) > 0", "(player distance cursorObject) <= 5"],
+		["!(isNil {cursorObject getVariable (RPF_curDelivery select 4)})", "count (attachedObjects player) > 0", "(player distance cursorObject) <= 5"],
 		[(localize "STR_RPF_MODULES_DELIVERY_DELIVER"), "[] call ClientModules_fnc_openDeliverDelivery"]
 	]
 ];
