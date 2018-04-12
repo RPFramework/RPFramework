@@ -1,19 +1,8 @@
 class RPF_farmingModule {
-	farmGroundTypes[] = {
-		"#GdtStratisDryGrass",
-		"#GdtStratisGreenGrass",
-		"#GdtStratisForestPine",
-		"#GdtStratisDirt",
-		"#GdtDirt",
-		"#GdtGrassGreen",
-		"#GdtGrassDry",
-		"#GdtSoil",
-		"#GdtThorn",
-		"#GdtMarsh",
-		"#GdtVRsurface01"
-	};
 	plantTypes[] = {
-		"RPF_Plant_Olive",
-		"RPF_Plant_Poppy"
+		"b_neriumo2s_f.p3d",
+		"b_neriumo2s_white_f.p3d",
+		"b_ficusc2s_f.p3d",
+		"b_ficusc1s_f.p3d"
 	};
 };

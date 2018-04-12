@@ -8,7 +8,7 @@ RPF_savedNames = [];
 onEachFrame {
 	_units = player nearEntities ((missionConfigFile >> "RPF_playerNamesModule" >> "drawDistance") call BIS_fnc_getCfgData);
 	{
-		if ((alive _x) && !(isNull _x)) then {
+		if ((alive _x) && !(isNull _x) && !(_x isEqualTo player)) then {
 			_y = _x;
 			_name = "";
 			_visibility = [objNull, "VIEW"] checkVisibility [eyePos player, eyePos _x];
