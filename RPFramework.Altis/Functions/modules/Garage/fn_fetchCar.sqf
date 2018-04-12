@@ -17,6 +17,7 @@ closeDialog 0;
 [_car select 4,false] remoteExecCall ["ServerModules_fnc_switchGarage", 2];
 
 _vehicle = (_car select 1) createVehicle [0,0,0];
+_vehicle setPlateNumber (_car select 6);
 _vehicle setPos _position;
 _vehicle setDir (getDir RPF_curGarage);
 [_car select 3, _vehicle]call Client_fnc_vehicleHitLoad;
