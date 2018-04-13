@@ -9,6 +9,6 @@ _indexCB = lbCurSel _idcCB;
 if (_indexLB == -1 || _indexCB == -1) exitWith {};
 
 _data = lbData [_idcCB, _indexCB];
-_color = call compile _data;
+_color = parseSimpleArray _data;
 
 lbSetColor [_idcLB, _indexLB, _color];

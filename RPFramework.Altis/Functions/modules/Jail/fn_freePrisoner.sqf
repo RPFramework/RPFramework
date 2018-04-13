@@ -4,8 +4,7 @@ First Edit: 6.12.2016
 */
 _index = lbCurSel 1500;
 if (_index == -1) exitWith {};
-_dataS = lbData [1500, _index];
-_data = call compile _dataS;
+_data = parseNumber (lbData [1500, _index]);
 
 _player = RPF_Prisoners select _data;
 
