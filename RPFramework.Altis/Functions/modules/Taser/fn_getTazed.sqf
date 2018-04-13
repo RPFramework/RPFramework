@@ -2,9 +2,9 @@
 Author: theflyingjets
 */
 
-player switchmove "AinjPfalMstpSnonWnonDf_carried_fallwc";
-disableUserInput true;
-sleep ((missionConfigFile >> "RPF_taserModule" >> "taserTime") call BIS_fnc_getCfgData);
+player setUnconscious true;
+uiSleep ((missionConfigFile >> "RPF_taserModule" >> "taserTime") call BIS_fnc_getCfgData);
+player switchMove "";
+player setUnconscious false;
 player allowDamage true;
 player setFatigue 1;
-disableUserInput false;

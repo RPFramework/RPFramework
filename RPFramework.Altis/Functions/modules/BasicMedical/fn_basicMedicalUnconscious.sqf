@@ -40,12 +40,13 @@ if (_cash != 0) then {
 	_money = "Land_Money_F" createVehicle position _unit;
 	_money setVariable ["money", _cash, true];
 };
+_unit setVariable ["cash", 0, true];
+player setVariable ["cash", 0, true];
 
 for "_i" from 0 to 1 step 0 do {
 	if (time >= _timer || !(_unit getVariable ["unconscious",  false]) || !isNil{RPF_forcedRespawn}) exitWith {};
 	_text = format [(localize "STR_RPF_MODULES_BASICMEDICAL_BLEEDINGOUT"), round (_timer - time)];
-	//cutText [_text,"BLACK FADED",1];
-	cutText [_text,"PLAIN DOWN",1];
+	cutText [_text,"BLACK FADED",1];
 	sleep 0.1;
 };
 

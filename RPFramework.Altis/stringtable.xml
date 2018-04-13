@@ -919,7 +919,7 @@
 				<French>Vous chauffez...</French>
 				<Portuguese>Você está aplicando mais calor...</Portuguese>
 			</Key>
-			<Key ID="STR_RPF_MODULES_METHLAB_COOKINGONE">
+			<Key ID="STR_RPF_MODULES_METHLAB_COOKING">
 				<Original>Cooking</Original>
 				<English>Cooking</English>
 				<French>Cuisson</French>

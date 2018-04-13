@@ -12,7 +12,7 @@ _license = "";
 	if (_id == (_x select 0)) then {
 		_license = (_x select 2);
 	};
-}forEach (RPF_sendLicenseTarget getVariable "licenses");
+}forEach (player getVariable "licenses");
 
 [_license] remoteExecCall ["ClientModules_fnc_openLicense", RPF_sendLicenseTarget];
 
