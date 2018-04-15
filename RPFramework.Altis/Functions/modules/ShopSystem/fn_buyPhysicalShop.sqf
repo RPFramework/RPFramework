@@ -52,6 +52,9 @@ switch (_type) do {
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
 			} forEach ((call RPF_buyPhysicalShopStatements) select 1);
+			if (!(player canAdd [_class, _amount])) exitWith {
+				hint localize "STR_RPF_CORE_CANTADDITEM";
+			};
 			for "_i" from 1 to _amount step 1 do {
 				player addItem _class;
 			};

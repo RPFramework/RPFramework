@@ -5,6 +5,8 @@ First Edit: 25.12.2016
 Additional Information:
 */
 
+[player, [16807.5,12663.8,0.00144768]] remoteExec ["ServerModules_fnc_medicalStatSave", 2];
+
 _unit = _this select 0;
 _deadLoadout = [0, _unit, []]call ClientModules_fnc_basicMedicalLoadout;
 

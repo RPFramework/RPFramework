@@ -8,7 +8,11 @@ private	["_idx", "_classname"];
 _idx = lbCurSel 1502;
 if (_idx == -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTT")];};
 _classname = lbData [1502, _idx];
-player addItem _classname;
+if (player canAdd _classname) then {
+	player addItem _classname;
+} else {
+	hint localize "STR_RPF_CORE_CANTADDITEM";
+};
 
 lbClear 1502;
 

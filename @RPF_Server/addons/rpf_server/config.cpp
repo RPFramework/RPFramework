@@ -54,7 +54,9 @@ class CfgFunctions
 		class Vehicles
 		{
 			file = "RPF_Server\Functions\core\Vehicles";
-			class initVehiclesKilledHandlers {preInit=1};
+			class initVehiclesKilledHandlers {
+				preInit = 1;
+			};
 			class setupVehiclesKilledHandlers {};
 		};
 		class Init
@@ -78,7 +80,9 @@ class CfgFunctions
 			class ExtDBinit {};
 			class ExtDBstrip {};
 			class ExtDBquery {};
-			class DBSetup {preinit=1};
+			class DBSetup {
+				preInit = 1;
+			};
 		};
 	};
 	class ServerModules

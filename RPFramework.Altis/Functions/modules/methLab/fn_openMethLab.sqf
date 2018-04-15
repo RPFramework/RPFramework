@@ -36,6 +36,15 @@ lbClear 1501;
 	};
 }forEach _ingredients;
 
+if (!isNil{RPF_labProducts}) then {
+	{
+		private	["_class", "_item"];
+		_class = _x select 0;
+		_item = lbAdd [1502, format ["%1 x %2", [_class]call Client_fnc_getWeaponName,  _x select 1]];
+		lbSetData [1502, _item, _class];
+	}forEach RPF_labProducts;
+};
+
 lbSetCurSel [1500, 0];
 
 ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_READY")];

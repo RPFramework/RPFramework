@@ -9,6 +9,12 @@
 				<Portuguese>RPFramework 7.0.0</Portuguese>
 			</Key>
 			
+			<Key ID="STR_RPF_CORE_CANTADDITEM">
+				<Original>This item doesn't fit your inventory!</Original>
+				<English>This item doesn't fit your inventory!</English>
+				<French>This item doesn't fit your inventory!</French>
+				<Portuguese>This item doesn't fit your inventory!</Portuguese>
+			</Key>
 			<Key ID="STR_RPF_CORE_GIVECASH_AMT">
 				<Original>Amount</Original>
 				<English>Amount</English>

@@ -16,11 +16,15 @@ hint (localize "STR_RPF_MODULES_METHLAB_SUCCESS");
 
 _amount = 2 + round(random 10);
 
-_product = lbAdd [1502, format ["%1 x %2", [_recipe]call Client_fnc_getWeaponName, _amount]];
-lbSetData [1502, _product, _recipe];
+if (isNil{RPF_labProducts}) then {
+	RPF_labProducts = [[_recipe, _amount]];
+} else {
+	RPF_labProducts pushBack [_recipe, _amount];
+};
 
-RPF_labProducts = [
-	[_recipe, _amount]
-];
+closeDialog 0;
+RPF_curLab setVariable ["labActive", false, true];
+
+[RPF_curLab]call ClientModules_fnc_openMethLab;
 
 ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_SUCCESS")];
