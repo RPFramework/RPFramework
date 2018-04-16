@@ -6,4 +6,5 @@
 			class initShops {};
 			class updateItemPrice {};
 			class vehicleShopLoop {};
+			class buyPhysicalShopStatement {};
 		};

@@ -3,7 +3,7 @@
 		idd = 1001;
 		onLoad = "uiNamespace setVariable ['LicenseCard',_this select 0]";
 		name = "LicenseCard";
-		duration = 120;
+		duration = 60;
 		movingEnable = 0;
 		fadein = 0;
 		fadeout = 0;

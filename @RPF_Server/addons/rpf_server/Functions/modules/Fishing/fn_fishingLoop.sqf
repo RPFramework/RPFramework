@@ -6,11 +6,13 @@ for "_i" from 0 to 1 step 0 do
 {
 	sleep 180;
 	{
-		if (underwater _x) then 
-		{
-			_random = (floor random 2) + 1;
-			_x addItemCargoGlobal ["RPF_Items_Salema", _random]
+		_fishingNet = (objectFromNetId _x);
+		if (!(isNull _fishingNet)) then {
+			if (underwater _fishingNet) then {
+				_fishingNet addItemCargoGlobal ["RPF_Items_Salema", (floor random 2) + 1]
+			};
+		} else {
+			[_x, false]call ServerModules_fnc_manageFishingnet;
 		};
 	}forEach RPF_fishingNets;
-	//[0,0] nearObjects [RPF_fishingNet, 30000]
 };

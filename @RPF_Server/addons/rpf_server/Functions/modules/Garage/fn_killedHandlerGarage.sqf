@@ -13,5 +13,4 @@ if (!isServer) exitWith {};
 
 params [["_vehicle",objNull,[objNull]]];
 
-private _key = _vehicle getVariable "key";
-[_key] call ServerModules_fnc_removeGarage;
+[_vehicle getVariable ["key",""]] call ServerModules_fnc_removeGarage;

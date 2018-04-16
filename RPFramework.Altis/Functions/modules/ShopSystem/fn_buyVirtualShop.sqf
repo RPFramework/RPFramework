@@ -18,6 +18,9 @@ switch (_type) do {
 		_check = [1, _amountPrice] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_amountPrice] call Client_fnc_removeCash;
+			if (!(player canAdd [_class, _amount])) exitWith {
+				hint localize "STR_RPF_CORE_CANTADDITEM";
+			};
 			for "_i" from 1 to _amount step 1 do {
 				player addItem _class;
 			};
@@ -30,6 +33,9 @@ switch (_type) do {
 		_check = [1, _amountPrice] call Client_fnc_checkMoney;
 		if (_check) then {
 			[_amountPrice] call Client_fnc_removeCash;
+			if (!(player canAdd [_class, _amount])) exitWith {
+				hint localize "STR_RPF_CORE_CANTADDITEM";
+			};
 			for "_i" from 1 to _amount step 1 do {
 				player addMagazine _class;
 			};

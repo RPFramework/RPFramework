@@ -2,4 +2,5 @@
 		{
 			file = "Functions\modules\Fishing";
 			class initFishing {};
+			class manageFishingNet {};
 		};

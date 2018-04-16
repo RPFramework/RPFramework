@@ -28,7 +28,6 @@ class interaction
 			y = 0.302077 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [0] call Client_fnc_interactionAction;
 		};
 		class RscButton_1601: RscButton
 		{
@@ -37,7 +36,6 @@ class interaction
 			y = 0.34606 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [1] call Client_fnc_interactionAction;
 		};
 		class RscButton_1602: RscButton
 		{
@@ -46,7 +44,6 @@ class interaction
 			y = 0.390043 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [2] call Client_fnc_interactionAction;
 		};
 		class RscButton_1603: RscButton
 		{
@@ -55,7 +52,6 @@ class interaction
 			y = 0.434026 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [3] call Client_fnc_interactionAction;
 		};
 		class RscButton_1604: RscButton
 		{
@@ -64,7 +60,6 @@ class interaction
 			y = 0.478009 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [4] call Client_fnc_interactionAction;
 		};
 		class RscButton_1605: RscButton
 		{
@@ -73,7 +68,6 @@ class interaction
 			y = 0.521991 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [5] call Client_fnc_interactionAction;
 		};
 		class RscButton_1606: RscButton
 		{
@@ -82,7 +76,6 @@ class interaction
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [6] call Client_fnc_interactionAction;
 		};
 		class RscButton_1607: RscButton
 		{
@@ -91,7 +84,6 @@ class interaction
 			y = 0.609957 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [7] call Client_fnc_interactionAction;
 		};
 		class RscButton_1608: RscButton
 		{
@@ -100,7 +92,6 @@ class interaction
 			y = 0.65394 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = [8] call Client_fnc_interactionAction;
 		};
 	};
 };

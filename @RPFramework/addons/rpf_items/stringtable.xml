@@ -232,6 +232,16 @@
 				<English>1g of Cocaine</English>
 				<French>1g de Cocaïne</French>
 			</Key>
+			<Key ID="STR_RPF_ITEMS_COCALEAF_NAME">
+				<Original>A few coca leaves</Original>
+				<English>A few coca leaves</English>
+				<French>Quelques feuilles de coca</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_COCASEED_NAME">
+				<Original>Coca seeds</Original>
+				<English>Coca seeds</English>
+				<French>Graine de coca</French>
+			</Key>
 			<Key ID="STR_RPF_ITEMS_BOLTCUTTER_NAME">
 				<Original>Bolt cutter</Original>
 				<English>Bolt cutter</English>
@@ -271,6 +281,11 @@
 				<Original>1g of Cannabis</Original>
 				<English>1g of Cannabis</English>
 				<French>1g de Cannabis</French>
+			</Key>
+			<Key ID="STR_RPF_ITEMS_WEEDSEED_NAME">
+				<Original>Cannabis seeds</Original>
+				<English>Cannabis seeds</English>
+				<French>Graine de Cannabis</French>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_WHISKY_NAME">
 				<Original>A bottle of whisky</Original>

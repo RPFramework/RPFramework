@@ -33,7 +33,7 @@ _car = objNull;
 if (!(isNil {(_car getVariable "curTask")})) exitWith { hint (localize "STR_RPF_MODULES_POLICEPLUS_UNITBUSY"); };
 
 _strData = lbData [1500, _indx];
-_taskID = call compile _strData;
+_taskID = parseNumber _strData;
 _taskData = [];
 {
 	if (_taskID == (_x select 0)) exitWith {

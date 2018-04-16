@@ -5,7 +5,7 @@ First Edit: 28.12.2016
 _indx = lbCurSel 1500;
 if (_indx == -1) exitWith {};
 _strData = lbData [1500, _indx];
-_taskID = call compile _strData;
+_taskID = parseNumber _strData;
 _data = [];
 {
 	if (_taskID == (_x select 0)) exitWith {

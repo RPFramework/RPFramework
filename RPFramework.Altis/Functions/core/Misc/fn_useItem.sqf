@@ -9,13 +9,21 @@ if (isNil {_dataS}) exitWith {};
 _data = parseSimpleArray _dataS;
 _item = _data select 0;
 
+_success = true;
+
 {
 	if ((_x select 0) == _item) then {
-		call compile (_x select 1);
+		if ((_x select 2) in ((missionConfigFile >> "RPF_Config" >> "usableWhitelist") call BIS_fnc_getCfgData)) then {
+			(_x select 1) call (missionNamespace getVariable format ["%1", (_x select 2)]);
+			player removeItem _item;
+		} else {
+			diag_log format ["RPFramework error: Function %1 not whitelisted (Usables)",(_x select 2)];
+			_success = false;
+		};
 	};
 }forEach RPF_Usables;
 
-player removeItem _item;
+if (!_success) exitWith {};
 
 lbClear 1500;
 

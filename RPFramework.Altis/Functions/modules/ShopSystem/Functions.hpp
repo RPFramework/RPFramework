@@ -2,7 +2,6 @@
 		{
 			file = "Functions\modules\ShopSystem";
 			class buyPhysicalShop {};
-			class buyPhysicalShopStatement {};
 			class buyVirtualShop {};
 			class findItemType {};
 			class initShopSystem {};

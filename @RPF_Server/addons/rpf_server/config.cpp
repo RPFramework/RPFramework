@@ -20,6 +20,7 @@ class RPF_serverConfig {
 };
 
 #include "Functions\modules\CONFIG\moduleConfigs.hpp"
+#include "Functions\modules\CONFIG\moduleInit.hpp"
 
 class CfgFunctions
 {
@@ -53,8 +54,21 @@ class CfgFunctions
 		class Vehicles
 		{
 			file = "RPF_Server\Functions\core\Vehicles";
-			class initVehiclesKilledHandlers {preInit=1};
+			class initVehiclesKilledHandlers {
+				preInit = 1;
+			};
 			class setupVehiclesKilledHandlers {};
+		};
+		class Init
+		{
+			file = "RPF_Server\Functions\core\Init";
+			class initModules {};
+		};
+		class Interaction
+		{
+			file = "RPF_Server\Functions\core\Interaction";
+			class initInteractions {};
+			class addSubInteractions {};
 		};
 	};
 	class ExternalS
@@ -66,7 +80,9 @@ class CfgFunctions
 			class ExtDBinit {};
 			class ExtDBstrip {};
 			class ExtDBquery {};
-			class DBSetup {preinit=1};
+			class DBSetup {
+				preInit = 1;
+			};
 		};
 	};
 	class ServerModules
@@ -74,7 +90,6 @@ class CfgFunctions
 		class Config
 		{
 			file = "RPF_Server\Functions\modules\CONFIG";
-			class initModules {};
 			class firstLogin {};
 		};
 		#include "Functions\modules\CONFIG\moduleFunctions.hpp"

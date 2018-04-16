@@ -2,38 +2,29 @@
 Author: Kerkkoh
 First Edit: 22.9.2016
 */
-RPF_methLabItems = [
-    ["RPF_Items_ButaneCanister", 0],
-    ["RPF_Items_Matches", 0],
-    ["RPF_Items_Painkillers", 0],
-	["RPF_Items_Battery", 0],
-	["RPF_Items_Vitamins", 0],
-    ["RPF_Items_GasCanister", 0],
-	["RPF_Items_CleanerSpray", 0]
-];
-RPF_methLabPlayerItems = [
-    ["RPF_Items_ButaneCanister", 0],
-    ["RPF_Items_Matches", 0],
-    ["RPF_Items_Painkillers", 0],
-	["RPF_Items_Battery", 0],
-	["RPF_Items_Vitamins", 0],
-    ["RPF_Items_GasCanister", 0],
-	["RPF_Items_CleanerSpray", 0]
-];
 
+params ["_recipe"];
+private ["_amount", "_product"];
+
+RPF_labItems = [];
+RPF_labPlayerItems = [];
+
+lbClear 1500;
 lbClear 1501;
 
-hint (localize "STR_RPF_MODULES_METHLAB_DONECOOKING");
+hint (localize "STR_RPF_MODULES_METHLAB_SUCCESS");
 
-_amount = 5 + round(random 10);
+_amount = 2 + round(random 10);
 
-_stringName = ["RPF_Items_Meth"]call Client_fnc_getWeaponName;
-_finalName = format ["%1 x %2", _stringName, _amount];
-_product = lbAdd [1502, _finalName];
-lbSetData [1502, _product, "RPF_Items_Meth"];
+if (isNil{RPF_labProducts}) then {
+	RPF_labProducts = [[_recipe, _amount]];
+} else {
+	RPF_labProducts pushBack [_recipe, _amount];
+};
 
-RPF_methLabProducts = [
-	["RPF_Items_Meth", _amount]
-];
+closeDialog 0;
+RPF_curLab setVariable ["labActive", false, true];
+
+[RPF_curLab]call ClientModules_fnc_openMethLab;
 
 ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_SUCCESS")];

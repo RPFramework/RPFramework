@@ -9,7 +9,7 @@ if (!(isNull RPF_Grinder)) then {
 	RPF_Grinder = objNull;
 } else {
 	player removeItem "RPF_Mining_Grinder";
-	RPF_Grinder = "Land_Grinder_F" createVehicle [0,0,0];
+	RPF_Grinder = createSimpleObject ["a3\structures_f\items\tools\grinder_f.p3d", [0,0,0]];
 	{detach _x;}forEach (attachedObjects player);
 	RPF_Grinder attachTo [player, [0,-0.1,0.1], "lefthand"];
 	RPF_Grinder setVectorDirAndUp [[0,-1,0],[0,0,1]];

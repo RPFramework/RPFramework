@@ -11,7 +11,9 @@ _mC = "RPF_deliveryServerModule";
 	_dir = (configFile >> _mC >> _x >> "dir") call BIS_fnc_getCfgData;
 	_variable = (configFile >> _mC >> _x >> "variable") call BIS_fnc_getCfgData;
 	
-	_veh = _classname createVehicle _pos;
+	
+	_veh = createSimpleObject[_className, [0,0,0]];
+	_veh setPosWorld _pos;
 	_veh setDir _dir;
 	_veh setVariable [_variable, true, true];
 	

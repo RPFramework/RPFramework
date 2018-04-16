@@ -1,8 +1,8 @@
 class RPF_miningModule {
-	// Classnames for rocks that one can mine (Make sure this matches with the serverside config!)
+	// MODEL names for rocks that one can mine (Make sure this matches with the serverside config!)
 	rocks[] = {
-		"RPF_Mining_Rock1",
-		"RPF_Mining_Rock2",
-		"RPF_Mining_Rock3"
+		"sharpstone_01.p3d",
+		"sharpstone_02.p3d",
+		"sharpstone_03.p3d"
 	};
 };

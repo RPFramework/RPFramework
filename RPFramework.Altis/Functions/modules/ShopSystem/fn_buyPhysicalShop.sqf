@@ -4,10 +4,8 @@ First Edit: 22.4.2016
 */
 params ["_ct"];
 
-_array = _ct getVariable "buyableThing";
-_class = _array select 0;
-_price = _array select 1;
-_type = _array select 2;
+(_ct getVariable "buyableThing") params ["_class", "_price", "_type"];
+
 
 switch (_type) do {
 	case 0: { //Vehicle
@@ -32,8 +30,7 @@ switch (_type) do {
 				private _condition = call(_x select 0);
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
-				
-			} forEach (RPF_buyPhysicalShopStatements select 0);
+			} forEach ((call RPF_buyPhysicalShopStatements) select 0);
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
 			[_ct, clientOwner] remoteExec ["setOwner", 2];
 			_ct allowDamage true;
@@ -54,8 +51,10 @@ switch (_type) do {
 				private _condition = call(_x select 0);
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
-				
-			} forEach (RPF_buyPhysicalShopStatements select 1);
+			} forEach ((call RPF_buyPhysicalShopStatements) select 1);
+			if (!(player canAdd [_class, _amount])) exitWith {
+				hint localize "STR_RPF_CORE_CANTADDITEM";
+			};
 			for "_i" from 1 to _amount step 1 do {
 				player addItem _class;
 			};
@@ -79,8 +78,7 @@ switch (_type) do {
 				private _condition = call(_x select 0);
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
-				
-			} forEach (RPF_buyPhysicalShopStatements select 2);
+			} forEach ((call RPF_buyPhysicalShopStatements) select 2);
 			_newfurn setVariable ["vars", _vars, true];
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEM");
 		} else {

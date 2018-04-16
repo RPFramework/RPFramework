@@ -5,19 +5,15 @@ First Edit: 20.11.2016
 
 closeDialog 0;
 
-_class = RPF_curDelivery select 0;
 _amount = RPF_curDelivery select 1;
 _reward = RPF_curDelivery select 2;
-_delivered = RPF_curDelivery select 5;
-_delivered = _delivered + 1;
+_delivered = (RPF_curDelivery select 5) + 1;
 RPF_curDelivery set [5, _delivered];
 
 {
 	detach _x;
-	_class = typeOf _x;
 	
-	_pia = RPF_ownedFurniture find _x;
-	_rem = RPF_ownedFurniture deleteAt _pia;
+	_rem = RPF_ownedFurniture deleteAt (RPF_ownedFurniture find _x);
 	
 	deleteVehicle _x;
 } forEach attachedObjects player;
@@ -28,6 +24,5 @@ if (_delivered == _amount) then {
 	[_reward] call Client_fnc_addCash;
 	deleteMarkerLocal "dp";
 } else {
-	_str = format [(localize "STR_RPF_MODULES_DELIVERY_ITEMSDELIVERED"), _delivered, _amount];
-	hint _str;
+	hint format [(localize "STR_RPF_MODULES_DELIVERY_ITEMSDELIVERED"), _delivered, _amount];
 };

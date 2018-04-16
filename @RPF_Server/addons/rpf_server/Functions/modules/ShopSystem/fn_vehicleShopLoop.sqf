@@ -29,6 +29,7 @@ RPF_vehicleShopVehicles = [
 		_x setVariable ["buyableThing", [typeOf _x, (_x getVariable "carShop"), 0], true];
 		_x lock 2;
 		_x allowDamage false;
+		clearItemCargoGlobal _x;
 	};
 }forEach (entities [["LandVehicle","Air","Ship"],[], false, true]);
 
@@ -46,6 +47,7 @@ for "_i" from 0 to 1 step 0 do
 			_veh setVariable ["buyableThing", [_class, _price, 0], true];
 			_veh lock 2;
 			_veh allowDamage false;
+			clearItemCargoGlobal _veh;
 		};
 	}forEach RPF_vehicleShopVehicles;
 	sleep 300;

@@ -8,14 +8,13 @@ _mc = "RPF_jailServerModule";
 {
 	_classname = (configFile >> _mC >> _x >> "className") call BIS_fnc_getCfgData;
 	_pos = (configFile >> _mC >> _x >> "pos") call BIS_fnc_getCfgData;
-	
 	_dir = (configFile >> _mC >> _x >> "dir") call BIS_fnc_getCfgData;
 	_up = (configFile >> _mC >> _x >> "up") call BIS_fnc_getCfgData;
 
-	_obj = _classname createVehicle _pos;
-	_obj setposATL _pos;
+	_obj = createSimpleObject[_className, [0,0,0]];
+	_obj setPosWorld _pos;
 	_obj setVectorDirAndUp [_dir, _up];
-	_obj setposATL _pos;
+	_obj setPosWorld _pos;
 }forEach ((configFile >> _mC >> "jailPhysicals") call BIS_fnc_getCfgData);
 {
 	_name = (configFile >> _mC >> _x >> "name") call BIS_fnc_getCfgData;

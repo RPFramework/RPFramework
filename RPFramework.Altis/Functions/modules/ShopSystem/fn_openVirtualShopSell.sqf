@@ -11,9 +11,7 @@ closeDialog 0;
 createDialog "virtualShopSell";
 
 _array = _ct getVariable "shopSystemShop";
-_shopName = localize (_array select 0);
-_shopItems = _array select 2;
-ctrlSetText [1000, _shopName];
+ctrlSetText [1000, (_array select 0) call BIS_fnc_localize];
 
 {
 	_class = _x select 0;
@@ -35,7 +33,7 @@ ctrlSetText [1000, _shopName];
 	};
 	_shopItem = lbAdd [1500, _stringName];
 	lbSetData [1500, _shopItem, str _classPriceType];
-}forEach _shopItems;
+}forEach (_array select 2);
 
 lbSetCurSel [1500, 0];
 []call ClientModules_fnc_shopSystemRefresh;
