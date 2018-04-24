@@ -98,7 +98,7 @@ _shops = "true" configClasses (configFile >> "RPF_shopSystemServerModule" >> "sh
 	_isMedicStation = (configFile >> _mC >> "shops" >> _configName >> "isMedicStation") call BIS_fnc_getCfgData;
 	
 	_store = createSimpleObject[_className, [0,0,0]];
-	_store setPosWorld _pos;
+	_store setPosATL _pos;
 	_store setDir _dir;
 	
 	_store setVariable ["shopSystemShop", [_shopName,_buyItems,_sellItems], true];

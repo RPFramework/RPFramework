@@ -1,1 +1,1 @@
-7.0.0 STABLE
+7.0.1 STABLE

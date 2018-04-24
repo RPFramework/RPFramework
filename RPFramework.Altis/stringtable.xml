@@ -3,10 +3,10 @@
 	<Package name="RPFMission">
 		<Container name="CORE">
 			<Key ID="STR_RPF_CORE_ONLOADNAME">
-				<Original>RPFramework 7.0.0</Original>
-				<English>RPFramework 7.0.0</English>
-				<French>RPFramework 7.0.0</French>
-				<Portuguese>RPFramework 7.0.0</Portuguese>
+				<Original>RPFramework 7.0.1</Original>
+				<English>RPFramework 7.0.1</English>
+				<French>RPFramework 7.0.1</French>
+				<Portuguese>RPFramework 7.0.1</Portuguese>
 			</Key>
 			
 			<Key ID="STR_RPF_CORE_CANTADDITEM">
