@@ -106,8 +106,7 @@ class RPF_shopSystemServerModule {
 		// Types: 0 - Item, 1 - Magazine, 2 - Weapon, 3 - Uniform, 4 - Vest, 5 - Headgear, 6 - Backpack
 		/*
 		* classname: Classname of the shop that we spawn OR the path to the p3d model of the objet since these are simple objects
-		* pos[]: Position of the shop, FORMAT IS POSITIONWORLD https://community.bistudio.com/wiki/PositionWorld
-		*								^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ <- UPDATED IN 7.0.0
+		* pos[]: Position of the shop, ATL
 		* dir: Direction of the shop 0-360 degrees
 		* shopName: The name of the shop (This is localized)
 		*
@@ -131,7 +130,7 @@ class RPF_shopSystemServerModule {
 		*/
 		class shop1 {
 			className = "a3\structures_f\furniture\tabledesk_f.p3d";
-			pos[] = {16773.4,12632.5,22.253};
+			pos[] = {16773.4,12632.5,1.28563};
 			dir = 272.798;
 			shopName = "STR_RPF_SHOPSYSTEM_GENERALSTORE";
 			buyItems[] = {
@@ -191,7 +190,7 @@ class RPF_shopSystemServerModule {
 		};
 		class shop2 {
 			className = "a3\structures_f\furniture\tabledesk_f.p3d";
-			pos[] = {16941,12636.5,17.3792};
+			pos[] = {16941,12636.5,0.0048542};
 			dir = 311.788;
 			shopName = "STR_RPF_SHOPSYSTEM_DRUGDEALER";
 			buyItems[] = {
@@ -215,7 +214,7 @@ class RPF_shopSystemServerModule {
 		};
 		class shop3 {
 			className = "a3\structures_f\furniture\tabledesk_f.p3d";
-			pos[] = {16797.1,12551.1,18.1514};
+			pos[] = {16797.1,12551.1,0.732117};
 			dir = 256.722;
 			shopName = "STR_RPF_SHOPSYSTEM_FARMSTORE";
 			buyItems[] = {
@@ -231,7 +230,7 @@ class RPF_shopSystemServerModule {
 		};
 		class shop4 {
 			className = "a3\structures_f\furniture\tabledesk_f.p3d";
-			pos[] = {16685.3,12450.8,8.40597};
+			pos[] = {16685.3,12450.8,0.356976};
 			dir = 227;
 			shopName = "STR_RPF_SHOPSYSTEM_GUNSTORE";
 			buyItems[] = {
@@ -254,7 +253,7 @@ class RPF_shopSystemServerModule {
 		};
 		class shop5 {
 			className = "a3\structures_f\furniture\tabledesk_f.p3d";
-			pos[] = {16565.4,12729.2,11.4224};
+			pos[] = {16565.4,12729.2,0.0153408};
 			dir = 219.916;
 			shopName = "STR_RPF_SHOPSYSTEM_POLSTORE";
 			buyItems[] = {
@@ -306,7 +305,7 @@ class RPF_shopSystemServerModule {
 		};
 		class shop6 {
 			className = "a3\structures_f\furniture\tabledesk_f.p3d";
-			pos[] = {16550.2,12764.8,11.4246};
+			pos[] = {16550.2,12764.8,0.01754};
 			dir = 305.054;
 			shopName = "STR_RPF_SHOPSYSTEM_EMSSTORE";
 			buyItems[] = {
