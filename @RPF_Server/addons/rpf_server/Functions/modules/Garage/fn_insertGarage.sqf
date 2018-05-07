@@ -11,4 +11,4 @@ if (isNil "_krand") then {
     _krand = [_vehicle,_player] call Server_fnc_insertKey;
 };
 
-_insert = [0, format["insertVehicle:%1:%2:%3:%4:%5", typeOf _vehicle, getPlayerUID _player, ((getAllHitPointsDamage _vehicle) select 2), _krand, getPlateNumber _vehicle]] call ExternalS_fnc_ExtDBquery;
+[0, format["insertVehicle:%1:%2:%3:%4:%5", typeOf _vehicle, getPlayerUID _player, ((getAllHitPointsDamage _vehicle) select 2), _krand, getPlateNumber _vehicle]] call ExternalS_fnc_ExtDBquery;

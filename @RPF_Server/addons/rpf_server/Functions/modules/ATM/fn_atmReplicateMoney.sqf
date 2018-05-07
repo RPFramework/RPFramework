@@ -16,15 +16,16 @@ PARAMS
 	1 (ELSE) - deposit
 */
 params ["_player", "_id", "_amount", "_type"];
+private["_fetch", "_res", "_newBank", "_newCash"];
 
-_fetch = [(format["playerMoney:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
+_fetch = [format["playerMoney:%1", _id], 2] call ExternalS_fnc_ExtDBasync;
 _res = _fetch select 0;
-_cash = _res select 0;
-_bank = _res select 1;
+_res params ["_cash", "_bank"];
 
 _newBank = 0;
 _newCash = 0;
-if (_type == 0) then {
+
+if (_type isEqualTo 0) then {
 	_newBank = _bank - _amount;
 	_newCash = _cash + _amount;
 } else {
@@ -34,7 +35,8 @@ if (_type == 0) then {
 
 if ((_newBank < 0) || (_newCash < 0)) exitWith {_player setVariable ["isDoingATMstuff", nil, true];};
 
-_insert = [0, (format["updatePlayerMoney:%1:%2:%3", _newCash, _newBank, _id])] call ExternalS_fnc_ExtDBquery;
+[0, (format["updatePlayerMoney:%1:%2:%3", _newCash, _newBank, _id])] call ExternalS_fnc_ExtDBquery;
+
 _player setVariable ["bank", _newBank, true];
 _player setVariable ["cash", _newCash, true];
 

@@ -5,7 +5,7 @@ First Edit: 24.4.2016
 
 diag_log (localize "STR_RPF_SHOPSYSTEM_INIT");
 
-_menuItems = [
+private _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'buyableThing'})", "(player distance cursorObject) <= 5"],
 		["STR_RPF_MODULES_SHOPSYSTEM_BUYTHIS", "[cursorObject] call ClientModules_fnc_openPhysicalShop"]
@@ -44,7 +44,7 @@ RPF_buyPhysicalShopStatements = [[],[],[]];
 
 []spawn {
 	uiSleep 5;
-	
+
 	RPF_buyPhysicalShopStatements = compileFinal str RPF_buyPhysicalShopStatements;
 	publicVariable "RPF_buyPhysicalShopStatements";
 };

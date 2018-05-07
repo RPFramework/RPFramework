@@ -11,12 +11,13 @@
 		2: STRING Optional Protocol Options i.e db_conf name for DB_CUSTOM
 */
 
-private["_database","_protocol","_protocol_options","_return","_result","_random_number","_extDB_SQL_CUSTOM_ID"];
+private["_database","_protocol","_protocol_options","_return","_result","_extDB_SQL_CUSTOM_ID"];
 
-_database = [_this,0,"",[""]] call BIS_fnc_param;
-_protocol = [_this,1,"",[""]] call BIS_fnc_param;
-_protocol_options = [_this,2,"",[""]] call BIS_fnc_param;
-
+params[
+	["_database", "", [""]],
+	["_protocol", "", [""]],
+	["_protocol_options", "", [""]]
+];
 
 _return = false;
 
@@ -28,7 +29,7 @@ if ( isNil {uiNamespace getVariable "extDB_SQL_CUSTOM_ID"}) then
 	_result = "extDB3" callExtension "9:VERSION";
 
 	diag_log format ["extDB3: Version: %1", _result];
-	if(_result == "") exitWith {diag_log "extDB3: Failed to Load"; false};
+	if(_result isEqualTo "") exitWith {diag_log "extDB3: Failed to Load"; false};
 	//if ((parseNumber _result) < 20) exitWith {diag_log "Error: extDB version 20 or Higher Required";};
 
 	// extDB Connect to Database
@@ -37,8 +38,7 @@ if ( isNil {uiNamespace getVariable "extDB_SQL_CUSTOM_ID"}) then
 	diag_log "extDB3: Connected to Database";
 
 	// Generate Randomized Protocol Name
-	_random_number = round(random(999999));
-	_extDB_SQL_CUSTOM_ID = str(_random_number);
+	_extDB_SQL_CUSTOM_ID = str round(random(999999));
 	extDB_SQL_CUSTOM_ID = compileFinal _extDB_SQL_CUSTOM_ID;
 
 	// extDB Load Protocol
@@ -54,9 +54,7 @@ if ( isNil {uiNamespace getVariable "extDB_SQL_CUSTOM_ID"}) then
 	// Save Randomized ID
 	uiNamespace setVariable ["extDB_SQL_CUSTOM_ID", _extDB_SQL_CUSTOM_ID];
 	_return = true;
-}
-else
-{
+} else {
 	extDB_SQL_CUSTOM_ID = compileFinal str(uiNamespace getVariable "extDB_SQL_CUSTOM_ID");
 	diag_log "extDB3: Already Setup";
 	_return = true;

@@ -1,43 +1,39 @@
 /*
 Author: Kerkkoh
 First Edit: 28.12.2016
+
+0 - OBJECT - The car that this unit is attached to
+1 - NUMBER - 0 for police units, anything else for medic units
+2 - NUMBER - 0 for adding an unit, anything else for removing units
+3 - STRING - The role of the unit
+4 - ARRAY OF OBJECTS - Array of players attached to the unit
 */
 
 params ["_car", "_type", "_action", "_role", "_players"];
+private["_unit", "_i", "_idNumbersIdx", "_unitStr"];
 
-if (_action == 0) then {
-	if (_type == 0) then {
-		RPF_iDNumbers set [0, (RPF_iDNumbers select 0) + 1];
-		_unit = format["Police#%1-%2", RPF_iDNumbers select 0, _role];
-		RPF_policeCars pushBack [_car, _unit];
-		_car setVariable ["id", [_unit, _players], true];
-	} else {
-		RPF_iDNumbers set [1, (RPF_iDNumbers select 1) + 1];
-		_unit = format["Medic#%1-%2", RPF_iDNumbers select 1, _role];
-		RPF_medicCars pushBack [_car, _unit];
-		_car setVariable ["id", [_unit, _players], true];
-	};
+if (_action isEqualTo 0) then {
+	_idNumbersIdx = [1, 0] select (_type isEqualTo 0);
+	_unitStr = ["Medic", "Police"] select (_type isEqualTo 0);
+
+	RPF_iDNumbers set [_idNumbersIdx, (RPF_iDNumbers select _idNumbersIdx) + 1];
+	
+	_unit = format["%1#%2-%3", _unitStr, RPF_iDNumbers select _idNumbersIdx, _role];
+	([RPF_medicCars, RPF_policeCars] select (_type isEqualTo 0)) pushBack [_car, _unit];
+
+	_car setVariable ["id", [_unit, _players], true];
 } else {
-	if (_type == 0) then {
-		_i = 0;
-		{
-			if ((_x select 0) == _car) exitWith {
-				_i = _forEachIndex;
-			};
-		}forEach RPF_policeCars;
-		RPF_policeCars deleteAt _i;
-	} else {
-		_i = 0;
-		{
-			if ((_x select 0) == _car) exitWith {
-				_i = _forEachIndex;
-			};
-		}forEach RPF_medicCars;
-		RPF_medicCars deleteAt _i;
-	};
+	_i = 0;
+	{
+		if ((_x select 0) isEqualTo _car) exitWith {
+			_i = _forEachIndex;
+		};
+	}forEach ([RPF_medicCars, RPF_policeCars] select (_type isEqualTo 0));
+	([RPF_medicCars, RPF_policeCars] select (_type isEqualTo 0)) deleteAt _i;
+
 	_car setVariable ["id", nil, true];
 	_car setVariable ["curTask", nil, true];
 };
-if (!isNil {RPF_dispatcher}) then {
+if (!isNil "RPF_dispatcher") then {
 	[RPF_policeCars, RPF_medicCars] remoteExec ["ClientModules_fnc_policePlusDrefresh", RPF_dispatcher];
 };

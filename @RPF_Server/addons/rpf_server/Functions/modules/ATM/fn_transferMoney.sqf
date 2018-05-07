@@ -3,10 +3,8 @@ Author: Kerkkoh
 Last Edit: 6.9.2016
 */
 params ["_finalAccount", "_amount", "_player"];
+private["_check", "_fetch", "_found"];
 
-_checkstr = format ["existBankAccount:%1", _finalAccount];
-_check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
-_booli = (_check select 0) select 0;
 
 _fetch = [(format["playerBankBalance:%1", (_player getVariable "bankAccount")]), 2] call ExternalS_fnc_ExtDBasync;
 
@@ -14,21 +12,23 @@ if ((((_fetch select 0) select 0) - _amount) < 0) exitWith {
 	["STR_RPF_ATM_TRANSFER_NOTENOUGHBANK"] remoteExecCall ["Client_fnc_hintMP", _player];
 };
 
-if (_booli) then {
+_check = [0, format ["existBankAccount:%1", _finalAccount]] call ExternalS_fnc_ExtDBquery;
+
+if ((_check select 0) select 0) then {
 	_found = objNull;
 	{
-		if ((_x getVariable "bankAccount") == _finalAccount) then {
+		if ((_x getVariable "bankAccount") == _finalAccount) exitWith {
 			_found = _x;
 		};
-	}forEach allPlayers;
+		true;
+	}count allPlayers;
 	if (isNull _found) then {
 		[_finalAccount, _amount]call ServerModules_fnc_atmSendMoney;
 	} else {
-		_bankAccount = _found getVariable "bankAccount";
-		[_found, _bankAccount, _amount, 1, 0]call Server_fnc_replicateMoney;
+		[_found, _found getVariable "bankAccount", _amount, 1, 0]call Server_fnc_replicateMoney;
 		["STR_RPF_ATM_TRANSFER_RECEIVED"] remoteExecCall ["Client_fnc_hintMP", _found];
 	};
-	
+
 	[_player, (_player getVariable "bankAccount"), _amount, 0, 0]call Server_fnc_replicateMoney;
 
 	["STR_RPF_ATM_TRANSFER_COMPLETED"] remoteExecCall ["Client_fnc_hintMP", _player];

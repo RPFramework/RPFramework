@@ -9,5 +9,4 @@ For example, you could set a new default starting money here or maybe make every
 */
 params["_explayer"];
 
-_log = format [(localize "STR_RPF_EXAMPLE_NEWPLAYER"), name _explayer, missionStart select 1, missionStart select 2, missionStart select 0, missionStart select 3, missionStart select 4];
-diag_log (_log);
+diag_log format [localize "STR_RPF_EXAMPLE_NEWPLAYER", name _explayer, missionStart select 1, missionStart select 2, missionStart select 0, missionStart select 3, missionStart select 4];

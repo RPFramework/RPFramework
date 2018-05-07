@@ -4,7 +4,7 @@
     Author: Dardo
     Description:
     Save house's trunk to the database
-			
+
     Arguments:
         1 - House <Object>
 */
@@ -17,10 +17,6 @@ private _trunk = _house getVariable "trunk";
 
 private _query = format ["updateHouseTrunk:%1:%2", _trunk, _houseID];
 
-if not(_trunk isEqualTo []) then {
-    _fetch = [0, _query] call ExternalS_fnc_ExtDBquery;
+if !(_trunk isEqualTo []) then {
+    [0, _query] call ExternalS_fnc_ExtDBquery;
 };
-
-
-
-

@@ -2,31 +2,22 @@
 Author: Kerkkoh
 First Edit: 20.11.2016
 */
+private["_cfg", "_veh", "_marker"];
 
-_mC = "RPF_deliveryServerModule";
+_cfg = configFile >> "RPF_deliveryServerModule";
 
 {
-	_classname = (configFile >> _mC >> _x >> "className") call BIS_fnc_getCfgData;
-	_pos = (configFile >> _mC >> _x >> "pos") call BIS_fnc_getCfgData;
-	_dir = (configFile >> _mC >> _x >> "dir") call BIS_fnc_getCfgData;
-	_variable = (configFile >> _mC >> _x >> "variable") call BIS_fnc_getCfgData;
-	
-	
-	_veh = createSimpleObject[_className, [0,0,0]];
-	_veh setPosWorld _pos;
-	_veh setDir _dir;
-	_veh setVariable [_variable, true, true];
-	
-}forEach ((configFile >> _mC >> "deliveryPhysicals") call BIS_fnc_getCfgData);
+	_veh = createSimpleObject[getText(_x >> "className"), [0,0,0]];
+	_veh setPosWorld getArray(_x >> "pos");
+	_veh setDir getNumber(_x >> "dir");
+	_veh setVariable [configName(_x), true, true];
+	true;
+}count ("true" configClasses (_cfg >> "physicals"));
+
 {
-	_name = (configFile >> _mC >> _x >> "name") call BIS_fnc_getCfgData;
-	_pos = (configFile >> _mC >> _x >> "pos") call BIS_fnc_getCfgData;
-	_shape = (configFile >> _mC >> _x >> "shape") call BIS_fnc_getCfgData;
-	_type = (configFile >> _mC >> _x >> "type") call BIS_fnc_getCfgData;
-	_text = (configFile >> _mC >> _x >> "text") call BIS_fnc_getCfgData;
-	
-	_marker = createMarker [_name, _pos];
-	_marker setMarkerShape _shape;
-	_marker setMarkerType _type;
-	_marker setMarkerText _text;
-}forEach ((configFile >> _mC >> "deliveryMarkers") call BIS_fnc_getCfgData);
+	_marker = createMarker [configName(_x), getArray(_x >> "pos")];
+	_marker setMarkerShape getText(_x >> "shape");
+	_marker setMarkerType getText(_x >> "type");
+	_marker setMarkerText getText(_x >> "text");
+	true;
+}count ("true" configClasses (_cfg >> "markers"));

@@ -37,61 +37,54 @@ class RPF_shopSystemServerModule {
 			price = 500;
 			type = 2;
 			isMethLab = 1;
-		};	
+		};
 	};
-	
+
 	class shopMarkers {
 		/*
-		* name: Name of the marker (This is just the handle used to access it; has to be unique)
+		* The name of the class should be an unique identifier for the marker
 		* pos[]: Position of the marker
 		* shape: Shape of the marker (used for command setMarkerShape)
 		* type: Type of the marker (used for command setMarkerType)
 		* text: Text shown on the map at the marker's position (These are localized)
 		*/
-		class marker1 {
-			name = "vehicleStore";
+		class vehicleStore {
 			pos[] = {16736.5,12502.5,0.00124454};
 			shape = "ICON";
 			type = "hd_dot";
 			text = $STR_RPF_SHOPSYSTEM_VEHICLESTORE;
 		};
-		class marker2 {
-			name = "generalStore";
+		class generalStore {
 			pos[] = {16774.1,12633,-0.0249958};
 			shape = "ICON";
 			type = "hd_dot";
 			text = $STR_RPF_SHOPSYSTEM_GENERALSTORE;
 		};
-		class marker3 {
-			name = "drugDealer";
+		class drugDealer {
 			pos[] = {16940,12635.2,0.00168991};
 			shape = "ICON";
 			type = "hd_dot";
 			text = $STR_RPF_SHOPSYSTEM_DRUGDEALER;
 		};
-		class marker4 {
-			name = "farmStore";
+		class farmStore {
 			pos[] = {16797.4,12551.2,-0.0250072};
 			shape = "ICON";
 			type = "hd_dot";
 			text = $STR_RPF_SHOPSYSTEM_FARMSTORE;
 		};
-		class marker5 {
-			name = "gunStore";
+		class gunStore {
 			pos[] = {16685.3,12450.8,-0.0249996};
 			shape = "ICON";
 			type = "hd_dot";
 			text = $STR_RPF_SHOPSYSTEM_GUNSTORE;
 		};
-		class marker6 {
-			name = "polStore";
+		class polStore {
 			pos[] = {16565.4,12729.2,-9.53674e-006};
 			shape = "ICON";
 			type = "hd_dot";
 			text = $STR_RPF_SHOPSYSTEM_POLSTORE;
 		};
-		class marker7 {
-			name = "emsStore";
+		class emsStore {
 			pos[] = {16550.2,12764.8,0.00196266};
 			shape = "ICON";
 			type = "hd_dot";
@@ -100,7 +93,7 @@ class RPF_shopSystemServerModule {
 	};
 	// List all shops that you define as classes below
 	class shops {
-		
+
 		// buyItems & sellItems arrays:
 		// {"class", price, type}
 		// Types: 0 - Item, 1 - Magazine, 2 - Weapon, 3 - Uniform, 4 - Vest, 5 - Headgear, 6 - Backpack
@@ -148,18 +141,18 @@ class RPF_shopSystemServerModule {
 				{"RPF_Items_GasCanister", 10},
 				{"RPF_Items_Matches", 3},
 				{"RPF_Items_CleanerSpray", 15},
-				
+
 				{"U_Marshal", 30},
 				{"U_C_Journalist", 30},
 				{"U_B_Wetsuit", 50},
 				{"U_OrestesBody", 30},
 				{"U_IG_Guerilla2_1", 30},
 				{"U_C_Poor_1", 10},
-				
+
 				{"V_Rangemaster_belt", 40},
 				{"V_RebreatherB", 100},
 				{"V_Press_F", 50},
-				
+
 				{"H_Cap_surfer", 10},
 				{"H_Booniehat_oli", 10},
 				{"H_Shemag_olive", 20},
@@ -174,11 +167,11 @@ class RPF_shopSystemServerModule {
 				{"U_OrestesBody", 15},
 				{"U_IG_Guerilla2_1", 15},
 				{"U_C_Poor_1", 15},
-				
+
 				{"V_Rangemaster_belt", 20},
 				{"V_RebreatherB", 50},
 				{"V_Press_F", 25, 4},
-				
+
 				{"H_Cap_surfer", 5},
 				{"H_Booniehat_oli", 5},
 				{"H_Shemag_olive", 10},
@@ -266,16 +259,16 @@ class RPF_shopSystemServerModule {
 				{"acc_pointer_IR", 5},
 				{"optic_Arco", 10},
 				{"U_B_CTRG_2", 5},
-	
+
 				{"RPF_Items_Handcuffs", 1},
 				{"RPF_Items_HandcuffKeys", 1},
-				
+
 				{"V_TacVest_blk_POLICE", 40},
 				{"V_TacVestIR_blk", 40},
-				
+
 				{"H_Cap_police", 10},
 				{"H_Beret_blk_POLICE", 10},
-				
+
 				{"B_Carryall_oucamo", 25}
 			};
 			sellItems[] = {
@@ -288,16 +281,16 @@ class RPF_shopSystemServerModule {
 				{"acc_pointer_IR", 5},
 				{"optic_Arco", 10},
 				{"U_B_CTRG_2", 5},
-	
+
 				{"RPF_Items_Handcuffs", 1},
 				{"RPF_Items_HandcuffKeys", 1},
-				
+
 				{"V_TacVest_blk_POLICE", 40},
 				{"V_TacVestIR_blk", 40},
-				
+
 				{"H_Cap_police", 10},
 				{"H_Beret_blk_POLICE", 10},
-				
+
 				{"B_Carryall_oucamo", 25}
 			};
 			isPoliceStation = 1;
@@ -312,22 +305,22 @@ class RPF_shopSystemServerModule {
 				{"Medikit", 10},
 				{"FirstAidKit", 5},
 				{"U_C_Driver_1_red", 5},
-				
+
 				{"V_TacVest_brn", 40},
-				
+
 				{"H_Cap_red", 10},
-				
+
 				{"B_Carryall_cbr", 25}
 			};
 			sellItems[] = {
 				{"Medikit", 10},
 				{"FirstAidKit", 5},
 				{"U_C_Driver_1_red", 5},
-				
+
 				{"V_TacVest_brn", 40},
-				
+
 				{"H_Cap_red", 10},
-				
+
 				{"B_Carryall_cbr", 25}
 			};
 			isPoliceStation = 0;

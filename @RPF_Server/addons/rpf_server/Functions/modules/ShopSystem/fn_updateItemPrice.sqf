@@ -3,8 +3,8 @@
     Module: ShopSystem
     Author: Dardo
     Description:
-    Update buy/sell price of the passed itemClass by updating it in the Global Prices Array    
-    
+    Update buy/sell price of the passed itemClass by updating it in the Global Prices Array
+
     Arguments:
         1 - Item Classname <String>
         2 - New Price <Int>

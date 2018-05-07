@@ -5,7 +5,7 @@ First Edit: 1.4.2017
 
 diag_log (localize "STR_RPF_LICENSES_INIT");
 
-_menuItems = [
+private _menuItems = [
 	[
 		["isPlayer cursorObject"],
 		["STR_RPF_MODULES_LICENSES_MYLS", "[cursorObject] call ClientModules_fnc_openLicenses"]

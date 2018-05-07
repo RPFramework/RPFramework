@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 6.4.2018
 */
 
-_menuItems = [
+private _menuItems = [
 	[
 		["isPlayer cursorObject", "alive cursorObject", "(player distance cursorObject) <= 5"],
 		[(localize "STR_RPF_MODULES_PLAYERNAMES_SETNAME"), "createDialog 'setName'"]

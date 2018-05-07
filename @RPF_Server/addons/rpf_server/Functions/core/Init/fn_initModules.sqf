@@ -9,4 +9,5 @@ You need to add your module inits to moduleInit.hpp into the array in there. Thi
 uiSleep 1;
 {
 	[] call (call compile _x);
-}forEach ((configFile >> "RPF_initModules") call BIS_fnc_getCfgData);
+	true;
+}count ((configFile >> "RPF_initModules") call BIS_fnc_getCfgData);

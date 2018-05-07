@@ -6,7 +6,7 @@ Additional Information:
 Here you can add some scripts to run on the server.
 */
 
-_menuItems = [
+private _menuItems = [
 	[
 		["(player getVariable ['cop', 0]) > 0", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
 		["STR_RPF_MODULES_TICKETING_ISSUE", "[cursorObject] call ClientModules_fnc_ticket"]

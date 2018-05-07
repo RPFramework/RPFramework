@@ -4,7 +4,7 @@ First Edit: 6.9.2016
 */
 params ["_id", "_player", "_license"];
 
-_check = [0, (format["deleteLicense:%1", _id])] call ExternalS_fnc_ExtDBquery;
+[0, (format["deleteLicense:%1", _id])] call ExternalS_fnc_ExtDBquery;
 
 [_player] call ServerModules_fnc_fetchLicenses;
 

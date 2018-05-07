@@ -4,15 +4,16 @@ First Edit: 5.12.2016
 */
 
 params ["_player"];
+private["_posCell", "_posPlayer", "_counter"];
 
 _posCell = 0;
-_counter = 0;
 _posPlayer = 0;
+
 {
-	_y = _x;
+	private _y = _x;
 	_counter = _forEachIndex;
 	{
-		if (_x == _player) then {
+		if (_x isEqualTo _player) exitWith {
 			_posPlayer = _forEachIndex;
 			_posCell = _counter;
 		};

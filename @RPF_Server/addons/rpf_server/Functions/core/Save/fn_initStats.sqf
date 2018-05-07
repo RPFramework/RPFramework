@@ -3,8 +3,9 @@ Author: Kerkkoh
 Last Edit: 23.11.2015
 */
 params ["_player", "_firstLogin"];
+private["_uid", "_fetch", "_res"];
 
-if (isNil{extDB_SQL_CUSTOM_ID}) then {
+if (isNil "extDB_SQL_CUSTOM_ID") then {
 	[]call ExternalS_fnc_ExtDBinit;
 };
 
@@ -33,7 +34,7 @@ if ((([(format["existPlayerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) s
 		[_player]call ServerModules_fnc_firstLogin;
 	};
 } else {
-	[(format["insertPlayerInfo:%1:%2:%3:%4:%5:%6", _uid, name _player, [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], getPosATL _player, []call Server_fnc_phoneNumber]), 1] call ExternalS_fnc_ExtDBasync;
+	[format["insertPlayerInfo:%1:%2:%3:%4:%5:%6", _uid, name _player, [uniformItems _player, vestItems _player, backpackItems _player, (assignedItems _player)], [uniform _player, vest _player, backpack _player, headgear _player], getPosATL _player, []call Server_fnc_phoneNumber], 1] call ExternalS_fnc_ExtDBasync;
 
 	uiSleep 2;
 	[_player, true] spawn Server_fnc_initStats;

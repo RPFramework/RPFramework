@@ -3,13 +3,14 @@
     Module: Housing
     Author: Dardo
     Description:
-    Populate with the passed inventory array the container set in _containerBox variable 
-			
+    Populate with the passed inventory array the container set in _containerBox variable
+
     Arguments:
         1 - Container <Object>
         2 - Inventory <Array>
 */
 params [["_containerBox",objNull,[objNull]],["_inventory",[],[[]]]];
+private["_fnc_baseWeapon", "_baseCfg", "_cfg", "_parent"];
 
 //Clean up the content of the container
 clearItemCargoGlobal _containerBox;
@@ -24,10 +25,11 @@ _fnc_baseWeapon = {
     _baseCfg = (configFile >> "cfgWeapons");
     _cfg = _baseCfg >> _weapon;
 
-    while {isClass (_cfg >> "LinkedItems") } do {
+		for "_i" from 0 to 1 step 0 do {
+			if (!isClass (_cfg >> "LinkedItems")) exitWith {};
 	    _parent = configName (inheritsFrom (_cfg));
 	    _cfg = _baseCfg >> _parent;
-    };
+		};
 
     configName _cfg
 };
@@ -36,12 +38,12 @@ _fnc_baseWeapon = {
         private _mainInventory = _inventory select 0;
         private _mainItems = _mainInventory select 0;
         private _mainWeapons = _mainInventory select 1;
-        
-        
+
+
         //Main Items Handling
         private _mainItemsClasses = _mainItems select 0;
         private _mainItemsAmounts = _mainItems select 1;
-        
+
         //Fetch Weapons
         {
             private _curWeapon = [_x select 0] call _fnc_baseWeapon;
@@ -82,8 +84,8 @@ _fnc_baseWeapon = {
                 };
             nil;
         } count _mainWeapons;
-        
-        
+
+
         //Add ALL Items (weapons,magazines,items,etc.)
          for "_i" from 0 to (count(_mainItemsClasses)-1) do {
          private _curItem = _mainItemsClasses select _i;
@@ -98,19 +100,19 @@ _fnc_baseWeapon = {
     {
         private _containerClass = _x select 0;
         private _cargo = _x select 1;
-        
+
         //Add container to vehicle and grab object
         _containerBox addBackpackCargoGlobal [_containerClass,1];
         private _containerObj = (everyContainer _containerBox) select 0 select 1; //Always first element(Last added to cargo)
-        
-        
+
+
         //Set variables
         private _containerItemsClasses = _cargo select 0;
         private _containerItemsAmounts = _cargo select 1;
         private _containerWeapons = _x select 2;
- 
- 
- 
+
+
+
         //Iterate through weapons
         {
             private _curWeapon = [_x select 0] call _fnc_baseWeapon;
@@ -151,8 +153,8 @@ _fnc_baseWeapon = {
                 };
             nil;
         } count _containerWeapons;
-        
-       
+
+
         //Final Iteration
         for "_i" from 0 to (count(_containerItemsClasses)-1) do {
             private _curItem = _containerItemsClasses select _i;

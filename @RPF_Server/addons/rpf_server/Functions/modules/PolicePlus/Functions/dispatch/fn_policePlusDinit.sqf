@@ -5,7 +5,7 @@ First Edit: 28.9.2016
 
 diag_log (localize "STR_RPF_POLICEPLUSDISPATCH_INIT");
 
-_menuItems = [
+private _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'policeStation'})", "(player distance cursorObject) <= 5", "player getVariable ['cop', 0] > 0 || player getVariable ['ems', 0] > 0", "(player distance cursorObject) <= 5"],
 		["STR_RPF_MODULES_POLICEPLUS_DISPATCH", "[] spawn ClientModules_fnc_policePlusDopen"]

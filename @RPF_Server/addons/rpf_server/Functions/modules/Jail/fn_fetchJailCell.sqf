@@ -4,29 +4,25 @@ First Edit: 5.12.2016
 */
 
 params ["_player", "_time", "_reason"];
+private["_freeCells", "_pos", "_cellPos"];
 
 _freeCells = [];
-_pos = [];
+_pos = (RPF_JailCells select 0) select 1;
 _cellPos = 0;
-{
-	if (_x select 2) then {
-		_freeCells pushBack _x;
-	};
-}forEach RPF_JailCells;
+
+_freeCells = RPF_JailCells select {_x select 2};
 
 if ((count _freeCells) > 0) then {
 	_pos = ((_freeCells select 0) select 1);
+
 	{
-		_isEqual = [_x select 1, _pos]call BIS_fnc_areEqual;
-		if (_isEqual) then {
+		if ((_x select 1) isEqualTo _pos) exitWith {
 			_cellPos = _forEachIndex;
 		};
 	}forEach RPF_JailCells;
-	((RPF_JailCells select _cellPos) select 0) pushBack _player;
-} else {
-	_pos = ((RPF_JailCells select 0) select 1);
-	((RPF_JailCells select 0) select 0) pushBack _player;
 };
+
+((RPF_JailCells select _cellPos) select 0) pushBack _player;
 
 (RPF_JailCells select _cellPos) set [2, false];
 

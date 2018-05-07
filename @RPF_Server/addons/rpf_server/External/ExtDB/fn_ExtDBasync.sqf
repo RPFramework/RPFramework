@@ -11,7 +11,7 @@
 		1: INTEGER (1 = ASYNC + not return for update/insert, 2 = ASYNC + return for query's).
 */
 
-private["_queryStmt","_queryResult","_key","_mode","_return","_loop"];
+private["_queryStmt","_queryResult","_key","_mode","_return","_loop", "_pipe"];
 
 if (!params [
 	["_queryStmt", "", [""]],
@@ -23,14 +23,6 @@ if(_mode isEqualTo 1) exitWith {true};
 
 _key = parseSimpleArray format["%1",_key];
 _key = _key select 1;
-
-/*_start = diag_tickTime;
-_sleepLoop = true;
-while {_sleepLoop} do {
-	if (diag_tickTime > (_start + 30)) then {
-		_sleepLoop = false;
-	};
-};*/
 
 _queryResult = "";
 _loop = true;
@@ -45,15 +37,7 @@ for "_i" from 0 to 1 step 0 do {
 			_queryResult = _queryResult + _pipe;
 		};
 	} else {
-		if (_queryResult isEqualTo "[3]") then {
-			/*_start = diag_tickTime;
-			_sleepLoop = true;
-			while {_sleepLoop} do {
-				if (diag_tickTime > (_start + 100)) then {
-					_sleepLoop = false;
-				};
-			};*/
-		} else {
+		if (_queryResult != "[3]") then {
 			_loop = false;
 		};
 	};
@@ -64,4 +48,4 @@ _queryResult = parseSimpleArray _queryResult;
 
 if ((_queryResult select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Protocol Error: %1", _queryResult]; []};
 _return = (_queryResult select 1);
-_return;
+_return

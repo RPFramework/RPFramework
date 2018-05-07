@@ -10,10 +10,11 @@ Only player is currently passed to every function so remember to include params[
 */
 params["_player"];
 
-_firstTimeFunctions = [
+private _firstTimeFunctions = [
 	"ServerModules_fnc_exampleNewPlayer"
 ];
 
 {
 	[_player] call (call compile _x);
-}forEach _firstTimeFunctions;
+	true;
+}count _firstTimeFunctions;

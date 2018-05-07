@@ -8,4 +8,4 @@ IMPORTANT: Use this only to remove all the keys to a vehicle! This should be onl
 
 params ["_key"];
 
-_check = [0, (format["deleteKeys:%1", _key])] call ExternalS_fnc_ExtDBquery;
+[0, (format["deleteKeys:%1", _key])] call ExternalS_fnc_ExtDBquery;

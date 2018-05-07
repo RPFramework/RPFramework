@@ -1,10 +1,13 @@
 /*
 Author: Kerkkoh
 Last Edit: 18.7.2017
-Another way to do this would be to then md5 hash this string, but for that you need some extensions.
 */
-_key = "";
-_abc = [["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],["1","2","3","4","5","6","7","8","9"]];
+private["_key","_abc","_keyArr","_q"];
+_abc = [
+	["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+	["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
+	["1","2","3","4","5","6","7","8","9"]
+];
 
 for "_i" from 0 to 1 step 0 do {
 	_keyArr = ["vk_"];

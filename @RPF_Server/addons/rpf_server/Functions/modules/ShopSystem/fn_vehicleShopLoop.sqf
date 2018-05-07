@@ -2,16 +2,17 @@
 Author: Kerkkoh
 First Edit: 24.4.2016
 
-Array format
+Array format for RPF_vehicleShopVehicles
 ["classname", position, direction, price]
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-To make new buyable cars in the editor, put this in their init:
+To make new buyable cars in the editor, AND THE EDITOR ONLY, put this in their init:
 
 this setVariable ["carShop", PRICEHERE, true];
 
+There are two examples in the default mission, the ATVs next to the general store
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -25,30 +26,30 @@ RPF_vehicleShopVehicles = [
 
 {
 	if ((_x getVariable ["carShop", -1]) > 0) then {
-		RPF_vehicleShopVehicles pushBack [typeOf _x, getPos _x, getDir _x, (_x getVariable "carShop")];
-		_x setVariable ["buyableThing", [typeOf _x, (_x getVariable "carShop"), 0], true];
+		RPF_vehicleShopVehicles pushBack [typeOf _x, getPos _x, getDir _x, _x getVariable "carShop"];
+		_x setVariable ["buyableThing", [typeOf _x, _x getVariable "carShop", 0], true];
 		_x lock 2;
 		_x allowDamage false;
 		clearItemCargoGlobal _x;
 	};
-}forEach (entities [["LandVehicle","Air","Ship"],[], false, true]);
+	true;
+}count (entities [["LandVehicle","Air","Ship"],[], false, true]);
 
-for "_i" from 0 to 1 step 0 do 
+for "_i" from 0 to 1 step 0 do
 {
 	{
+		private["_class", "_pos", "_veh"];
 		_class = _x select 0;
 		_pos = _x select 1;
-		_dir = _x select 2;
-		_price = _x select 3;
-		_nearest = nearestObjects [_pos, ["AllVehicles"], 3];
-		if (count _nearest == 0) then {
+		if ((count (nearestObjects [_pos, ["AllVehicles"], 3])) isEqualTo 0) then {
 			_veh = _class createVehicle _pos;
-			_veh setDir _dir;
-			_veh setVariable ["buyableThing", [_class, _price, 0], true];
+			_veh setDir (_x select 2);
+			_veh setVariable ["buyableThing", [_class, _x select 3, 0], true];
 			_veh lock 2;
 			_veh allowDamage false;
 			clearItemCargoGlobal _veh;
 		};
-	}forEach RPF_vehicleShopVehicles;
-	sleep 300;
+		true;
+	}count RPF_vehicleShopVehicles;
+	uiSleep 300;
 };

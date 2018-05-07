@@ -8,7 +8,7 @@ Add actions for medics
 
 RPF_InteractionMenuItems pushBack ['STR_RPF_MODULES_BASICMEDICAL_MEDICAL', "['STR_RPF_MODULES_BASICMEDICAL_MEDICAL'] call Client_fnc_interactionSub"];
 
-_menuItems = [
+private _menuItems = [
 	'STR_RPF_MODULES_BASICMEDICAL_MEDICAL',
 	[
 		[

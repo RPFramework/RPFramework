@@ -30,7 +30,7 @@ RPF_InteractionMenuItems = [
 
 /*
 
-Consists of subcategories that are arrays inside of this one: 
+Consists of subcategories that are arrays inside of this one:
 [
 	"Category name",  //< This is the unique name we defined above && can be localized or not
 	[
@@ -57,7 +57,7 @@ RPF_InteractionSubItems = [
 				['STR_RPF_CORE_INTERACTION_CARKEY', "[cursorObject] call Client_fnc_useKey"]
 			],
 			[
-				["(vehicle player) != player", "((vehicle player) getVariable ['key', 'nuh']) in RPF_vehKeys"],
+				["!(isNull objectParent player)", "((vehicle player) getVariable ['key', 'nuh']) in RPF_vehKeys"],
 				['STR_RPF_CORE_INTERACTION_CARKEY', "[vehicle player] call Client_fnc_useKey"]
 			],
 			[

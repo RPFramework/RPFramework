@@ -5,7 +5,7 @@ First Edit: 24.4.2016
 
 diag_log (localize "STR_RPF_DELIVERY_INIT");
 
-_menuItems = [
+private _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'delivery'})", "(RPF_curDelivery select 4) == ''", "(player distance cursorObject) <= 5"],
 		[(localize "STR_RPF_MODULES_DELIVERY_TASKS"), "[] call ClientModules_fnc_openTakeDelivery"]

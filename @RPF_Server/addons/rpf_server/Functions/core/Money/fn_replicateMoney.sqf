@@ -19,28 +19,20 @@ PARAMS
 	1 - cash
 */
 params ["_player", "_id", "_amount", "_type", "_cashOrBank"];
+private ["_fetch", "_oldBalance", "_newBalance"];
 
-_fetch = [];
-if (_cashOrBank == 0) then {
-	_fetch = [(format["playerBankBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
-} else {
-	_fetch = [(format["playerCashBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
-};
-_oldBalance = ((_fetch select 0) select 0);
+_fetch = [format[["playerCashBalance:%1", "playerBankBalance:%1"] select (_cashOrBank isEqualTo 0), _id], 2] call ExternalS_fnc_ExtDBasync;
 
-_newBalance = nil;
-if (_type == 0) then {
-	_newBalance = _oldBalance - _amount;
-} else {
-	_newBalance = _oldBalance + _amount;
-};
+_oldBalance = (_fetch select 0) select 0;
+
+_newBalance = [_oldBalance + _amount, _oldBalance - _amount] select (_type isEqualTo 0);
 
 if (_newBalance < 0) exitWith {};
 
-if (_cashOrBank == 0) then {
-	_insert = [0, (format["updatePlayerBalance:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
+if (_cashOrBank isEqualTo 0) then {
+	[0, (format["updatePlayerBalance:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
 	_player setVariable ["bank", _newBalance, true];
 } else {
-	_insert = [0, (format["updatePlayerCash:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
+	[0, (format["updatePlayerCash:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
 	_player setVariable ["cash", _newBalance, true];
 };

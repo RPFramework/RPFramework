@@ -4,23 +4,23 @@
     Author: Dardo
     Description:
     Save the container box inventory array on the database by creating an array with the following structure:
-    
+
     [_inventoryArray,_containersArray]
-    
-    
+
+
     -------_inventoryArray-------
     [
-    [_inventoryClasses, --> Classes of items 
+    [_inventoryClasses, --> Classes of items
     _inventoryAmounts], --> Number of items of the specified kind at the same index in _inventoryClasses
-    _weaponsCargo ---> Weapons  
-    ] 
-    
+    _weaponsCargo ---> Weapons
+    ]
+
     -------_containersArray------- //Used for saving backpacks
     [
     _className1 --> Backpack's classname,
     [_inventoryClasses,_inventoryAmounts],_weapons
     ] --> Same structure as _inventoryArray
-			
+
     Arguments:
         1 - Container <Object>
         2 - House ID <Int>
@@ -32,7 +32,7 @@ private _id = _container getVariable "id";
     //Classnames merging
         //getItemCargo  + getMagazineCargo  classnames
         private _inventoryClasses = ((getItemCargo _container) select 0) + ((getMagazineCargo _container) select 0);
-     
+
     //Amount merging
         //getItemCargo  + getMagazineCargo amounts
         private _inventoryAmounts = ((getItemCargo _container) select 1) + ((getMagazineCargo _container) select 1);
@@ -48,7 +48,7 @@ private _backpacksObjects = (everyContainer _container) apply {_x select 1};
 
 //Clean duplicates(Backpacks also appear in _inventoryClasses)
 if !(_inventoryClasses arrayIntersect _backpacksClasses isEqualTo []) then {
-    private _amountsIDXToRemove = []; 
+    private _amountsIDXToRemove = [];
     {
     	private _idx = _inventoryClasses find _x;
     	if (_idx != -1) then { _amountsIDXToRemove pushBack _idx };
@@ -67,7 +67,7 @@ if !(_inventoryClasses arrayIntersect _backpacksClasses isEqualTo []) then {
 //Format array
 private _inventoryArray = [[_inventoryClasses,_inventoryAmounts],_weaponsCargo];
 
-//Setup backpacks array 
+//Setup backpacks array
 private _backpacksArray = [];
 {
 	/* ----
@@ -103,6 +103,5 @@ private _isEmpty = {
 private _updateCondition = not([_inventoryArray,_backpacksArray] call _isEmpty);
 
 if (_updateCondition) then {
-    _query = format["updateHouseContainer:%1:%2",[_inventoryArray,_backpacksArray],_id];
-    _check = [0, _query] call ExternalS_fnc_ExtDBquery;
+    [0, format["updateHouseContainer:%1:%2",[_inventoryArray,_backpacksArray],_id]] call ExternalS_fnc_ExtDBquery;
 };

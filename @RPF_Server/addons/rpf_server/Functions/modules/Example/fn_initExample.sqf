@@ -8,7 +8,7 @@ Here you can add some scripts to run on the server.
 
 diag_log (localize "STR_RPF_EXAMPLE_INIT");
 
-_menuItems = [
+private _menuItems = [
 	[
 		["alive player"],
 		["STR_RPF_MODULES_EXAMPLE_MENUACT", "[] call ClientModules_fnc_hintExample"]

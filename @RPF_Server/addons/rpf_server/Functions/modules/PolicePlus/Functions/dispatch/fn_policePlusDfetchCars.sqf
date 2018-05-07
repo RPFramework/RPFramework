@@ -5,7 +5,7 @@ First Edit: 28.12.2016
 
 params ["_player"];
 
-if (!isNil{RPF_dispatcher}) exitWith {
+if (!isNil "RPF_dispatcher") exitWith {
 	["STR_RPF_POLICEPLUSDISPATCH_OCCUPIED", name RPF_dispatcher] remoteExecCall ["Client_fnc_hintMP", _player];
 };
 
