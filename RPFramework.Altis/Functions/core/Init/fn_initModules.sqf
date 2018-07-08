@@ -9,4 +9,5 @@ You add the module init files in:
 
 {
 	[] call (call compile _x);
-}forEach ((missionConfigFile >> "RPF_initModules") call BIS_fnc_getCfgData);
+	true;
+}count ((missionConfigFile >> "RPF_initModules") call BIS_fnc_getCfgData);

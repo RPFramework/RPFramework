@@ -17,7 +17,7 @@ You can animate almost anything with enough creativity and controls. For example
 params ["_displ", "_ctrlIdc", "_pos", "_fade", "_time"];
 
 // get the control we want to animate
-_ctrl = _displ displayCtrl _ctrlIdc;
+private _ctrl = _displ displayCtrl _ctrlIdc;
 
 // If the position isn't the current position then we need to change it
 if (!(_pos isEqualTo (ctrlPosition _ctrl))) then {

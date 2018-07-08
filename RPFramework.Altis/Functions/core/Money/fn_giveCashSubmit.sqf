@@ -5,7 +5,7 @@ First Edit: 23.11.2015
 
 params ["_target", "_giver"];
 
-_amount = parseNumber (ctrlText 1401);
+private _amount = parseNumber (ctrlText 1401);
 closeDialog 0;
 
 if (_amount > 0) then {

@@ -40,7 +40,7 @@ if (_action select 0) then {
 _class = typeOf _object;
 _stringName = [_class]call Client_fnc_getVehicleName;
 {
-	if ((_x select 0) == _class) exitWith {
+	if ((_x select 0) isEqualTo _class) exitWith {
 		_stringName = (_x select 1);
 	};
 }forEach RPF_ItemNames;
@@ -57,10 +57,11 @@ _veh setVariable ["trunk", _trunk, true];
 if (isNil {(findDisplay 1020) getVariable "trunkSize"}) then {
 	_trunkSize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/((missionConfigFile >> "RPF_Config" >> "trunkDivivde") call BIS_fnc_getCfgData));
 	{
-		if ((_x select 0) == (typeOf _veh)) exitWith {
+		if ((_x select 0) isEqualTo (typeOf _veh)) then {
 			_trunkSize = (_x select 1);
 		};
-	}forEach ((missionConfigFile >> "RPF_Config" >> "trunkException") call BIS_fnc_getCfgData);
+		true;
+	}count ((missionConfigFile >> "RPF_Config" >> "trunkException") call BIS_fnc_getCfgData);
 } else {
 	_trunkSize = (findDisplay 1020) getVariable "trunkSize";
 };

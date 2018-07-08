@@ -2,4 +2,5 @@ params ["_vehicle"];
 
 {
 	_x action ["eject", _vehicle];
-} forEach crew _vehicle;
+	true;
+} count crew _vehicle;

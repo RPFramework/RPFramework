@@ -9,24 +9,20 @@ PARAMS:
 */
 
 params ["_d", "_t"];
-if(_d == 0) then {
-	if(_t == 0) then {
-		_cop = player getVariable ["cop", 0];
+if(_d isEqualTo 0) then {
+	if(_t isEqualTo 0) then {
 		player setVariable ["cop", 0, true];
-		player setVariable ["copoffduty", _cop, true];
+		player setVariable ["copoffduty", player getVariable ["cop", 0], true];
 	} else {
-		_ems = player getVariable ["ems", 0];
 		player setVariable ["ems", 0, true];
-		player setVariable ["emsoffduty", _ems, true];
+		player setVariable ["emsoffduty", player getVariable ["ems", 0], true];
 	};
 } else {
-	if(_t == 0) then {
-		_cop = player getVariable ["copoffduty", 0];
-		player setVariable ["cop", _cop, true];
+	if(_t isEqualTo 0) then {
+		player setVariable ["cop", player getVariable ["copoffduty", 0], true];
 		player setVariable ["copoffduty", 0, true];
 	} else {
-		_ems = player getVariable ["emsoffduty", 0];
-		player setVariable ["ems", _ems, true];
+		player setVariable ["ems", player getVariable ["emsoffduty", 0], true];
 		player setVariable ["emsoffduty", 0, true];
 	};
 };
