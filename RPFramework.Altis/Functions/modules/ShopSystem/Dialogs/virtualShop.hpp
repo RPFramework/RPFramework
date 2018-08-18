@@ -64,6 +64,7 @@ class virtualShop
 			y = 0.631948 * safezoneH + safezoneY;
 			w = 0.126042 * safezoneW;
 			h = 0.0329871 * safezoneH;
+			text = "1";
 		};
 		class RscButton_1600: RscButton
 		{
