@@ -4,7 +4,7 @@ First Edit: 22.9.2016
 */
 
 lbSetCurSel [1501, 0];
-if ((lbCurSel 1501) == -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NEI")];};
+if ((lbCurSel 1501) isEqualTo -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NEI")];};
 
 if (RPF_curLab getVariable ["labActive", false]) exitWith {};
 

@@ -2,13 +2,8 @@
 Author: Kerkkoh
 First Edit: 23.4.2016
 */
-
-_index = lbCurSel 1500;
-_data = lbData [1500, _index];
-_dataArray = parseSimpleArray _data;
-_class = _dataArray select 0;
-_price = _dataArray select 1;
-_type = _dataArray select 2;
+private _index = lbCurSel 1500;
+(parseSimpleArray lbData [1500, _index]) params ["_class","_price","_type"];
 
 switch (_type) do {
 	case 0: {

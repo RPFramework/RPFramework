@@ -7,6 +7,7 @@ for "_i" from 0 to 1 step 0 do {
 	if (isNil {RPF_dispatching}) exitWith {};
 	lbClear 1503;
 	{
+		private["_msg","_arr","_new"];
 		_msg = _x select 1;
 		_arr = toArray _msg;
 		if (count _arr >= 30) then {
@@ -15,7 +16,8 @@ for "_i" from 0 to 1 step 0 do {
 		};
 		_new = lbAdd [1503, toString _arr];
 		lbSetData [1503, _new, str [(_x select 0), _msg]];
-	}forEach RPF_phoneMessages;
-	
+		true;
+	}count RPF_phoneMessages;
+
 	sleep 1;
 };

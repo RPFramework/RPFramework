@@ -5,7 +5,7 @@ First Edit: 25.12.2016
 Additional Information:
 */
 
-[player, [16807.5,12663.8,0.00144768]] remoteExec ["ServerModules_fnc_medicalStatSave", 2];
+[player, [getArray (missionConfigFile >> "RPF_Config" >> "spawnPoint")]] remoteExec ["ServerModules_fnc_medicalStatSave", 2];
 
 _unit = _this select 0;
 _deadLoadout = [0, _unit, []]call ClientModules_fnc_basicMedicalLoadout;
@@ -16,12 +16,12 @@ player setVariable ["loadedIn", false, true];
 //purgatory for now at least
 []spawn {
 	uiSleep 2;
-	player setPos [14536.8,5774.77,0.00147748];
+	player setPos (getArray(missionConfigFile >> "RPF_basicMedicalModule" >> "purgatoryPosition"));
 	player enableSimulation false;
 	player allowDamage false;
 };
 
-_timer = time + ((missionConfigFile >> "RPF_basicMedicalModule" >> "unconsciousTime") call BIS_fnc_getCfgData);
+_timer = time + (getNumber(missionConfigFile >> "RPF_basicMedicalModule" >> "unconsciousTime"));
 
 _medics = []call Client_fnc_getMedics;
 {
@@ -59,7 +59,7 @@ player allowDamage true;
 
 if (!(_unit getVariable ["unconscious",  false])) then {
 	[1, player, _deadLoadout]call ClientModules_fnc_basicMedicalLoadout;
-	
+
 	player setPos (getPos _unit);
 	player setDir (getDir _unit);
 } else {
@@ -67,9 +67,9 @@ if (!(_unit getVariable ["unconscious",  false])) then {
 	player setVariable ["hunger", 0, true];
 	player setVariable ["thirst", 0, true];
 	[player, 0, getPlayerUID player, name player] remoteExec ["Server_fnc_statSave", 2];
-	
-	//return from purgatory
-	player setPos [16807.5,12663.8,0.00144768];
+
+	//return from purgatory to spawnPoint
+	player setPos (getArray (missionConfigFile >> "RPF_Config" >> "spawnPoint"));
 };
 
 {

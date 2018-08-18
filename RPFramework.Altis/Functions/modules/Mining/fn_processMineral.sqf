@@ -3,11 +3,11 @@ Author: Kerkkoh
 First Edit: 2.2.2017
 */
 
-if (({_x == "RPF_Mining_Minerals"} count (items player)) == 0) exitWith {};
+if (({_x isEqualTo "RPF_Mining_Minerals"} count (items player)) == 0) exitWith {};
 
 player removeItem "RPF_Mining_Minerals";
 
-_class = selectRandom ["RPF_Mining_Gold", "RPF_Mining_Iron", "RPF_Mining_Lead", "RPF_Mining_Copper", "RPF_Mining_Diamond"];
+private _class = selectRandom getArray(missionConfigFile >> "RPF_miningModule" >> "resources");
 
 player addItem _class;
 

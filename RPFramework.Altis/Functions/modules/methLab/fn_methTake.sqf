@@ -6,7 +6,7 @@ First Edit: 22.9.2016
 private	["_idx", "_classname"];
 
 _idx = lbCurSel 1502;
-if (_idx == -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTT")];};
+if (_idx isEqualTo -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTT")];};
 _classname = lbData [1502, _idx];
 if (player canAdd _classname) then {
 	player addItem _classname;
@@ -20,7 +20,7 @@ lbClear 1502;
 	private	["_class", "_amount", "_item"];
 	_class = _x select 0;
 	_amount = _x select 1;
-	if (_class == _classname) then {
+	if (_class isEqualTo _classname) then {
 		_amount = _amount - 1;
 		_x set [1, _amount];
 	};

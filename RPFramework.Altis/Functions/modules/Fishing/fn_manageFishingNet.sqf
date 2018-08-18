@@ -9,10 +9,7 @@ false - Delete
 */
 
 params["_obj", "_adding"];
-private["_netID"];
-
-_netID = netId _obj;
 
 if (isNull _obj) exitWith {};
 
-[_netID, _adding] remoteExecCall ["ServerModules_fnc_manageFishingnet", 2];
+[netId _obj, _adding] remoteExecCall ["ServerModules_fnc_manageFishingnet", 2];

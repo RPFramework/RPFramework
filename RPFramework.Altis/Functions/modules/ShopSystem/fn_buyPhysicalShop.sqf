@@ -9,12 +9,11 @@ params ["_ct"];
 
 switch (_type) do {
 	case 0: { //Vehicle
-		_check = [1, _price] call Client_fnc_checkMoney;
-		if (_check) then {
+		if ([1, _price] call Client_fnc_checkMoney) then {
 			[_price] call Client_fnc_removeCash;
 			_ct setVariable ["buyableThing", nil, true];
 			closeDialog 0;
-			
+
 			//Add vehicle to database (If garage module is installed)
 			if (!isNil "RPF_GarageModule") then {
 				[_ct,player] remoteExecCall ["ServerModules_fnc_insertGarage", 2];
@@ -30,7 +29,8 @@ switch (_type) do {
 				private _condition = call(_x select 0);
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
-			} forEach ((call RPF_buyPhysicalShopStatements) select 0);
+				true;
+			} count ((call RPF_buyPhysicalShopStatements) select 0);
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR");
 			[_ct, clientOwner] remoteExec ["setOwner", 2];
 			_ct allowDamage true;
@@ -40,10 +40,10 @@ switch (_type) do {
 		};
 	};
 	case 1: { //Item
+		private ["_amount","_amountPrice"];
 		_amount = parseNumber (ctrlText 1400);
 		_amountPrice = _price * _amount;
-		_check = [1, _amountPrice] call Client_fnc_checkMoney;
-		if (_check) then {
+		if ([1, _amountPrice] call Client_fnc_checkMoney) then {
 			[_amountPrice] call Client_fnc_removeCash;
 			closeDialog 0;
 			//Execute buyShopStatements
@@ -51,7 +51,8 @@ switch (_type) do {
 				private _condition = call(_x select 0);
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
-			} forEach ((call RPF_buyPhysicalShopStatements) select 1);
+				true;
+			} count ((call RPF_buyPhysicalShopStatements) select 1);
 			if (!(player canAdd [_class, _amount])) exitWith {
 				hint localize "STR_RPF_CORE_CANTADDITEM";
 			};
@@ -65,8 +66,7 @@ switch (_type) do {
 		};
 	};
 	case 2: { //Furniture
-		_check = [1, _price] call Client_fnc_checkMoney;
-		if (_check) then {
+		if ([1, _price] call Client_fnc_checkMoney) then {
 			[_price] call Client_fnc_removeCash;
 			closeDialog 0;
 			private _newfurn = _class createVehicle position player;
@@ -78,7 +78,8 @@ switch (_type) do {
 				private _condition = call(_x select 0);
 				private _statement = _x select 1;
 				if (_condition) then { call _statement };
-			} forEach ((call RPF_buyPhysicalShopStatements) select 2);
+				true;
+			} count ((call RPF_buyPhysicalShopStatements) select 2);
 			_newfurn setVariable ["vars", _vars, true];
 			hint (localize "STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEM");
 		} else {

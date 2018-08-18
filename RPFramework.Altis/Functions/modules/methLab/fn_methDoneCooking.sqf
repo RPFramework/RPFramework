@@ -4,7 +4,6 @@ First Edit: 22.9.2016
 */
 
 params ["_recipe"];
-private ["_amount", "_product"];
 
 RPF_labItems = [];
 RPF_labPlayerItems = [];
@@ -14,7 +13,7 @@ lbClear 1501;
 
 hint (localize "STR_RPF_MODULES_METHLAB_SUCCESS");
 
-_amount = 2 + round(random 10);
+private _amount = 2 + round(random 10);
 
 if (isNil{RPF_labProducts}) then {
 	RPF_labProducts = [[_recipe, _amount]];

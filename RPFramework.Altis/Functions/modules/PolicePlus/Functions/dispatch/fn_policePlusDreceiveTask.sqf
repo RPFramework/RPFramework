@@ -7,7 +7,7 @@ params ["_name", "_pos"];
 
 deleteMarkerLocal "dispatchMarker";
 
-_dm = createMarkerLocal ["dispatchMarker", _pos];
+private _dm = createMarkerLocal ["dispatchMarker", _pos];
 _dm setMarkerShapeLocal "ICON";
 _dm setMarkerTypeLocal "hd_objective";
 _dm setMarkerTextLocal "Dispatch Location";

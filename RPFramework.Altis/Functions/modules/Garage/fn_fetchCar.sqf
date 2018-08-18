@@ -2,6 +2,7 @@
 Author: Kerkkoh
 First Edit: 6.9.2016
 */
+private ["_car","_position","_vehicle"];
 
 if ((lbCurSel 1500) == -1) exitWith {};
 _car = parseSimpleArray (lbData [1500, lbCurSel 1500]);
@@ -20,7 +21,7 @@ _vehicle = (_car select 1) createVehicle [0,0,0];
 clearItemCargoGlobal _vehicle;
 _vehicle setPlateNumber (_car select 6);
 _vehicle setPos _position;
-_vehicle setDir (getDir RPF_curGarage);
+_vehicle setDir getDir RPF_curGarage;
 [_car select 3, _vehicle]call Client_fnc_vehicleHitLoad;
 _vehicle setVariable ["key", _car select 4, true];
 [_vehicle] remoteExecCall ["Server_fnc_setupVehiclesKilledHandlers", 2];

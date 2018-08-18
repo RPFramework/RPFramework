@@ -2,13 +2,12 @@
 Author: Kerkkoh
 First Edit: 28.12.2016
 */
+private ["_indx","_data","_allCars","_car"];
 _indx = lbCurSel 1500;
-if (_indx == -1) exitWith {};
-_strData = lbData [1500, _indx];
-_taskID = parseNumber _strData;
+if (_indx isEqualTo -1) exitWith {};
 _data = [];
 {
-	if (_taskID == (_x select 0)) exitWith {
+	if ((parseNumber lbData [1500, _indx]) isEqualTo (_x select 0)) exitWith {
 		_data = _x;
 	};
 }forEach RPF_currentDispatchTasks;
@@ -20,20 +19,24 @@ _allCars = [];
 		_car setVariable ["curTask", nil, true];
 		_allCars pushBack _car;
 	};
-}forEach RPF_dispatchPoliceCars;
+	true;
+}count RPF_dispatchPoliceCars;
 {
 	if ((_x select 0) in (_data select 4)) then {
 		_car = _x select 0;
 		_car setVariable ["curTask", nil, true];
 		_allCars pushBack _car;
 	};
-}forEach RPF_dispatchMedicCars;
+	true;
+}count RPF_dispatchMedicCars;
 
 {
 	{
 		[_data select 1] remoteExecCall ["ClientModules_fnc_policePlusDreceiveCompleteTask", _x];
-	} forEach ((_x getVariable "id") select 1);
-}foreach _allCars;
+		true;
+	} count ((_x getVariable "id") select 1);
+	true;
+}count _allCars;
 
 [1, _data select 0, "", "", ""] remoteExecCall ["ServerModules_fnc_policePlusDmanageTask", 2];
 

@@ -1,4 +1,5 @@
 class RPF_methLabServerModule {
+	// remember to add all ingredients used to the client side config as well!
 	recipes[] = {
 		{
 			"RPF_Items_Meth",

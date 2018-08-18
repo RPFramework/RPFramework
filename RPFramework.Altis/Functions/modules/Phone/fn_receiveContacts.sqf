@@ -8,12 +8,11 @@ _contacts pushBack [name player, player getVariable "phone", -1];
 
 lbClear 2100;
 {
-	_name = _x select 0;
-	_number = _x select 1;
-	_id = _x select 2;
-	_new = lbAdd [2100, _name];
+	_x params ["_name","_number","_id"];
+	private _new = lbAdd [2100, _name];
 	lbSetData [2100, _new, str [_number, _id]];
-}forEach _contacts;
+	true;
+}count _contacts;
 
 lbSetCurSel [2100, 0];
 

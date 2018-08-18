@@ -3,12 +3,12 @@ Author: Kerkkoh
 First Edit: 22.9.2016
 */
 
-private ["_idx","_classname", "_deleteIndex", "_found"];
+private ["_idx","_classname", "_deleteIndex", "_found", "_item"];
 
 _idx = lbCurSel 1501;
-if (_idx == -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTR")];};
+if (_idx isEqualTo -1) exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTR")];};
 _classname = lbData [1501, _idx];
-if (_classname == "") exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTR")];};
+if (_classname isEqualTo "") exitWith {ctrlSetText [1000, (localize "STR_RPF_MODULES_METHLAB_STATUS_NTR")];};
 lbClear 1501;
 lbClear 1500;
 
@@ -18,7 +18,7 @@ _deleteIndex = -1;
 	private	["_class", "_amount", "_item"];
 	_class = _x select 0;
 	_amount = _x select 1;
-	if (_class == _classname) then {
+	if (_class isEqualTo _classname) then {
 		_amount = _amount - 1;
 		_x set [1, _amount];
 	};
@@ -39,7 +39,7 @@ _found = false;
 	private	["_class", "_amount", "_item"];
 	_class = _x select 0;
 	_amount = _x select 1;
-	if (_class == _classname) then {
+	if (_class isEqualTo _classname) then {
 		_found = true;
 		_amount = _amount + 1;
 		_x set [1, _amount];

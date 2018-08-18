@@ -7,7 +7,7 @@ params ["_prisoners"];
 
 {
 	if (!(isNull _x)) then {
-		_item = lbAdd [1500, name _x];
+		private _item = lbAdd [1500, name _x];
 		lbSetData [1500, _item, str _forEachIndex];
 	};
 }forEach _prisoners;

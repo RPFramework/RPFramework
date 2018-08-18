@@ -2,6 +2,7 @@
 Author: Kerkkoh
 First Edit: 20.11.2016
 */
+private ["_amount", "_reward", "_delivered"];
 
 closeDialog 0;
 
@@ -12,13 +13,12 @@ RPF_curDelivery set [5, _delivered];
 
 {
 	detach _x;
-	
-	_rem = RPF_ownedFurniture deleteAt (RPF_ownedFurniture find _x);
-	
+	RPF_ownedFurniture deleteAt (RPF_ownedFurniture find _x);
 	deleteVehicle _x;
-} forEach attachedObjects player;
+	true;
+} count attachedObjects player;
 
-if (_delivered == _amount) then {
+if (_delivered isEqualTo _amount) then {
 	RPF_curDelivery = ["", 0, 0, 0, "", 0];
 	["TaskSucceeded",["","Delivery succeeded!"]] call BIS_fnc_showNotification;
 	[_reward] call Client_fnc_addCash;

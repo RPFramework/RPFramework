@@ -4,6 +4,7 @@ First Edit: 22.9.2016
 */
 
 params ["_object", "_col", "_time"];
+private ["_source", "_source2"];
 _col params ["_c1","_c2","_c3"];
 
 _source = "#particlesource" createVehicle getpos _object;

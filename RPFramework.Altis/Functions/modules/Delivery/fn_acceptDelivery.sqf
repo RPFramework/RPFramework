@@ -3,19 +3,11 @@ Author: Kerkkoh
 First Edit: 20.11.2016
 */
 
-_locations = [
-	["dp1", [14882.873, 11054.816, 0]],
-	["dp2", [16987.119, 14904.747, 0]]
-];
+private _dp = selectRandom ("true" configClasses (missionConfigFile >> "RPF_deliveryModule" >> "locations"));
 
-_dp = selectRandom _locations;
+RPF_curDelivery set [4, configName(_dp)];
 
-_dpvar = _dp select 0;
-_loc = _dp select 1;
-
-RPF_curDelivery set [4, _dpvar];
-
-_marker = createMarkerLocal ["dp", _loc];
+private _marker = createMarkerLocal ["dp", getArray(_dp >> "pos")];
 _marker setMarkerShapeLocal "ICON";
 _marker setMarkerTypeLocal "hd_dot";
 _marker setMarkerTextLocal (localize "STR_RPF_MODULES_DELIVERY_DP");

@@ -16,12 +16,10 @@ createDialog "physicalShop";
 ctrlShow [1004, false];
 ctrlShow [1400, false];
 
-_array = _ct getVariable "buyableThing";
-_methLab = _ct getVariable ["methLab", false];
-_class = _array select 0;
-_price = _array select 1;
+(_ct getVariable "buyableThing") params ["_class","_price","_type"];
 ctrlSetText [1003, str _price];
-_type = _array select 2;
+
+// prevent civs from buying cop and ems vehicles
 
 if ((_class in ((missionConfigFile >> "RPF_Config" >> "policeCars") call BIS_fnc_getCfgData)) && (player getVariable ['cop', 0] <= 0)) exitWith {closeDialog 0;};
 
@@ -29,17 +27,14 @@ if ((_class in ((missionConfigFile >> "RPF_Config" >> "medicCars") call BIS_fnc_
 
 switch (true) do {
 	case (_type == 0): {
-		_name = [_class]call Client_fnc_getVehicleName;
-		ctrlSetText [1001, _name];
+		ctrlSetText [1001, [_class]call Client_fnc_getVehicleName];
 	};
 	case (_type == 1): {
-		_name = [_class]call Client_fnc_getWeaponName;
-		ctrlSetText [1001, _name];
-		ctrlShow [1400, true];
+		ctrlSetText [1001, [_class]call Client_fnc_getWeaponName];
 		ctrlShow [1004, true];
+		ctrlShow [1400, true];
 	};
 	case (_type == 2): {
-		_name = [_class]call Client_fnc_getVehicleName;
-		ctrlSetText [1001, _name];
+		ctrlSetText [1001, [_class]call Client_fnc_getVehicleName];
 	};
 };

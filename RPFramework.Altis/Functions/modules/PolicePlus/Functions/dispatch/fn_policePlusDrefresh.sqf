@@ -7,16 +7,18 @@ params ["_police", "_medics"];
 
 lbClear 1502;
 {
-	_new = lbAdd [1502, _x select 1];
+	private _new = lbAdd [1502, _x select 1];
 	lbSetData [1502, _new, _x select 1];
-}forEach _medics;
+	true;
+}count _medics;
 lbSort ((findDisplay 1086) displayCtrl 1502);
 
 lbClear 1501;
 {
-	_new = lbAdd [1501, _x select 1];
+	private _new = lbAdd [1501, _x select 1];
 	lbSetData [1501, _new, _x select 1];
-}forEach _police;
+	true;
+}count _police;
 lbSort ((findDisplay 1086) displayCtrl 1501);
 
 RPF_dispatchPoliceCars = _police;

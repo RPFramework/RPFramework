@@ -3,6 +3,7 @@ Author: Kerkkoh
 First Edit: 18.12.2016
 */
 params["_c"];
+private ["_name","_f"];
 
 _name = ctrlText 1401;
 closeDialog 0;

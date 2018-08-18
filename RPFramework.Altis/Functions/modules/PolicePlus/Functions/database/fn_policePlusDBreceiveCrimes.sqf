@@ -7,6 +7,7 @@ params ["_crimes"];
 lbClear 1501;
 
 {
+	private ["_arr","_item"];
 	_arr = toArray (_x select 0);
 	if (count _arr >= 30) then {
 		_arr resize 30;
@@ -14,6 +15,7 @@ lbClear 1501;
 	};
 	_item = lbAdd [1501, toString _arr];
 	lbSetData [1501, _item, str _x];
-}forEach _crimes;
+	true;
+}count _crimes;
 
 lbSetCurSel [1501, 0];

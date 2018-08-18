@@ -2,32 +2,31 @@
 Author: Kerkkoh
 First Edit: 28.12.2016
 */
-
+private ["_arr","_idc","_car","_index","_data","_array"];
 params["_type"];
 _arr = RPF_dispatchMedicCars;
 _idc = 1502;
-if (_type == 0) then {
+if (_type isEqualTo 0) then {
 	_arr = RPF_dispatchPoliceCars;
 	_idc = 1501;
 };
 
-if ((lbCurSel _idc) == -1) exitWith {};
+if ((lbCurSel _idc) isEqualTo -1) exitWith {};
 
 _car = objNull;
 {
-	if ((lbData[_idc, lbCurSel _idc]) == (_x select 1)) then {
+	if ((lbData[_idc, lbCurSel _idc]) isEqualTo (_x select 1)) then {
 		_car = _x select 0;
 	};
-}forEach _arr;
+	true;
+}count _arr;
 
 if (isNil {(_car getVariable "curTask")}) exitWith {};
-
-_curTask = _car getVariable "curTask";
 
 _index = -1;
 _data = [];
 {
-	if ((_x select 0) == (_curTask select 0)) then {
+	if ((_x select 0) == ((_car getVariable "curTask") select 0)) exitWith {
 		_index = _forEachIndex;
 		_data = _x;
 	};
@@ -40,6 +39,7 @@ ctrlSetText [1002, str (_data select 3)];
 _array = [];
 {
 	_array pushBack ((_x getVariable "id") select 0);
-}forEach (_taskData select 4);
-_aFinal = _array joinString ", ";
-ctrlSetText [1007, _aFinal];
+	true;
+}count (_data select 4);
+
+ctrlSetText [1007, _array joinString ", "];

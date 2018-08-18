@@ -2,14 +2,11 @@
 Author: Kerkkoh
 First Edit: 28.12.2016
 */
-
+private ["_indx"];
 _indx = lbCurSel 1503;
-if (_indx == -1) exitWith {};
-_str = lbData [1503, _indx];
-_data = parseSimpleArray _str;
-
-_author = _data select 0;
-_msg = _data select 1;
+if (_indx isEqualTo -1) exitWith {};
+	
+(parseSimpleArray lbData [1503, _indx]) params ["_author","_msg"];
 
 if (_author != "Anonymous") then {
 	{

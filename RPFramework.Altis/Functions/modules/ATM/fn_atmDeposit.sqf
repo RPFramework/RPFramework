@@ -6,7 +6,7 @@ First Edit: 30.11.2015
 if (player getVariable ["isDoingATMstuff", false]) exitWith {hint (localize "STR_RPF_MODULES_ATM_WAIT")};
 player setVariable ["isDoingATMstuff", true, true];
 
-_amount = round (parseNumber (ctrlText 1400));
+private _amount = round (parseNumber (ctrlText 1400));
 
 if (_amount > 0) then {
 	[_amount, 1] call ClientModules_fnc_atmRefresh;

@@ -2,14 +2,12 @@
 Author: Kerkkoh
 First Edit: 28.12.2016
 */
-
+private ["_indexLB","_task","_array"];
 _indexLB = lbCurSel 1500;
-if (_indexLB == -1) exitWith {};
-_strData = lbData [1500, _indexLB];
-_taskID = parseNumber _strData;
+if (_indexLB isEqualTo -1) exitWith {};
 _task = [];
 {
-	if (_taskID == (_x select 0)) exitWith {
+	if ((parseNumber lbData [1500, _indexLB]) == (_x select 0)) exitWith {
 		_task = _x;
 	};
 }forEach RPF_currentDispatchTasks;
@@ -20,6 +18,7 @@ ctrlSetText [1002, str (_task select 3)];
 _array = [];
 {
 	_array pushBack ((_x getVariable "id") select 0);
-}forEach (_task select 4);
-_aFinal = _array joinString ", ";
-ctrlSetText [1007, _aFinal];
+	true;
+}count (_task select 4);
+
+ctrlSetText [1007, _array joinString ", "];

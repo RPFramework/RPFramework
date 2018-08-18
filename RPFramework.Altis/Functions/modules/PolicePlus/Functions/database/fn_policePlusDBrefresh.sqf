@@ -2,14 +2,12 @@
 Author: Kerkkoh
 First Edit: 27.9.2016
 */
-
+private ["_indx","_data"];
 _indx = lbCurSel 1500;
-if (_indx == -1) exitWith {};
-_name = lbText [1500, _indx];
-_str = lbData [1500, _indx];
-_data = parseSimpleArray _str;
+if (_indx isEqualTo -1) exitWith {};
+_data = parseSimpleArray lbData [1500, _indx];
 
-ctrlSetText [1000, _name];
+ctrlSetText [1000, lbText [1500, _indx]];
 if ((_data select 1) != "no") then {
 	ctrlSetText [1002, _data select 1];
 	((findDisplay 1085) displayCtrl 1002) ctrlSetTextColor [1, 0, 0, 1];

@@ -8,7 +8,7 @@ Params:
 */
 params ["_house", "_action"];
 
-_price = parseNumber (ctrlText 1400);
+private _price = parseNumber (ctrlText 1400);
 if ((_price < 0) && (_action == 0)) exitWith {hint (localize "STR_RPF_MODULES_HOUSING_INVALIDPRICE")};
 if (_action == 1) then {
 	_price = -1;

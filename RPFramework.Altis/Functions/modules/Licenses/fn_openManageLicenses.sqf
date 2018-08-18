@@ -4,6 +4,7 @@ First Edit: 24.4.2017
 */
 
 params["_target"];
+private ["_licenses", "_lname", "_l", "_c"];
 
 createDialog "manageLicenses";
 
@@ -12,7 +13,8 @@ RPF_licenseManageTarget = _target;
 _licenses = [];
 {
 	_licenses pushBack (_x select 1);
-}forEach (RPF_licenseManageTarget getVariable "licenses");
+	true;
+}count (RPF_licenseManageTarget getVariable "licenses");
 
 {
 	_lname = (_x select 0);
@@ -25,6 +27,7 @@ _licenses = [];
 		_c = [1,0,0,1];
 	};
 	lbSetColor [1500, _l, _c];
-}forEach ((missionConfigFile >> "RPF_licensesModule" >> "licenses") call BIS_fnc_getCfgData);
+	true;
+}count ((missionConfigFile >> "RPF_licensesModule" >> "licenses") call BIS_fnc_getCfgData);
 
 lbSetCurSel [1500, 0];

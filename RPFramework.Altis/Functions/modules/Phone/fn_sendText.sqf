@@ -4,42 +4,36 @@ First Edit: 23.12.2016
 */
 
 params["_anon"];
+private ["_msg", "_numberArray", "_number", "_author", "_player"];
 
-_numberstr = ctrlText 1403;
 _msg = ctrlText 1402;
 
-_arr = toArray _numberstr;
 _numberArray = [];
 {
-	_arr1 = [_x];
-	_strArr1 = toString _arr1;
-	_char = parseNumber _strArr1;
-	_numberArray pushBack _char;
-}forEach _arr;
+	_numberArray pushBack (parseNumber (toString  [_x]));
+	true;
+}count toArray (ctrlText 1403);
 
 _number = (_numberArray joinString "");
 
-_author = "";
-if (_anon) then {
-	_author = "Anonymous";
-} else {
-	_author = player getVariable "phone";
-};
+_author = [player getVariable "phone", "Anonymous"] select (_anon);
 
 if (_number == ((missionConfigFile >> "RPF_phoneModule" >> "emergencyNumber") call BIS_fnc_getCfgData)) then {
-	_police = []call Client_fnc_getPolice;
-	_medics = []call Client_fnc_getMedics;
 	{
 		[_author, _msg, true] remoteExecCall ["ClientModules_fnc_receiveText", _x];
-	}forEach _police;
+		true;
+	}count ([]call Client_fnc_getPolice);
+
 	{
 		[_author, _msg, true] remoteExecCall ["ClientModules_fnc_receiveText", _x];
-	}forEach _medics;
+		true;
+	}count ([]call Client_fnc_getMedics);
+
 	hint (localize "STR_RPF_MODULES_PHONE_MSGSENT");
 } else {
 	_player = objNull;
 	{
-		if ((_x getVariable "phone") == _number) exitWith {
+		if ((_x getVariable "phone") isEqualTo _number) exitWith {
 			_player = _x;
 		};
 	}forEach allPlayers;
