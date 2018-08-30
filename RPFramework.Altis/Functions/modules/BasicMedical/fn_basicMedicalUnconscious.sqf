@@ -58,6 +58,7 @@ player enableSimulation true;
 player allowDamage true;
 
 if (!(_unit getVariable ["unconscious",  false])) then {
+	_deadLoadout = [0, _unit, []]call ClientModules_fnc_basicMedicalLoadout;
 	[1, player, _deadLoadout]call ClientModules_fnc_basicMedicalLoadout;
 	
 	player setPos (getPos _unit);
