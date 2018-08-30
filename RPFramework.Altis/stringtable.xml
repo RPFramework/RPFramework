@@ -3,23 +3,23 @@
 	<Package name="RPFMission">
 		<Container name="CORE">
 			<Key ID="STR_RPF_CORE_ONLOADNAME">
-				<Original>RPFramework 7.0.1</Original>
-				<English>RPFramework 7.0.1</English>
-				<French>RPFramework 7.0.1</French>
-				<Portuguese>RPFramework 7.0.1</Portuguese>
+				<Original>RPFramework 7.0.2</Original>
+				<English>RPFramework 7.0.2</English>
+				<French>RPFramework 7.0.2</French>
+				<Portuguese>RPFramework 7.0.2</Portuguese>
 			</Key>
 			
 			<Key ID="STR_RPF_CORE_CANTADDITEM">
 				<Original>This item doesn't fit your inventory!</Original>
 				<English>This item doesn't fit your inventory!</English>
 				<French>This item doesn't fit your inventory!</French>
-				<Portuguese>This item doesn't fit your inventory!</Portuguese>
+				<Portuguese>Este item não se encaixa no seu inventário!</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_CORE_GIVECASH_AMT">
 				<Original>Amount</Original>
 				<English>Amount</English>
 				<French>Montant</French>
-				<Portuguese>Quantia</Portuguese>
+				<Portuguese>Quantidade</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_CORE_GIVECASH_GIVE">
 				<Original>Give</Original>
@@ -241,7 +241,7 @@
 				<Original>Interaction</Original>
 				<English>Interaction</English>
 				<French>Interaction</French>
-				<Portuguese>Interaction</Portuguese>
+				<Portuguese>Interação</Portuguese>
 			</Key>
 		</Container>
 		<Container name="ATM">
@@ -500,7 +500,7 @@
 				<Original>Tasks</Original>
 				<English>Tasks</English>
 				<French>Taches</French>
-				<Portuguese>Taches</Portuguese>
+				<Portuguese>Tarefas</Portuguese>
 			</Key>
 			<Key ID="STR_RPF_MODULES_DELIVERY_TAKEITEMS">
 				<Original>Take Items</Original>
@@ -634,10 +634,12 @@
 			<Key ID="STR_RPF_MODULES_HOUSING_OPENCONTAINER">
  				<Original>Open Container</Original>
  				<English>Open Container</English>
+				<Portuguese>Recipiente Aberto</Portuguese>
  			</Key>
  			<Key ID="STR_RPF_MODULES_HOUSING_OPENTRUNK">
  				<Original>Open Trunk</Original>
  				<English>Open Trunk</English>
+				<Portuguese>Inventario aberto</Portuguese>
  			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_PRICEMANAGE">
 				<Original>Price</Original>
