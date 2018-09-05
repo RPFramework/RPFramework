@@ -45,7 +45,11 @@ if (isServer) then {
 			};
 			//Holster/Unholster (default key H)
 			case (getNumber(missionConfigFile >> "RPF_Config" >> "unlockCarKey")): {
-				[cursorObject]call Client_fnc_useKey;
+				if !(player == vehicle player) then {
+					[vehicle player]call Client_fnc_useKey;
+				} else {
+					[cursorObject]call Client_fnc_useKey;
+				};
 				false;
 			};
 			default {
