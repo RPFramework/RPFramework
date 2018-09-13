@@ -55,6 +55,10 @@ if (isServer) then {
 			};
 		};
 	}];
+	
+	player addEventHandler ["GetOutMan", {
+		[]call Client_fnc_holster;
+	}];
 
 	[] spawn Client_fnc_initSurvivalLoop;
 
