@@ -27,8 +27,6 @@ if (isServer) then {
 	[] call Client_fnc_miscVariables;
 
 	player setVariable ["cuffed", false, true];
-	
-	RPF_Holstered = 0;
 
 	waituntil {uiSleep 0.01; !(isNull (findDisplay 46))};
 
