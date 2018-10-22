@@ -6,83 +6,98 @@
 				<Original>Grinder</Original>
 				<English>Grinder</English>
 				<French>Broyeur</French>
+				<Italian>Macina</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_GRINDER_DESC">
 				<Original>Grinder</Original>
 				<English>Grinder</English>
 				<French>Broyeur</French>
+				<Italian>Macina</Italian>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_MINERALS_NAME">
 				<Original>Minerals</Original>
 				<English>Minerals</English>
 				<French>Minéraux</French>
+				<Italian>Minerali</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_MINERALS_DESC">
 				<Original>Some minerals</Original>
 				<English>Some minerals</English>
 				<French>Des minéraux</French>
+				<Italian>Alcuni minerali</Italian>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_GOLD_NAME">
 				<Original>Gold Ingot</Original>
 				<English>Gold Ingot</English>
 				<French>Lingot d'or</French>
+				<Italian>Lingotto d'oro</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_GOLD_DESC">
 				<Original>Gold Ingot</Original>
 				<English>Gold Ingot</English>
 				<French>Lingot d'or</French>
+				<Italian>Lingotto d'oro</Italian>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_IRON_NAME">
 				<Original>Iron Ingot</Original>
 				<English>Iron Ingot</English>
 				<French>Lingot de fer</French>
+				<Italian>Lingotto di ferro</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_IRON_DESC">
 				<Original>Iron Ingot</Original>
 				<English>Iron Ingot</English>
 				<French>Lingot de fer</French>
+				<Italian>Lingotto di ferro</Italian>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_COPPER_NAME">
 				<Original>Copper Ingot</Original>
 				<English>Copper Ingot</English>
 				<French>Lingot de cuivre</French>
+				<Italian>Lingotto di rame</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_COPPER_DESC">
 				<Original>Copper Ingot</Original>
 				<English>Copper Ingot</English>
 				<French>Lingot de cuivre</French>
+				<Italian>Lingotto di rame</Italian>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_DIAMOND_NAME">
 				<Original>A Diamond</Original>
 				<English>A Diamond</English>
 				<French>Un Diamant</French>
+				<Italian>Un diamante</Italian>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_LEAD_NAME">
 				<Original>Lead Ingot</Original>
 				<English>Lead Ingot</English>
 				<French>Lingot de plomb</French>
+				<Italian>Lingotto di piombo</Italian>
 			</Key>
 			
 			<Key ID="STR_RPF_MINING_ROCKONE_NAME">
 				<Original>Rock 1</Original>
 				<English>Rock 1</English>
 				<French>Rocher 1</French>
+				<Italian>Roccia 1</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_ROCKTWO_NAME">
 				<Original>Rock 2</Original>
 				<English>Rock 2</English>
 				<French>Rocher 2</French>
+				<Italian>Roccia 2</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_ROCKTHREE_NAME">
 				<Original>Rock 3</Original>
 				<English>Rock 3</English>
 				<French>Rocher 3</French>
+				<Italian>Roccia 3</Italian>
 			</Key>
 		</Container>
 	</Package>

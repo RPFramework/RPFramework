@@ -6,11 +6,13 @@
 				<Original>Olive Plant</Original>
 				<English>Olive Plant</English>
 				<French>Plant d'olivier</French>
+				<Italian>Olivo</Italian>
 			</Key>
 			<Key ID="STR_RPF_FARMING_PLANTS_POPPY">
 				<Original>Poppy Plant</Original>
 				<English>Poppy Plant</English>
 				<French>Plant de pavot</French>
+				<Italian>Papavero</Italian>
 			</Key>
 		</Container>
 	</Package>

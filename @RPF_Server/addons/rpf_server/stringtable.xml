@@ -5,6 +5,7 @@
 			<Key ID="STR_RPF_ATM_INIT">
 				<Original># ATM: Module Loaded #</Original>
 				<English># ATM: Module Loaded #</English>
+				<Italian># ATM: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -12,10 +13,12 @@
 			<Key ID="STR_RPF_DELIVERY_INIT">
 				<Original># Delivery: Module Loaded #</Original>
 				<English># Delivery: Module Loaded #</English>
+				<Italian># Consegna: Modulo caricato #</Italian>
 			</Key>
 			<Key ID="STR_RPF_DELIVERY_DP">
 				<Original>Delivery Depot</Original>
 				<English>Delivery Depot</English>
+				<Italian>Deposito consegne</Italian>
 			</Key>
 		</Container>
 		
@@ -23,10 +26,12 @@
 			<Key ID="STR_RPF_EXAMPLE_INIT">
 				<Original># Example: Module Loaded #</Original>
 				<English># Example: Module Loaded #</English>
+				<Italian># Esempio: Modulo caricato #</Italian>
 			</Key>
 			<Key ID="STR_RPF_EXAMPLE_NEWPLAYER">
 				<Original>Example Module: %1's First time login on %2/%3/%4 %5:%6</Original>
 				<English>Example Module: %1's First time login on %2/%3/%4 %5:%6</English>
+				<Italian>Modulo d'esempio: primo login per %1 il %2/%3/%4 %5:%6</Italian>
 			</Key>
 		</Container>
 		
@@ -34,6 +39,7 @@
 			<Key ID="STR_RPF_FARMING_INIT">
 				<Original># Farming: Module Loaded #</Original>
 				<English># Farming: Module Loaded #</English>
+				<Italian># Agricoltura: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -41,6 +47,7 @@
 			<Key ID="STR_RPF_FISHING_INIT">
 				<Original># Fishing: Module Loaded #</Original>
 				<English># Fishing: Module Loaded #</English>
+				<Italian># Pesca: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -48,6 +55,7 @@
 			<Key ID="STR_RPF_GARAGE_INIT">
 				<Original># Garage: Module Loaded #</Original>
 				<English># Garage: Module Loaded #</English>
+				<Italian># Garage: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -55,6 +63,7 @@
 			<Key ID="STR_RPF_HOUSING_INIT">
 				<Original># Housing: Module Loaded #</Original>
 				<English># Housing: Module Loaded #</English>
+				<Italian># Alloggiamento: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -62,10 +71,12 @@
 			<Key ID="STR_RPF_JAIL_INIT">
 				<Original># Jail: Module Loaded #</Original>
 				<English># Jail: Module Loaded #</English>
+				<Italian># Prigione: Modulo caricato #</Italian>
 			</Key>
 			<Key ID="STR_RPF_JAIL_JAIL">
 				<Original>Jail</Original>
 				<English>Jail</English>
+				<Italian>Prigione</Italian>
 			</Key>
 		</Container>
 		
@@ -73,6 +84,7 @@
 			<Key ID="STR_RPF_LICENSES_INIT">
 				<Original># Licenses: Module Loaded #</Original>
 				<English># Licenses: Module Loaded #</English>
+				<Italian># Licenze: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -80,6 +92,7 @@
 			<Key ID="STR_RPF_METHLAB_INIT">
 				<Original># methLab: Module Loaded #</Original>
 				<English># methLab: Module Loaded #</English>
+				<Italian># Laboratori di metanfetamina: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -87,18 +100,22 @@
 			<Key ID="STR_RPF_MINING_INIT">
 				<Original># Mining: Module Loaded #</Original>
 				<English># Mining: Module Loaded #</English>
+				<Italian># Estrazione: Modulo caricato #</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_MINE">
 				<Original>Mine</Original>
 				<English>Mine</English>
+				<Italian>Estrai</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_TRADER">
 				<Original>Mineral trader</Original>
 				<English>Mineral trader</English>
+				<Italian>Commerciante di minerali</Italian>
 			</Key>
 			<Key ID="STR_RPF_MINING_PROCESSING">
 				<Original>Mineral processing</Original>
 				<English>Mineral processing</English>
+				<Italian>Processo minerali</Italian>
 			</Key>
 		</Container>
 		
@@ -106,6 +123,7 @@
 			<Key ID="STR_RPF_PHONE_INIT">
 				<Original># Phone: Module Loaded #</Original>
 				<English># Phone: Module Loaded #</English>
+				<Italian># Telefono: Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -113,14 +131,17 @@
 			<Key ID="STR_RPF_POLICEPLUS_INIT">
 				<Original># Police+: Module Loaded #</Original>
 				<English># Police+: Module Loaded #</English>
+				<Italian># Polizia+: Modulo caricato #</Italian>
 			</Key>
 			<Key ID="STR_RPF_POLICEPLUSDB_INIT">
 				<Original># Police+: Police Database Loaded #</Original>
 				<English># Police+: Police Database Loaded #</English>
+				<Italian># Polizia+: Database polizia caricato #</Italian>
 			</Key>
 			<Key ID="STR_RPF_POLICEPLUSDISPATCH_INIT">
 				<Original># Police+ Module Loaded #</Original>
 				<English># Police+ Module Loaded #</English>
+				<Italian># Polizia+ Modulo caricato #</Italian>
 			</Key>
 		</Container>
 		
@@ -128,34 +149,42 @@
 			<Key ID="STR_RPF_SHOPSYSTEM_INIT">
 				<Original># Shop System: Module Loaded #</Original>
 				<English># Shop System: Module Loaded #</English>
+				<Italian># Sistema del negozio : Modulo caricato #</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_VEHICLESTORE">
 				<Original>Vehicle Store</Original>
 				<English>Vehicle Store</English>
+				<Italian>Negozio veicoli</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_GENERALSTORE">
 				<Original>General Store</Original>
 				<English>General Store</English>
+				<Italian>Magazini generali</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_DRUGDEALER">
 				<Original>Drug Dealer</Original>
 				<English>Drug Dealer</English>
+				<Italian>Spacciatore</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_FARMSTORE">
 				<Original>Farm Store</Original>
 				<English>Farm Store</English>
+				<Italian>Negozio articoli agricoli</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_GUNSTORE">
 				<Original>Gun Store</Original>
 				<English>Gun Store</English>
+				<Italian>Negozio d'armi</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_POLSTORE">
 				<Original>Police Store</Original>
 				<English>Police Store</English>
+				<Italian>Negozio polizia</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_EMSSTORE">
 				<Original>EMS Store</Original>
 				<English>EMS Store</English>
+				<Italian>Negozio EMS</Italian>
 			</Key>
 		</Container>
 	</Package>
