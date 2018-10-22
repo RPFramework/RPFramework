@@ -6,291 +6,349 @@
 				<Original>Handcuffs</Original>
 				<English>Handcuffs</English>
 				<French>Menotes</French>
+				<Italian>Manette</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_HANDCUFFS_DESC">
 				<Original>Handcuffs</Original>
 				<English>Handcuffs</English>
 				<French>Menotes</French>
+				<Italian>Manette</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_HANDCUFFKEYS_NAME">
 				<Original>Handcuff Keys</Original>
 				<English>Handcuff Keys</English>
 				<French>Clef des Menotes</French>
+				<Italian>Chavi manette</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_HANDCUFFKEYS_DESC">
 				<Original>Handcuff Keys</Original>
 				<English>Handcuff Keys</English>
 				<French>Clef des Menotes</French>
+				<Italian>Chiavi manette</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_METH_NAME">
 				<Original>Meth</Original>
 				<English>Meth</English>
 				<French>Meth</French>
+				<Italian>Metanfetamina</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_METH_DESC">
 				<Original>1g of Meth</Original>
 				<English>1g of Meth</English>
 				<French>1g de Meth</French>
+				<Italian>1gr di metanfetamina</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_SALEMA_NAME">
 				<Original>Salema</Original>
 				<English>Salema</English>
 				<French>Salema</French>
+				<Italian>Sarpa salpa</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_SALEMA_DESC">
 				<Original>Salema Fish</Original>
 				<English>Salema Fish</English>
 				<French>Poisson de Salema</French>
+				<Italian>Pesce Sarpa salpa</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_POPPYSEED_NAME">
 				<Original>Poppy Seed</Original>
 				<English>Poppy Seed</English>
 				<French>Graine de pavot</French>
+				<Italian>Seme di papavero</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_POPPYSEED_DESC">
 				<Original>Poppy Seed</Original>
 				<English>Poppy Seed</English>
 				<French>Graine de pavot</French>
+				<Italian>Seme di papavero</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_POPPY_NAME">
 				<Original>Raw Opium</Original>
 				<English>Raw Opium</English>
 				<French>Opium Brut</French>
+				<Italian>Oppio grezzo</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_POPPY_DESC">
 				<Original>1g of Raw Opium</Original>
 				<English>1g of Raw Opium</English>
 				<French>1g d'opium Brut</French>
+				<Italian>1gr di oppio grezzo</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_OLIVESEED_NAME">
 				<Original>Olive Seed</Original>
 				<English>Olive Seed</English>
 				<French>Noyeau d'olive</French>
+				<Italian>Seme d'oliva</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_OLIVESEED_DESC">
 				<Original>Olive Seed</Original>
 				<English>Olive Seed</English>
 				<French>Noyeau d'olive</French>
+				<Italian>Seme d'oliva</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_OLIVES_NAME">
 				<Original>Black Olives</Original>
 				<English>Black Olives</English>
 				<French>Olive noires</French>
+				<Italian>Olive nere</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_OLIVES_DESC">
 				<Original>Black Olives</Original>
 				<English>Black Olives</English>
 				<French>Olive noires</French>
+				<Italian>Olive nere</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_ANTIBIOTICS_NAME">
 				<Original>Antibiotics</Original>
 				<English>Antibiotics</English>
 				<French>Antibiotiques</French>
+				<Italian>Antibiotici</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_ANTIBIOTICS_DESC">
 				<Original>Antibiotics</Original>
 				<English>Antibiotics</English>
 				<French>Antibiotiques</French>
+				<Italian>Antibiotici</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_PAINKILLERS_NAME">
 				<Original>Painkillers</Original>
 				<English>Painkillers</English>
 				<French>Antidouleurs</French>
+				<Italian>Antidolorifici</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_PAINKILLERS_DESC">
 				<Original>Painkillers</Original>
 				<English>Painkillers</English>
 				<French>Antidouleurs</French>
+				<Italian>Antidolorifici</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_VITAMINS_NAME">
 				<Original>Vitamins</Original>
 				<English>Vitamins</English>
 				<French>Vitamines</French>
+				<Italian>Vitamine</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_VITAMINS_DESC">
 				<Original>Vitamins</Original>
 				<English>Vitamins</English>
 				<French>Vitamines</French>
+				<Italian>Vitamine</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BATTERY_NAME">
 				<Original>Battery</Original>
 				<English>Battery</English>
 				<French>Batteries</French>
+				<Italian>Batterie</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BATTERY_DESC">
 				<Original>Battery</Original>
 				<English>Battery</English>
 				<French>Batteries</French>
+				<Italian>Batterie</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BAKEDBEANS_NAME">
 				<Original>Baked Beans</Original>
 				<English>Baked Beans</English>
 				<French>Haricots</French>
+				<Italian>Stufato di fagioli</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BAKEDBEANS_DESC">
 				<Original>Baked Beans</Original>
 				<English>Baked Beans</English>
 				<French>Haricots</French>
+				<Italian>Stufato di fagioli</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_WATERBOTTLE_NAME">
 				<Original>Water Bottle</Original>
 				<English>Water Bottle</English>
 				<French>Bouteille d'eau</French>
+				<Italian>Bottiglia d'acqua</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_WATERBOTTLE_DESC">
 				<Original>Water Bottle</Original>
 				<English>Water Bottle</English>
 				<French>Bouteille d'eau</French>
+				<Italian>Bottiglia d'acqua</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_CANTEEN_NAME">
 				<Original>Canteen</Original>
 				<English>Canteen</English>
 				<French>Gourde</French>
+				<Italian>Borraccia</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_CANTEEN_DESC">
 				<Original>Canteen</Original>
 				<English>Canteen</English>
 				<French>Gourde</French>
+				<Italian>Borraccia</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_CEREAL_NAME">
 				<Original>A Cereal Box</Original>
 				<English>A Cereal Box</English>
 				<French>Boite de céréales</French>
+				<Italian>Scatola di cereali</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_CEREAL_DESC">
 				<Original>A Cereal Box</Original>
 				<English>A Cereal Box</English>
 				<French>Boite de céréales</French>
+				<Italian>Scatola di cereali</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_RICEBOX_NAME">
 				<Original>A Rice Box</Original>
 				<English>A Rice Box</English>
 				<French>Boite de riz</French>
+				<Italian>Pacco di riso</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_RICEBOX_DESC">
 				<Original>A Rice Box</Original>
 				<English>A Rice Box</English>
 				<French>Boite de riz</French>
+				<Italian>Pacco di riso</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BUTANECANISTER_NAME">
 				<Original>A Butane Canister</Original>
 				<English>A Butane Canister</English>
 				<French>Bouteille de Butane</French>
+				<Italian>Contenitore di butano</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BUTANECANISTER_DESC">
 				<Original>A Butane Canister</Original>
 				<English>A Butane Canister</English>
 				<French>Bouteille de Butane</French>
+				<Italian>Contenitore di butano</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_GASCANISTER_NAME">
 				<Original>A Gas Canister</Original>
 				<English>A Gas Canister</English>
 				<French>Bouteille de gaz</French>
+				<Italian>Bomboletta di gas</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_GASCANISTER_DESC">
 				<Original>A Gas Canister</Original>
 				<English>A Gas Canister</English>
 				<French>Bouteille de gaz</French>
+				<Italian>Bomboletta di gas</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_MATCHES_NAME">
 				<Original>A Box Of Matches</Original>
 				<English>A Box Of Matches</English>
 				<French>Boite d'allumettes</French>
+				<Italian>Scatola di fiammiferi</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_MATCHES_DESC">
 				<Original>A Box Of Matches</Original>
 				<English>A Box Of Matches</English>
 				<French>Boite d'allumettes</French>
+				<Italian>Scatola di fiammiferi</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_CLEANERSPRAY_NAME">
 				<Original>Alcohol Based Cleaner</Original>
 				<English>Alcohol Based Cleaner</English>
 				<French>Nettoyant à base d'alcool</French>
+				<Italian>Detergente a base di alcol</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_CLEANERSPRAY_DESC">
 				<Original>Cleaner spray with a high level of ethanol</Original>
 				<English>Cleaner spray with a high level of ethanol</English>
 				<French>Spray nettoyant à haut degré d'éthanol</French>
+				<Italian>Spray detergente con un alto livello di etanolo</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BANANA_NAME">
 				<Original>Banana</Original>
 				<English>Banana</English>
 				<French>Banane</French>
+				<Italian>Banana</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BEER_NAME">
 				<Original>Beer</Original>
 				<English>Beer</English>
 				<French>Bière</French>
+				<Italian>Birra</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BULLETPARTS_NAME">
 				<Original>Bullet parts</Original>
 				<English>Bullet parts</English>
 				<French>Pièces de balle</French>
+				<Italian>Parti di proiettile</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_COKE_NAME">
 				<Original>1g of Cocaine</Original>
 				<English>1g of Cocaine</English>
 				<French>1g de Cocaïne</French>
+				<Italian>1gr di cocaina</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_COCALEAF_NAME">
 				<Original>A few coca leaves</Original>
 				<English>A few coca leaves</English>
 				<French>Quelques feuilles de coca</French>
+				<Italian>Qualche foglia di coca</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_COCASEED_NAME">
 				<Original>Coca seeds</Original>
 				<English>Coca seeds</English>
 				<French>Graine de coca</French>
+				<Italian>Semi di coca</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_BOLTCUTTER_NAME">
 				<Original>Bolt cutter</Original>
 				<English>Bolt cutter</English>
 				<French>Coupe-boulons</French>
+				<Italian>Taglierina per bulloni</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_DECODER_NAME">
 				<Original>Decoder</Original>
 				<English>Decoder</English>
 				<French>Décodeur</French>
+				<Italian>Decodificatore</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_WEAPONPARTS_NAME">
 				<Original>Weapon parts</Original>
 				<English>Weapon parts</English>
 				<French>Pièces d'armes</French>
+				<Italian>Parti armi</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_HEROIN_NAME">
 				<Original>1g of Heroin</Original>
 				<English>1g of Heroin</English>
 				<French>1g d'héroïne</French>
+				<Italian>1gr di eroina</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_OILSHALE_NAME">
 				<Original>Oil shale</Original>
 				<English>Oil shale</English>
 				<French>Schiste bitumineux</French>
+				<Italian>Scisti bituminosi</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_ORANGE_NAME">
 				<Original>Orange</Original>
 				<English>Orange</English>
 				<French>Orange</French>
+				<Italian>Arancia</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_SYRINGE_NAME">
 				<Original>Syringe</Original>
 				<English>Syringe</English>
 				<French>Seringue</French>
+				<Italian>Siringa</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_WEED_NAME">
 				<Original>1g of Cannabis</Original>
 				<English>1g of Cannabis</English>
 				<French>1g de Cannabis</French>
+				<Italian>1gr di Cannabis</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_WEEDSEED_NAME">
 				<Original>Cannabis seeds</Original>
 				<English>Cannabis seeds</English>
 				<French>Graine de Cannabis</French>
+				<Italian>Semi di cannabis</Italian>
 			</Key>
 			<Key ID="STR_RPF_ITEMS_WHISKY_NAME">
 				<Original>A bottle of whisky</Original>
 				<English>A bottle of whisky</English>
 				<French>Bouteille de whisky</French>
+				<Italian>Una bottiglia di whisky</Italian>
 			</Key>
 		</Container>
 	</Package>

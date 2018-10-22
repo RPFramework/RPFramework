@@ -6,16 +6,19 @@
 				<Original>Dummy MX Red</Original>
 				<English>Dummy MX Red</English>
 				<French>Maquillé MX Rouge</French>
+				<Italian>Manichino MX Rosso</Italian>
 			</Key>
 			<Key ID="STR_RPF_DUMMY_MX_B">
 				<Original>Dummy MX Blue</Original>
 				<English>Dummy MX Blue</English>
 				<French>Maquillé MX Bleu</French>
+				<Italian>Manichino MX Blu</Italian>
 			</Key>
 			<Key ID="STR_RPF_DUMMY_MX_MAGAZINE">
 				<Original>Non-Lethal Dummy Magazine</Original>
 				<English>Non-Lethal Dummy Magazine</English>
 				<French>Non Mortel Dummy Magazine</French>
+				<Italian>Manichino da munizioni non letale</Italian>
 			</Key>
 		</Container>
 	</Package>

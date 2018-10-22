@@ -604,14 +604,14 @@
 				<English>You can disable this example module in mission>functions>modules>CONFIG>fn_initModules.sqf by removing it from the modules array!</English>
 				<French>Vous pouvez désactiver ce module d'exemple dans mission>functions>modules>CONFIG>fn_initModules.sqf en le supprimant du tableau des modules!</French>
 				<Portuguese>Você pode desabilitar este módulo de teste em: mission>functions>modules>CONFIG>fn_initModules.sqf, simplesmente removendo-o do array de módulos!</Portuguese>
-				<Italian></Italian>
+				<Italian>Puoi disabilitare queso modulo d'esempio nel percorso: mission>functions>modules>CONFIG>fn_initModules.sqf, semplicemente rimuovendolo dall'array dei moduli!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_EXAMPLE_MENUACT">
 				<Original>Example</Original>
 				<English>Example</English>
 				<French>Exemple</French>
 				<Portuguese>Exemplo</Portuguese>
-				<Italian></Italian>
+				<Italian>Esempio</Italian>
 			</Key>
 		</Container>
 		<Container name="FARMING">
@@ -620,35 +620,35 @@
 				<English>Can't plant here</English>
 				<French>Vous ne pouvez pas planter ici</French>
 				<Portuguese>Você não pode plantar aqui</Portuguese>
-				<Italian></Italian>
+				<Italian>Non puoi piantare qui</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_DESTROY">
 				<Original>Destroy Plant</Original>
 				<English>Destroy Plant</English>
 				<French>Détruire les plantes</French>
 				<Portuguese>Destruir plantação</Portuguese>
-				<Italian></Italian>
+				<Italian>Distruggi pianta</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_HARVEST">
 				<Original>Harvest Plant</Original>
 				<English>Harvest Plant</English>
 				<French>Récolte</French>
 				<Portuguese>Colher planta(s)</Portuguese>
-				<Italian></Italian>
+				<Italian>Raccogli pianta</Italian>
 			</Key>
 			<Key ID="STR_RPF_FARMING_NOTFULLYGROWN">
 				<Original>This plant is not fully grown yet!</Original>
 				<English>This plant is not fully grown yet!</English>
 				<French>This plant is not fully grown yet!</French>
 				<Portuguese>Esta planta ainda não terminou de crescer!</Portuguese>
-				<Italian></Italian>
+				<Italian>Questa pianta non è ancora cresciuta completamente!</Italian>
 			</Key>
 			<Key ID="STR_RPF_FARMING_TOOCLOSE">
 				<Original>You can't plant a new plant so close to another one!</Original>
 				<English>You can't plant a new plant so close to another one!</English>
 				<French>You can't plant a new plant so close to another one!</French>
 				<Portuguese>Você não pode plantar uma nova planta perto de uma antiga!</Portuguese>
-				<Italian></Italian>
+				<Italian>Non puoi piantare una nuova pianta così vicino ad un'altra!</Italian>
 			</Key>
 		</Container>
 		<Container name="FISHING">
@@ -657,7 +657,7 @@
 				<English>Fishing net</English>
 				<French>Canne à pêche.</French>
 				<Portuguese>Rede de pesca</Portuguese>
-				<Italian></Italian>
+				<Italian>Rete da pesca</Italian>
 			</Key>
 		</Container>
 		<Container name="GARAGE">
@@ -666,35 +666,35 @@
 				<English>Garage</English>
 				<French>Garage</French>
 				<Portuguese>Garagem</Portuguese>
-				<Italian></Italian>
+				<Italian>Garage</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_GARAGE_FETCHCAR">
 				<Original>Fetch Car</Original>
 				<English>Fetch Car</English>
 				<French>Sortir le véhicule</French>
 				<Portuguese>Retirar Veículo</Portuguese>
-				<Italian></Italian>
+				<Italian>Prendi veicolo</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_GARAGE_BLOCKING">
 				<Original>Something is blocking the garage</Original>
 				<English>Something is blocking the garage</English>
 				<French>Quelque chose bloque le garage</French>
 				<Portuguese>Algo está bloqueando a retirada de veículos da garagem!</Portuguese>
-				<Italian></Italian>
+				<Italian>Qualcosa sta bloccando il garage</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_GARAGE_STOREVEHICLE">
 				<Original>Store Vehicle</Original>
 				<English>Store Vehicle</English>
 				<French>Garer le véhicule</French>
 				<Portuguese>Guardar Veículo</Portuguese>
-				<Italian></Italian>
+				<Italian>Parcheggia veicolo</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_GARAGE_OPENGARAGE">
 				<Original>Open Garage</Original>
 				<English>Open Garage</English>
 				<French>Ouvrir le Garage</French>
 				<Portuguese>Abrir Garagem</Portuguese>
-				<Italian></Italian>
+				<Italian>Apri garage</Italian>
 			</Key>
 		</Container>
 		<Container name="HOUSING">
@@ -703,145 +703,145 @@
 				<English>For sale:</English>
 				<French>A vendre:</French>
 				<Portuguese>A venda:</Portuguese>
-				<Italian></Italian>
+				<Italian>Da vendere:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_NO">
 				<Original>No</Original>
 				<English>No</English>
 				<French>Non</French>
 				<Portuguese>Não</Portuguese>
-				<Italian></Italian>
+				<Italian>No</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_PRICE">
 				<Original>Price:</Original>
 				<English>Price:</English>
 				<French>Prix:</French>
 				<Portuguese>Preço:</Portuguese>
-				<Italian></Italian>
+				<Italian>Prezzo:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_BUY">
 				<Original>Buy</Original>
 				<English>Buy</English>
 				<French>Acheter</French>
 				<Portuguese>Comprar</Portuguese>
-				<Italian></Italian>
+				<Italian>Compra</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_NOTFORSALE">
 				<Original>Currently not for sale</Original>
 				<English>Currently not for sale</English>
 				<French>Pas à vendre</French>
 				<Portuguese>Inativo para venda no momento</Portuguese>
-				<Italian></Italian>
+				<Italian>Non è in vendita al momento</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_OPENCONTAINER">
  				<Original>Open Container</Original>
  				<English>Open Container</English>
 				<Portuguese>Recipiente Aberto</Portuguese>
-				<Italian></Italian>
+				<Italian>Apri contenitore</Italian>
  			</Key>
  			<Key ID="STR_RPF_MODULES_HOUSING_OPENTRUNK">
  				<Original>Open Trunk</Original>
  				<English>Open Trunk</English>
 				<Portuguese>Inventario aberto</Portuguese>
-				<Italian></Italian>
+				<Italian>Apri baule</Italian>
  			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_PRICEMANAGE">
 				<Original>Price</Original>
 				<English>Price</English>
 				<French>Prix</French>
 				<Portuguese>Preço</Portuguese>
-				<Italian></Italian>
+				<Italian>Prezzo</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_SELL">
 				<Original>Sell</Original>
 				<English>Sell</English>
 				<French>Vendre</French>
 				<Portuguese>Vender</Portuguese>
-				<Italian></Italian>
+				<Italian>Vendi</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_STOPSELLING">
 				<Original>Stop selling</Original>
 				<English>Stop selling</English>
 				<French>Arrêter vente</French>
 				<Portuguese>Encerrar vendas</Portuguese>
-				<Italian></Italian>
+				<Italian>Interrompi vendita</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_SETPRICE">
 				<Original>Set price</Original>
 				<English>Set price</English>
 				<French>Définir le prix</French>
 				<Portuguese>Determinar preço</Portuguese>
-				<Italian></Italian>
+				<Italian>Imposta prezzo</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_NOTENOUGHBANK">
 				<Original>Not enough money in your bank account</Original>
 				<English>Not enough money in your bank account</English>
 				<French>Pas assez sur votre compte</French>
 				<Portuguese>Não há dinheiro suficiente em sua conta bancária</Portuguese>
-				<Italian></Italian>
+				<Italian>Denaro insufficiente sul tuo conto bancario</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_WAIT">
 				<Original>Please wait for a couple of seconds...</Original>
 				<English>Please wait for a couple of seconds...</English>
 				<French>Patienter quelques secondes...</French>
 				<Portuguese>Por favor, aguarde...</Portuguese>
-				<Italian></Italian>
+				<Italian>Per favore, attendi qualche secondo...</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_MANAGESELL">
 				<Original>Manage Sell</Original>
 				<English>Manage Sell</English>
 				<French>Gérer la vente</French>
 				<Portuguese>Gerenciar Venda</Portuguese>
-				<Italian></Italian>
+				<Italian>Gestisci vendita</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_LOCK">
 				<Original>Lock</Original>
 				<English>Lock</English>
 				<French>Verouiller</French>
 				<Portuguese>Trancar</Portuguese>
-				<Italian></Italian>
+				<Italian>Blocca</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_UNLOCK">
 				<Original>Unlock</Original>
 				<English>Unlock</English>
 				<French>Déverouiller</French>
 				<Portuguese>Destrancar</Portuguese>
-				<Italian></Italian>
+				<Italian>Sblocca</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_HINFO">
 				<Original>House Info</Original>
 				<English>House Info</English>
 				<French>Information sur maison</French>
 				<Portuguese>Informações da Casa</Portuguese>
-				<Italian></Italian>
+				<Italian>Info casa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_INVALIDPRICE">
 				<Original>Invalid price!</Original>
 				<English>Invalid price!</English>
 				<French>Prix incorrect!</French>
 				<Portuguese>Preço inválido!</Portuguese>
-				<Italian></Italian>
+				<Italian>Prezzo invalido!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_HOUSING_CURFORSALE">
 				<Original>Currently for sale</Original>
 				<English>Currently for sale</English>
 				<French>En vente</French>
 				<Portuguese>À venda no momento</Portuguese>
-				<Italian></Italian>
+				<Italian>In vendita</Italian>
 			</Key>
 			<Key ID="STR_RPF_HOUSING_WELCOME">
 				<Original>Welcome to your brand new house!</Original>
 				<English>Welcome to your brand new house!</English>
 				<French>Welcome to your brand new house!</French>
 				<Portuguese>Seja bem-vindo à sua nova casa!</Portuguese>
-				<Italian></Italian>
+				<Italian>Benvenuto nella tua nuova casa!</Italian>
 			</Key>
 			<Key ID="STR_RPF_HOUSING_RECEIVEDMONEY">
 				<Original>You have received money!</Original>
 				<English>You have received money!</English>
 				<French>You have received money!</French>
 				<Portuguese>Você recebeu o dinheiro!</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai ricevuto dei soldi!</Italian>
 			</Key>
 		</Container>
 		<Container name="JAIL">
@@ -850,112 +850,112 @@
 				<English>Free</English>
 				<French>Libérer</French>
 				<Portuguese>Liberar</Portuguese>
-				<Italian></Italian>
+				<Italian>Libera</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_SECURELOCK">
 				<Original>Secure Jail Lock</Original>
 				<English>Secure Jail Lock</English>
 				<French>Verrouiller la prison</French>
 				<Portuguese>Bloquear a prisão</Portuguese>
-				<Italian></Italian>
+				<Italian>Blocca la prigione</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_HACK">
 				<Original>Hack</Original>
 				<English>Hack</English>
 				<French>Pirater</French>
 				<Portuguese>Hack</Portuguese>
-				<Italian></Italian>
+				<Italian>Hackera</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_TIMEMINS">
 				<Original>Time (Minutes):</Original>
 				<English>Time (Minutes):</English>
 				<French>Temps (Minutes):</French>
 				<Portuguese>Tempo (Minutos):</Portuguese>
-				<Italian></Italian>
+				<Italian>Tempo (minuti):</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_REASON">
 				<Original>Reason:</Original>
 				<English>Reason:</English>
 				<French>Raison:</French>
 				<Portuguese>Motivo:</Portuguese>
-				<Italian></Italian>
+				<Italian>Motivo:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_CONFIRM">
 				<Original>Confirm</Original>
 				<English>Confirm</English>
 				<French>Confirmer</French>
 				<Portuguese>Confirmar</Portuguese>
-				<Italian></Italian>
+				<Italian>Conferma</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_TIMELEFT">
 				<Original>Time left in jail: %1 minutes. Reason: %2</Original>
 				<English>Time left in jail: %1 minutes. Reason: %2</English>
 				<French>Temps restant d'incarcération: %1 minutes. Raison: %2</French>
 				<Portuguese>Tempo restante: %1min. Motivo: %2</Portuguese>
-				<Italian></Italian>
+				<Italian>Tempo rimanente in prigione: %1 minuti. Motivo: %2</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_HACKINGONE">
 				<Original>Hacking.</Original>
 				<English>Hacking.</English>
 				<French>Piratage.</French>
 				<Portuguese>Hacking.</Portuguese>
-				<Italian></Italian>
+				<Italian>Hackerando.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_HACKINGTWO">
 				<Original>Hacking..</Original>
 				<English>Hacking..</English>
 				<French>Piratage..</French>
 				<Portuguese>Hacking..</Portuguese>
-				<Italian></Italian>
+				<Italian>Hackerando..</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_HACKINGTHREE">
 				<Original>Hacking...</Original>
 				<English>Hacking...</English>
 				<French>Piratage...</French>
 				<Portuguese>Hacking...</Portuguese>
-				<Italian></Italian>
+				<Italian>Hackerando...</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_SUCCESS">
 				<Original>Success!</Original>
 				<English>Success!</English>
 				<French>Effectué!</French>
 				<Portuguese>Pronto!</Portuguese>
-				<Italian></Italian>
+				<Italian>Effettuato!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_ERROR">
 				<Original>Error</Original>
 				<English>Error</English>
 				<French>Erreur</French>
 				<Portuguese>Error</Portuguese>
-				<Italian></Italian>
+				<Italian>Errore</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_JBALERT">
 				<Original>&lt;t color='#4265FF' size='1.9' align='center'&gt;DISPATCH:&lt;br /&gt;&lt;/t&gt;&lt;t color='#6682FF' size='1.5'&gt;There is a jailbreak going on!&lt;/t&gt;</Original>
 				<English>&lt;t color='#4265FF' size='1.9' align='center'&gt;DISPATCH:&lt;br /&gt;&lt;/t&gt;&lt;t color='#6682FF' size='1.5'&gt;There is a jailbreak going on!&lt;/t&gt;</English>
 				<French>&lt;t color='#4265FF' size='1.9' align='center'&gt;DISPATCH:&lt;br /&gt;&lt;/t&gt;&lt;t color='#6682FF' size='1.5'&gt;Une tentative d'évasion est en cours!&lt;/t&gt;</French>
 				<Portuguese>&lt;t color='#4265FF' size='1.9' align='center'&gt;DESPACHO:&lt;br /&gt;&lt;/t&gt;&lt;t color='#6682FF' size='1.5'&gt;Há uma fuga da prisão ocorrendo neste exato momento!&lt;/t&gt;</Portuguese>
-				<Italian></Italian>
+				<Italian>&lt;t color='#4265FF' size='1.9' align='center'&gt;DISPATCH:&lt;br /&gt;&lt;/t&gt;&lt;t color='#6682FF' size='1.5'&gt;C'è un evasione dal carcere in corso!&lt;/t&gt;</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_ARREST">
 				<Original>Arrest</Original>
 				<English>Arrest</English>
 				<French>Arrêter</French>
 				<Portuguese>Prender na prisão</Portuguese>
-				<Italian></Italian>
+				<Italian>Fermare</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_BREAKOUT">
 				<Original>Breakout</Original>
 				<English>Breakout</English>
 				<French>S'échapper</French>
 				<Portuguese>Fugir</Portuguese>
-				<Italian></Italian>
+				<Italian>Fuggire</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_JAIL_FREEPRISONERS">
 				<Original>Free prisoners</Original>
 				<English>Free prisoners</English>
 				<French>Libérer les prisoniers</French>
 				<Portuguese>Libertar detentos</Portuguese>
-				<Italian></Italian>
+				<Italian>Libera prigionieri</Italian>
 			</Key>
 		</Container>
 		<Container name="METHLAB">
@@ -964,168 +964,168 @@
 				<English>Chemistry Table</English>
 				<French>Livre de chimie.</French>
 				<Portuguese>Mesa de experimentos</Portuguese>
-				<Italian></Italian>
+				<Italian>Tavolo di chimica</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_COOK">
 				<Original>Cook</Original>
 				<English>Cook</English>
 				<French>Préparer</French>
 				<Portuguese>Preparar Meta.</Portuguese>
-				<Italian></Italian>
+				<Italian>Cucina</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_ABORT">
 				<Original>Abort</Original>
 				<English>Abort</English>
 				<French>Arrêter</French>
 				<Portuguese>Abortar</Portuguese>
-				<Italian></Italian>
+				<Italian>Abbandona</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_ADDITEM">
 				<Original>Add Item &gt;&gt;&gt;</Original>
 				<English>Add Item &gt;&gt;&gt;</English>
 				<French>Ajouter un composant &gt;&gt;&gt;</French>
 				<Portuguese>Adicionar item &gt;&gt;&gt;</Portuguese>
-				<Italian></Italian>
+				<Italian>Aggiungi oggetto &gt;&gt;&gt;</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_REMOVEITEM">
 				<Original>&lt;&lt;&lt; Remove Item</Original>
 				<English>&lt;&lt;&lt; Remove Item</English>
 				<French>&lt;&lt;&lt; Enlever un composant</French>
 				<Portuguese>&lt;&lt;&lt; Remover item</Portuguese>
-				<Italian></Italian>
+				<Italian>&lt;&lt;&lt; Rimuovi oggetto</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_PRODUCTS">
 				<Original>Products</Original>
 				<English>Products</English>
 				<French>Produit</French>
 				<Portuguese>Produtos</Portuguese>
-				<Italian></Italian>
+				<Italian>Prodotti</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_YOURITEMS">
 				<Original>Your Items</Original>
 				<English>Your Items</English>
 				<French>Vos composants</French>
 				<Portuguese>Seus itens</Portuguese>
-				<Italian></Italian>
+				<Italian>Tuoi oggetti</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_LABSITEMS">
 				<Original>Meth Lab's Items</Original>
 				<English>Meth Lab's Items</English>
 				<French>Composants disponibles</French>
 				<Portuguese>Itens do laboratório de meta.</Portuguese>
-				<Italian></Italian>
+				<Italian>Oggetti laboratorio metanfetamina</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_TAKEPRODUCT">
 				<Original>Take Product</Original>
 				<English>Take Product</English>
 				<French>Prendre produit</French>
 				<Portuguese>Pegar Produto</Portuguese>
-				<Italian></Italian>
+				<Italian>Prendi prodotto</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_OPENLAB">
 				<Original>Open Lab</Original>
 				<English>Open Lab</English>
 				<French>Ouvrir labo</French>
 				<Portuguese>Abrir Laboratório de meta.</Portuguese>
-				<Italian></Italian>
+				<Italian>Apri laboratorio</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_STATUS_NTA">
 				<Original>STATUS: Nothing add!</Original>
 				<English>STATUS: Nothing add!</English>
 				<French>STATUT: Rien ajouté!</French>
 				<Portuguese>STATUS: Nada adicionado!</Portuguese>
-				<Italian></Italian>
+				<Italian>STATO: Niente aggiunto!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_STATUS_NEI">
 				<Original>STATUS: Not enough ingredients!</Original>
 				<English>STATUS: Not enough ingredients!</English>
 				<French>STATUT: Pas assez d'ingredients!</French>
 				<Portuguese>STATUS: Não há ingredientes suficientes!</Portuguese>
-				<Italian></Italian>
+				<Italian>STATO: Ingredienti insufficienti!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_STATUS_NTR">
 				<Original>STATUS: Nothing to remove!</Original>
 				<English>STATUS: Nothing to remove!</English>
 				<French>STATUT: Rien à enlever!</French>
 				<Portuguese>STATUS: Nada para remover!</Portuguese>
-				<Italian></Italian>
+				<Italian>STATO: Niente da rimuovere!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_STATUS_NTT">
 				<Original>STATUS: Nothing to take!</Original>
 				<English>STATUS: Nothing to take!</English>
 				<French>STATUT: Rien à prendre!</French>
 				<Portuguese>STATUS: Nada para pegar!</Portuguese>
-				<Italian></Italian>
+				<Italian>STATO: Niente da prendere!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_STATUS_READY">
 				<Original>STATUS: Ready</Original>
 				<English>STATUS: Ready</English>
 				<French>STATUS: Prêt</French>
-				<Portuguese>STATUS: Pronto!</Portuguese>
-				<Italian></Italian>
+				<Portuguese>STATUS: Pronto</Portuguese>
+				<Italian>STATO: Pronto</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_SUCCESS">
 				<Original>Success!</Original>
 				<English>Success!</English>
 				<French>Réussite!</French>
 				<Portuguese>Pronto!</Portuguese>
-				<Italian></Italian>
+				<Italian>Riuscito!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_APPLYINGHEAT">
 				<Original>You're applying heat...</Original>
 				<English>You're applying heat...</English>
 				<French>Vous chauffez...</French>
 				<Portuguese>Você está aplicando mais calor...</Portuguese>
-				<Italian></Italian>
+				<Italian>Stai applicando calore...</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_COOKING">
 				<Original>Cooking</Original>
 				<English>Cooking</English>
 				<French>Cuisson</French>
 				<Portuguese>Preparando</Portuguese>
-				<Italian></Italian>
+				<Italian>Cucinando</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_MSGONE">
 				<Original>You accidentally nudge the flask enough to mess up the cooking process.</Original>
 				<English>You accidentally nudge the flask enough to mess up the cooking process.</English>
 				<French>Vous mettez un petit coup dans le ballon.. juste assez pour rater la cuisson.</French>
 				<Portuguese>Você cutucou o frasco de modo que, acidentalmente, a preparação da meta. saiu de seu controle.</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai spinto accidentalmente la fiaschetta, abbastanza da rovinare il processo di cottura.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_MSGTWO">
 				<Original>Some dirt has gone into the flask and it's starting to produce smoke and flames.</Original>
 				<English>Some dirt has gone into the flask and it's starting to produce smoke and flames.</English>
 				<French>De la poussuière est entré dans le ballon et commence à produire de la la fumée et des flammes.</French>
 				<Portuguese>Parece que alguma sujeira entrou no frasco e iniciou uma pequena fumaça juntamente a chamas.</Portuguese>
-				<Italian></Italian>
+				<Italian>Qualche sporcizia è penetrata nella fiaschetta e sta iniziando a produrre fumo e fiamme.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_MSGTHREE">
 				<Original>Applying heat doesn't start the chemical reaction and only burns the ingredients. Seems like an unlucky chemical error.</Original>
 				<English>Applying heat doesn't start the chemical reaction and only burns the ingredients. Seems like an unlucky chemical error.</English>
 				<French>Chauffer ne fait pas réagir comme prévu et brule tous les ingrédients. Il semblerait que vous ayez fait une erreur.</French>
 				<Portuguese>Aplicar mais calor não inicia o processo químico, mas sim queima todos os ingredientes. Parece que você faltou nas aulas de química.</Portuguese>
-				<Italian></Italian>
+				<Italian>L'applicazione di calore non ha avviato la reazione chimica ma bruciato semplicemente gli ingredienti. Sembra uno sfortunato errore.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_CHECKMSGONE">
 				<Original>You managed to produce some green liquid like substance that is now about to catch fire. This is certainly not what you wanted.</Original>
 				<English>You managed to produce some green liquid like substance that is now about to catch fire. This is certainly not what you wanted.</English>
 				<French>Vous commencez à produire une sorte de liquide vert, il faut maintenant chauffer. Ce n'est certainement pas ce que tu voulais.</French>
 				<Portuguese>Parece que você produziu uma espécie de líquido verde, uma substância que agora pôs fogo em seu experimento. Isto certamente não é o que você queria.</Portuguese>
-				<Italian></Italian>
+				<Italian>Sei riuscito a produrre un liquido verde che sta per prendere fuoco. Non è certamente quello che volevi.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_CHECKMSGTWO">
 				<Original>Green smoke starts coming out of the cooking flask and some dark green slime is left in the flask. This is certainly not what you wanted.</Original>
 				<English>Green smoke starts coming out of the cooking flask and some dark green slime is left in the flask. This is certainly not what you wanted.</English>
 				<French>De la fumée verte s'échappe du ballon et un dépot gluant vert sombre est précipité au fond. Ce n'est certainement pas ce que tu voulais.</French>
 				<Portuguese>Uma fumaça verde começa a sair do frasco de preparação e você identifica um certo lodo em seu fundo. Isto certamente não é o que você queria.</Portuguese>
-				<Italian></Italian>
+				<Italian>Il fumo verde inizia a uscire dalla fiaschetta e nel fiasco rimane della melma verde scuro.Non è certamente quello che volevi.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_METHLAB_CHECKMSGTHREE">
 				<Original>You can notice flames and green smoke coming out of the cooking flask and some burned substance is left in the flask. This is certainly not what you wanted.</Original>
 				<English>You can notice flames and green smoke coming out of the cooking flask and some burned substance is left in the flask. This is certainly not what you wanted.</English>
 				<French>Vous pouvez constater des flammes et de la fumée verte s'échappant du ballon de plus un précipité brulé réside au fond. Ce n'est certainement pas ce que tu voulais.</French>
 				<Portuguese>Seu experimento pega fogo e uma fumaça verde começa a sair de seu frasco, descobrindo assim, uma substância queimada em seu fundo. Isto certamente não é o que você queria.</Portuguese>
-				<Italian></Italian>
+				<Italian>Noti fiamme e fumo verde che escono dalla fiaschetta di cottura. Una sostanza bruciata viene rilasciata nella fiaschetta. Non è certamente quello che volevi.</Italian>
 			</Key>
 		</Container>
 		<Container name="MINING">
@@ -1134,42 +1134,42 @@
 				<English>Process</English>
 				<French>Traitement</French>
 				<Portuguese>Processar</Portuguese>
-				<Italian></Italian>
+				<Italian>Processa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_MINING_UNEQUIP">
 				<Original>Unequip Grinder</Original>
 				<English>Unequip Grinder</English>
 				<French>Démonter le broyeur</French>
 				<Portuguese>Desequipar Mineiradora</Portuguese>
-				<Italian></Italian>
+				<Italian>Disequipaggia macina</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_MINING_GRIND">
 				<Original>Grind</Original>
 				<English>Grind</English>
 				<French>Broyer</French>
 				<Portuguese>Mineirar</Portuguese>
-				<Italian></Italian>
+				<Italian>Macina</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_MINING_PROCESSING">
 				<Original>Processing</Original>
 				<English>Processing</English>
 				<French>En cours de traitement</French>
 				<Portuguese>Processando</Portuguese>
-				<Italian></Italian>
+				<Italian>Processando</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_MINING_YOURMINERALS">
 				<Original>You have %1 minerals</Original>
 				<English>You have %1 minerals</English>
 				<French>Vous avez %1 minéral(aux)</French>
 				<Portuguese>Você tem %1 minerais</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai %1 minerali</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_MINING_YOUGOT">
 				<Original>You got a %1</Original>
 				<English>You got a %1</English>
 				<French>Vous obtenez de %1</French>
 				<Portuguese>Você pegou um(a) %1</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai preso un %1</Italian>
 			</Key>
 		</Container>
 		<Container name="PHONE">
@@ -1178,119 +1178,119 @@
 				<English>From:</English>
 				<French>Expéditeur:</French>
 				<Portuguese>De:</Portuguese>
-				<Italian></Italian>
+				<Italian>Da:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_COMPOSE">
 				<Original>Compose a message</Original>
 				<English>Compose a message</English>
 				<French>Composez un message</French>
 				<Portuguese>Escrever mensagem</Portuguese>
-				<Italian></Italian>
+				<Italian>Componi messaggio</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_SEND">
 				<Original>Send</Original>
 				<English>Send</English>
 				<French>Envoyer</French>
 				<Portuguese>Enviar</Portuguese>
-				<Italian></Italian>
+				<Italian>Invia</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_MSGS">
 				<Original>Messages</Original>
 				<English>Messages</English>
 				<French>Messages</French>
 				<Portuguese>Mensagens</Portuguese>
-				<Italian></Italian>
+				<Italian>Messaggi</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_ADDUPDATECONT">
 				<Original>Add/Update Contact</Original>
 				<English>Add/Update Contact</English>
 				<French>Ajouter/modifier un contact</French>
 				<Portuguese>Add/Atualizar Contato</Portuguese>
-				<Italian></Italian>
+				<Italian>Aggiungi/Aggiorna contatto</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NAME">
 				<Original>Name</Original>
 				<English>Name</English>
 				<French>Nom</French>
 				<Portuguese>Nome</Portuguese>
-				<Italian></Italian>
+				<Italian>Nome</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NUMBER">
 				<Original>Number</Original>
 				<English>Number</English>
 				<French>Numéro</French>
 				<Portuguese>Número</Portuguese>
-				<Italian></Italian>
+				<Italian>Numero</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_CONTACT">
 				<Original>Contact</Original>
 				<English>Contact</English>
 				<French>Contact</French>
 				<Portuguese>Contato</Portuguese>
-				<Italian></Italian>
+				<Italian>Contatto</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_SENDANON">
 				<Original>Send Anonymously</Original>
 				<English>Send Anonymously</English>
 				<French>Envoyer anonymement</French>
 				<Portuguese>Enviar anonimamente</Portuguese>
-				<Italian></Italian>
+				<Italian>Invia anonimamente</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_MSGSENT">
 				<Original>Message sent.</Original>
 				<English>Message sent.</English>
 				<French>Message envoyé</French>
 				<Portuguese>Mensagem enviada.</Portuguese>
-				<Italian></Italian>
+				<Italian>Messaggio inviato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NNOTAVAIL">
 				<Original>You can not reach this number right now.</Original>
 				<English>You can not reach this number right now.</English>
 				<French>Vous ne pouvez pas contacter ce numéro pour l'instant</French>
 				<Portuguese>Você não pode ligar para este número no momento.</Portuguese>
-				<Italian></Italian>
+				<Italian>Questo numero non è al momento raggiungibile</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NEWEMERGMSG">
 				<Original>New 911 Message!</Original>
 				<English>New 911 Message!</English>
 				<French>Nouveau message au 17!</French>
 				<Portuguese>Nova mensagem de emergência!</Portuguese>
-				<Italian></Italian>
+				<Italian>Nuovo messaggio dal 911</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NEWMSG">
 				<Original>New Message!</Original>
 				<English>New Message!</English>
 				<French>Nouveau message!</French>
 				<Portuguese>Nova mensagem!</Portuguese>
-				<Italian></Italian>
+				<Italian>Nuovo messaggio!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_TITLE">
 				<Original>Phone</Original>
 				<English>Phone</English>
-				<French>Téléphone!</French>
+				<French>Téléphone</French>
 				<Portuguese>Telefone</Portuguese>
-				<Italian></Italian>
+				<Italian>Telefono</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_INVNMBR">
 				<Original>Invalid Number</Original>
 				<English>Invalid Number</English>
 				<French>Numéro incorrect</French>
 				<Portuguese>Número inválido</Portuguese>
-				<Italian></Italian>
+				<Italian>Numero non valido</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_CONTACTUPDATED">
 				<Original>Contact updated.</Original>
 				<English>Contact updated.</English>
-				<French>Contact mis à jour</French>
+				<French>Contact mis à jour.</French>
 				<Portuguese>Lista de contatos atualizada.</Portuguese>
-				<Italian></Italian>
+				<Italian>Contatto aggiornato.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_CONTACTADDED">
 				<Original>Contact added.</Original>
 				<English>Contact added.</English>
 				<French>Contact ajouté.</French>
 				<Portuguese>Contato adicionado.</Portuguese>
-				<Italian></Italian>
+				<Italian>Contatto aggiunto</Italian>
 			</Key>
 		</Container>
 		<Container name="PLAYERNAMES">
@@ -1299,28 +1299,28 @@
 				<English>Name</English>
 				<French>Nom</French>
 				<Portuguese>Nome</Portuguese>
-				<Italian></Italian>
+				<Italian>Nome</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PLAYERNAMES_SET">
 				<Original>Set</Original>
 				<English>Set</English>
 				<French>Définir</French>
 				<Portuguese>Definir</Portuguese>
-				<Italian></Italian>
+				<Italian>Imposta</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PLAYERNAMES_MASKED">
 				<Original>Masked</Original>
 				<English>Masked</English>
 				<French>Masqué</French>
 				<Portuguese>Irreconhecível</Portuguese>
-				<Italian></Italian>
+				<Italian>Mascherato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PLAYERNAMES_SETNAME">
 				<Original>Set Name</Original>
 				<English>Set Name</English>
 				<French>Définir nom</French>
 				<Portuguese>Definir Nome</Portuguese>
-				<Italian></Italian>
+				<Italian>Imposta nome</Italian>
 			</Key>
 		</Container>
 		<Container name="POLICEPLUS">
@@ -1329,433 +1329,433 @@
 				<English>Unit:</English>
 				<French>Unité</French>
 				<Portuguese>Unidade:</Portuguese>
-				<Italian></Italian>
+				<Italian>Unità:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_CALLOUT">
 				<Original>Callout:</Original>
 				<English>Callout:</English>
-				<French>Appeler</French>
+				<French>Appeler:</French>
 				<Portuguese>Chamar:</Portuguese>
-				<Italian></Italian>
+				<Italian>Chiamare:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_ADDOFFICER">
 				<Original>Add officer</Original>
 				<English>Add officer</English>
 				<French>Ajouter un officier</French>
 				<Portuguese>Adicionar oficial</Portuguese>
-				<Italian></Italian>
+				<Italian>Aggiungi agente:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_REMOVEOFFICER">
 				<Original>Remove Officer</Original>
 				<English>Remove Officer</English>
 				<French>Enlever officier</French>
 				<Portuguese>Remover oficial</Portuguese>
-				<Italian></Italian>
+				<Italian>Rimuovi agente:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_REGUNIT">
 				<Original>Register Unit</Original>
 				<English>Register Unit</English>
 				<French>Choisir unité</French>
 				<Portuguese>Registrar unidade</Portuguese>
-				<Italian></Italian>
+				<Italian>Registra unità</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_UNREGUNIT">
 				<Original>UnRegister Unit</Original>
 				<English>UnRegister Unit</English>
 				<French>Retirer unité</French>
 				<Portuguese>Desregistrar unidade</Portuguese>
-				<Italian></Italian>
+				<Italian>Rimuovi unità</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_NAME">
 				<Original>Name</Original>
 				<English>Name</English>
 				<French>Nom</French>
 				<Portuguese>Nome</Portuguese>
-				<Italian></Italian>
+				<Italian>Nome</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_DESC">
 				<Original>Description</Original>
 				<English>Description</English>
 				<French>Description</French>
 				<Portuguese>Descrição</Portuguese>
-				<Italian></Italian>
+				<Italian>Descrizione</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_NEW">
 				<Original>New</Original>
 				<English>New</English>
 				<French>Nouveau</French>
 				<Portuguese>Novo</Portuguese>
-				<Italian></Italian>
+				<Italian>Nuovo</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_DONE">
 				<Original>Done</Original>
 				<English>Done</English>
 				<French>Effectué</French>
 				<Portuguese>Pronto</Portuguese>
-				<Italian></Italian>
+				<Italian>Fatto</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_ASSIGN">
 				<Original>Assign</Original>
 				<English>Assign</English>
 				<French>Affecter</French>
 				<Portuguese>Atribuir</Portuguese>
-				<Italian></Italian>
+				<Italian>Assegna</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_CALLER">
 				<Original>Caller:</Original>
 				<English>Caller:</English>
 				<French>Appelant</French>
 				<Portuguese>Chamador:</Portuguese>
-				<Italian></Italian>
+				<Italian>Chiamante:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_POLUNITS">
 				<Original>Police Units</Original>
 				<English>Police Units</English>
 				<French>Unités de police</French>
 				<Portuguese>Unidades Policiais</Portuguese>
-				<Italian></Italian>
+				<Italian>Unità di polizia</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_EMSUNITS">
 				<Original>EMS Units</Original>
 				<English>EMS Units</English>
 				<French>Unités médicales</French>
 				<Portuguese>Unidades médicas</Portuguese>
-				<Italian></Italian>
+				<Italian>Unità EMS</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_CSELECTIONS">
 				<Original>Clear selections</Original>
 				<English>Clear selections</English>
 				<French>Effacer les sélections</French>
 				<Portuguese>Limpar seleção</Portuguese>
-				<Italian></Italian>
+				<Italian>Cancella le selezioni</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MESSAGE">
 				<Original>Message</Original>
 				<English>Message</English>
 				<French>Message</French>
 				<Portuguese>Mensagem</Portuguese>
-				<Italian></Italian>
+				<Italian>Messaggio</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_POLICEDB">
 				<Original>Police Database</Original>
 				<English>Police Database</English>
 				<French>Base de donnée de la police</French>
 				<Portuguese>Banco de dados policial</Portuguese>
-				<Italian></Italian>
+				<Italian>Banca dati polizia</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_RUN">
 				<Original>Run</Original>
 				<English>Run</English>
 				<French>Exécuter</French>
 				<Portuguese>Executar</Portuguese>
-				<Italian></Italian>
+				<Italian>Esegui</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_ADD">
 				<Original>Add</Original>
 				<English>Add</English>
 				<French>Ajouter</French>
 				<Portuguese>Adicionar</Portuguese>
-				<Italian></Italian>
+				<Italian>Aggiungi</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_REM">
 				<Original>Remove</Original>
 				<English>Remove</English>
 				<French>Supprimer</French>
 				<Portuguese>Remover</Portuguese>
-				<Italian></Italian>
+				<Italian>Rimuovi</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_WANTED">
 				<Original>Wanted:</Original>
 				<English>Wanted:</English>
 				<French>Recherché:</French>
 				<Portuguese>Procurado:</Portuguese>
-				<Italian></Italian>
+				<Italian>Ricercato:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_PRIORS">
 				<Original>Priors</Original>
 				<English>Priors</English>
 				<French>Faits</French>
 				<Portuguese>Antecedentes</Portuguese>
-				<Italian></Italian>
+				<Italian>Precedenti</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_ADDAPRIOR">
 				<Original>Add a prior</Original>
 				<English>Add a prior</English>
 				<French>Ajouter un fait</French>
 				<Portuguese>Adicionar um antecedente</Portuguese>
-				<Italian></Italian>
+				<Italian>Aggiungi un precedente</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_ADDPRIOR">
 				<Original>Add prior</Original>
 				<English>Add prior</English>
 				<French>Ajouter fait(s)</French>
 				<Portuguese>Adicionar antecedente</Portuguese>
-				<Italian></Italian>
+				<Italian>Aggiungi precedente</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_SETWANTED">
 				<Original>Set wanted</Original>
 				<English>Set wanted</English>
 				<French>Lancer le mandat</French>
 				<Portuguese>Definir procurado</Portuguese>
-				<Italian></Italian>
+				<Italian>Imposta ricercato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_CWANTEDSTATUS">
 				<Original>Clear wanted status</Original>
 				<English>Clear wanted status</English>
 				<French>Stopper le mandat</French>
 				<Portuguese>Limpar estado de procurado</Portuguese>
-				<Italian></Italian>
+				<Italian>Rimuovi stato da ricercato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_NOTHINGSELECTED">
 				<Original>Nothing selected. First search for the criminal, then select their name from the box and then click the button.</Original>
 				<English>Nothing selected. First search for the criminal, then select their name from the box and then click the button.</English>
 				<French>Aucune sélection effectuée. Rechercher en premier lieu le criminel, sélectionner le nom dans la liste et ensuite clicker sur le bouton.</French>
 				<Portuguese>Nada selecionado. Primeiro busque pelo criminoso, em seguida selecione seu nome na caixa de nomes e então clique no botão para prosseguir.</Portuguese>
-				<Italian></Italian>
+				<Italian>Niente selezionato. Prima cerca il criminale, quindi seleziona il nome dalla casella e poi fai clic sul pulsante.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_CRIMEEMPTY">
 				<Original>Crime can't be empty.</Original>
 				<English>Crime can't be empty.</English>
 				<French>L'infraction soit être renseignée</French>
 				<Portuguese>O criminoso não pode ser adicionado sem ter cometido crimes. Selecione o crime cometido pelo mesmo.</Portuguese>
-				<Italian></Italian>
+				<Italian>Il crimine non può essere vuoto</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_PDB">
 				<Original>Police DB</Original>
 				<English>Police DB</English>
 				<French>Police DB</French>
 				<Portuguese>BD da Polícia</Portuguese>
-				<Italian></Italian>
+				<Italian>Banca dati polizia</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_DESCEMPTY">
 				<Original>Description can't be empty.</Original>
 				<English>Description can't be empty.</English>
 				<French>Renseigner la description</French>
 				<Portuguese>Adicionar um antecedente</Portuguese>
-				<Italian></Italian>
+				<Italian>La descrizione non può essere vuota</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_NOTWANTED">
 				<Original>Not wanted.</Original>
 				<English>Not wanted.</English>
 				<French>Non recherché</French>
 				<Portuguese>Não procurado.</Portuguese>
-				<Italian></Italian>
+				<Italian>Non ricercato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_NO">
 				<Original>No</Original>
 				<English>No</English>
 				<French>Non</French>
 				<Portuguese>Não</Portuguese>
-				<Italian></Italian>
+				<Italian>No</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_DLOCATION">
 				<Original>Dispatch Location</Original>
 				<English>Dispatch Location</English>
 				<French>Central</French>
 				<Portuguese>Local de despacho</Portuguese>
-				<Italian></Italian>
+				<Italian>Luogo dispatch</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_UNITBUSY">
 				<Original>This unit is already busy.</Original>
 				<English>This unit is already busy.</English>
 				<French>Cette unité est occupée</French>
 				<Portuguese>Esta unidade está ocupado no momento.</Portuguese>
-				<Italian></Italian>
+				<Italian>Questa unità è gia occupata</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_DISPATCH">
 				<Original>Dispatch</Original>
 				<English>Dispatch</English>
 				<French>Dispatch</French>
 				<Portuguese>Despacho</Portuguese>
-				<Italian></Italian>
+				<Italian>Dispatch</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MANAGEUNIT">
 				<Original>Manage Unit</Original>
 				<English>Manage Unit</English>
 				<French>Gèrer les unités</French>
 				<Portuguese>Gerenciar unidades</Portuguese>
-				<Italian></Italian>
+				<Italian>Gestisci unità</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_CHOOSEAROLE">
 				<Original>Choose a role!</Original>
 				<English>Choose a role!</English>
 				<French>Sélectionner un rôle!</French>
 				<Portuguese>Selecione uma função!</Portuguese>
-				<Italian></Italian>
+				<Italian>Scegli un ruolo!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_DNOTIFIED">
 				<Original>Hope you have a safe shift! Dispatch has been notified of your presence</Original>
 				<English>Hope you have a safe shift! Dispatch has been notified of your presence</English>
 				<French>Espérons que vous ayez une planque. Le central est informé de votre présence</French>
 				<Portuguese>Espero que você tenha uma transferência segura! O despacho já foi notificado de sua presença</Portuguese>
-				<Italian></Italian>
+				<Italian>Spero che tu abbia un nascondiglio sicuro! La centrale è stata notificata della tua presenza</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_ALREADYASSIGNED">
 				<Original>Already assigned</Original>
 				<English>Already assigned</English>
 				<French>Déjà affecté</French>
 				<Portuguese>Já atribuído</Portuguese>
-				<Italian></Italian>
+				<Italian>Già assegnato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_NOTASSIGNED">
 				<Original>Not assigned</Original>
 				<English>Not assigned</English>
 				<French>Pas affecté</French>
 				<Portuguese>Não atribuído</Portuguese>
-				<Italian></Italian>
+				<Italian>Non assegnato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_PATROL">
 				<Original>Patrol</Original>
 				<English>Patrol</English>
 				<French>Patrouille</French>
 				<Portuguese>Patrulha</Portuguese>
-				<Italian></Italian>
+				<Italian>Pattuglia</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_SUPERVISOR">
 				<Original>Supervisor</Original>
 				<English>Supervisor</English>
 				<French>Superviseur</French>
 				<Portuguese>Supervisor</Portuguese>
-				<Italian></Italian>
+				<Italian>Supervisore</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_DETECTIVE">
 				<Original>Detective</Original>
 				<English>Detective</English>
 				<French>Policier</French>
 				<Portuguese>Detetive</Portuguese>
-				<Italian></Italian>
+				<Italian>Detective</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_FEDERAL">
 				<Original>Federal</Original>
 				<English>Federal</English>
 				<French>PSIG</French>
 				<Portuguese>Policial Federal</Portuguese>
-				<Italian></Italian>
+				<Italian>Federale</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_SWAT">
 				<Original>SWAT</Original>
 				<English>SWAT</English>
 				<French>RAID</French>
 				<Portuguese>BOPE</Portuguese>
-				<Italian></Italian>
+				<Italian>SWAT</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_AMBULANCE">
 				<Original>Ambulance</Original>
 				<English>Ambulance</English>
 				<French>Ambulance</French>
 				<Portuguese>Ambulância</Portuguese>
-				<Italian></Italian>
+				<Italian>Ambulanza</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_FIREENGINE">
 				<Original>Fire Engine</Original>
 				<English>Fire Engine</English>
 				<French>Camion de pompier</French>
 				<Portuguese>Motor de incêndio</Portuguese>
-				<Italian></Italian>
+				<Italian>Autopompa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MUNITNOTREG">
 				<Original>Unit: Not registered</Original>
 				<English>Unit: Not registered</English>
 				<French>Unité: Non définie</French>
 				<Portuguese>Unidade: Não registrada</Portuguese>
-				<Italian></Italian>
+				<Italian>Unità: Non registrata</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MUNITSNOTREG">
 				<Original>Units: Not registered</Original>
 				<English>Units: Not registered</English>
 				<French>Unités: Non définis</French>
 				<Portuguese>Unidades: Não registradas</Portuguese>
-				<Italian></Italian>
+				<Italian>Unità: Non registrate</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MCALLOUTNOTREG">
 				<Original>Callout: Not registered</Original>
 				<English>Callout: Not registered</English>
 				<French>Appel: Non enregistré</French>
 				<Portuguese>Chamada: Não registrada</Portuguese>
-				<Italian></Italian>
+				<Italian>Chiamata: Non registrata</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MDESCNOTREG">
 				<Original>Description: Not registered</Original>
 				<English>Description: Not registered</English>
 				<French>Description: Non enregistré</French>
 				<Portuguese>Descrição: Não registrada</Portuguese>
-				<Italian></Italian>
+				<Italian>Descrizione: Non registrata</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MCALLOUTNONE">
 				<Original>Callout: None</Original>
 				<English>Callout: None</English>
 				<French>Appel: Aucun</French>
 				<Portuguese>Chamada: Não registrada</Portuguese>
-				<Italian></Italian>
+				<Italian>Chiamata: Nessuna</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MDESCNONE">
 				<Original>Description: None</Original>
 				<English>Description: None</English>
 				<French>Description: Aucune</French>
 				<Portuguese>Descrição: Nenhuma</Portuguese>
-				<Italian></Italian>
+				<Italian>Descrizione: Nessuna</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MCALLOUT">
 				<Original>Callout: %1</Original>
 				<English>Callout: %1</English>
 				<French>Appel: %1</French>
 				<Portuguese>Chamada: %1</Portuguese>
-				<Italian></Italian>
+				<Italian>Chiamata: %1</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MDESC">
 				<Original>Description: %1</Original>
 				<English>Description: %1</English>
 				<French>Description: %1</French>
 				<Portuguese>Descrição: %1</Portuguese>
-				<Italian></Italian>
+				<Italian>Descrizione: %1</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MUNIT">
 				<Original>Unit: %1</Original>
 				<English>Unit: %1</English>
 				<French>Unité: %1</French>
 				<Portuguese>Unidade: %1</Portuguese>
-				<Italian></Italian>
+				<Italian>Unità: %1</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_MUNITS">
 				<Original>Units: %1</Original>
 				<English>Units: %1</English>
 				<French>Unités: %1</French>
 				<Portuguese>Unidades: %1</Portuguese>
-				<Italian></Italian>
+				<Italian>Unità: %1</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_BUSY">
 				<Original>Busy</Original>
 				<English>Busy</English>
 				<French>Occupé</French>
 				<Portuguese>Ocupado</Portuguese>
-				<Italian></Italian>
+				<Italian>Occupato</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_AVAILABLE">
 				<Original>Available</Original>
 				<English>Available</English>
 				<French>Disponible</French>
 				<Portuguese>Disponível</Portuguese>
-				<Italian></Italian>
+				<Italian>Disponibile</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_AWAY">
 				<Original>Away</Original>
 				<English>Away</English>
 				<French>Sortie</French>
 				<Portuguese>Ausente</Portuguese>
-				<Italian></Italian>
+				<Italian>Assente</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_POLICEPLUS_CALLERREFRESH">
 				<Original>Caller: %1</Original>
 				<English>Caller: %1</English>
 				<French>Appelant: %1</French>
 				<Portuguese>Chamador: %1</Portuguese>
-				<Italian></Italian>
+				<Italian>Chiamante: %1</Italian>
 			</Key>
 			<Key ID="STR_RPF_POLICEPLUSDISPATCH_OCCUPIED">
 				<Original>%1 is already the dispatcher!</Original>
 				<English>%1 is already the dispatcher!</English>
 				<Portuguese>%1 já é o despachante!</Portuguese>
-				<Italian></Italian>
+				<Italian>%1 è già il dispatcher!</Italian>
 			</Key>
 		</Container>
 		<Container name="SHOPSYSTEM">
@@ -1764,189 +1764,189 @@
 				<English>Name:</English>
 				<French>Nom:</French>
 				<Portuguese>Nome:</Portuguese>
-				<Italian></Italian>
+				<Italian>Nome:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BUY">
 				<Original>Buy</Original>
 				<English>Buy</English>
 				<French>Acheter</French>
 				<Portuguese>Comprar</Portuguese>
-				<Italian></Italian>
+				<Italian>Compra</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_PRICE">
 				<Original>Price:</Original>
 				<English>Price:</English>
 				<French>Prix:</French>
 				<Portuguese>Preço:</Portuguese>
-				<Italian></Italian>
+				<Italian>Prezzo:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_AMOUNT">
 				<Original>Amount:</Original>
 				<English>Amount:</English>
 				<French>Montant:</French>
 				<Portuguese>Quantia:</Portuguese>
-				<Italian></Italian>
+				<Italian>Quantità:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SHOPNAME">
 				<Original>Shop Name</Original>
 				<English>Shop Name</English>
 				<French>Nom du magasin</French>
-				<Portuguese>Nome da Loja:</Portuguese>
-				<Italian></Italian>
+				<Portuguese>Nome da Loja</Portuguese>
+				<Italian>Nome negozio</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SELLTOSHOP">
 				<Original>Sell To Shop</Original>
 				<English>Sell To Shop</English>
 				<French>Revendre au magasin</French>
-				<Portuguese>Vender à loja:</Portuguese>
-				<Italian></Italian>
+				<Portuguese>Vender à loja</Portuguese>
+				<Italian>Vendi al negozio</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_VALUE">
 				<Original>Value:</Original>
 				<English>Value:</English>
 				<French>Valeur:</French>
 				<Portuguese>Valor:</Portuguese>
-				<Italian></Italian>
+				<Italian>Valore:</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SELL">
 				<Original>Sell</Original>
 				<English>Sell</English>
 				<French>Vendre</French>
 				<Portuguese>Vender</Portuguese>
-				<Italian></Italian>
+				<Italian>Vendi</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR">
 				<Original>Congratulations for buying a new car! Here are the keys.</Original>
 				<English>Congratulations for buying a new car! Here are the keys.</English>
 				<French>Félicitations d'avoir acheté cette nouvelle voiture! Voici les clefs.</French>
 				<Portuguese>Parabéns, você comprou um novo carro! Aqui estão as chaves.</Portuguese>
-				<Italian></Italian>
+				<Italian>Congratulazioni per l'acquisto di una nuova auto! Ecco le chiavi.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH">
 				<Original>You don't have enough money!</Original>
 				<English>You don't have enough money!</English>
 				<French>Vous n'avez pas assez d'argent!</French>
 				<Portuguese>Você não tem dinheiro suficiente!</Portuguese>
-				<Italian></Italian>
+				<Italian>Non hai abbastanza denaro!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEMS">
 				<Original>You have bought the item(s)! Here you go.</Original>
 				<English>You have bought the item(s)! Here you go.</English>
 				<French>Vous avez acheté ce(s) object(s)! Vous êtes servis.</French>
 				<Portuguese>Você comprou itens! Aqui está.</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai acquistato gli oggetti! Ecco qui.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEM">
 				<Original>You have bought the item! Here you go.</Original>
 				<English>You have bought the item! Here you go.</English>
 				<French>Vous avez acheté cet object! Vous êtes servis.</French>
 				<Portuguese>Você comprou o item! Aqui está.</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai acquistato l'oggetto! Ecco qui.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTMAGS">
 				<Original>You have bought the magazine(s)! Here you go.</Original>
 				<English>You have bought the magazine(s)! Here you go.</English>
 				<French>Vous avez acheté ce(s) magasines! Vous êtes servis.</French>
 				<Portuguese>Você comprou munições! Aqui está.</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai acquistato i caricatori! Ecco qui.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTWEAPONS">
 				<Original>You have bought the weapon! Here you go.</Original>
 				<English>You have bought the weapon! Here you go.</English>
 				<French>Vous avez acheté cette arme! Vous êtes servis.</French>
 				<Portuguese>Você comprou uma arma! Aqui está.</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai acquistato le armi! Ecco qui.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTCLOTHES">
 				<Original>You have bought the clothes! Here you go.</Original>
 				<English>You have bought the clothes! Here you go.</English>
 				<French>Vous avez acheté ces vêtements! Vous êtes servis.</French>
 				<Portuguese>Você comprou roupas! Aqui está.</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai acquistato i vestiti! Ecco qui.</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BUYTHIS">
 				<Original>Buy this</Original>
 				<English>Buy this</English>
 				<French>Achetez le.</French>
 				<Portuguese>Comprar isto</Portuguese>
-				<Italian></Italian>
+				<Italian>Compra questo</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_OPENSHOP">
 				<Original>Open shop</Original>
 				<English>Open shop</English>
 				<French>ouvrez le magasin.</French>
 				<Portuguese>Abrir loja</Portuguese>
-				<Italian></Italian>
+				<Italian>Apri negozio</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SOLDANITEM">
 				<Original>You have sold an item!</Original>
 				<English>You have sold an item!</English>
 				<French>Vous avez vendu un objet!</French>
 				<Portuguese>Você vendeu um item!</Portuguese>
-				<Italian></Italian>
+				<Italian>HAi venduto un articolo!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SOLDCLOTHES">
 				<Original>You have sold some clothes!</Original>
 				<English>You have sold some clothes!</English>
 				<French>Vous avez vendu des vêtements!</French>
 				<Portuguese>Você vendeu roupas!</Portuguese>
-				<Italian></Italian>
+				<Italian>Hai venduto degli abiti!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT">
 				<Original>You don't have that!</Original>
 				<English>You don't have that!</English>
 				<French>Vous n'avez pas ça!</French>
 				<Portuguese>Você não possui isso!</Portuguese>
-				<Italian></Italian>
+				<Italian>Non lo possiedi!</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_VEHICLESTORE">
 				<Original>Vehicle Store</Original>
 				<English>Vehicle Store</English>
 				<French>Vehicle Store</French>
 				<Portuguese>Loja de veículos</Portuguese>
-				<Italian></Italian>
+				<Italian>Negozio veicoli</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_GENERALSTORE">
 				<Original>General Store</Original>
 				<English>General Store</English>
 				<French>General Store</French>
 				<Portuguese>Loja Geral</Portuguese>
-				<Italian></Italian>
+				<Italian>Magazzini generali</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_DRUGDEALER">
 				<Original>Drug Dealer</Original>
 				<English>Drug Dealer</English>
 				<French>Drug Dealer</French>
 				<Portuguese>Traficante</Portuguese>
-				<Italian></Italian>
+				<Italian>Trafficante</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_FARMSTORE">
 				<Original>Farm Store</Original>
 				<English>Farm Store</English>
 				<French>Farm Store</French>
 				<Portuguese>Loja do Fazendeiro</Portuguese>
-				<Italian></Italian>
+				<Italian>Negozio fornitore agricole</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_GUNSTORE">
 				<Original>Gun Store</Original>
 				<English>Gun Store</English>
 				<French>Gun Store</French>
 				<Portuguese>Loja de Armas</Portuguese>
-				<Italian></Italian>
+				<Italian>Negozio armi</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_POLSTORE">
 				<Original>Police Store</Original>
 				<English>Police Store</English>
 				<French>Police Magasin</French>
 				<Portuguese>Loja da Polícia</Portuguese>
-				<Italian></Italian>
+				<Italian>Negozio polizia</Italian>
 			</Key>
 			<Key ID="STR_RPF_SHOPSYSTEM_EMSSTORE">
 				<Original>EMS Store</Original>
 				<English>EMS Store</English>
 				<French>Unités médicales Magasin</French>
 				<Portuguese>Loja do SAMU</Portuguese>
-				<Italian></Italian>
+				<Italian>Negozio EMS</Italian>
 			</Key>
 		</Container>
 		<Container name="TICKETING">
@@ -1955,98 +1955,98 @@
 				<English>Ticket</English>
 				<French>PV</French>
 				<Portuguese>Multa</Portuguese>
-				<Italian></Italian>
+				<Italian>Multa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_AMOUNT">
 				<Original>Amount</Original>
 				<English>Amount</English>
 				<French>Montant</French>
 				<Portuguese>Quantia</Portuguese>
-				<Italian></Italian>
+				<Italian>Quantità</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_REASON">
 				<Original>Reason</Original>
 				<English>Reason</English>
 				<French>Raison</French>
 				<Portuguese>Motivo</Portuguese>
-				<Italian></Italian>
+				<Italian>Motivo</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_PAY">
 				<Original>Pay</Original>
 				<English>Pay</English>
 				<French>Payer</French>
 				<Portuguese>Pagar</Portuguese>
-				<Italian></Italian>
+				<Italian>PAga</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_REFUSE">
 				<Original>Refuse</Original>
 				<English>Refuse</English>
 				<French>Refuser</French>
 				<Portuguese>Não Pagar</Portuguese>
-				<Italian></Italian>
+				<Italian>Rifiuta</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_TICKETAMOUNT">
 				<Original>Ticket Amount</Original>
 				<English>Ticket Amount</English>
 				<French>Montant du PV</French>
 				<Portuguese>Preço da Multa</Portuguese>
-				<Italian></Italian>
+				<Italian>Ammontare multa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_TICKETREASON">
 				<Original>Ticket Reason</Original>
 				<English>Ticket Reason</English>
 				<French>Raison du PV</French>
 				<Portuguese>,Motivo da Multa</Portuguese>
-				<Italian></Italian>
+				<Italian>Ragione multa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_SUBMIT">
 				<Original>Submit</Original>
 				<English>Submit</English>
 				<French>Envoyer</French>
 				<Portuguese>Enviar</Portuguese>
-				<Italian></Italian>
+				<Italian>Invia</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_ISSUE">
 				<Original>Issue Ticket</Original>
 				<English>Issue Ticket</English>
 				<French>Délivrer le PV</French>
 				<Portuguese>Multa</Portuguese>
-				<Italian></Italian>
+				<Italian>Emetti multa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_PAIDTICKET">
 				<Original>Ticketed person paid the ticket.</Original>
 				<English>Ticketed person paid the ticket.</English>
 				<French>La personne verbalisé à payé son amende</French>
 				<Portuguese>O infrator pagou a multa.</Portuguese>
-				<Italian></Italian>
+				<Italian>La persona multata ha pagato la multa</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_NOTENOUGHBANK">
 				<Original>You don't have enough money in your bank account!</Original>
 				<English>You don't have enough money in your bank account!</English>
 				<French>Vous n'avez pas assez sur votre compte!</French>
 				<Portuguese>Você não tem dinheiro suficiente em sua conta bancária.</Portuguese>
-				<Italian></Italian>
+				<Italian>Non hai abbastanza denaro sul tuo conto bancario!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_FAILEDNOTENOUGH">
 				<Original>Ticketed person DOESN'T HAVE ENOUGH MONEY to pay the ticket!</Original>
 				<English>Ticketed person DOESN'T HAVE ENOUGH MONEY to pay the ticket!</English>
 				<French>La personne verbalisé N'A PAS ASSEZ pour payer son amende!</French>
 				<Portuguese>O infrator não tem dinheiro suficiente para pagar a multa.</Portuguese>
-				<Italian></Italian>
+				<Italian>La persona multata NON HA ABBASTANZA SOLDI per pagare la multa!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_REFUSEDTICKET">
 				<Original>Ticketed person REFUSED to pay the ticket!</Original>
 				<English>Ticketed person REFUSED to pay the ticket!</English>
 				<French>La personne verbalisé REFUSE de payer son amende!</French>
-				<Portuguese>O infrator se recusou a pagar a multa.</Portuguese>
-				<Italian></Italian>
+				<Portuguese>O infrator se recusou a pagar a multa!</Portuguese>
+				<Italian>La persona multato SI È RIFIUTATO di pagare la multa!</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_TICKETING_AMOUNTGTZ">
 				<Original>Ticket amount must be more than $0!</Original>
 				<English>Ticket amount must be more than $0!</English>
 				<French>Le montant du PV doit être supérieur à 0$!</French>
 				<Portuguese>O valor da multa deve ser maior que R$0!</Portuguese>
-				<Italian></Italian>
+				<Italian>L'ammontare della multa deve superare 0$!</Italian>
 			</Key>
 		</Container>
 		<Container name="LICENSES">
@@ -2055,49 +2055,49 @@
 				<English>Show</English>
 				<French>Voir</French>
 				<Portuguese>Mostrar</Portuguese>
-				<Italian></Italian>
+				<Italian>Mostra</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_LICENSES_GRANT">
 				<Original>Grant</Original>
 				<English>Grant</English>
 				<French>Donner</French>
 				<Portuguese>Permitir</Portuguese>
-				<Italian></Italian>
+				<Italian>Concedi</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_LICENSES_REVOKE">
 				<Original>Revoke</Original>
 				<English>Revoke</English>
 				<French>Retirer</French>
 				<Portuguese>Revogar</Portuguese>
-				<Italian></Italian>
+				<Italian>Revoca</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_LICENSES_MYLS">
 				<Original>My Licenses</Original>
 				<English>My Licenses</English>
 				<French>Mes permis</French>
 				<Portuguese>Minhas Licenças</Portuguese>
-				<Italian></Italian>
+				<Italian>Mie licenze</Italian>
 			</Key>
 			<Key ID="STR_RPF_MODULES_LICENSES_MANLS">
 				<Original>Manage Licenses</Original>
 				<English>Manage Licenses</English>
 				<French>Gêrer les permis</French>
 				<Portuguese>Gerenciar Licenças</Portuguese>
-				<Italian></Italian>
+				<Italian>Gestisci licenze</Italian>
 			</Key>
 			<Key ID="STR_RPF_LICENSES_NEWLICENSE">
 				<Original>You've been granted a %1</Original>
 				<English>You've been granted a %1</English>
 				<French>You've been granted a %1</French>
 				<Portuguese>Você adquiriu uma licença de %1</Portuguese>
-				<Italian></Italian>
+				<Italian>Ti è stato concesso un %1</Italian>
 			</Key>
 			<Key ID="STR_RPF_LICENSES_REVOKED">
 				<Original>Your %1 has been revoked.</Original>
 				<English>Your %1 has been revoked.</English>
 				<French>Your %1 has been revoked.</French>
 				<Portuguese>Sua licença de %1 foi revogada.</Portuguese>
-				<Italian></Italian>
+				<Italian>Il tuo %1 è stato revocato.</Italian>
 			</Key>
 		</Container>
 	</Package>
