@@ -5,7 +5,8 @@ First Edit: 25.12.2016
 Additional Information:
 */
 
-[player, [16807.5,12663.8,0.00144768]] remoteExec ["ServerModules_fnc_medicalStatSave", 2];
+_spawnPos = ((missionConfigFile >> "RPF_basicMedicalModule" >> "spawnPoint") call BIS_fnc_getCfgData);
+[player, _spawnPos] remoteExec ["ServerModules_fnc_medicalStatSave", 2];
 
 _unit = _this select 0;
 _deadLoadout = [0, _unit, []]call ClientModules_fnc_basicMedicalLoadout;
@@ -69,7 +70,7 @@ if (!(_unit getVariable ["unconscious",  false])) then {
 	[player, 0, getPlayerUID player, name player] remoteExec ["Server_fnc_statSave", 2];
 	
 	//return from purgatory
-	player setPos [16807.5,12663.8,0.00144768];
+	player setPos _spawnPos;
 };
 
 {
