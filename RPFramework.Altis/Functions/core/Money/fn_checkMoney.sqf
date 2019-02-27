@@ -17,4 +17,4 @@ if (_type == 1) then {
 	if (((player getVariable "bank") - _amount) >= 0) then {_return = true}
 };
 
-_return
+_return;
